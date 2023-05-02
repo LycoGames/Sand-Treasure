@@ -14,10 +14,9 @@ namespace _Game.Scripts.Player
         private bool isTouched;
 
         public float speed;
-
-        //  private PlayerAnimatorController playerAnimatorController;
+        
         private PlayerController playerController;
-        private float movementSpeed=10f;
+        private float movementSpeed = 10f;
 
         public MovementWithMouse(PlayerController playerController) // set player controller in here.
         {
@@ -42,12 +41,10 @@ namespace _Game.Scripts.Player
                 playerController.transform.rotation =
                     Quaternion.RotateTowards(playerController.transform.rotation, CalculateRotation(), step);
                 playerController.transform.Translate(Vector3.forward * (Time.deltaTime * movementSpeed));
-                //set run anim in here
             }
-            // else set idle anim in here
+            
         }
-
-
+        
         private Quaternion CalculateRotation()
         {
             Vector3 direction = (lastTouch - firstTouch).normalized;
