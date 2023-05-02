@@ -7,7 +7,7 @@ namespace _Game.Scripts.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private MeshDeformer meshDeformer;
-
+        
         private IMover IMover;
 
         private void Awake()

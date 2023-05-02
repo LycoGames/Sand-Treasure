@@ -40,6 +40,10 @@ namespace _Game.Scripts.Mesh
             Vector3 pointToVertex = modifiedVerts[i] - point;
             float attenuatedForce = force / (1f + pointToVertex.sqrMagnitude);
             modifiedVerts[i] = modifiedVerts[i] + (Vector3.down * attenuatedForce) / 2f;
+            if (modifiedVerts[i].y <= 0)
+            {
+                modifiedVerts[i].y = 0;
+            }
         }
     }
 }

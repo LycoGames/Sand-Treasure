@@ -35,10 +35,10 @@ public class PlayerMeshHandler : MonoBehaviour
 
     IEnumerator DigCoroutine(Vector3 point, float force)
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 20; i++)
         {
             meshDeformer.AddDeformingForce(point, force);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

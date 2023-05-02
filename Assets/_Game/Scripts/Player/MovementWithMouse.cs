@@ -14,9 +14,10 @@ namespace _Game.Scripts.Player
         private bool isTouched;
 
         public float speed;
-        
+
         private PlayerController playerController;
         private float movementSpeed = 10f;
+        private Rigidbody myRb;
 
         public MovementWithMouse(PlayerController playerController) // set player controller in here.
         {
@@ -42,9 +43,8 @@ namespace _Game.Scripts.Player
                     Quaternion.RotateTowards(playerController.transform.rotation, CalculateRotation(), step);
                 playerController.transform.Translate(Vector3.forward * (Time.deltaTime * movementSpeed));
             }
-            
         }
-        
+
         private Quaternion CalculateRotation()
         {
             Vector3 direction = (lastTouch - firstTouch).normalized;
