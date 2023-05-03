@@ -1,21 +1,23 @@
 using UnityEngine;
 
-namespace _Game.Scripts.Mesh
+namespace _Game.Scripts.MeshTools
 {
     public class MeshDeformer : MonoBehaviour
     {
-        private UnityEngine.Mesh mesh;
-        private Vector3[] verticies, modifiedVerts;
+        private Mesh mesh;
+        private Vector3[] vertices, modifiedVerts;
+        [SerializeField] private MeshCollider meshCollider;
+        [SerializeField] private MeshFilter meshFilter;
 
         private void Start()
         {
-            mesh = GetComponent<MeshFilter>().mesh;
-            verticies = mesh.vertices;
+            mesh = meshFilter.mesh;
+            vertices = mesh.vertices;
             modifiedVerts = mesh.vertices;
-            modifiedVerts = new Vector3[verticies.Length];
-            for (int i = 0; i < verticies.Length; i++)
+            modifiedVerts = new Vector3[vertices.Length];
+            for (int i = 0; i < vertices.Length; i++)
             {
-                modifiedVerts[i] = verticies[i];
+                modifiedVerts[i] = vertices[i];
             }
         }
 
@@ -23,6 +25,7 @@ namespace _Game.Scripts.Mesh
         private void Update()
         {
             mesh.vertices = modifiedVerts;
+            meshCollider.sharedMesh = mesh;
             mesh.RecalculateNormals();
         }
 
@@ -39,7 +42,7 @@ namespace _Game.Scripts.Mesh
         {
             Vector3 pointToVertex = modifiedVerts[i] - point;
             float attenuatedForce = force / (1f + pointToVertex.sqrMagnitude);
-            modifiedVerts[i] = modifiedVerts[i] + (Vector3.down * attenuatedForce) / 2f;
+            modifiedVerts[i] += (Vector3.down * attenuatedForce) / 2f;
             if (modifiedVerts[i].y <= 0)
             {
                 modifiedVerts[i].y = 0;
