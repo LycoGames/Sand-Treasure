@@ -8,7 +8,6 @@ namespace _Game.Scripts.MeshTools
         private Vector3[] vertices, modifiedVerts;
         [SerializeField] private MeshCollider meshCollider;
         [SerializeField] private MeshFilter meshFilter;
-
         private void Start()
         {
             mesh = meshFilter.mesh;
@@ -30,16 +29,21 @@ namespace _Game.Scripts.MeshTools
         }
 
 
-        public void AddDeformingForce(Vector3 point, float force)
+        public void AddDeformingForce(Vector3 point, float force,float diggingField)
         {
             for (int i = 0; i < modifiedVerts.Length; i++)
             {
-                AddForceToVertecies(i, point, force);
+                AddForceToVertecies(i, point, force,diggingField);
             }
         }
 
-        private void AddForceToVertecies(int i, Vector3 point, float force)
+        private void AddForceToVertecies(int i, Vector3 point, float force,float diggingField)
         {
+            Vector3 vertPos = modifiedVerts[i];
+            vertPos.x*=transform.localScale.x;
+            vertPos.y *= transform.localScale.y;
+            vertPos.z *= transform.localScale.z;
+            if (Vector3.Distance(point,vertPos ) > diggingField) return;
             Vector3 pointToVertex = modifiedVerts[i] - point;
             float attenuatedForce = force / (1f + pointToVertex.sqrMagnitude);
             modifiedVerts[i] += (Vector3.down * attenuatedForce) / 2f;

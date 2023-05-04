@@ -10,6 +10,8 @@ namespace _Game.Scripts.Player
         [SerializeField] private float forceOffset;
         [SerializeField] private float force;
         [SerializeField] private float digCooldown;
+        [SerializeField] private float diggingField;
+        [SerializeField] private Transform diggerPos;
         private float time = Mathf.Infinity;
 
         private void OnTriggerEnter(Collider other)
@@ -30,9 +32,9 @@ namespace _Game.Scripts.Player
         private Vector3 GetHittedVertPoint()
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, -transform.up, out hit, 3f))
+            if (Physics.Raycast(diggerPos.position, -diggerPos.up, out hit, 5f))
             {
-                Debug.DrawRay(transform.position, -transform.up, Color.blue, 5f);
+                Debug.DrawRay(diggerPos.position, -diggerPos.up*5, Color.blue, 5f);
                 if (meshDeformer)
                 {
                     print("found mesh deformer");
@@ -49,7 +51,7 @@ namespace _Game.Scripts.Player
         {
             for (int i = 0; i < 100; i++)
             {
-                meshDeformer.AddDeformingForce(point, force);
+                meshDeformer.AddDeformingForce(point, force,diggingField);
                 yield return new WaitForSeconds(0.1f);
             }
         }
@@ -68,7 +70,7 @@ namespace _Game.Scripts.Player
         {
             if (time > digCooldown)
             {
-                meshDeformer.AddDeformingForce(GetHittedVertPoint(), force);
+                meshDeformer.AddDeformingForce(GetHittedVertPoint(), force,diggingField);
                 time = 0;
             }
         }
