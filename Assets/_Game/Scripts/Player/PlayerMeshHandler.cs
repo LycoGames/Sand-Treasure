@@ -12,29 +12,29 @@ namespace _Game.Scripts.Player
         [SerializeField] private float digCooldown;
         [SerializeField] private float diggingField;
         [SerializeField] private Transform diggerPos;
+        private Coroutine cooldownTimer;
         private float time = Mathf.Infinity;
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag("DigArea"))
-            {
-                print(other.name);
-                //  DiggingState();
-            }
-        }
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     if (other.CompareTag("DigArea"))
+        //     {
+        //         //  DiggingState();
+        //     }
+        // }
 
-        private void DiggingState()
-        {
-            //diggin anim & effects 
-            DigCoroutine(GetHittedVertPoint());
-        }
+        // private void DiggingState()
+        // {
+        //     //diggin anim & effects 
+        //     DigCoroutine(GetHittedVertPoint());
+        // }
 
         private Vector3 GetHittedVertPoint()
         {
             RaycastHit hit;
             if (Physics.Raycast(diggerPos.position, -diggerPos.up, out hit, 5f))
             {
-                Debug.DrawRay(diggerPos.position, -diggerPos.up*5, Color.blue, 5f);
+                Debug.DrawRay(diggerPos.position, -diggerPos.up * 5, Color.blue, 5f);
                 if (meshDeformer)
                 {
                     print("found mesh deformer");
@@ -44,33 +44,52 @@ namespace _Game.Scripts.Player
                 }
             }
 
-            return Vector3.zero;
+            print("zeroya düştü");
+            return Vector3.negativeInfinity;
         }
 
-        IEnumerator DigCoroutine(Vector3 point)
-        {
-            for (int i = 0; i < 100; i++)
-            {
-                meshDeformer.AddDeformingForce(point, force,diggingField);
-                yield return new WaitForSeconds(0.1f);
-            }
-        }
+        // IEnumerator DigCoroutine(Vector3 point)
+        // {
+        //     for (int i = 0; i < 100; i++)
+        //     {
+        //         meshDeformer.AddDeformingForce(point, force,diggingField);
+        //         yield return new WaitForSeconds(0.1f);
+        //     }
+        // }
 
-        private void OnTriggerStay(Collider other)
+        // private void OnTriggerStay(Collider other)
+        // {
+        //     if (other.CompareTag("DigArea"))
+        //     {
+        //         Dig();
+        //         time += Time.deltaTime;
+        //     }
+        // }
+
+        private IEnumerator CooldownTimer()
         {
-            if (other.CompareTag("DigArea"))
+            while (true)
             {
-                Dig();
                 time += Time.deltaTime;
+                yield return null;
             }
         }
 
+        public void StartTimerCoroutine()
+        {
+            cooldownTimer = StartCoroutine(CooldownTimer());
+        }
 
-        private void Dig()
+        public void StopTimerCoroutine()
+        {
+            StopCoroutine(cooldownTimer);
+        }
+
+        public void Dig()
         {
             if (time > digCooldown)
             {
-                meshDeformer.AddDeformingForce(GetHittedVertPoint(), force,diggingField);
+                meshDeformer.AddDeformingForce(GetHittedVertPoint(), force, diggingField);
                 time = 0;
             }
         }

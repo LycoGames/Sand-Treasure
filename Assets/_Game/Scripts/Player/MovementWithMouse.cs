@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.Interfaces;
-using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -17,7 +16,6 @@ namespace _Game.Scripts.Player
 
         private PlayerController playerController;
         private float movementSpeed = 10f;
-        private Rigidbody myRb;
 
         public MovementWithMouse(PlayerController playerController) // set player controller in here.
         {

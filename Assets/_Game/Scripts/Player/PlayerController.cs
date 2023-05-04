@@ -16,11 +16,13 @@ namespace _Game.Scripts.Player
         {
             MovementState();
         }
-
+        
         private void MovementState()
         {
             IMover.Movement();
             //moving anim
         }
+
+       
     }
 }
