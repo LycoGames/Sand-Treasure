@@ -1,3 +1,4 @@
+using _Game.Scripts.Enums;
 using _Game.Scripts.Interfaces;
 using UnityEngine;
 
@@ -10,19 +11,18 @@ namespace _Game.Scripts.Player
         private void Awake()
         {
             IMover = new MovementWithMouse(this);
+            
         }
 
         private void Update()
         {
             MovementState();
         }
-        
+
         private void MovementState()
         {
             IMover.Movement();
             //moving anim
         }
-
-       
     }
 }

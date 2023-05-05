@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4500609344892705175}
   - component: {fileID: 972981336413918626}
   - component: {fileID: 5146356572713050066}
-  - component: {fileID: 2452680918248424598}
+  - component: {fileID: -7050967083047659361}
   m_Layer: 0
   m_Name: diamond
   m_TagString: Diamond
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2452680918248424598
+--- !u!114 &-7050967083047659361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
