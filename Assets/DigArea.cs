@@ -8,12 +8,12 @@ using UnityEngine;
 
 public class DigArea : MonoBehaviour
 {
-    [SerializeField] private ItemsObjectPool pool;
     [SerializeField] private float diggingCooldown = .25f;
     private StateController stateController;
     private Coroutine diggingCoroutine;
     private WaitForSeconds diggingCoroutineWaitForSeconds;
     private StackManager playerStackManager;
+    private ItemsObjectPool pool;
 
     private void Start()
     {
@@ -22,10 +22,11 @@ public class DigArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (stateController == null || playerStackManager == null)
+        if (stateController == null || playerStackManager == null || pool == null)
         {
             stateController = other.GetComponent<StateController>();
             playerStackManager = other.GetComponent<StackManager>();
+            pool = other.GetComponent<ItemsObjectPool>();
         }
 
         stateController.ChangeState(stateController.DigState);

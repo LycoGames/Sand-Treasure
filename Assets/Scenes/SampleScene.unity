@@ -1703,7 +1703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08864cb0fe50ed4394206da79d68929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pool: {fileID: 1473802900}
   diggingCooldown: 0.25
 --- !u!1001 &1161415365
 PrefabInstance:
@@ -2426,7 +2425,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1473802900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2439,9 +2438,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8541dcef6fb4284429f8e8ca61959603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 20
+  count: 40
   objectToPool: {fileID: -7050967083047659361, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
   objectsInUse: []
+  spawnPos: {fileID: 0}
 --- !u!4 &1473802901
 Transform:
   m_ObjectHideFlags: 0
@@ -2928,14 +2928,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 161839883, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2073548927, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
-      propertyPath: force
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 2073548927, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: meshDeformer
       value: 

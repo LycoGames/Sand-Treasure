@@ -27,7 +27,6 @@ public class GenericObjectPool<T> : MonoBehaviour where T : MonoBehaviour
 
     public virtual T GetFromPool()
     {
-        print("za base");
         if (pooledObjects.Count>0)
         {
             T itemToReturn = pooledObjects.Dequeue();
