@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - DigArea
+  - Diamond
   layers:
   - Default
   - TransparentFX

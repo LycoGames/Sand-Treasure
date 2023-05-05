@@ -89,7 +89,7 @@ namespace _Game.Scripts.Player
         {
             if (time > digCooldown)
             {
-                meshDeformer.AddDeformingForce(GetHittedVertPoint(), force, diggingField);
+                meshDeformer.AddDeformingForce(diggerPos.position, force, diggingField);
                 time = 0;
             }
         }

@@ -4,14 +4,21 @@
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Plane Instance.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Plane Instance.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Plane Instance2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Plane Instance2.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithMouse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/DigState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/DigState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/IdleState.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMeshHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMeshHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StateController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +28,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/DigArea.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/DigState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/IdleState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Datas/StatData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/ParabolicMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/ParabolicMover.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -113,7 +122,8 @@
       <workItem from="1683144880268" duration="2900000" />
       <workItem from="1683147882234" duration="700000" />
       <workItem from="1683200198923" duration="1707000" />
-      <workItem from="1683208241310" duration="6201000" />
+      <workItem from="1683208241310" duration="6489000" />
+      <workItem from="1683281676886" duration="7319000" />
     </task>
     <servers />
   </component>
