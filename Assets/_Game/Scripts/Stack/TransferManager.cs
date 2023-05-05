@@ -19,11 +19,11 @@ namespace _Game.Scripts.Stack
         public event TransferManagerWealthCollectDelegate OnDiamondCollected;
 
         [SerializeField] private StackManager stackManager;
-       // [SerializeField] private EffectHandler effectHandler;
+        // [SerializeField] private EffectHandler effectHandler;
 
 
         [SerializeField] private float focusTime = 0.5f;
-      //  [SerializeField] private Canvas maxTextPrefab;
+        //  [SerializeField] private Canvas maxTextPrefab;
 
         private float capacityToTransferSpeedDivider = 5f;
 
@@ -43,6 +43,7 @@ namespace _Game.Scripts.Stack
 
         private void OnEnable()
         {
+            UpdateTransferSpeed(stats.GetStat(Stat.StackCapacity));
             stats.OnStackCapacityChange += UpdateTransferSpeed;
         }
 
@@ -129,7 +130,7 @@ namespace _Game.Scripts.Stack
                 {
                     if (otherType == ItemType.RepairPart)
                     {
-                     //   effectHandler.PlayThirdSoundEffect();
+                        //   effectHandler.PlayThirdSoundEffect();
                     }
 
                     stackManager.Add(iStackItemGiver.Get(), transferSpeed);
@@ -155,13 +156,14 @@ namespace _Game.Scripts.Stack
 
         private void PickupItem(StackableItem stackableItem)
         {
-            stackableItem.transform.DOMove(transform.position + new Vector3(0, 2f, 0), PickupDelay)
-                .SetAutoKill(true)
-                .OnComplete(() =>
-                {
-                    GetWealth(stackableItem);
-                    stackableItem.ReSendToPool();
-                });
+            // stackableItem.transform.DOMove(transform.position + new Vector3(0, 2f, 0), PickupDelay)
+            //     .SetAutoKill(true)
+            //     .OnComplete(() =>
+            //     {
+            //         GetWealth(stackableItem);
+            //         stackableItem.ReSendToPool();
+            //     });
+            stackManager.Add(stackableItem, transferSpeed);
         }
 
         private void GetWealth(StackableItem stackableItem)
@@ -170,13 +172,13 @@ namespace _Game.Scripts.Stack
             {
                 case ItemType.Money:
                     OnMoneyCollected?.Invoke(stackableItem.Value);
-                   // effectHandler.PlaySoundEffect();
-                   // inGameCanvas.DoPunchWealthPanel(ItemType.Money);
+                    // effectHandler.PlaySoundEffect();
+                    // inGameCanvas.DoPunchWealthPanel(ItemType.Money);
                     break;
                 case ItemType.Diamond:
                     OnDiamondCollected?.Invoke(stackableItem.Value);
-                   // effectHandler.PlaySecondSoundEffect();
-                  //  inGameCanvas.DoPunchWealthPanel(ItemType.Diamond);
+                    // effectHandler.PlaySecondSoundEffect();
+                    //  inGameCanvas.DoPunchWealthPanel(ItemType.Diamond);
                     break;
                 default:
                     break;

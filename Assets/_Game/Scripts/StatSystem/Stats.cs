@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace _Game.Scripts.StatSystem
 {
-    public class Stats : MonoBehaviour, ISerializationCallbackReceiver
+    public class Stats : MonoBehaviour, ISerializationCallbackReceiver, ISaveable
     {
         public Action<float> OnMovementSpeedChange;
         public Action<float> OnHealthChange;
@@ -27,19 +27,17 @@ namespace _Game.Scripts.StatSystem
         public bool SaveStatsForActiveMap => saveStatsForActiveMap;
 
 
-        public void Setup(Dictionary<Stat, int> dictionary)
-        {
-            statLevelsDictionary = dictionary;
-            InvokeAllUpdateActions();
-        }
-
         public float GetStat(Stat stat)
         {
+            if (!HaveStat(stat))
+                statLevelsDictionary[stat] = 1;
             return progression.GetStat(stat, statLevelsDictionary[stat]);
         }
 
         public float GetNextLevelStat(Stat stat)
         {
+            if (!HaveStat(stat))
+                statLevelsDictionary[stat] = 1;
             return progression.GetStat(stat, statLevelsDictionary[stat] + 1);
         }
 
@@ -50,21 +48,30 @@ namespace _Game.Scripts.StatSystem
 
         public int GetStatLevel(Stat stat)
         {
+            if (!HaveStat(stat))
+                statLevelsDictionary[stat] = 1;
             return statLevelsDictionary[stat];
         }
 
         public int GetStatCost(Stat stat)
         {
+            if (!HaveStat(stat))
+                statLevelsDictionary[stat] = 1;
             return progression.GetStatCost(stat, statLevelsDictionary[stat]);
         }
 
         public void UpgradeStat(Stat stat)
         {
-            statLevelsDictionary[stat]++;
+            if (!HaveStat(stat))
+                statLevelsDictionary[stat] = 2;
+            else
+                statLevelsDictionary[stat]++;
+
+
             InvokeUpdateAction(stat);
         }
 
-        public bool HaveStat(Stat stat)
+        private bool HaveStat(Stat stat)
         {
             return statLevelsDictionary.ContainsKey(stat);
         }
@@ -90,7 +97,7 @@ namespace _Game.Scripts.StatSystem
 
         public bool IsStatOnMaxLevel(Stat stat)
         {
-            return statLevelsDictionary[stat] == progression.GetLevels(stat);
+            return !HaveStat(stat) || statLevelsDictionary[stat] == progression.GetLevels(stat);
         }
 
         private void InvokeUpdateAction(Stat stat)
@@ -121,12 +128,14 @@ namespace _Game.Scripts.StatSystem
             }
         }
 
-        private void InvokeAllUpdateActions()
+        public object CaptureState()
         {
-            foreach (var stat in progression.GetStatFields())
-            {
-                InvokeUpdateAction(stat);
-            }
+            return statLevelsDictionary;
+        }
+
+        public void RestoreState(object state)
+        {
+            statLevelsDictionary = (Dictionary<Stat, int>)state;
         }
     }
 }

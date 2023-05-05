@@ -13,6 +13,16 @@ namespace _Game.Scripts.Pool
 
         public void InitializeStackPool(int limit)
         {
+            if (stackPool.Any())
+            {
+                foreach (var stack in stackPool)
+                {
+                    Destroy(stack.gameObject);
+                }
+
+                stackPool.Clear();
+            }
+
             for (int i = 0; i < limit; i++)
             {
                 StackData instanceStack = Instantiate(prefab, transform);

@@ -31,6 +31,7 @@ namespace _Game.Scripts.Stack
 
         private void OnEnable()
         {
+            InitializeStackPool(stats.GetStat(Stat.StackLimit));
             stats.OnStackLimitChange += InitializeStackPool;
         }
 

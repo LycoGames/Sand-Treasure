@@ -21,7 +21,6 @@ public class DigState : IState
     {
         Debug.Log("update dig state");
         playerMeshHandler.Dig();
-       
     }
 
     public void OnHurt(StateController controller)
