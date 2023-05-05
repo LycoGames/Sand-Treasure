@@ -13,6 +13,7 @@ public class DigArea : MonoBehaviour
     private StateController stateController;
     private Coroutine diggingCoroutine;
     private WaitForSeconds diggingCoroutineWaitForSeconds;
+    private StackManager playerStackManager;
 
     private void Start()
     {
@@ -21,23 +22,32 @@ public class DigArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        stateController = other.GetComponent<StateController>();
+        if (stateController == null || playerStackManager == null)
+        {
+            stateController = other.GetComponent<StateController>();
+            playerStackManager = other.GetComponent<StackManager>();
+        }
+
         stateController.ChangeState(stateController.DigState);
-        if (TryGetComponent<StackManager>(out var stackManager))
-            diggingCoroutine = StartCoroutine(DiggingCoroutine(stackManager));
+        diggingCoroutine = StartCoroutine(DiggingCoroutine(playerStackManager));
     }
 
     private void OnTriggerExit(Collider other)
     {
         stateController.ChangeState(stateController.IdleState);
-        StopCoroutine(diggingCoroutine);
+        if (diggingCoroutine != null)
+        {
+            StopCoroutine(diggingCoroutine);
+        }
     }
 
-    private IEnumerator DiggingCoroutine(StackManager sourceStack)
+    private IEnumerator DiggingCoroutine(StackManager playerStack)
     {
-        while (sourceStack.CanAddToStack(pool.GetPrefab().Type))
+        while (playerStack.CanAddToStack(pool.GetPrefab().Type))
         {
-            sourceStack.Add(pool.Get(), diggingCooldown);
+            var obj = pool.Get();
+            obj.gameObject.SetActive(true);
+            playerStack.Add(obj, diggingCooldown);
             yield return diggingCoroutineWaitForSeconds;
         }
     }

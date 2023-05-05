@@ -78,7 +78,6 @@ namespace _Game.Scripts.Control
         {
             while (true)
             {
-                Debug.Log("aa");
                 yield return new WaitForSeconds(focusTime);
                 while (stackManager.CanAddToStack(prefab.Type))
                 {
