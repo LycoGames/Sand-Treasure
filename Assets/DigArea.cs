@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class DigArea : MonoBehaviour
 {
-    [SerializeField] private ObjectPool pool;
+    [SerializeField] private ItemsObjectPool pool;
     [SerializeField] private float diggingCooldown = .25f;
     private StateController stateController;
     private Coroutine diggingCoroutine;
@@ -29,7 +29,7 @@ public class DigArea : MonoBehaviour
         }
 
         stateController.ChangeState(stateController.DigState);
-        diggingCoroutine = StartCoroutine(DiggingCoroutine(playerStackManager));
+        diggingCoroutine = StartCoroutine(DiggingCoroutine());
     }
 
     private void OnTriggerExit(Collider other)
@@ -41,13 +41,13 @@ public class DigArea : MonoBehaviour
         }
     }
 
-    private IEnumerator DiggingCoroutine(StackManager playerStack)
+    private IEnumerator DiggingCoroutine()
     {
-        while (playerStack.CanAddToStack(pool.GetPrefab().Type))
+        while (playerStackManager.CanAddToStack(pool.GetPrefab().Type))
         {
-            var obj = pool.Get();
+            var obj = pool.GetFromPool();
             obj.gameObject.SetActive(true);
-            playerStack.Add(obj, diggingCooldown);
+            playerStackManager.Add(obj, diggingCooldown);
             yield return diggingCoroutineWaitForSeconds;
         }
     }
