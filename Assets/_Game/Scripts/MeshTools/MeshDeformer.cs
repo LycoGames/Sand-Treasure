@@ -8,6 +8,10 @@ namespace _Game.Scripts.MeshTools
         private Vector3[] vertices, modifiedVerts;
         [SerializeField] private MeshCollider meshCollider;
         [SerializeField] private MeshFilter meshFilter;
+
+        private Vector3 currentvertPos;
+        private float currentDistance;
+        private float newHeight;
         private void Start()
         {
             mesh = meshFilter.mesh;
@@ -23,7 +27,11 @@ namespace _Game.Scripts.MeshTools
 
         private void Update()
         {
-            mesh.vertices = modifiedVerts;
+        }
+
+        private void UpdateMesh()
+        {
+            mesh.vertices= modifiedVerts;
             meshCollider.sharedMesh = mesh;
             mesh.RecalculateNormals();
         }
@@ -35,22 +43,27 @@ namespace _Game.Scripts.MeshTools
             {
                 AddForceToVertecies(i, point, force,diggingField);
             }
+            UpdateMesh();
         }
 
         private void AddForceToVertecies(int i, Vector3 point, float force,float diggingField)
         {
-            Vector3 vertPos = modifiedVerts[i];
-            vertPos.x*=transform.localScale.x;
-            vertPos.y *= transform.localScale.y;
-            vertPos.z *= transform.localScale.z;
-            if (Vector3.Distance(point,vertPos ) > diggingField) return;
-            Vector3 pointToVertex = modifiedVerts[i] - point;
-            float attenuatedForce = force / (1f + pointToVertex.sqrMagnitude);
-            modifiedVerts[i] += (Vector3.down * attenuatedForce) / 2f;
-            if (modifiedVerts[i].y <= 0)
-            {
-                modifiedVerts[i].y = 0;
-            }
+            currentvertPos = GetScaledVector(modifiedVerts[i]);
+            currentDistance = Vector3.Distance(point, currentvertPos);
+             // with out height, only 2d circle field !!!
+             //currentDistance = Vector3.Distance(new Vector3(point.x,0,point.z)
+              //   , new Vector3(currentvertPos.x,0,currentvertPos.z));
+            if (currentDistance > diggingField || modifiedVerts[i].y <= 0) return;
+            newHeight = modifiedVerts[i].y - force * (diggingField - currentDistance) * Time.deltaTime;
+            modifiedVerts[i].y = Mathf.Clamp(newHeight, 0, modifiedVerts[i].y);
+        }
+
+        private Vector3 GetScaledVector(Vector3 vector)
+        {
+            vector.x *=transform.localScale.x;
+            vector.y *= transform.localScale.y;
+            vector.z *= transform.localScale.z;
+            return vector;
         }
     }
 }

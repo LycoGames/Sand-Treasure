@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using _Game.Scripts.MeshTools;
 using UnityEngine;
@@ -13,20 +14,35 @@ namespace _Game.Scripts.Player
         [SerializeField] private float diggingField;
         [SerializeField] private Transform diggerPos;
         private float time = Mathf.Infinity;
+        private WaitForSeconds wfsForDig;
+
+        private void Start()
+        {
+            wfsForDig = new WaitForSeconds(digCooldown);
+        }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("DigArea"))
             {
                 print(other.name);
+                StartCoroutine(DigCoroutine());
                 //  DiggingState();
+            }
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("DigArea"))
+            {
+                StopAllCoroutines();
             }
         }
 
         private void DiggingState()
         {
             //diggin anim & effects 
-            DigCoroutine(GetHittedVertPoint());
+            //DigCoroutine(GetHittedVertPoint());
         }
 
         private Vector3 GetHittedVertPoint()
@@ -47,12 +63,21 @@ namespace _Game.Scripts.Player
             return Vector3.zero;
         }
 
-        IEnumerator DigCoroutine(Vector3 point)
+        // IEnumerator DigCoroutine(Vector3 point)
+        // {
+        //     for (int i = 0; i < 100; i++)
+        //     {
+        //         meshDeformer.AddDeformingForce(point, force,diggingField);
+        //         yield return new WaitForSeconds(0.1f);
+        //     }
+        // }
+        IEnumerator DigCoroutine()
         {
-            for (int i = 0; i < 100; i++)
+            while (true)
             {
-                meshDeformer.AddDeformingForce(point, force,diggingField);
-                yield return new WaitForSeconds(0.1f);
+                Debug.Log("Digging");
+                meshDeformer.AddDeformingForce(diggerPos.position, force,diggingField);
+                yield return wfsForDig;
             }
         }
 
@@ -70,7 +95,7 @@ namespace _Game.Scripts.Player
         {
             if (time > digCooldown)
             {
-                meshDeformer.AddDeformingForce(GetHittedVertPoint(), force,diggingField);
+                meshDeformer.AddDeformingForce(diggerPos.position, force,diggingField);
                 time = 0;
             }
         }
