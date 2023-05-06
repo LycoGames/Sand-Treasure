@@ -3126,7 +3126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: downForce
-      value: 200
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: brakeForce
@@ -3134,7 +3134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: motorForce
-      value: 750
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: centerOfMass.y
