@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8686835834194297847}
   - component: {fileID: 4500609344892705175}
   - component: {fileID: 972981336413918626}
-  - component: {fileID: 5146356572713050066}
   - component: {fileID: -7050967083047659361}
   m_Layer: 9
   m_Name: diamond
@@ -85,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5146356572713050066
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 735322730761741343}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-7050967083047659361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,5 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   value: 1
-  myCollider: {fileID: 5146356572713050066}
+  myCollider: {fileID: 0}
   offset: {x: 1, y: 1, z: 1}
