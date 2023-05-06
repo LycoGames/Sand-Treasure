@@ -77,6 +77,7 @@ namespace _Game.Scripts.Stack
             return stackList.Count < GetStackLimit();
         }
 
+
         public bool CanGetFromStack(ItemType type)
         {
             StackData stackData = GetStackByType(type);

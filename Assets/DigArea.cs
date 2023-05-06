@@ -1,7 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using _Game.Scripts.Interfaces;
 using _Game.Scripts.Pool;
 using _Game.Scripts.Stack;
 using UnityEngine;
@@ -9,11 +7,13 @@ using UnityEngine;
 public class DigArea : MonoBehaviour
 {
     [SerializeField] private float diggingCooldown = .25f;
+    [SerializeField] private LootArea lootArea;
+
     private StateController stateController;
     private Coroutine diggingCoroutine;
     private WaitForSeconds diggingCoroutineWaitForSeconds;
     private StackManager playerStackManager;
-    private ItemsObjectPool pool;
+    private List<ItemsObjectPool> pools;
 
     private void Start()
     {
@@ -22,11 +22,11 @@ public class DigArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (stateController == null || playerStackManager == null || pool == null)
+        if (stateController == null || playerStackManager == null || pools == null)
         {
             stateController = other.GetComponent<StateController>();
             playerStackManager = other.GetComponent<StackManager>();
-            pool = other.GetComponent<ItemsObjectPool>();
+            pools = other.GetComponent<PoolCreator>().ItemsObjectPools;
         }
 
         stateController.ChangeState(stateController.DigState);
@@ -44,11 +44,26 @@ public class DigArea : MonoBehaviour
 
     private IEnumerator DiggingCoroutine()
     {
-        while (playerStackManager.CanAddToStack(pool.GetPrefab().Type))
+        while (true)
         {
-            var obj = pool.GetFromPool();
-            obj.gameObject.SetActive(true);
-            playerStackManager.Add(obj, diggingCooldown);
+            var item = lootArea.GetDroppedItem();
+            if (item==null)
+            {
+                continue;
+            }
+            foreach (var pool in pools)
+            {
+                if (pool.PoolType == item.Type && playerStackManager.CanAddToStack(item.Type))
+                {
+                    var obj = pool.GetFromPool();
+                    obj.gameObject.SetActive(true);
+                    playerStackManager.Add(obj, diggingCooldown);
+                }
+            }
+            
+            // var obj = pools[0].GetFromPool();
+            // obj.gameObject.SetActive(true);
+            // playerStackManager.Add(obj, diggingCooldown);
             yield return diggingCoroutineWaitForSeconds;
         }
     }

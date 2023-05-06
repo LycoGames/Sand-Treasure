@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class GenericObjectPool<T> : MonoBehaviour where T : MonoBehaviour
 {
-    [SerializeField] private int count;
+    [SerializeField] private protected int count;
     [SerializeField] private protected  T objectToPool;
     public Queue<T> pooledObjects = new Queue<T>();
     public List<T> objectsInUse = new List<T>();
 
-    protected void Awake()
+    protected void Start()
     {
         InitializePool(count);
     }

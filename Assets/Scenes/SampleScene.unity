@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd0127a4883f0c84094eb3a4dddd662a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: -7050967083047659361, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
+  prefab: {fileID: 0}
 --- !u!4 &904584957
 Transform:
   m_ObjectHideFlags: 0
@@ -1433,7 +1433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stackManager: {fileID: 936195120}
   spawnPoint: {fileID: 1183273663}
-  prefab: {fileID: -7050967083047659361, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
+  prefab: {fileID: 0}
   transferDelay: 0
   focusTime: 0.5
 --- !u!65 &936195123
@@ -1648,6 +1648,7 @@ GameObject:
   - component: {fileID: 1038781806}
   - component: {fileID: 1038781805}
   - component: {fileID: 1038781808}
+  - component: {fileID: 1038781809}
   m_Layer: 8
   m_Name: Sphere (2)
   m_TagString: DigArea
@@ -1704,6 +1705,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diggingCooldown: 0.25
+  lootArea: {fileID: 0}
+--- !u!114 &1038781809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038781804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d76b0cfd34b03a4f8e3f5888e30190b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsThatCanBeDrop:
+  - {fileID: 5141354047206038508, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
+  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
+--- !u!1 &1140758138 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 781990486467974119, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
+  m_PrefabInstance: {fileID: 781990486007659600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1161415365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2439,9 +2461,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 40
-  objectToPool: {fileID: -7050967083047659361, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
+  objectToPool: {fileID: 0}
   objectsInUse: []
   spawnPos: {fileID: 0}
+  poolType: 0
 --- !u!4 &1473802901
 Transform:
   m_ObjectHideFlags: 0
@@ -2906,6 +2929,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 781990486468420645, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
   m_PrefabInstance: {fileID: 781990486007659600}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2073548927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140758138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5ef395cac3fb841bfdd086c8932cce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stackableItemsList:
+  - {fileID: 5141354047206038508, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
+  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
+  poolPrefab: {fileID: 6015403373500027189, guid: 57efc752f0d62bb4bb370aea8746d9dd, type: 3}
 --- !u!4 &543450652750964082
 Transform:
   m_ObjectHideFlags: 0
@@ -2980,7 +3019,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 3688753826380109715, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
+      propertyPath: objectToPool
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688753826380109715, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
+      propertyPath: stackableItemsList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688753826380109715, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
+      propertyPath: stackableItemsList.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688753826380109715, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
+      propertyPath: stackableItemsList.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3688753826380109715, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
 --- !u!1 &919132149030633416
 GameObject:

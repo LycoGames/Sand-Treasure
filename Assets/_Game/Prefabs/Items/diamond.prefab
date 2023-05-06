@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4500609344892705175}
   - component: {fileID: 972981336413918626}
   - component: {fileID: 5146356572713050066}
-  - component: {fileID: -7050967083047659361}
+  - component: {fileID: 5141354047206038508}
   m_Layer: 9
   m_Name: diamond
   m_TagString: Diamond
@@ -98,7 +98,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-7050967083047659361
+--- !u!114 &5141354047206038508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,10 +107,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 735322730761741343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab7bcb057d11264f8c783c30faf899f, type: 3}
+  m_Script: {fileID: 11500000, guid: fb3656e7db1faa14f8362af738afb976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
   value: 1
   myCollider: {fileID: 5146356572713050066}
   offset: {x: 1, y: 1, z: 1}
+  dropChance: 30
