@@ -8,13 +8,13 @@ using UnityEngine;
 public class StateController : MonoBehaviour
 {
     IState currentState;
-
     public DigState DigState = new DigState();
-    public IdleState IdleState = new IdleState();
+    public MovementState MovementState = new MovementState();
+    public IState CurrentState => currentState;
 
     private void Start()
     {
-        currentState = IdleState;
+        currentState = MovementState;
     }
 
     void Update()

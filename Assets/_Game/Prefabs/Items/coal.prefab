@@ -114,4 +114,4 @@ MonoBehaviour:
   value: 1
   myCollider: {fileID: 7543183033864084294}
   offset: {x: 1, y: 1, z: 1}
-  dropChance: 60
+  dropChance: 100

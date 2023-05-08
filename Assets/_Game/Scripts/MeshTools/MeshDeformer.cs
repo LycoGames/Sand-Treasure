@@ -41,12 +41,12 @@ namespace _Game.Scripts.MeshTools
         {
             for (int i = 0; i < modifiedVerts.Length; i++)
             {
-                AddForceToVertecies(i, point, force,diggingField);
+                AddForceToVertices(i, point, force,diggingField);
             }
             UpdateMesh();
         }
 
-        private void AddForceToVertecies(int i, Vector3 point, float force,float diggingField)
+        private void AddForceToVertices(int i, Vector3 point, float force,float diggingField)
         {
             currentvertPos = GetScaledVector(modifiedVerts[i]);
             currentDistance = Vector3.Distance(point, currentvertPos);

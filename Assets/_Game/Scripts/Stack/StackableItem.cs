@@ -54,7 +54,7 @@ namespace _Game.Scripts.Stack
             transform.SetParent(stackData.gameObject.transform);
             if (myCollider && myCollider.isTrigger)
             {
-                myCollider.isTrigger = false;
+               myCollider.isTrigger = false;
             }
         }
 

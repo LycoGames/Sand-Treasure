@@ -21,3 +21,7 @@ MonoBehaviour:
     levels:
     - 4
     upgradeCosts: 
+  - stat: 1
+    levels:
+    - 4
+    upgradeCosts: 

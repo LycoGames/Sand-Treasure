@@ -164,6 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a2c0393fd37a24c83e99558e0eed7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateController: {fileID: 2073548921}
 --- !u!54 &2073548924
 Rigidbody:
   m_ObjectHideFlags: 0

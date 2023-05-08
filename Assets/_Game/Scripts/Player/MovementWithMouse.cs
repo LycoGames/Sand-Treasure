@@ -16,6 +16,10 @@ namespace _Game.Scripts.Player
 
         private PlayerController playerController;
         private float movementSpeed = 10f;
+        private Rigidbody myRb;
+
+
+        public bool HasInput { get; private set; }
 
         public MovementWithMouse(PlayerController playerController) // set player controller in here.
         {
@@ -29,6 +33,7 @@ namespace _Game.Scripts.Player
             if (Input.GetMouseButtonDown(0))
             {
                 firstTouch = Input.mousePosition;
+                HasInput = true;
             }
 
             if (Input.GetMouseButton(0))
@@ -41,6 +46,16 @@ namespace _Game.Scripts.Player
                     Quaternion.RotateTowards(playerController.transform.rotation, CalculateRotation(), step);
                 playerController.transform.Translate(Vector3.forward * (Time.deltaTime * movementSpeed));
             }
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                HasInput = false;
+            }
+        }
+
+        bool IMover.HasInput()
+        {
+            return HasInput;
         }
 
         private Quaternion CalculateRotation()

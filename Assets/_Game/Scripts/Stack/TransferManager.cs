@@ -163,7 +163,10 @@ namespace _Game.Scripts.Stack
             //         GetWealth(stackableItem);
             //         stackableItem.ReSendToPool();
             //     });
-            stackManager.Add(stackableItem, transferSpeed);
+            if (stackManager.CanAddToStack(stackableItem.Type))
+            {
+                stackManager.Add(stackableItem, transferSpeed);
+            }
         }
 
         private void GetWealth(StackableItem stackableItem)

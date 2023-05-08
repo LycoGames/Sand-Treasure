@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using _Game.Scripts.Interfaces;
 using UnityEngine;
 
-public class IdleState : IState
+public class MovementState : IState
 {
     public void OnEnter(StateController controller)
     {
@@ -14,11 +14,7 @@ public class IdleState : IState
     {
         Debug.Log("update idle state");
     }
-
-    public void OnHurt(StateController controller)
-    {
-    }
-
+    
     public void OnExit(StateController controller)
     {
         Debug.Log("exited idle");

@@ -105,13 +105,11 @@ namespace _Game.Scripts.Stack
             if (stackData == null)
             {
                 print("Stackdata is null");
-                Debug.Break();
             }
 
             if (stackableItem == null)
             {
                 print("Stackableitem is null");
-                Debug.Break();
             }
 
             stackData.StackType = stackableItem.Type;
