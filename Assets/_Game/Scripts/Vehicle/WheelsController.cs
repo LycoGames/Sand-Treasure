@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _Game.Scripts.Vehicle
 {
     public class WheelsController : MonoBehaviour
     {
-        [SerializeField] private float maxspeed;
+        [SerializeField] private float maxSpeed;
+        [SerializeField] private float maxSpeedBraking;
         [SerializeField] private float MaxSteeringAngle;
         [SerializeField] private Rigidbody myRb;
         [SerializeField] private float motorForce;
@@ -13,20 +15,21 @@ namespace _Game.Scripts.Vehicle
         [SerializeField] private float downForce;
         [SerializeField] private Vector3 centerOfMass;
 
-        [Header("Wheel Colliders")] [Space] 
-        [SerializeField] private WheelCollider frontleftWheelCollider;
+        [Header("Wheel Colliders")] [Space] [SerializeField]
+        private WheelCollider frontleftWheelCollider;
+
         [SerializeField] private WheelCollider frontrightWheelCollider;
         [SerializeField] private WheelCollider rearleftWheelCollider;
         [SerializeField] private WheelCollider rearrightWheelCollider;
 
-        [Space] [Header("Wheel Transforms")] [Space] 
-        [SerializeField] private Transform frontleftWheelTransform;
+        [Space] [Header("Wheel Transforms")] [Space] [SerializeField]
+        private Transform frontleftWheelTransform;
+
         [SerializeField] private Transform frontrightWheelTransform;
         [SerializeField] private Transform rearleftWheelTransform;
         [SerializeField] private Transform rearrightWheelTransform;
 
         private float currentMotorForce;
-        private float currentInput;
         private float steerAngle;
         private float currentSteerAngle;
         private int speedlimiting;
@@ -50,8 +53,8 @@ namespace _Game.Scripts.Vehicle
 
         public void SetInput(float horizontalInput, float verticalInput)
         {
-            this.horizontalInput = horizontalInput;
-            this.verticalInput = verticalInput;
+            this.horizontalInput = Math.Clamp(horizontalInput,-1,1);
+            this.verticalInput = Math.Clamp(verticalInput,-1,1);
         }
 
         private void ApplyDownForce()
@@ -61,7 +64,7 @@ namespace _Game.Scripts.Vehicle
 
         private bool isReachMaxSpeed()
         {
-            return myRb.velocity.magnitude > maxspeed;
+            return myRb.velocity.magnitude > maxSpeed;
         }
 
         private void UpdateWheels()
@@ -83,8 +86,7 @@ namespace _Game.Scripts.Vehicle
 
         private void HandleMotor()
         {
-            currentInput = verticalInput > horizontalInput ? verticalInput : horizontalInput;
-            currentMotorForce = isReachMaxSpeed() ?  0:verticalInput * motorForce;
+            currentMotorForce = isReachMaxSpeed() ? 0 : verticalInput * motorForce;
             rearleftWheelCollider.motorTorque = currentMotorForce;
             rearrightWheelCollider.motorTorque = currentMotorForce;
             frontleftWheelCollider.motorTorque = currentMotorForce;
@@ -97,9 +99,12 @@ namespace _Game.Scripts.Vehicle
             frontleftWheelCollider.steerAngle = currentSteerAngle;
             frontrightWheelCollider.steerAngle = currentSteerAngle;
         }
+
         private void ApplyBreaking()
         {
-            currentBrakeForce = brakeForce * (currentInput==0?1:0);
+            if (isReachMaxSpeed()) currentBrakeForce = maxSpeedBraking*(myRb.velocity.magnitude-maxSpeed);
+            else if (verticalInput == 0) currentBrakeForce = brakeForce;
+            else currentBrakeForce = 0;
             rearleftWheelCollider.brakeTorque = currentBrakeForce;
             rearrightWheelCollider.brakeTorque = currentBrakeForce;
             frontleftWheelCollider.brakeTorque = currentBrakeForce;
