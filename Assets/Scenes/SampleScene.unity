@@ -3134,7 +3134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: downForce
-      value: 200
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: brakeForce
@@ -3146,7 +3146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: centerOfMass.y
-      value: -2
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4674967886951021648, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: maxSpeedBraking
@@ -3182,11 +3182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5427645624363666862, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SuspensionSpring.damper
-      value: 2000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5427645624363666862, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SuspensionSpring.spring
-      value: 4000
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 5427645624363666862, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_ForwardFriction.m_Stiffness
@@ -3194,7 +3194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5427645624363666862, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5427645624363666862, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SuspensionSpring.targetPosition
@@ -3222,11 +3222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5715344245312861155, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SuspensionSpring.damper
-      value: 2000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5715344245312861155, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SuspensionSpring.spring
-      value: 4000
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 5715344245312861155, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_ForwardFriction.m_Stiffness
@@ -3234,7 +3234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5715344245312861155, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SidewaysFriction.m_Stiffness
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5715344245312861155, guid: 13939ba9c8de21f4c80f6ef7cbab7acc, type: 3}
       propertyPath: m_SuspensionSpring.targetPosition

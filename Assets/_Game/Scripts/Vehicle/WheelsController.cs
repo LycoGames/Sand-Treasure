@@ -37,6 +37,10 @@ namespace _Game.Scripts.Vehicle
         private float verticalInput;
         private float currentBrakeForce;
 
+        private int groundedCount;
+        private float groundPercent;
+        private float airPercent;
+
         private void Start()
         {
             myRb.centerOfMass = centerOfMass;
@@ -44,7 +48,7 @@ namespace _Game.Scripts.Vehicle
 
         private void FixedUpdate()
         {
-            ApplyDownForce();
+            CheckGrounded();
             HandleMotor();
             ApplyBreaking();
             HandleSteering();
@@ -56,10 +60,25 @@ namespace _Game.Scripts.Vehicle
             this.horizontalInput = Math.Clamp(horizontalInput,-1,1);
             this.verticalInput = Math.Clamp(verticalInput,-1,1);
         }
-
-        private void ApplyDownForce()
+        private void CheckGrounded()
         {
-            myRb.AddForce(-transform.up * downForce);
+            groundedCount = 0;
+            if (frontleftWheelCollider.isGrounded && frontleftWheelCollider.GetGroundHit(out WheelHit hit))
+                groundedCount++;
+            if (frontleftWheelCollider.isGrounded && frontleftWheelCollider.GetGroundHit(out hit))
+                groundedCount++;
+            if (rearleftWheelCollider.isGrounded && rearleftWheelCollider.GetGroundHit(out hit))
+                groundedCount++;
+            if (rearrightWheelCollider.isGrounded && rearrightWheelCollider.GetGroundHit(out hit))
+                groundedCount++;
+
+            // calculate how grounded and airborne we are
+            groundPercent = (float) groundedCount / 4.0f;
+            airPercent = 1 - groundPercent;
+            if (airPercent >= 1)
+            {
+                myRb.velocity += Physics.gravity * Time.fixedDeltaTime * downForce;
+            }
         }
 
         private bool isReachMaxSpeed()
