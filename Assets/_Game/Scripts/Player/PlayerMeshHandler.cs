@@ -93,5 +93,6 @@ namespace _Game.Scripts.Player
                 time = 0;
             }
         }
+        
     }
 }

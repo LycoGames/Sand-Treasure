@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class DigArea : MonoBehaviour
 {
-    [SerializeField] private float diggingCooldown = .25f;
+    [SerializeField] private float lootingCooldown = .25f;
     [SerializeField] private LootArea lootArea;
 
     private StateController stateController;
@@ -20,7 +20,7 @@ public class DigArea : MonoBehaviour
 
     private void Start()
     {
-        diggingCoroutineWaitForSeconds = new WaitForSeconds(diggingCooldown);
+        diggingCoroutineWaitForSeconds = new WaitForSeconds(lootingCooldown);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -69,7 +69,7 @@ public class DigArea : MonoBehaviour
                 if (playerStackManager.CanAddToStack(item.Type))
                 {
                     var obj = poolDictionary[item.Type].GetFromPool();
-                    playerStackManager.Add(obj, diggingCooldown);
+                    playerStackManager.Add(obj, lootingCooldown);
                 }
             }
 

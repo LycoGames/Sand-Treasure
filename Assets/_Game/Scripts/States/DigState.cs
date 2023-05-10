@@ -7,15 +7,17 @@ using UnityEngine;
 public class DigState : IState
 {
     private PlayerMeshHandler playerMeshHandler;
-
+    private PlayerAnimator playerAnimator;
     public void OnEnter(StateController controller)
     {
-        if (playerMeshHandler == null)
+        if (playerMeshHandler == null|| playerAnimator==null)
         {
             playerMeshHandler = controller.GetComponent<PlayerMeshHandler>();
+            playerAnimator = controller.GetComponent<PlayerAnimator>();
         }
 
         playerMeshHandler.StartTimerCoroutine();
+        playerAnimator.StartDigAnim();
         Debug.Log("entered dig state");
     }
 
@@ -28,6 +30,7 @@ public class DigState : IState
     public void OnExit(StateController controller)
     {
         playerMeshHandler.StopTimerCoroutine();
+        playerAnimator.StopDigAnim();
         Debug.Log("exited dig state");
     }
 }
