@@ -1,5 +1,6 @@
 using _Game.Scripts.Enums;
 using _Game.Scripts.Interfaces;
+using _Game.Scripts.StatSystem;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -10,7 +11,8 @@ namespace _Game.Scripts.Player
 
         private IMover IMover;
         private bool isInSellZone = false;
-
+        [SerializeField] private Stats stats;
+        
         private void Awake()
         {
             IMover = new MovementWithMouse(this);
@@ -19,6 +21,12 @@ namespace _Game.Scripts.Player
 
         private void Update()
         {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                
+                stats.UpgradeStat(Stat.StackCapacity);
+                print(stats.GetStat(Stat.StackCapacity)+" "+stats.GetStatLevel(Stat.StackCapacity));
+            }
             if (IMover.HasInput() || isInSellZone)
             {
                 if (stateController.CurrentState == stateController.DigState)

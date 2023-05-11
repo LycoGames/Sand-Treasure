@@ -3,19 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DigArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DigArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/diamond.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/diamond.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Stack/Tractor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Stack/Tractor.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/ItemsObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/ItemsObjectPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolCreator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/MovementState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/IdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/MovementState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/IdleState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/StateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +20,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/DigArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LootArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Subject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Actions/Actions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Factory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Datas/StatData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -137,7 +128,7 @@
       <workItem from="1683548156354" duration="11946000" />
       <workItem from="1683716934006" duration="3004000" />
       <workItem from="1683726724200" duration="6400000" />
-      <workItem from="1683799264378" duration="17694000" />
+      <workItem from="1683799264378" duration="19539000" />
     </task>
     <servers />
   </component>

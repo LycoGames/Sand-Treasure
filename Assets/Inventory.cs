@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Inventory : Subject
+public class Inventory : Subject,ISaveable
 {
     private int money;
 
     // Start is called before the first frame update
     void Start()
     {
-        money = 0;
+        
     }
 
     // Update is called once per frame
@@ -36,5 +36,16 @@ public class Inventory : Subject
     public bool HasEnoughMoneyToSpend(int value)
     {
         return money >= value;
+    }
+
+    public object CaptureState()
+    {
+        return money;
+    }
+
+    public void RestoreState(object state)
+    {
+        money = (int)state;
+        base.NotifyObservers(money);
     }
 }
