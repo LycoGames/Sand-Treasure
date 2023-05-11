@@ -9,12 +9,12 @@ public class StateController : MonoBehaviour
 {
     IState currentState;
     public DigState DigState = new DigState();
-    public MovementState MovementState = new MovementState();
+    public IdleState IdleState = new IdleState();
     public IState CurrentState => currentState;
 
     private void Start()
     {
-        currentState = MovementState;
+        currentState = IdleState;
     }
 
     void Update()

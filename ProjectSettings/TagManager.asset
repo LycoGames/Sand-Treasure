@@ -6,6 +6,8 @@ TagManager:
   tags:
   - DigArea
   - Diamond
+  - SellArea
+  - DigPos
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - PlayerBody
   - DigArea
   - StackableItem
-  - 
+  - SellArea
   - 
   - 
   - 

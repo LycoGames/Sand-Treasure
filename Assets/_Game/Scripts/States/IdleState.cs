@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using _Game.Scripts.Interfaces;
 using UnityEngine;
 
-public class MovementState : IState
+public class IdleState : IState
 {
     public void OnEnter(StateController controller)
     {

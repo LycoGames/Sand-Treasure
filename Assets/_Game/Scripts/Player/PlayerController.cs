@@ -9,24 +9,26 @@ namespace _Game.Scripts.Player
         [SerializeField] private StateController stateController;
 
         private IMover IMover;
+        private bool isInSellZone = false;
 
         private void Awake()
         {
             IMover = new MovementWithMouse(this);
+            Actions.onCollisionSellZone += () => isInSellZone = !isInSellZone;
         }
 
         private void Update()
         {
-            if (IMover.HasInput())
+            if (IMover.HasInput() || isInSellZone)
             {
                 if (stateController.CurrentState == stateController.DigState)
                 {
-                    stateController.ChangeState(stateController.MovementState);
+                    stateController.ChangeState(stateController.IdleState);
                 }
             }
             else
             {
-                if (stateController.CurrentState == stateController.MovementState)
+                if (stateController.CurrentState == stateController.IdleState)
                 {
                     stateController.ChangeState(stateController.DigState);
                 }

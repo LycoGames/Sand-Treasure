@@ -21,5 +21,24 @@ namespace _Game.Scripts.Pool
             base.objectToPool = stackableItem;
             poolType = stackableItem.Type;
         }
+
+        public override StackableItem GetFromPool()
+        {
+            if (pooledObjects.Count>0)
+            {
+                var itemToReturn = pooledObjects.Dequeue();
+                objectsInUse.Add(itemToReturn);
+                //itemToReturn.gameObject.SetActive(true);
+                return itemToReturn;
+            }
+
+            return CreateNewPooledItem();
+        }
+
+        public override void ReturnToPool(StackableItem item)
+        {
+            base.ReturnToPool(item);
+            item.transform.parent = this.transform;
+        }
     }
 }

@@ -15,8 +15,7 @@ public class DigArea : MonoBehaviour
     private Coroutine diggingCoroutine;
     private WaitForSeconds diggingCoroutineWaitForSeconds;
     private StackManager playerStackManager;
-    private List<ItemsObjectPool> pools;
-    private Dictionary<ItemType, ItemsObjectPool> poolDictionary;
+    private Transform playerDigPos;
 
     private void Start()
     {
@@ -25,26 +24,16 @@ public class DigArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (stateController == null || playerStackManager == null || pools == null || poolDictionary == null)
+        if (stateController == null || playerStackManager == null)
         {
             stateController = other.GetComponent<StateController>();
             playerStackManager = other.GetComponent<StackManager>();
-            pools = other.GetComponent<PoolCreator>().ItemsObjectPools;
-            SetPoolsDictionary();
+            playerDigPos = other.gameObject.transform.Find("Digger").gameObject.transform;
         }
-
 
         diggingCoroutine = StartCoroutine(DiggingCoroutine());
     }
 
-    private void SetPoolsDictionary()
-    {
-        poolDictionary = new Dictionary<ItemType, ItemsObjectPool>();
-        foreach (var pool in pools)
-        {
-            poolDictionary[pool.PoolType] = pool;
-        }
-    }
 
     private void OnTriggerExit(Collider other)
     {
@@ -68,7 +57,9 @@ public class DigArea : MonoBehaviour
 
                 if (playerStackManager.CanAddToStack(item.Type))
                 {
-                    var obj = poolDictionary[item.Type].GetFromPool();
+                    var obj = PoolManager.Instance.GetFromPool(item.Type);
+                    obj.transform.position = playerDigPos.position;
+                    obj.gameObject.SetActive(true);
                     playerStackManager.Add(obj, lootingCooldown);
                 }
             }
