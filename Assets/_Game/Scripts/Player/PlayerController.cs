@@ -1,6 +1,7 @@
 using _Game.Scripts.Enums;
 using _Game.Scripts.Interfaces;
 using _Game.Scripts.StatSystem;
+using _Game.Scripts.Vehicle;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -9,14 +10,18 @@ namespace _Game.Scripts.Player
     {
         [SerializeField] private StateController stateController;
 
-        private IMover IMover;
+        [SerializeField] private MovementWithJoystick movementWithJoystick;
         private bool isInSellZone = false;
         [SerializeField] private Stats stats;
-        
+
+        [SerializeField] private WheelsController wheelsController;
+        [SerializeField] private Joystick joystick;
+        [SerializeField] private float steerSense;
+
         private void Awake()
         {
-            IMover = new MovementWithMouse(this);
             Actions.onCollisionSellZone += () => isInSellZone = !isInSellZone;
+            movementWithJoystick.Setup(wheelsController,joystick,steerSense);
         }
 
         private void Update()
@@ -26,7 +31,7 @@ namespace _Game.Scripts.Player
                 stats.UpgradeStat(Stat.StackCapacity);
                 print(stats.GetStat(Stat.StackCapacity)+" "+stats.GetStatLevel(Stat.StackCapacity));
             }
-            if (IMover.HasInput() || isInSellZone)
+            if (movementWithJoystick.HasInput() || isInSellZone)
             {
                 if (stateController.CurrentState == stateController.DigState)
                 {
@@ -46,7 +51,7 @@ namespace _Game.Scripts.Player
 
         private void Movement()
         {
-            IMover.Movement();
+            movementWithJoystick.Movement();
             //moving anim
         }
     }

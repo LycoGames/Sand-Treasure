@@ -10,7 +10,7 @@ namespace _Game.Scripts.Stack
     {
         [SerializeField] private ItemType type;
         [SerializeField] private int value = 1;
-        [SerializeField] private Collider myCollider;
+       // [SerializeField] private Collider myCollider;
         [SerializeField] private Vector3 offset;
 
 
@@ -52,10 +52,10 @@ namespace _Game.Scripts.Stack
                 DropSequence.Kill();
             SetRotation(stackData.transform.rotation);
             transform.SetParent(stackData.gameObject.transform);
-            if (myCollider && myCollider.isTrigger)
-            {
-               myCollider.isTrigger = false;
-            }
+            // if (myCollider && myCollider.isTrigger)
+            // {
+            //    myCollider.isTrigger = false;
+            // }
         }
 
         public void ReSendToPool()
@@ -65,7 +65,7 @@ namespace _Game.Scripts.Stack
 
         public void ActivateColliderTrigger()
         {
-            myCollider.isTrigger = true;
+           // myCollider.isTrigger = true;
         }
     }
 }

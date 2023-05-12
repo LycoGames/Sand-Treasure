@@ -28,6 +28,7 @@ public class DigArea : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (!other.CompareTag("Player")) return;
         if (stateController == null || playerStackManager == null)
         {
             stateController = other.GetComponent<StateController>();
@@ -44,6 +45,7 @@ public class DigArea : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if (!other.CompareTag("Player")) return;
         if (diggingCoroutine != null)
         {
             StopCoroutine(diggingCoroutine);
