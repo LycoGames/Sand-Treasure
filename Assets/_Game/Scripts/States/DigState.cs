@@ -8,14 +8,16 @@ public class DigState : IState
 {
     private PlayerMeshHandler playerMeshHandler;
     private PlayerAnimator playerAnimator;
+    private Effects effects;
     public void OnEnter(StateController controller)
     {
         if (playerMeshHandler == null|| playerAnimator==null)
         {
             playerMeshHandler = controller.GetComponent<PlayerMeshHandler>();
             playerAnimator = controller.GetComponent<PlayerAnimator>();
+            effects = controller.GetComponent<Effects>();
         }
-
+        effects.effect.Play(true);
         playerAnimator.StartDigAnim();
         Debug.Log("entered dig state");
     }
@@ -29,6 +31,7 @@ public class DigState : IState
     public void OnExit(StateController controller)
     {
         playerAnimator.StopDigAnim();
+        effects.effect.Stop(true);
         Debug.Log("exited dig state");
     }
 }

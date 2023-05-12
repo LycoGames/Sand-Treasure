@@ -19,7 +19,7 @@ namespace _Game.Scripts.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("enter");
+            Debug.Log("enter"+other.name);
             if (other.TryGetComponent(out DigZone digZone))
             {
                 this.digZone = digZone;
@@ -28,7 +28,7 @@ namespace _Game.Scripts.Player
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("exit");
+            Debug.Log("exit"+other.name);
             if (other.TryGetComponent(out DigZone digZone))
             {
                 this.digZone = null;

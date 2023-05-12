@@ -9,29 +9,23 @@ namespace _Game.Scripts.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private StateController stateController;
-
-        [SerializeField] private MovementWithJoystick movementWithJoystick;
-        private bool isInSellZone = false;
         [SerializeField] private Stats stats;
-
         [SerializeField] private WheelsController wheelsController;
         [SerializeField] private Joystick joystick;
         [SerializeField] private float steerSense;
 
+        private bool isInSellZone = false;
+        private IMover Imover;
+
         private void Awake()
         {
             Actions.onCollisionSellZone += () => isInSellZone = !isInSellZone;
-            movementWithJoystick.Setup(wheelsController,joystick,steerSense);
+            Imover = new MovementWithJoystick(this, wheelsController, joystick, steerSense);
         }
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                stats.UpgradeStat(Stat.StackCapacity);
-                print(stats.GetStat(Stat.StackCapacity)+" "+stats.GetStatLevel(Stat.StackCapacity));
-            }
-            if (movementWithJoystick.HasInput() || isInSellZone)
+            if (Imover.HasInput() || isInSellZone)
             {
                 if (stateController.CurrentState == stateController.DigState)
                 {
@@ -51,7 +45,7 @@ namespace _Game.Scripts.Player
 
         private void Movement()
         {
-            movementWithJoystick.Movement();
+            Imover.Movement();
             //moving anim
         }
     }
