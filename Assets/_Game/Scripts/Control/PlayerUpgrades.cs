@@ -61,45 +61,34 @@ namespace _Game.Scripts.Control
             //SetHealth();
         }
 
-        private void UpgradeMovementSpeed()
-        {
-            if (!IsPurchasable(Stat.MovementSpeed))
-                return;
-            BuyUpgrade(Stat.MovementSpeed);
-            UpgradeStat(Stat.MovementSpeed);
-            SetMovementSpeedOnUI();
-            OnUpgradeAction?.Invoke();
-        }
 
-        private void UpgradeStackCapacity()
+        private void UpgradeSelectedStat(Stat stat)
         {
-            if (!IsPurchasable(Stat.StackCapacity))
+            if (!IsPurchasable(stat))
                 return;
-            BuyUpgrade(Stat.StackCapacity);
-            UpgradeStat(Stat.StackCapacity);
-            SetStackCapacityOnUI();
-            OnUpgradeAction?.Invoke();
-        }
+            BuyUpgrade(stat);
+            UpgradeStat(stat);
+            switch (stat)
+            {
+                case Stat.StackCapacity:
+                    SetStackCapacityOnUI();
+                    break;
+                case Stat.ItemDropChance:
+                    SetItemDropChanceOnUI();
+                    break;
+                case Stat.MovementSpeed:
+                    SetMovementSpeedOnUI();
+                    break;
+            }
 
-        private void UpgradeItemDropChance()
-        {
-            if (!IsPurchasable(Stat.ItemDropChance))
-                return;
-            BuyUpgrade(Stat.ItemDropChance);
-            UpgradeStat(Stat.ItemDropChance);
-            SetItemDropChanceOnUI();
             OnUpgradeAction?.Invoke();
-        }
-
-        private void SetMoney()
-        {
         }
 
         private void SetStackCapacityOnUI()
         {
             var cost = playerStats.GetStatCost(Stat.StackCapacity).ToString();
             var currentLevelStat = playerStats.GetStat(Stat.StackCapacity).ToString(CultureInfo.CurrentCulture);
-            if (IsLastLevel(Stat.StackCapacity))
+            if (IsStatOnMaxLevel(Stat.StackCapacity))
             {
                 playerUpgradesUI.SetStackCapacity(currentLevelStat);
                 return;
@@ -121,7 +110,7 @@ namespace _Game.Scripts.Control
         {
             var cost = playerStats.GetStatCost(Stat.ItemDropChance).ToString();
             var currentLevelStat = playerStats.GetStat(Stat.ItemDropChance).ToString(CultureInfo.CurrentCulture);
-            if (IsLastLevel(Stat.ItemDropChance))
+            if (IsStatOnMaxLevel(Stat.ItemDropChance))
             {
                 playerUpgradesUI.SetItemDropChance(currentLevelStat);
                 return;
@@ -138,7 +127,7 @@ namespace _Game.Scripts.Control
             return playerStats.GetStatLevel(stat) != playerStats.GetStatMaxLevel(stat) && ownedMoney >= GetCost(stat);
         }
 
-        private bool IsLastLevel(Stat stat)
+        private bool IsStatOnMaxLevel(Stat stat)
         {
             return playerStats.GetStatLevel(stat) == playerStats.GetStatMaxLevel(stat);
         }
@@ -174,24 +163,22 @@ namespace _Game.Scripts.Control
             playerUpgradesUI.SetItemDropChanceUpgradeButtonInteractable(IsPurchasable(Stat.ItemDropChance));
         }
 
-
         private void SubscribeToButtonActions()
         {
-            playerUpgradesUI.OnStackCapacityUpgradeRequest += UpgradeStackCapacity;
-            playerUpgradesUI.OnMovementSpeedUpgradeRequest += UpgradeMovementSpeed;
-            playerUpgradesUI.OnItemDropChanceUpgradeRequest += UpgradeItemDropChance;
+            playerUpgradesUI.OnStackCapacityUpgradeRequest += UpgradeSelectedStat;
+            playerUpgradesUI.OnMovementSpeedUpgradeRequest += UpgradeSelectedStat;
+            playerUpgradesUI.OnItemDropChanceUpgradeRequest += UpgradeSelectedStat;
         }
 
         private void UnSubscribeToButtonActions()
         {
-            playerUpgradesUI.OnStackCapacityUpgradeRequest -= UpgradeStackCapacity;
-            playerUpgradesUI.OnMovementSpeedUpgradeRequest -= UpgradeMovementSpeed;
-            playerUpgradesUI.OnItemDropChanceUpgradeRequest -= UpgradeItemDropChance;
+            playerUpgradesUI.OnStackCapacityUpgradeRequest -= UpgradeSelectedStat;
+            playerUpgradesUI.OnMovementSpeedUpgradeRequest -= UpgradeSelectedStat;
+            playerUpgradesUI.OnItemDropChanceUpgradeRequest -= UpgradeSelectedStat;
         }
 
         private void SubscribeToOnUpgradeAction()
         {
-            OnUpgradeAction += SetMoney;
             OnUpgradeAction += SetMovementSpeedButtonInteractable;
             OnUpgradeAction += SetStackCapacityUpgradeButtonInteractable;
             OnUpgradeAction += SetItemDropChanceButtonInteractable;
@@ -199,7 +186,6 @@ namespace _Game.Scripts.Control
 
         private void UnSubscribeToOnUpgradeAction()
         {
-            OnUpgradeAction -= SetMoney;
             OnUpgradeAction -= SetMovementSpeedButtonInteractable;
             OnUpgradeAction -= SetStackCapacityUpgradeButtonInteractable;
             OnUpgradeAction -= SetItemDropChanceButtonInteractable;

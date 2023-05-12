@@ -10,13 +10,11 @@ namespace _Game.Scripts.StatSystem
     public class Stats : MonoBehaviour, ISerializationCallbackReceiver, ISaveable
     {
         public Action<float> OnMovementSpeedChange;
-        public Action<float> OnHealthChange;
         public Action<float> OnStackCapacityChange;
         public Action<float> OnTransferSpeedChange;
         public Action<float> OnStackLimitChange;
-        public Action<float> OnDamageChange;
         public Action<float> OnItemDropChanceChange;
-
+        
         [SerializeField] private Progression progression;
 
         [SerializeField] private string id;
@@ -108,20 +106,11 @@ namespace _Game.Scripts.StatSystem
                 case Stat.MovementSpeed:
                     OnMovementSpeedChange?.Invoke(GetStat(stat));
                     break;
-                case Stat.Health:
-                    OnHealthChange?.Invoke(GetStat(stat));
-                    break;
                 case Stat.StackCapacity:
                     OnStackCapacityChange?.Invoke(GetStat(stat));
                     break;
                 case Stat.TransferSpeed:
                     OnTransferSpeedChange?.Invoke(GetStat(stat));
-                    break;
-                case Stat.StackLimit:
-                    OnStackLimitChange?.Invoke(GetStat(stat));
-                    break;
-                case Stat.Damage:
-                    OnDamageChange?.Invoke(GetStat(stat));
                     break;
                 case Stat.ItemDropChance:
                     OnItemDropChanceChange?.Invoke(GetStat(stat));

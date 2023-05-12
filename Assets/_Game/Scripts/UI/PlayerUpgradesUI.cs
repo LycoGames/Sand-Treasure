@@ -1,4 +1,5 @@
 using System;
+using _Game.Scripts.Enums;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,9 +8,9 @@ namespace _Game.Scripts.UI
 {
     public class PlayerUpgradesUI : MonoBehaviour
     {
-        public Action OnStackCapacityUpgradeRequest;
-        public Action OnItemDropChanceUpgradeRequest;
-        public Action OnMovementSpeedUpgradeRequest;
+        public Action<Stat> OnStackCapacityUpgradeRequest;
+        public Action<Stat> OnItemDropChanceUpgradeRequest;
+        public Action<Stat> OnMovementSpeedUpgradeRequest;
 
         [SerializeField] private TMP_Text stackCapacityCostText;
         [SerializeField] private Button stackCapacityUpgradeButton;
@@ -110,17 +111,17 @@ namespace _Game.Scripts.UI
 
         private void RequestStackCapacityUpgrade()
         {
-            OnStackCapacityUpgradeRequest?.Invoke();
+            OnStackCapacityUpgradeRequest?.Invoke(Stat.StackCapacity);
         }
 
         private void RequestItemDropChanceUpgrade()
         {
-            OnItemDropChanceUpgradeRequest?.Invoke();
+            OnItemDropChanceUpgradeRequest?.Invoke(Stat.ItemDropChance);
         }
 
         private void RequestMovementSpeedUpgrade()
         {
-            OnMovementSpeedUpgradeRequest?.Invoke();
+            OnMovementSpeedUpgradeRequest?.Invoke(Stat.ItemDropChance);
         }
 
         #endregion

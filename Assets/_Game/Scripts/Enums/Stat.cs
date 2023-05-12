@@ -6,8 +6,6 @@ namespace _Game.Scripts.Enums
         StackLimit,
         TransferSpeed,
         MovementSpeed,
-        Health,
-        Damage,
         ItemDropChance
     }
 }
