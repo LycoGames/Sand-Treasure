@@ -6,9 +6,8 @@ namespace _Game.Scripts.MeshTools
 {
     public class DigZone : MonoBehaviour
     {
-
         private MeshBase meshBase;
-        private Dictionary<int, Vector3> zoneVertices=new Dictionary<int, Vector3>();
+        private Dictionary<int, Vector3> zoneVertices = new Dictionary<int, Vector3>();
         private Dictionary<int, Vector3> modifiedZoneVertices;
         private float totalDigHeight;
         private float currentDugHeight;
@@ -40,6 +39,11 @@ namespace _Game.Scripts.MeshTools
             meshBase.UpdateMesh();
         }
 
+        public int GetPercentOfDig()
+        {
+            return (int)(currentDugHeight / totalDigHeight * 100);
+        }
+
         private void SearchInZoneVertices()
         {
             Vector3[] vertices = meshBase.GetVertices();
@@ -66,7 +70,7 @@ namespace _Game.Scripts.MeshTools
             newHeight = vertex.y - force * (diggingField - currentDistance) * Time.deltaTime;
             currentDugHeight += vertex.y - Mathf.Clamp(newHeight, 0, vertex.y);
             vertex.y = Mathf.Clamp(newHeight, 0, vertex.y);
-            modifiedZoneVertices[index]=vertex;
+            modifiedZoneVertices[index] = vertex;
             meshBase.SetVertex(index, vertex);
         }
 

@@ -8,5 +8,6 @@ namespace _Game.Scripts.Enums
         MovementSpeed,
         Health,
         Damage,
+        ItemDropChance
     }
 }

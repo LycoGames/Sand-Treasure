@@ -40,7 +40,8 @@ namespace _Game.Scripts.Player
             {
                 lastTouch = Input.mousePosition;
                 var deltaPos = (lastTouch - firstTouch).normalized;
-                if (lastTouch == firstTouch) return; //to prevent move forward when there is a input without swiping
+                if (lastTouch == firstTouch){ return; //to prevent move forward when there is a input without swiping
+}
                 var step = 1500f * Time.deltaTime;
                 playerController.transform.rotation =
                     Quaternion.RotateTowards(playerController.transform.rotation, CalculateRotation(), step);

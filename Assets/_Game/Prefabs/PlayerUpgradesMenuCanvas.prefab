@@ -1092,19 +1092,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5743900270476396309}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6562324356185804195}
-        m_TargetAssemblyTypeName: _Game.Scripts.UI.PlayerUpgradesUI, Assembly-CSharp
-        m_MethodName: RequestMovementSpeedUpgrade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5743900270313769745
 GameObject:
   m_ObjectHideFlags: 0
@@ -2232,7 +2220,7 @@ GameObject:
   - component: {fileID: 5743900271145790000}
   - component: {fileID: 5743900271145790001}
   m_Layer: 10
-  m_Name: Health
+  m_Name: ItemDropChance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2471,7 +2459,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100HP -> 120HP
+  m_text: 1sec -> 0.9sec
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2498,7 +2486,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
+  m_fontSize: 33.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3054,19 +3042,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5743900271864899205}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6562324356185804195}
-        m_TargetAssemblyTypeName: _Game.Scripts.UI.PlayerUpgradesUI, Assembly-CSharp
-        m_MethodName: RequestHealthUpgrade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &5743900272045916334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,7 +3109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Health
+  m_text: Item Drop Period
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3160,7 +3136,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.75
+  m_fontSize: 38.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3922,11 +3898,11 @@ MonoBehaviour:
   movementSpeedLevelText: {fileID: 5743900271796768839}
   movementSpeedMaxTextField: {fileID: 7744065552427465114}
   movementSpeedUpgradableCostField: {fileID: 2636285975912677644}
-  healthCostText: {fileID: 5743900272064220080}
-  healthUpgradeButton: {fileID: 5743900272029799570}
-  healthStat: {fileID: 5743900271288649604}
-  healthMaxTextField: {fileID: 3940714741841918243}
-  healthUpgradableCostField: {fileID: 6295542718523632455}
+  itemDropChanceCostText: {fileID: 5743900272064220080}
+  itemDropChanceUpgradeButton: {fileID: 5743900272029799570}
+  itemDropChanceStat: {fileID: 5743900271288649604}
+  itemDropChanceMaxTextField: {fileID: 3940714741841918243}
+  itemDropChanceUpgradableCostField: {fileID: 6295542718523632455}
 --- !u!1 &6789370374439977839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3980,7 +3956,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6789370374439977839}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5288,19 +5264,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8316455993258763196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6562324356185804195}
-        m_TargetAssemblyTypeName: _Game.Scripts.UI.PlayerUpgradesUI, Assembly-CSharp
-        m_MethodName: RequestStackCapacityUpgrade
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &8316455993778125507
 GameObject:
   m_ObjectHideFlags: 0

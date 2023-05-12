@@ -2,12 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-1_comp_dir.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-1_comp_dir.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-1_comp_light.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-1_comp_light.exr.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-1_comp_shadowmask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-1_comp_shadowmask.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DigArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DigArea.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Models/Billboard/billboardModel.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/Models/Billboard/billboardModel.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Models/Chair/chairModel.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/Models/Chair/chairModel.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/MeshTools/MeshController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/MeshTools/MeshController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMeshHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMeshHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesMenuCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesMenuCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Stack/Tractor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Stack/Tractor.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/Stat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/Stat.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/MeshTools/DigZone.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/MeshTools/DigZone.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithMouse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SavingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SavingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StatSystem/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StatSystem/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,21 +39,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/58b3825308ef4432906c14dc69daab2515000/ce/07659466/Stats.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/e6/8091955c/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5995835e2565222bd845851833bf32626f8a8e23753c86c8cc54d6f22587cd6a/System.Globalization.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/DigArea.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/LootArea.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Subject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Factory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Datas/StatData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Datas/StatsData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IMover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/MeshTools/DigZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/GenericObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/ItemsObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Stack/LootableStackableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/ParabolicMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/ParabolicMover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/UIRewardVisualizer.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

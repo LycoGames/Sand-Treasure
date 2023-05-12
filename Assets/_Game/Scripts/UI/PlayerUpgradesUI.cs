@@ -8,7 +8,7 @@ namespace _Game.Scripts.UI
     public class PlayerUpgradesUI : MonoBehaviour
     {
         public Action OnStackCapacityUpgradeRequest;
-        public Action OnHealthUpgradeRequest;
+        public Action OnItemDropChanceUpgradeRequest;
         public Action OnMovementSpeedUpgradeRequest;
 
         [SerializeField] private TMP_Text stackCapacityCostText;
@@ -24,20 +24,28 @@ namespace _Game.Scripts.UI
         [SerializeField] private GameObject movementSpeedUpgradableCostField;
 
 
-        [Space] [SerializeField] private TMP_Text healthCostText;
-        [SerializeField] private Button healthUpgradeButton;
-        [SerializeField] private TMP_Text healthStat;
-        [SerializeField] private TMP_Text healthMaxTextField;
-        [SerializeField] private GameObject healthUpgradableCostField;
+        [Space] [SerializeField] private TMP_Text itemDropChanceCostText;
+        [SerializeField] private Button itemDropChanceUpgradeButton;
+        [SerializeField] private TMP_Text itemDropChanceStat;
+        [SerializeField] private TMP_Text itemDropChanceMaxTextField;
+        [SerializeField] private GameObject itemDropChanceUpgradableCostField;
 
 
         private const string MaxText = "MAX";
         private const string LevelText = "LEVEL ";
-        private const string StatSeparator = "->";
+        private const string StatSeparator = " -> ";
         private const string HealthText = "HP";
         private const string PcsText = "pcs";
+        private const string Seconds = "sec";
 
         #region Changes
+
+        private void Start()
+        {
+            stackCapacityUpgradeButton.onClick.AddListener(RequestStackCapacityUpgrade);
+            movementSpeedUpgradeButton.onClick.AddListener(RequestMovementSpeedUpgrade);
+            itemDropChanceUpgradeButton.onClick.AddListener(RequestItemDropChanceUpgrade);
+        }
 
         public void SetStackCapacity(string cost, string currentLevelStat, string nextLevelStat)
         {
@@ -52,17 +60,17 @@ namespace _Game.Scripts.UI
             stackCapacityStat.text = currentLevelStat + PcsText;
         }
 
-        public void SetHealth(string cost, string currentLevelStat, string nextLevelStat)
+        public void SetItemDropChance(string cost, string currentLevelStat, string nextLevelStat)
         {
-            healthCostText.text = cost;
-            healthStat.text = currentLevelStat + HealthText + StatSeparator + nextLevelStat + HealthText;
+            itemDropChanceCostText.text = cost;
+            itemDropChanceStat.text = currentLevelStat + Seconds + StatSeparator + nextLevelStat + Seconds;
         }
 
-        public void SetHealth(string currentLevelStat)
+        public void SetItemDropChance(string currentLevelStat)
         {
-            healthUpgradableCostField.SetActive(false);
-            healthMaxTextField.enabled = true;
-            healthStat.text = currentLevelStat + HealthText;
+            itemDropChanceUpgradableCostField.SetActive(false);
+            itemDropChanceMaxTextField.enabled = true;
+            itemDropChanceStat.text = currentLevelStat + Seconds;
         }
 
         public void SetMovementSpeed(string cost, int level)
@@ -84,10 +92,10 @@ namespace _Game.Scripts.UI
                 stackCapacityUpgradeButton.interactable = isInteractable;
         }
 
-        public void SetHealthUpgradeButtonInteractable(bool isInteractable)
+        public void SetItemDropChanceUpgradeButtonInteractable(bool isInteractable)
         {
-            if (isInteractable != healthUpgradeButton.interactable)
-                healthUpgradeButton.interactable = isInteractable;
+            if (isInteractable != itemDropChanceUpgradeButton.interactable)
+                itemDropChanceUpgradeButton.interactable = isInteractable;
         }
 
         public void SetMovementSpeedUpgradeButtonInteractable(bool isInteractable)
@@ -100,17 +108,17 @@ namespace _Game.Scripts.UI
 
         #region Requests
 
-        public void RequestStackCapacityUpgrade()
+        private void RequestStackCapacityUpgrade()
         {
             OnStackCapacityUpgradeRequest?.Invoke();
         }
 
-        public void RequestHealthUpgrade()
+        private void RequestItemDropChanceUpgrade()
         {
-            OnHealthUpgradeRequest?.Invoke();
+            OnItemDropChanceUpgradeRequest?.Invoke();
         }
 
-        public void RequestMovementSpeedUpgrade()
+        private void RequestMovementSpeedUpgrade()
         {
             OnMovementSpeedUpgradeRequest?.Invoke();
         }

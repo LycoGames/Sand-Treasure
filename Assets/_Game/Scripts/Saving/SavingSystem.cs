@@ -20,7 +20,7 @@ public class SavingSystem : MonoBehaviour
     {
         Save(currentSaveKey);
     }
-
+    
     public IEnumerator LoadLastScene(string saveFile)
     {
         Dictionary<string, object> state = LoadFile(saveFile);

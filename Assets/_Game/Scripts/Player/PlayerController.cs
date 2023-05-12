@@ -23,7 +23,6 @@ namespace _Game.Scripts.Player
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                
                 stats.UpgradeStat(Stat.StackCapacity);
                 print(stats.GetStat(Stat.StackCapacity)+" "+stats.GetStatLevel(Stat.StackCapacity));
             }
