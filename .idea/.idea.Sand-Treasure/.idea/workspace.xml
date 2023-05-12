@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/Stat.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/Stat.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StatSystem/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StatSystem/Stats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" afterDir="false" />
-    </list>
+    <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +127,7 @@
       <workItem from="1683799264378" duration="19539000" />
       <workItem from="1683832839075" duration="1901000" />
       <workItem from="1683891882682" duration="8265000" />
-      <workItem from="1683917117293" duration="7782000" />
+      <workItem from="1683917117293" duration="7904000" />
     </task>
     <servers />
   </component>
