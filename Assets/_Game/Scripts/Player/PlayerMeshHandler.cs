@@ -15,7 +15,7 @@ namespace _Game.Scripts.Player
         [SerializeField] private Transform diggerPos;
         private Coroutine cooldownTimer;
         private float time = Mathf.Infinity;
-        private DigZone digZone=null;
+        private DigZone digZone = null;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -32,7 +32,7 @@ namespace _Game.Scripts.Player
             if (other.TryGetComponent(out DigZone digZone))
             {
                 this.digZone = null;
-            } 
+            }
         }
 
         // private void DiggingState()
@@ -59,43 +59,7 @@ namespace _Game.Scripts.Player
         //     print("zeroya düştü");
         //     return Vector3.negativeInfinity;
         // }
-
-        // IEnumerator DigCoroutine(Vector3 point)
-        // {
-        //     for (int i = 0; i < 100; i++)
-        //     {
-        //         meshDeformer.AddDeformingForce(point, force,diggingField);
-        //         yield return new WaitForSeconds(0.1f);
-        //     }
-        // }
-
-        // private void OnTriggerStay(Collider other)
-        // {
-        //     if (other.CompareTag("DigArea"))
-        //     {
-        //         Dig();
-        //         time += Time.deltaTime;
-        //     }
-        // }
-
-        private IEnumerator CooldownTimer()
-        {
-            while (true)
-            {
-                time += Time.deltaTime;
-                yield return null;
-            }
-        }
-
-        public void StartTimerCoroutine()
-        {
-            cooldownTimer = StartCoroutine(CooldownTimer());
-        }
-
-        public void StopTimerCoroutine()
-        {
-            StopCoroutine(cooldownTimer);
-        }
+        
 
         public void Dig()
         {
@@ -106,9 +70,11 @@ namespace _Game.Scripts.Player
                     Debug.Log("digging");
                     digZone.AddDeformingForce(diggerPos.position, force, diggingField);
                 }
+
                 time = 0;
             }
+
+            time += Time.deltaTime;
         }
-        
     }
 }

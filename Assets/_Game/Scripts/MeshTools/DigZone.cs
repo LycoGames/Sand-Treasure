@@ -67,7 +67,7 @@ namespace _Game.Scripts.MeshTools
             currentvertPos = GetScaledVector(vertex, meshScale);
             currentDistance = Vector3.Distance(point, currentvertPos);
             if (currentDistance > diggingField || vertex.y <= 0) return;
-            newHeight = vertex.y - force * (diggingField - currentDistance) * Time.deltaTime;
+            newHeight = vertex.y - force * (diggingField - currentDistance) * 0.01f;
             currentDugHeight += vertex.y - Mathf.Clamp(newHeight, 0, vertex.y);
             vertex.y = Mathf.Clamp(newHeight, 0, vertex.y);
             modifiedZoneVertices[index] = vertex;

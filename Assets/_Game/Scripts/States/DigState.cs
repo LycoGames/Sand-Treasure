@@ -16,7 +16,6 @@ public class DigState : IState
             playerAnimator = controller.GetComponent<PlayerAnimator>();
         }
 
-        playerMeshHandler.StartTimerCoroutine();
         playerAnimator.StartDigAnim();
         Debug.Log("entered dig state");
     }
@@ -29,7 +28,6 @@ public class DigState : IState
 
     public void OnExit(StateController controller)
     {
-        playerMeshHandler.StopTimerCoroutine();
         playerAnimator.StopDigAnim();
         Debug.Log("exited dig state");
     }
