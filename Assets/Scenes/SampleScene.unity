@@ -3515,22 +3515,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5787091169568309248, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
-      propertyPath: force
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787091169568309248, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
-      propertyPath: digCooldown
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787091169568309248, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
-      propertyPath: diggingField
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787091169568309248, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
-      propertyPath: meshDeformer
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5787091169568309273, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
       propertyPath: m_RootOrder
       value: 3

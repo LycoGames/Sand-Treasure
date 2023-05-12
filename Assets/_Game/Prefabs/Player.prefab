@@ -1190,11 +1190,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328496b1c38dfee40895345eeb3ee180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshDeformer: {fileID: 0}
   forceOffset: 0.1
   force: 5
   digCooldown: 0.1
-  diggingField: 10
+  diggingField: 7
   diggerPos: {fileID: 3896031487550918907}
 --- !u!114 &5787091169568309279
 MonoBehaviour:

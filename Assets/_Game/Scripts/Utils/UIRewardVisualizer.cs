@@ -31,7 +31,7 @@ namespace _Game.Scripts.Utils
             var screenPos = mainCam.WorldToScreenPoint(position);
             var instance = Instantiate(imageToInstantiatePrefab, screenPos, Quaternion.identity, destination);
             var targetPos = screenPos;
-            targetPos.y += BounceOffset;
+            targetPos.y = Screen.height*3/5;
             targetPos.x = Math.Clamp(targetPos.x + GetRandomXOffset(), 30, screenWidth - 30);
             var rewardSequence = DOTween.Sequence();
             var flyUpSequence = DOTween.Sequence();
