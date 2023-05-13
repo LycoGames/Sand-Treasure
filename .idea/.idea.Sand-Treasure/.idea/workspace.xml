@@ -3,24 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Brush Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Brush Settings/BrushSettings-Default.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Brush Settings/BrushSettings-Default.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Color Palette.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Color Palette/ColorPalette-Default.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Color Palette/ColorPalette-Default.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Prefab Palette.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Prefab Palette/PrefabPalette-Default.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Polybrush Data/Prefab Palette/PrefabPalette-Default.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SellArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/ItemType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/IObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/IObserver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/Subject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/Subject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/tractor and planter/models/Materials/planter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/tractor and planter/models/Materials/planter.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Vehicle/WheelsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Vehicle/WheelsController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +132,7 @@
       <workItem from="1683832839075" duration="1901000" />
       <workItem from="1683891882682" duration="8265000" />
       <workItem from="1683917117293" duration="7904000" />
-      <workItem from="1683975243076" duration="5099000" />
+      <workItem from="1683975243076" duration="6726000" />
     </task>
     <servers />
   </component>

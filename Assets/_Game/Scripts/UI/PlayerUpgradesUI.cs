@@ -121,7 +121,7 @@ namespace _Game.Scripts.UI
 
         private void RequestMovementSpeedUpgrade()
         {
-            OnMovementSpeedUpgradeRequest?.Invoke(Stat.ItemDropChance);
+            OnMovementSpeedUpgradeRequest?.Invoke(Stat.MovementSpeed);
         }
 
         #endregion

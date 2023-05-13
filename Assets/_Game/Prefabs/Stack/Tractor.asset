@@ -31,7 +31,7 @@ MonoBehaviour:
     - 6
     - 7
     - 8
-    upgradeCosts: 320000006400000096000000c8000000
+    upgradeCosts: 01000000020000000300000004000000
   - stat: 4
     levels:
     - 1

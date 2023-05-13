@@ -103,6 +103,11 @@ namespace _Game.Scripts.Control
         {
             var cost = playerStats.GetStatCost(Stat.MovementSpeed).ToString();
             var level = playerStats.GetStatLevel(Stat.MovementSpeed);
+            if (IsStatOnMaxLevel(Stat.MovementSpeed))
+            {
+                playerUpgradesUI.SetMovementSpeed(level);
+                return;
+            }
             playerUpgradesUI.SetMovementSpeed(cost, level);
         }
 

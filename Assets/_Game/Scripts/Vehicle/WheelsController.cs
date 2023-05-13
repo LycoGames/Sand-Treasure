@@ -1,16 +1,22 @@
 using System;
+using _Game.Scripts.Enums;
+using _Game.Scripts.StatSystem;
 using UnityEngine;
 
 namespace _Game.Scripts.Vehicle
 {
     public class WheelsController : MonoBehaviour
     {
-        [Header("Stats:")][Space]
-        [SerializeField] private float maxSpeed;
+        [SerializeField] private Stats stats;
+
+        [Header("Stats:")] [Space] [SerializeField]
+        private float maxSpeed;
+
         [SerializeField] private float acceleration;
 
-        [Space] [Header("Specs:")] [Space] 
-        [SerializeField] private int motorForceMultiplier=1000;
+        [Space] [Header("Specs:")] [Space] [SerializeField]
+        private int motorForceMultiplier = 1000;
+
         [SerializeField] private float maxSpeedBraking;
         [SerializeField] private float MaxSteeringAngle;
         [SerializeField] private Rigidbody myRb;
@@ -18,14 +24,16 @@ namespace _Game.Scripts.Vehicle
         [SerializeField] private float downForce;
         [SerializeField] private Transform centerOfMass;
 
-        [Header("Wheel Colliders")] [Space] 
-        [SerializeField] private WheelCollider frontleftWheelCollider;
+        [Header("Wheel Colliders")] [Space] [SerializeField]
+        private WheelCollider frontleftWheelCollider;
+
         [SerializeField] private WheelCollider frontrightWheelCollider;
         [SerializeField] private WheelCollider rearleftWheelCollider;
         [SerializeField] private WheelCollider rearrightWheelCollider;
 
-        [Space] [Header("Wheel Transforms")] [Space] 
-        [SerializeField] private Transform frontleftWheelTransform;
+        [Space] [Header("Wheel Transforms")] [Space] [SerializeField]
+        private Transform frontleftWheelTransform;
+
         [SerializeField] private Transform frontrightWheelTransform;
         [SerializeField] private Transform rearleftWheelTransform;
         [SerializeField] private Transform rearrightWheelTransform;
@@ -45,6 +53,8 @@ namespace _Game.Scripts.Vehicle
         private void Start()
         {
             myRb.centerOfMass = centerOfMass.localPosition;
+            stats.OnMovementSpeedChange += UpdateMovementSpeed;
+            UpdateMovementSpeed(stats.GetStat(Stat.MovementSpeed));
         }
 
         private void FixedUpdate()
@@ -58,9 +68,10 @@ namespace _Game.Scripts.Vehicle
 
         public void SetInput(float horizontalInput, float verticalInput)
         {
-            this.horizontalInput = Math.Clamp(horizontalInput,-1,1);
-            this.verticalInput = Math.Clamp(verticalInput,-1,1);
+            this.horizontalInput = Math.Clamp(horizontalInput, -1, 1);
+            this.verticalInput = Math.Clamp(verticalInput, -1, 1);
         }
+
         private void CheckGrounded()
         {
             groundedCount = 0;
@@ -74,7 +85,7 @@ namespace _Game.Scripts.Vehicle
                 groundedCount++;
 
             // calculate how grounded and airborne we are
-            groundPercent = (float) groundedCount / 4.0f;
+            groundPercent = (float)groundedCount / 4.0f;
             airPercent = 1 - groundPercent;
             if (airPercent >= 1)
             {
@@ -94,7 +105,7 @@ namespace _Game.Scripts.Vehicle
             UpdateSingleWheel(rearleftWheelCollider, rearleftWheelTransform);
             UpdateSingleWheel(rearrightWheelCollider, rearrightWheelTransform);
         }
-        
+
         private void UpdateSingleWheel(WheelCollider WheelCollider, Transform WheelTransform)
         {
             Vector3 pos;
@@ -106,7 +117,7 @@ namespace _Game.Scripts.Vehicle
 
         private void HandleMotor()
         {
-            currentMotorForce = isReachMaxSpeed() ? 0 : verticalInput * acceleration*motorForceMultiplier;
+            currentMotorForce = isReachMaxSpeed() ? 0 : verticalInput * acceleration * motorForceMultiplier;
             rearleftWheelCollider.motorTorque = currentMotorForce;
             rearrightWheelCollider.motorTorque = currentMotorForce;
             frontleftWheelCollider.motorTorque = currentMotorForce;
@@ -122,13 +133,18 @@ namespace _Game.Scripts.Vehicle
 
         private void ApplyBreaking()
         {
-            if (isReachMaxSpeed()) currentBrakeForce = maxSpeedBraking*(myRb.velocity.magnitude-maxSpeed);
+            if (isReachMaxSpeed()) currentBrakeForce = maxSpeedBraking * (myRb.velocity.magnitude - maxSpeed);
             else if (verticalInput == 0) currentBrakeForce = brakeForce;
             else currentBrakeForce = 0;
             rearleftWheelCollider.brakeTorque = currentBrakeForce;
             rearrightWheelCollider.brakeTorque = currentBrakeForce;
             frontleftWheelCollider.brakeTorque = currentBrakeForce;
             frontrightWheelCollider.brakeTorque = currentBrakeForce;
+        }
+
+        private void UpdateMovementSpeed(float value)
+        {
+            maxSpeed = value;
         }
     }
 }
