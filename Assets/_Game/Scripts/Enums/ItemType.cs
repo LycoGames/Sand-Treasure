@@ -6,6 +6,7 @@ namespace _Game.Scripts.Enums
         Money,
         RepairPart,
         Diamond,
-        Coal
+        Coal,
+        Treasure
     }
 }

@@ -81,7 +81,6 @@ public class SellArea : MonoBehaviour
                     (() => playerInventory.AddMoney(item.Value)));
                 PoolManager.Instance.ReturnItemToItsPool(item);
             });
-        //TODO return item to its pool
     }
 
     private void OnTriggerExit(Collider other)

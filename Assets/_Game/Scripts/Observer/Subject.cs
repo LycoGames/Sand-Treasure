@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using _Game.Scripts.Enums;
 using UnityEngine;
 
 public abstract class Subject : MonoBehaviour
@@ -16,11 +17,11 @@ public abstract class Subject : MonoBehaviour
         observers.Remove(observer);
     }
 
-    protected void NotifyObservers(int value)
+    protected void NotifyObservers(int value,ItemType type)
     {
         foreach (var observer in observers)
         {
-            observer.OnNotify(value);
+            observer.OnNotify(value,type);
         }
     }
 }
