@@ -10,9 +10,12 @@ namespace _Game.Scripts.Player
     {
         [SerializeField] private StateController stateController;
         [SerializeField] private Stats stats;
-        [SerializeField] private WheelsController wheelsController;
-        [SerializeField] private Joystick joystick;
-        [SerializeField] private float steerSense;
+        [SerializeField] private WheelAnimator wheelAnimator;
+
+        
+     //   [SerializeField] private WheelsController wheelsController;
+     //   [SerializeField] private Joystick joystick;
+     //   [SerializeField] private float steerSense;
 
         private bool isInSellZone = false;
         private IMover Imover;
@@ -20,23 +23,24 @@ namespace _Game.Scripts.Player
         private void Awake()
         {
             Actions.onCollisionSellZone += () => isInSellZone = !isInSellZone;
-            Imover = new MovementWithJoystick(this, wheelsController, joystick, steerSense);
+            Imover = new MovementWithMouse(this);
         }
 
         private void Update()
         {
             if (Imover.HasInput() || isInSellZone)
             {
-                if (stateController.CurrentState == stateController.DigState)
-                {
-                    stateController.ChangeState(stateController.IdleState);
-                }
-            }
-            else
-            {
                 if (stateController.CurrentState == stateController.IdleState)
                 {
                     stateController.ChangeState(stateController.DigState);
+                }
+                wheelAnimator.AnimateWheels();
+            }
+            else
+            {
+                if (stateController.CurrentState == stateController.DigState)
+                {
+                    stateController.ChangeState(stateController.IdleState);
                 }
             }
 
