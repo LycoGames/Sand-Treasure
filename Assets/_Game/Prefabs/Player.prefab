@@ -14515,7 +14515,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5787091169568309273}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -44.339, y: -132.93, z: 142.467}
 --- !u!198 &504517532
 ParticleSystem:
@@ -19294,7 +19294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &916320503
 Transform:
   m_ObjectHideFlags: 0
@@ -24305,7 +24305,7 @@ Transform:
   - {fileID: 403293833}
   - {fileID: 16510888}
   m_Father: {fileID: 5787091169568309273}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &1224335755
 ParticleSystem:
@@ -29381,7 +29381,7 @@ GameObject:
   m_Layer: 0
   m_Name: StackHolder
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29392,14 +29392,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3896031487749410077}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.29, z: -4.44}
+  m_LocalRotation: {x: 0.59636784, y: -0.3799282, z: 0.59636784, w: 0.3799282}
+  m_LocalPosition: {x: -0.867, y: 0.19, z: 0.933}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5787091169568309273}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Father: {fileID: 5787091169568230205}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 115, y: -90, z: 0}
 --- !u!114 &3896031487749410079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29809,6 +29809,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5787091169568283991}
+  - {fileID: 3896031487749410078}
   m_Father: {fileID: 5787091169568242001}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0.000005122643, y: 90.00001, z: -79.00002}
@@ -30294,7 +30295,6 @@ Transform:
   - {fileID: 3896031486083700663}
   - {fileID: 509298005}
   - {fileID: 3896031487550918907}
-  - {fileID: 3896031487749410078}
   - {fileID: 504517530}
   - {fileID: 1224335753}
   m_Father: {fileID: 0}
@@ -30343,7 +30343,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 90
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!114 &5787091169568309248
 MonoBehaviour:
@@ -30358,9 +30358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceOffset: 0.1
-  force: 5
+  force: 15
   digCooldown: 0.1
-  diggingField: 7
+  diggingField: 5
   diggerPos: {fileID: 3896031487550918907}
 --- !u!114 &5787091169568309279
 MonoBehaviour:
@@ -30432,8 +30432,8 @@ MonoBehaviour:
   rowCount: 1
   columnCount: 1
   reverseAlign: 0
-  offsetX: 1
-  offsetZ: 1
+  offsetX: 0.35
+  offsetZ: 0.35
 --- !u!95 &7376503935035932725
 Animator:
   serializedVersion: 5

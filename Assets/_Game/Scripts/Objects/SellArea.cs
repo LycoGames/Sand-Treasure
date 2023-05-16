@@ -20,7 +20,7 @@ public class SellArea : MonoBehaviour
     private WaitForSeconds waitForSeconds;
     void Start()
     {
-        waitForSeconds = new WaitForSeconds(0.5f);
+        waitForSeconds = new WaitForSeconds(0.2f);
     }
 
     void Update()
@@ -38,7 +38,7 @@ public class SellArea : MonoBehaviour
                 playerStateController = other.GetComponent<StateController>();
             }
             Actions.onCollisionSellZone?.Invoke();
-            playerStateController.ChangeState(playerStateController.IdleState);
+            //playerStateController.ChangeState(playerStateController.IdleState);
             SetCoroutineDictionary();
         }
     }
@@ -74,7 +74,7 @@ public class SellArea : MonoBehaviour
 
     private void GetItemFromPlayerStack(StackableItem item)
     {
-        item.transform.DOJump(transform.position, 1f, 1, 0.3f).SetAutoKill(true)
+        item.transform.DOJump(transform.position, 5f, 1, 0.3f).SetAutoKill(true)
             .OnComplete(() =>
             {
                 uiRewardVisualizer.VisualiseReward(this.transform.position,

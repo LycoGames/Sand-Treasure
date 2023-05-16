@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -319,11 +319,11 @@ LightingSettings:
   m_AlbedoBoost: 1
   m_IndirectOutputScale: 1
   m_UsingShadowmask: 1
-  m_BakeBackend: 1
+  m_BakeBackend: 2
   m_LightmapMaxSize: 1024
-  m_BakeResolution: 40
+  m_BakeResolution: 20
   m_Padding: 2
-  m_LightmapCompression: 3
+  m_LightmapCompression: 2
   m_AO: 0
   m_AOMaxDistance: 1
   m_CompAOExponent: 1
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moneyText: {fileID: 1780467349}
-  inventory: {fileID: 6429159574062522266}
+  inventory: {fileID: 3896031487681478709}
   moneyPanel: {fileID: 748337463}
   treasurePanel: {fileID: 1828810019}
   treasureTotalText: {fileID: 1971511221}
@@ -1246,8 +1246,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
-  - {fileID: 5141354047206038508, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
-  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
+  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
+  - {fileID: 6957982343563665668, guid: 42d39f1bcec79fd498c77c43aef16cf9, type: 3}
 --- !u!114 &571060255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1908,7 +1908,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -1939,7 +1939,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 5945
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -2504,8 +2504,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
-  - {fileID: 5141354047206038508, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
-  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
+  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
+  - {fileID: 6957982343563665668, guid: 42d39f1bcec79fd498c77c43aef16cf9, type: 3}
 --- !u!114 &1038781810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2829,8 +2829,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
-  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
-  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
+  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
+  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
 --- !u!114 &1206246670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3156,7 +3156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c3f1c85d161cf8342921c4aafcc49e4d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3602,8 +3602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackableItemsList:
-  - {fileID: 5141354047206038508, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
-  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
+  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
+  - {fileID: 6957982343563665668, guid: 42d39f1bcec79fd498c77c43aef16cf9, type: 3}
   poolPrefab: {fileID: 6015403373500027189, guid: 57efc752f0d62bb4bb370aea8746d9dd, type: 3}
 --- !u!4 &1562143527
 Transform:
@@ -4652,7 +4652,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &2101735552
 BoxCollider:
@@ -89271,14 +89271,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5787091169568309248, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
-      propertyPath: force
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5787091169568309248, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
-      propertyPath: diggingField
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5787091169568309273, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -89334,6 +89326,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5787091169568309273, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
   m_PrefabInstance: {fileID: 3896031487681478704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3896031487681478709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 119618216880648546, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
+  m_PrefabInstance: {fileID: 3896031487681478704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e448fe21144f0547a2065e382b8f0e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &4525719107194908365
 Animator:
   serializedVersion: 5

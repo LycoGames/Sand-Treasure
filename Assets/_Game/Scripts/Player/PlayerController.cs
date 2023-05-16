@@ -12,10 +12,10 @@ namespace _Game.Scripts.Player
         [SerializeField] private Stats stats;
         [SerializeField] private WheelAnimator wheelAnimator;
 
-        
-     //   [SerializeField] private WheelsController wheelsController;
-     //   [SerializeField] private Joystick joystick;
-     //   [SerializeField] private float steerSense;
+
+        //   [SerializeField] private WheelsController wheelsController;
+        //   [SerializeField] private Joystick joystick;
+        //   [SerializeField] private float steerSense;
 
         private bool isInSellZone = false;
         private IMover Imover;
@@ -28,17 +28,18 @@ namespace _Game.Scripts.Player
 
         private void Update()
         {
-            if (Imover.HasInput() || isInSellZone)
+            if (Imover.HasInput())
             {
                 if (stateController.CurrentState == stateController.IdleState)
                 {
                     stateController.ChangeState(stateController.DigState);
                 }
+
                 wheelAnimator.AnimateWheels();
             }
             else
             {
-                if (stateController.CurrentState == stateController.DigState)
+                if (stateController.CurrentState == stateController.DigState )
                 {
                     stateController.ChangeState(stateController.IdleState);
                 }
