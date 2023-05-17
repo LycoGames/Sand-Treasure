@@ -1,27 +1,29 @@
-using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Enums;
 using UnityEngine;
 
-public abstract class Subject : MonoBehaviour
+namespace _Game.Scripts.Observer
 {
-    private List<IObserver> observers=new List<IObserver>();
-
-    public void AddObserver(IObserver observer)
+    public abstract class Subject : MonoBehaviour
     {
-        observers.Add(observer);
-    }
+        private List<IObserver> observers=new List<IObserver>();
 
-    public void RemoveObserver(IObserver observer)
-    {
-        observers.Remove(observer);
-    }
-
-    protected void NotifyObservers(int value,ItemType type)
-    {
-        foreach (var observer in observers)
+        public void AddObserver(IObserver observer)
         {
-            observer.OnNotify(value,type);
+            observers.Add(observer);
+        }
+
+        public void RemoveObserver(IObserver observer)
+        {
+            observers.Remove(observer);
+        }
+
+        protected void NotifyObservers(int value,ItemType type)
+        {
+            foreach (var observer in observers)
+            {
+                observer.OnNotify(value,type);
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using _Game.Scripts.Interfaces;
 using _Game.Scripts.Vehicle;
+using Joystick_Pack.Scripts.Base;
 using UnityEngine;
 
 namespace _Game.Scripts.Player

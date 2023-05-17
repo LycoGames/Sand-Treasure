@@ -1,3 +1,5 @@
+using _Game.Scripts.States;
+
 namespace _Game.Scripts.Interfaces
 {
     public interface IState

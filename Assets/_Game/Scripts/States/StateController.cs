@@ -1,38 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using _Game.Scripts.Interfaces;
-using _Game.Scripts.Player;
 using UnityEngine;
 
-
-public class StateController : MonoBehaviour
+namespace _Game.Scripts.States
 {
-    IState currentState;
-    public DigState DigState = new DigState();
-    public IdleState IdleState = new IdleState();
-    public IState CurrentState => currentState;
-
-    private void Start()
+    public class StateController : MonoBehaviour
     {
-        currentState = IdleState;
-    }
+        IState currentState;
+        public DigState DigState = new DigState();
+        public IdleState IdleState = new IdleState();
+        public IState CurrentState => currentState;
 
-    void Update()
-    {
-        if (currentState != null)
+        private void Start()
         {
-            currentState.UpdateState(this);
-        }
-    }
-
-    public void ChangeState(IState newState)
-    {
-        if (currentState != null)
-        {
-            currentState.OnExit(this);
+            currentState = IdleState;
         }
 
-        currentState = newState;
-        currentState.OnEnter(this);
+        void Update()
+        {
+            if (currentState != null)
+            {
+                currentState.UpdateState(this);
+            }
+        }
+
+        public void ChangeState(IState newState)
+        {
+            if (currentState != null)
+            {
+                currentState.OnExit(this);
+            }
+
+            currentState = newState;
+            currentState.OnEnter(this);
+        }
     }
 }

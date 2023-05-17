@@ -1,30 +1,32 @@
-using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Stack;
 using UnityEngine;
 
-public class LootArea : MonoBehaviour
+namespace _Game.Scripts.Utils
 {
-    [SerializeField] private List<LootableStackableItem> itemsThatCanBeDrop;
-
-    public StackableItem GetDroppedItem()
+    public class LootArea : MonoBehaviour
     {
-        List<StackableItem> possibleItems = new List<StackableItem>();
-        int randomNumber = Random.Range(0, 101);
-        foreach (var item in itemsThatCanBeDrop)
-        {
-            if (randomNumber<=item.DropChance)
-            {
-                possibleItems.Add(item);
-            }
-        }
+        [SerializeField] private List<LootableStackableItem> itemsThatCanBeDrop;
 
-        if (possibleItems.Count>0)
+        public StackableItem GetDroppedItem()
         {
-            StackableItem droppedItem = possibleItems[Random.Range(0, possibleItems.Count)];
-            return droppedItem;
+            List<StackableItem> possibleItems = new List<StackableItem>();
+            int randomNumber = Random.Range(0, 101);
+            foreach (var item in itemsThatCanBeDrop)
+            {
+                if (randomNumber<=item.DropChance)
+                {
+                    possibleItems.Add(item);
+                }
+            }
+
+            if (possibleItems.Count>0)
+            {
+                StackableItem droppedItem = possibleItems[Random.Range(0, possibleItems.Count)];
+                return droppedItem;
+            }
+            print("No item dropped");
+            return null;
         }
-        print("No item dropped");
-        return null;
     }
 }

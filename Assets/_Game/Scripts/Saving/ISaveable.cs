@@ -1,5 +1,8 @@
-public interface ISaveable
+namespace _Game.Scripts.Saving
 {
-    object CaptureState();
-    void RestoreState(object state);
+    public interface ISaveable
+    {
+        object CaptureState();
+        void RestoreState(object state);
+    }
 }

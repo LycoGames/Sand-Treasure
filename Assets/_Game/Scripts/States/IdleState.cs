@@ -1,22 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using _Game.Scripts.Interfaces;
 using UnityEngine;
 
-public class IdleState : IState
+namespace _Game.Scripts.States
 {
-    public void OnEnter(StateController controller)
+    public class IdleState : IState
     {
-        Debug.Log("entered idle");
-    }
+        public void OnEnter(StateController controller)
+        {
+            Debug.Log("entered idle");
+        }
 
-    public void UpdateState(StateController controller)
-    {
-        Debug.Log("update idle state");
-    }
+        public void UpdateState(StateController controller)
+        {
+            Debug.Log("update idle state");
+        }
     
-    public void OnExit(StateController controller)
-    {
-        Debug.Log("exited idle");
+        public void OnExit(StateController controller)
+        {
+            Debug.Log("exited idle");
+        }
     }
 }

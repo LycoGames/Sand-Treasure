@@ -1,64 +1,65 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenericObjectPool<T> : MonoBehaviour where T : MonoBehaviour
+namespace _Game.Scripts.Pool
 {
-    [SerializeField] private protected int count;
-    [SerializeField] private protected  T objectToPool;
-    public Queue<T> pooledObjects = new Queue<T>();
-    public List<T> objectsInUse = new List<T>();
-
-    protected void Start()
+    public class GenericObjectPool<T> : MonoBehaviour where T : MonoBehaviour
     {
-        InitializePool(count);
-    }
+        [SerializeField] private protected int count;
+        [SerializeField] private protected  T objectToPool;
+        public Queue<T> pooledObjects = new Queue<T>();
+        public List<T> objectsInUse = new List<T>();
 
-    protected virtual void InitializePool(int count)
-    {
-        for (int i = 0; i < count; i++)
+        protected void Start()
         {
-            var item = Instantiate(objectToPool, this.transform);
-            item.gameObject.SetActive(false);
-            pooledObjects.Enqueue(item);
-        }
-    }
-
-    public virtual T GetFromPool()
-    {
-        if (pooledObjects.Count>0)
-        {
-            T itemToReturn = pooledObjects.Dequeue();
-            objectsInUse.Add(itemToReturn);
-            itemToReturn.gameObject.SetActive(true);
-            return itemToReturn;
+            InitializePool(count);
         }
 
-        return CreateNewPooledItem();
-    }
+        protected virtual void InitializePool(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                var item = Instantiate(objectToPool, this.transform);
+                item.gameObject.SetActive(false);
+                pooledObjects.Enqueue(item);
+            }
+        }
 
-    protected virtual T CreateNewPooledItem()
-    {
-        T newPooledItem = Instantiate(objectToPool, this.transform);
-        objectsInUse.Add(newPooledItem);
-        return newPooledItem;
-    }
+        public virtual T GetFromPool()
+        {
+            if (pooledObjects.Count>0)
+            {
+                T itemToReturn = pooledObjects.Dequeue();
+                objectsInUse.Add(itemToReturn);
+                itemToReturn.gameObject.SetActive(true);
+                return itemToReturn;
+            }
 
-    public virtual void ReturnToPool(T item)
-    {
-        item.gameObject.SetActive(false);
-        pooledObjects.Enqueue(item);
-        objectsInUse.Remove(item);
-    }
+            return CreateNewPooledItem();
+        }
 
-    public virtual void ReturnAllItemsToPool()
-    {
-        foreach (var item in objectsInUse)
+        protected virtual T CreateNewPooledItem()
+        {
+            T newPooledItem = Instantiate(objectToPool, this.transform);
+            objectsInUse.Add(newPooledItem);
+            return newPooledItem;
+        }
+
+        public virtual void ReturnToPool(T item)
         {
             item.gameObject.SetActive(false);
             pooledObjects.Enqueue(item);
+            objectsInUse.Remove(item);
         }
-        objectsInUse.Clear();
+
+        public virtual void ReturnAllItemsToPool()
+        {
+            foreach (var item in objectsInUse)
+            {
+                item.gameObject.SetActive(false);
+                pooledObjects.Enqueue(item);
+            }
+            objectsInUse.Clear();
+        }
     }
 }

@@ -1,37 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using _Game.Scripts.Interfaces;
 using _Game.Scripts.Player;
 using UnityEngine;
 
-public class DigState : IState
+namespace _Game.Scripts.States
 {
-    private PlayerMeshHandler playerMeshHandler;
-    private PlayerAnimator playerAnimator;
-    private Effects effects;
-    public void OnEnter(StateController controller)
+    public class DigState : IState
     {
-        if (playerMeshHandler == null|| playerAnimator==null)
+        private PlayerMeshHandler playerMeshHandler;
+        private PlayerAnimator playerAnimator;
+        private Effects effects;
+        public void OnEnter(StateController controller)
         {
-            playerMeshHandler = controller.GetComponent<PlayerMeshHandler>();
-            playerAnimator = controller.GetComponent<PlayerAnimator>();
-            effects = controller.GetComponent<Effects>();
+            if (playerMeshHandler == null|| playerAnimator==null)
+            {
+                playerMeshHandler = controller.GetComponent<PlayerMeshHandler>();
+                playerAnimator = controller.GetComponent<PlayerAnimator>();
+                effects = controller.GetComponent<Effects>();
+            }
+            effects.effect.Play(true);
+            playerAnimator.StartDigAnim();
+            Debug.Log("entered dig state");
         }
-        effects.effect.Play(true);
-        playerAnimator.StartDigAnim();
-        Debug.Log("entered dig state");
-    }
 
-    public void UpdateState(StateController controller)
-    {
-        Debug.Log("update dig state");
-        playerMeshHandler.Dig();
-    }
+        public void UpdateState(StateController controller)
+        {
+            Debug.Log("update dig state");
+            playerMeshHandler.Dig();
+        }
 
-    public void OnExit(StateController controller)
-    {
-        playerAnimator.StopDigAnim();
-        effects.effect.Stop(true);
-        Debug.Log("exited dig state");
+        public void OnExit(StateController controller)
+        {
+            playerAnimator.StopDigAnim();
+            effects.effect.Stop(true);
+            Debug.Log("exited dig state");
+        }
     }
 }

@@ -3,7 +3,53 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickPlayerExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickSetterExample.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Examples/JoystickSetterExample.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Base/Joystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/DynamicJoystickEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/FloatingJoystickEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/JoystickEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Editor/VariableJoystickEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/DynamicJoystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FixedJoystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/FloatingJoystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Joystick Pack/Scripts/Joysticks/VariableJoystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Misc Effects/Scripts/SpawnEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Ramps/Editor/RampAssetEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Ramps/Editor/RampAssetEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Ramps/Runtime/RampAsset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Ramps/Runtime/RampAsset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/AdjustTimeScale.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/AdjustTimeScale.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/ProximityActivate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/ProximityActivate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/SimpleCameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/SimpleCameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/SimpleCharacterMotor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/Shared/Scripts/SimpleCharacterMotor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/TutorialInfo/Scripts/Editor/ReadmeEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/TutorialInfo/Scripts/Readme.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/TutorialInfo/Scripts/Readme.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/DigArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/DigArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SellArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/Treasure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/Treasure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/IObserver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/IObserver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/Subject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Observer/Subject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Effects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Effects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithJoystick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithJoystick.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/WheelAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/WheelAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/GenericObjectPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/GenericObjectPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Pool/PoolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/ISaveable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/ISaveable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SaveableEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SaveableEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SavingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SavingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SerializableVector3.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Saving/SerializableVector3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/StatSystem/Stats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/StatSystem/Stats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/DigState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/DigState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/IdleState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/StateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/LoadingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/LoadingUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/Actions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/Actions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/LootArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/LootArea.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +62,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/e6/8091955c/MonoBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5995835e2565222bd845851833bf32626f8a8e23753c86c8cc54d6f22587cd6a/System.Globalization.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Level.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/LevelLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Base/StateMachine/IStateCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Factory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Datas/StatData.cs" root0="FORCE_HIGHLIGHTING" />
@@ -26,6 +76,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/GenericObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/ItemsObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameStateCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Stack/LootableStackableItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/ParabolicMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Utils/ParabolicMover.cs" root0="FORCE_HIGHLIGHTING" />
@@ -135,6 +186,7 @@
       <workItem from="1684153134700" duration="2356000" />
       <workItem from="1684238256017" duration="2366000" />
       <workItem from="1684319593252" duration="1653000" />
+      <workItem from="1684351204621" duration="9513000" />
     </task>
     <servers />
   </component>
