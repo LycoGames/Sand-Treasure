@@ -23,7 +23,6 @@ namespace _Game.Scripts.Control
 
         public void Initialize(PlayerUpgradesUI playerUpgradesUI)
         {
-            print(playerUpgradesUI);
             this.playerUpgradesUI = playerUpgradesUI;
             canvas = this.playerUpgradesUI.GetComponent<Canvas>();
             DisableCanvas();

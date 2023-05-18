@@ -19,7 +19,6 @@ namespace _Game.Scripts.Player
         private Rigidbody myRb;
 
         private bool input;
-        //public bool HasInput { get; private set; }
 
         public MovementWithMouse(PlayerController playerController) // set player controller in here.
         {
@@ -33,8 +32,6 @@ namespace _Game.Scripts.Player
             if (Input.GetMouseButtonDown(0))
             {
                 firstTouch = Input.mousePosition;
-                //  HasInput = true;
-                input = true;
             }
 
             if (Input.GetMouseButton(0))
@@ -46,6 +43,7 @@ namespace _Game.Scripts.Player
                     return; //to prevent move forward when there is a input without swiping
                 }
 
+                input = true;
                 var step = 1500f * Time.deltaTime;
                 playerController.transform.rotation =
                     Quaternion.RotateTowards(playerController.transform.rotation, CalculateRotation(), step);
@@ -54,7 +52,6 @@ namespace _Game.Scripts.Player
 
             if (Input.GetMouseButtonUp(0))
             {
-                //HasInput = false;
                 input = false;
             }
         }

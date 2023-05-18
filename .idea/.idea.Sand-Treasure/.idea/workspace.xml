@@ -3,44 +3,115 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EgyptPlane1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EgyptPlane1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EgyptPlane2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EgyptPlane2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EgyptPlane3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/EgyptPlane3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Materials/Base Desert Sand.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Materials/Base Desert Sand.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Materials/Vertex Color.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Materials/Vertex Color.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Unity Prefabs/Plants/Mixed_Plant_02.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Unity Prefabs/Plants/Mixed_Plant_02.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Level.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelLoader.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelLoader.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/UIElements/NextLevelButton.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/UIElements/NextLevelButton.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/UIElements/NextLevelButton.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/UIElements/NextLevelButton.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/FBX/DesertKits64_Sample.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/FBX/DesertKits64_Sample.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Materials/DesertKitsAtlas_Sample512.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Materials/DesertKitsAtlas_Sample512.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Materials/Desert_Sand_Sample256.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Materials/Desert_Sand_Sample256.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Block_Cube.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Block_Cube.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Boulder_Medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Boulder_Medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/ColumnSquare_Medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/ColumnSquare_Medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/ColumnSquare_Small1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/ColumnSquare_Small1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Column_Single.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Column_Single.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Column_TopRuined.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Column_TopRuined.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Obelisk_Stand.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Obelisk_Stand.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Pyramid_Medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Pyramid_Medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Pyramid_Small.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Pyramid_Small.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Ram_Altar.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Ram_Altar.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_SandPlateMedium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_SandPlateMedium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Slab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Slab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Temple_End.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Temple_End.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Temple_Entrance.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Temple_Entrance.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Temple_SegmentSingle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Desert_Temple_SegmentSingle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Path_End.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Path_End.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Path_Post.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Path_Post.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Path_Segment.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Path_Segment.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/PyramidStepsUpperHalf.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/PyramidStepsUpperHalf.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Pyramid_Thin_Base.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Pyramid_Thin_Base.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Pyramid_Thin_Tip.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Pyramid_Thin_Tip.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Ram_Sharp.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/Ram_Sharp.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/StoneGroup_Medium.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/StoneGroup_Medium.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/StoneGroup_Small.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Prefabs/StoneGroup_Small.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/ShowcaseScene_Sample.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/ShowcaseScene_Sample.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/ShowcaseScene_SampleSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/ShowcaseScene_SampleSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKitsAtlas_NRM_Sample512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKitsAtlas_NRM_Sample512.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKitsAtlas_Sample512.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKitsAtlas_Sample512.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/NewLayer.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_DesertKits64_Sample/Textures/NewLayer.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Plane Instance.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Plane Instance.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Plane Instance2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Models/Plane Instance2.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Treasure.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Treasure.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerOld.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerOld.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgrades.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgrades.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesZone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene/LightingData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/TerrainToMeshConvertScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/TerrainToMeshConvertScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Base/AppState/AbstractAppStateCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Base/AppState/AbstractAppState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Base/AppState/AbstractAppStateCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Base/AppState/AbstractAppState.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SellArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/Treasure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/Treasure.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameStateCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameStateCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/GameResetStateCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/GameResetState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/GameResetStateCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/GameResetState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/InGameStateCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/InGameState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/InGameStateCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/InGameState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/LoadingStateCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/LoadingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/LoadingStateCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/LoadingState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/PauseStateCanvas.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/PauseState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/PauseStateCanvas.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/PauseState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/SequenceManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/SequenceManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/UIRewardVisualizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/UIRewardVisualizer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithMouse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/MovementWithMouse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/States/IdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/States/IdleState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,9 +127,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/ea/bd397829/SceneManagerAPIInternal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5995835e2565222bd845851833bf32626f8a8e23753c86c8cc54d6f22587cd6a/System.Globalization.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Level.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/LevelLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Base/StateMachine/IStateCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Factory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -182,6 +250,7 @@
       <workItem from="1684319593252" duration="1653000" />
       <workItem from="1684351204621" duration="9557000" />
       <workItem from="1684403811246" duration="11223000" />
+      <workItem from="1684439376427" duration="3885000" />
     </task>
     <servers />
   </component>
