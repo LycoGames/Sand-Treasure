@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.Base.UserInterface;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Observer;
@@ -13,8 +14,12 @@ namespace _Game.Scripts.UI
         [SerializeField] private TextMeshProUGUI moneyText;
         [SerializeField] private Inventory inventory;
         [SerializeField] private RectTransform moneyPanel;
+
+        public RectTransform MoneyPanel => moneyPanel;
         [SerializeField] private RectTransform treasurePanel;
+        public RectTransform TreasurePanel => treasurePanel;
         [SerializeField] private TextMeshProUGUI treasureTotalText;
+      
         [SerializeField] private TextMeshProUGUI foundTreasureText;
 
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
@@ -26,12 +31,16 @@ namespace _Game.Scripts.UI
             inventory.AddObserver(this);
             moneyText.text = inventory.GetMoney().ToString();
         }
-
-        // Update is called once per frame
-        void Update()
+        
+        public void SetTotalTreasureCount(int count)
         {
+            treasureTotalText.text = count.ToString();
         }
 
+        public void SetFoundedTreasureCount(int count)
+        {
+            foundTreasureText.text = count.ToString();
+        }
         public override void OnStart()
         {
             Debug.Log("InGameUI OnStart");
@@ -56,7 +65,7 @@ namespace _Game.Scripts.UI
                     DOTween.Sequence()
                         .Append(treasurePanel.transform.DOPunchScale(punchScale, 0.1f, 2)).SetEase(Ease.InFlash)
                         .Append(treasurePanel.transform.DOScale(stockScale, 0.1f));
-                    foundTreasureText.text = value.ToString();
+                    SetFoundedTreasureCount(value);
                     break;
             }
         }

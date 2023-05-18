@@ -11,7 +11,7 @@ namespace _Game.Scripts.SequenceManager
 {
     public class SequenceManager : AbstractSingleton<SequenceManager>
     {
-        [SerializeField] private List<AbstractAppStateCanvas> AppStates;
+        [SerializeField] private List<AbstractAppState> AppStates;
         [SerializeField] private AppStateTypes startState;
 
         private readonly StateMachine appStateMachine = new StateMachine();
@@ -30,7 +30,7 @@ namespace _Game.Scripts.SequenceManager
             appStateMachine.ChangeState(GetAppState(appStateType));
         }
 
-        public AbstractAppStateCanvas GetAppState(AppStateTypes appStateType)
+        public AbstractAppState GetAppState(AppStateTypes appStateType)
         {
             foreach (var appState in AppStates)
             {

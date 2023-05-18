@@ -5,6 +5,7 @@ using _Game.Scripts.Player;
 using _Game.Scripts.Pool;
 using _Game.Scripts.Stack;
 using _Game.Scripts.States;
+using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
 using DG.Tweening;
 using UnityEngine;
@@ -21,15 +22,14 @@ namespace _Game.Scripts.Objects
         private Inventory playerInventory;
         private Dictionary<ItemType, Coroutine> coroutineDictionary = new();
         private WaitForSeconds waitForSeconds;
+
         void Start()
         {
             waitForSeconds = new WaitForSeconds(0.2f);
+            InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
+            uiRewardVisualizer.SetDestination(inGameUI.MoneyPanel);
         }
-
-        void Update()
-        {
-        }
-
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
@@ -40,6 +40,7 @@ namespace _Game.Scripts.Objects
                     playerInventory = other.GetComponent<Inventory>();
                     playerStateController = other.GetComponent<StateController>();
                 }
+
                 Actions.onCollisionSellZone?.Invoke();
                 //playerStateController.ChangeState(playerStateController.IdleState);
                 SetCoroutineDictionary();

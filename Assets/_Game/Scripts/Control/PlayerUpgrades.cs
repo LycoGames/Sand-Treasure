@@ -20,15 +20,13 @@ namespace _Game.Scripts.Control
 
         private Canvas canvas;
 
-        private void Start()
-        {
-            InitializeUI();
-            DisableCanvas();
-        }
 
-        private void InitializeUI()
+        public void Initialize(PlayerUpgradesUI playerUpgradesUI)
         {
-            canvas = playerUpgradesUI.GetComponent<Canvas>();
+            print(playerUpgradesUI);
+            this.playerUpgradesUI = playerUpgradesUI;
+            canvas = this.playerUpgradesUI.GetComponent<Canvas>();
+            DisableCanvas();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -110,6 +108,7 @@ namespace _Game.Scripts.Control
                 playerUpgradesUI.SetMovementSpeed(level);
                 return;
             }
+
             playerUpgradesUI.SetMovementSpeed(cost, level);
         }
 

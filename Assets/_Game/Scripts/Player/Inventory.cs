@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Observer;
 using _Game.Scripts.Saving;
@@ -44,6 +45,11 @@ namespace _Game.Scripts.Player
         {
             money = (int)state;
             base.NotifyObservers(money,ItemType.Money);
+        }
+
+        public void ResetTreasureCount()
+        {
+            treasure = 0;
         }
     }
 }

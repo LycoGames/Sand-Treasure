@@ -1,4 +1,7 @@
+using System;
+using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
+using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
 using DG.Tweening;
 using UnityEngine;
@@ -13,17 +16,12 @@ namespace _Game.Scripts.Objects
 
         private static readonly int OpenChest = Animator.StringToHash("OpenChest");
 
-
-        // Start is called before the first frame update
-        void Start()
+        private void Start()
         {
+            InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
+            rewardVisualizer.SetDestination(inGameUI.TreasurePanel);
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-        }
-
+        
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))

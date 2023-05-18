@@ -19,7 +19,7 @@ namespace _Game.Scripts.Utils
 
         private Camera mainCam;
         private float screenWidth;
-
+        public void SetDestination(RectTransform rectTransform) => destination=rectTransform;
         private void Start()
         {
             mainCam = Camera.main;
