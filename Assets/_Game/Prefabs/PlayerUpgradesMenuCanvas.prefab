@@ -3895,11 +3895,11 @@ MonoBehaviour:
   stackCapacityStat: {fileID: 8316455992230285905}
   stackCapacityMaxTextField: {fileID: 1417503495574953408}
   stackCapacityUpgradableCostField: {fileID: 3199463965512850711}
-  movementSpeedCostText: {fileID: 5743900272222815210}
-  movementSpeedUpgradeButton: {fileID: 5743900270250759920}
-  movementSpeedLevelText: {fileID: 5743900271796768839}
-  movementSpeedMaxTextField: {fileID: 7744065552427465114}
-  movementSpeedUpgradableCostField: {fileID: 2636285975912677644}
+  digFieldCostText: {fileID: 5743900272222815210}
+  digFieldUpgradeButton: {fileID: 5743900270250759920}
+  digFieldLevelText: {fileID: 5743900271796768839}
+  digFieldMaxTextField: {fileID: 7744065552427465114}
+  digFieldUpgradableCostField: {fileID: 2636285975912677644}
   itemDropChanceCostText: {fileID: 5743900272064220080}
   itemDropChanceUpgradeButton: {fileID: 5743900272029799570}
   itemDropChanceStat: {fileID: 5743900271288649604}

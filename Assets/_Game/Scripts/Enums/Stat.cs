@@ -6,6 +6,7 @@ namespace _Game.Scripts.Enums
         StackLimit,
         TransferSpeed,
         MovementSpeed,
-        ItemDropChance
+        ItemDropChance,
+        DigField
     }
 }

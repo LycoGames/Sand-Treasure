@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using _Game.Scripts.Enums;
 using _Game.Scripts.MeshTools;
+using _Game.Scripts.StatSystem;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -13,12 +15,21 @@ namespace _Game.Scripts.Player
         [SerializeField] private float digCooldown;
         [SerializeField] private float diggingField;
         [SerializeField] private Transform diggerPos;
+        [SerializeField] private Stats stats;
+        
         private Coroutine cooldownTimer;
         private float time = Mathf.Infinity;
         private DigZone digZone = null;
 
+        private void Start()
+        {
+            stats.OnDigFieldChange += UpdateDigField;
+            diggingField = stats.GetStat(Stat.DigField);
+        }
+
         private void OnTriggerEnter(Collider other)
         {
+            
             Debug.Log("enter"+other.name);
             if (other.TryGetComponent(out DigZone digZone))
             {
@@ -75,6 +86,11 @@ namespace _Game.Scripts.Player
             }
 
             time += Time.deltaTime;
+        }
+
+        private void UpdateDigField(float value)
+        {
+            diggingField = value;
         }
     }
 }

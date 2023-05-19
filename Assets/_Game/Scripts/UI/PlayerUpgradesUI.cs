@@ -18,11 +18,11 @@ namespace _Game.Scripts.UI
         [SerializeField] private TMP_Text stackCapacityMaxTextField;
         [SerializeField] private GameObject stackCapacityUpgradableCostField;
 
-        [Space] [SerializeField] private TMP_Text movementSpeedCostText;
-        [SerializeField] private Button movementSpeedUpgradeButton;
-        [SerializeField] private TMP_Text movementSpeedLevelText;
-        [SerializeField] private TMP_Text movementSpeedMaxTextField;
-        [SerializeField] private GameObject movementSpeedUpgradableCostField;
+        [Space] [SerializeField] private TMP_Text digFieldCostText;
+        [SerializeField] private Button digFieldUpgradeButton;
+        [SerializeField] private TMP_Text digFieldLevelText;
+        [SerializeField] private TMP_Text digFieldMaxTextField;
+        [SerializeField] private GameObject digFieldUpgradableCostField;
 
 
         [Space] [SerializeField] private TMP_Text itemDropChanceCostText;
@@ -44,7 +44,7 @@ namespace _Game.Scripts.UI
         private void Start()
         {
             stackCapacityUpgradeButton.onClick.AddListener(RequestStackCapacityUpgrade);
-            movementSpeedUpgradeButton.onClick.AddListener(RequestMovementSpeedUpgrade);
+            digFieldUpgradeButton.onClick.AddListener(RequestDigFieldUpgrade);
             itemDropChanceUpgradeButton.onClick.AddListener(RequestItemDropChanceUpgrade);
         }
 
@@ -74,17 +74,17 @@ namespace _Game.Scripts.UI
             itemDropChanceStat.text = currentLevelStat + Seconds;
         }
 
-        public void SetMovementSpeed(string cost, int level)
+        public void SetDigField(string cost, int level)
         {
-            movementSpeedCostText.text = cost;
-            movementSpeedLevelText.text = LevelText + level;
+            digFieldCostText.text = cost;
+            digFieldLevelText.text = LevelText + level;
         }
 
-        public void SetMovementSpeed(int level)
+        public void SetDigField(int level)
         {
-            movementSpeedUpgradableCostField.SetActive(false);
-            movementSpeedMaxTextField.enabled = true;
-            movementSpeedLevelText.text = LevelText + level;
+            digFieldUpgradableCostField.SetActive(false);
+            digFieldMaxTextField.enabled = true;
+            digFieldLevelText.text = LevelText + level;
         }
 
         public void SetStackCapacityUpgradeButtonInteractable(bool isInteractable)
@@ -99,10 +99,10 @@ namespace _Game.Scripts.UI
                 itemDropChanceUpgradeButton.interactable = isInteractable;
         }
 
-        public void SetMovementSpeedUpgradeButtonInteractable(bool isInteractable)
+        public void SetDigFieldUpgradeButtonInteractable(bool isInteractable)
         {
-            if (isInteractable != movementSpeedUpgradeButton.interactable)
-                movementSpeedUpgradeButton.interactable = isInteractable;
+            if (isInteractable != digFieldUpgradeButton.interactable)
+                digFieldUpgradeButton.interactable = isInteractable;
         }
 
         #endregion
@@ -119,9 +119,9 @@ namespace _Game.Scripts.UI
             OnItemDropChanceUpgradeRequest?.Invoke(Stat.ItemDropChance);
         }
 
-        private void RequestMovementSpeedUpgrade()
+        private void RequestDigFieldUpgrade()
         {
-            OnMovementSpeedUpgradeRequest?.Invoke(Stat.MovementSpeed);
+            OnMovementSpeedUpgradeRequest?.Invoke(Stat.DigField);
         }
 
         #endregion

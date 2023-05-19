@@ -55,7 +55,7 @@ namespace _Game.Scripts.Control
             OnUpgradeAction?.Invoke();
 
             SetStackCapacityOnUI();
-            SetMovementSpeedOnUI();
+            SetDigFieldOnUI();
             SetItemDropChanceOnUI();
             //SetHealth();
         }
@@ -75,8 +75,8 @@ namespace _Game.Scripts.Control
                 case Stat.ItemDropChance:
                     SetItemDropChanceOnUI();
                     break;
-                case Stat.MovementSpeed:
-                    SetMovementSpeedOnUI();
+                case Stat.DigField:
+                    SetDigFieldOnUI();
                     break;
             }
 
@@ -98,17 +98,17 @@ namespace _Game.Scripts.Control
             playerUpgradesUI.SetStackCapacity(cost, currentLevelStat, nextLevelStat);
         }
 
-        private void SetMovementSpeedOnUI()
+        private void SetDigFieldOnUI()
         {
-            var cost = playerStats.GetStatCost(Stat.MovementSpeed).ToString();
-            var level = playerStats.GetStatLevel(Stat.MovementSpeed);
-            if (IsStatOnMaxLevel(Stat.MovementSpeed))
+            var cost = playerStats.GetStatCost(Stat.DigField).ToString();
+            var level = playerStats.GetStatLevel(Stat.DigField);
+            if (IsStatOnMaxLevel(Stat.DigField))
             {
-                playerUpgradesUI.SetMovementSpeed(level);
+                playerUpgradesUI.SetDigField(level);
                 return;
             }
 
-            playerUpgradesUI.SetMovementSpeed(cost, level);
+            playerUpgradesUI.SetDigField(cost, level);
         }
 
         private void SetItemDropChanceOnUI()
@@ -158,9 +158,9 @@ namespace _Game.Scripts.Control
             playerUpgradesUI.SetStackCapacityUpgradeButtonInteractable(IsPurchasable(Stat.StackCapacity));
         }
 
-        private void SetMovementSpeedButtonInteractable()
+        private void SetDigFieldButtonInteractable()
         {
-            playerUpgradesUI.SetMovementSpeedUpgradeButtonInteractable(IsPurchasable(Stat.MovementSpeed));
+            playerUpgradesUI.SetDigFieldUpgradeButtonInteractable(IsPurchasable(Stat.DigField));
         }
 
         private void SetItemDropChanceButtonInteractable()
@@ -184,14 +184,14 @@ namespace _Game.Scripts.Control
 
         private void SubscribeToOnUpgradeAction()
         {
-            OnUpgradeAction += SetMovementSpeedButtonInteractable;
+            OnUpgradeAction += SetDigFieldButtonInteractable;
             OnUpgradeAction += SetStackCapacityUpgradeButtonInteractable;
             OnUpgradeAction += SetItemDropChanceButtonInteractable;
         }
 
         private void UnSubscribeToOnUpgradeAction()
         {
-            OnUpgradeAction -= SetMovementSpeedButtonInteractable;
+            OnUpgradeAction -= SetDigFieldButtonInteractable;
             OnUpgradeAction -= SetStackCapacityUpgradeButtonInteractable;
             OnUpgradeAction -= SetItemDropChanceButtonInteractable;
         }
