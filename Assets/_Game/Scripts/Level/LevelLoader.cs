@@ -12,7 +12,6 @@ public class LevelLoader : MonoBehaviour, ISaveable
 
     private int currentLevel;
     private Level loadedLevel;
-
     public void LoadLevel()
     {
         if (loadedLevel) DestroyLoadedLevel();
@@ -30,6 +29,8 @@ public class LevelLoader : MonoBehaviour, ISaveable
         GameManager.Instance.ResetTreasureCount();
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();
+        GameManager.Instance.ResetPlayerState();
+        GameManager.Instance.UpdateLevelText(currentLevel+1);
     }
 
     public void OnLevelComplete()
@@ -58,7 +59,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
     {
         return currentLevel;
     }
-
+    
     public void RestoreState(object state)
     {
         currentLevel = (int)state;

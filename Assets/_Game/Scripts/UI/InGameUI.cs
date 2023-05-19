@@ -22,7 +22,8 @@ namespace _Game.Scripts.UI
         [SerializeField] private TextMeshProUGUI treasureTotalText;
       
         [SerializeField] private TextMeshProUGUI foundTreasureText;
-
+        [SerializeField] private TextMeshProUGUI levelText;
+        
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
@@ -44,6 +45,11 @@ namespace _Game.Scripts.UI
         public void SetFoundedTreasureCount(int count)
         {
             foundTreasureText.text = count.ToString();
+        }
+
+        public void SetLevelText(int level)
+        {
+            levelText.text = level.ToString();
         }
         public override void OnStart()
         {

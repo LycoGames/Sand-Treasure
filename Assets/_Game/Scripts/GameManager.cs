@@ -44,6 +44,15 @@ public class GameManager : AbstractSingleton<GameManager>
     {
         player.transform.position = playerStartingPos;
         player.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void ResetPlayerState()
+    {
         playerStateController.ChangeState(playerStateController.IdleState);
+    }
+
+    public void UpdateLevelText(int level)
+    {
+        inGameUI.SetLevelText(level);
     }
 }
