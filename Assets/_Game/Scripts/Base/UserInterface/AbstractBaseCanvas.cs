@@ -11,6 +11,8 @@ namespace _Game.Scripts.Base.UserInterface
         
         [SerializeField] private Canvas canvas;
         public delegate void OnUIButtonClickEvent();
+
+        public delegate void OnUIToggleClickEvent(bool isOn);
         public void Start()
         {
         }

@@ -1,6 +1,7 @@
 using _Game.Scripts.Base.AppState;
 using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
+using UnityEngine;
 
 
 namespace _Game.Scripts.SequenceManager.AppStates
@@ -13,6 +14,7 @@ namespace _Game.Scripts.SequenceManager.AppStates
         public override void Initialize()
         {
             inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
+            inGameUI.AudioToggle = AudioOnOff;
             //inGameUI.Pause = PauseGame;
             //  playerController.OnPositionChange += inGameUI.SetDistanceText;
         }
@@ -32,6 +34,11 @@ namespace _Game.Scripts.SequenceManager.AppStates
         private void PauseGame()
         {
             SequenceManager.Instance.ChangeState(AppStateTypes.Pause);
+        }
+
+        private void AudioOnOff(bool isOn)
+        {
+            AudioListener.pause = !isOn;
         }
     }
 }

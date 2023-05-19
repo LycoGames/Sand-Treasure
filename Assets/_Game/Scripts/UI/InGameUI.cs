@@ -6,6 +6,7 @@ using _Game.Scripts.Player;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Game.Scripts.UI
 {
@@ -22,6 +23,8 @@ namespace _Game.Scripts.UI
       
         [SerializeField] private TextMeshProUGUI foundTreasureText;
 
+        [SerializeField] private Toggle audioToggle;
+        public OnUIToggleClickEvent AudioToggle;
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
 
         private readonly Vector3 stockScale = Vector3.one;
@@ -30,6 +33,7 @@ namespace _Game.Scripts.UI
         {
             inventory.AddObserver(this);
             moneyText.text = inventory.GetMoney().ToString();
+            audioToggle.onValueChanged.AddListener(ToggleAudioOnOff);
         }
         
         public void SetTotalTreasureCount(int count)
@@ -68,6 +72,11 @@ namespace _Game.Scripts.UI
                     SetFoundedTreasureCount(value);
                     break;
             }
+        }
+
+        private void ToggleAudioOnOff(bool isOn)
+        {
+            AudioToggle?.Invoke(isOn);
         }
     }
 }
