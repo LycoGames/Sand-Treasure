@@ -1,5 +1,6 @@
 using _Game.Scripts.Base.AppState;
 using _Game.Scripts.Enums;
+using _Game.Scripts.Player;
 using _Game.Scripts.SequenceManager;
 using _Game.Scripts.UI;
 using UnityEngine;
@@ -7,6 +8,8 @@ using UnityEngine;
 public class EndGameState : AbstractAppState
 {
     [SerializeField] private LevelLoader levelLoader;
+    [SerializeField] private Effects effects;
+    
     private EndGameUI endGameUI;
 
     public override void Initialize()
@@ -18,11 +21,13 @@ public class EndGameState : AbstractAppState
     public override void Enter()
     {
         UIManager.Instance.EnableCanvas(CanvasTypes.EndGame);
+        effects.effect.Play(true);
     }
 
     public override void Exit()
     {
         UIManager.Instance.DisableCanvas(CanvasTypes.EndGame);
+        effects.effect.Stop(true);
     }
 
     private void ChangeStateToLoading()

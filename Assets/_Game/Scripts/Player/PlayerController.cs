@@ -11,7 +11,6 @@ namespace _Game.Scripts.Player
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private StateController stateController;
-        [SerializeField] private Stats stats;
         [SerializeField] private WheelAnimator wheelAnimator;
 
 

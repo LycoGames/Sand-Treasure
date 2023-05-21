@@ -6,16 +6,19 @@ namespace _Game.Scripts.States
 {
     public class IdleState : IState
     {
+        PlayerAnimator playerAnimator;
+
         public void OnEnter(StateController controller)
         {
-            Debug.Log("entered idle");
+            Debug.Log("entered idle state");
+
         }
 
         public void UpdateState(StateController controller)
         {
             Debug.Log("update idle state");
         }
-    
+
         public void OnExit(StateController controller)
         {
             Debug.Log("exited idle");

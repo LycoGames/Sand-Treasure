@@ -9,7 +9,7 @@ namespace _Game.Scripts.Player
         private static readonly int StartDig = Animator.StringToHash("StartDig");
         private static readonly int StopDig = Animator.StringToHash("StopDig");
         private static readonly int Digging = Animator.StringToHash("Digging");
-    
+
         public void StartDigAnim()
         {
             arm1Animator.SetTrigger(StartDig);
@@ -21,10 +21,16 @@ namespace _Game.Scripts.Player
             arm2Animator.SetBool(Digging, false);
         }
 
-        //Event Function!
+        //Event Function! Arm1Startanim
         public void StartArm2DigAnim()
         {
             arm2Animator.SetBool(Digging, true);
+        }
+
+        //Event Function Arm1ForStopanim
+        public void StopArm2DigAnim()
+        {
+            arm2Animator.SetBool(Digging, false);
         }
     }
 }

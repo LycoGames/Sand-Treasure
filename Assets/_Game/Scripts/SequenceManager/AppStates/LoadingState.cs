@@ -23,7 +23,7 @@ namespace _Game.Scripts.SequenceManager.AppStates
             loadingUI.LoadingTime = loadingTime;
             levelLoader.LoadLevel();
             //TODO load level and exit loading
-            Invoke("StarGame", loadingTime);
+            Invoke("StartGame", loadingTime);
         }
 
         public override void Exit()
@@ -31,7 +31,7 @@ namespace _Game.Scripts.SequenceManager.AppStates
             UIManager.Instance.DisableCanvas(CanvasTypes.Loading);
         }
 
-        private void StarGame()
+        private void StartGame()
         {
             SequenceManager.Instance.ChangeState(AppStateTypes.InGame);
         }

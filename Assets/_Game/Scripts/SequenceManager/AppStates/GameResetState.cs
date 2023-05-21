@@ -6,7 +6,6 @@ namespace _Game.Scripts.SequenceManager.AppStates
 {
     public class GameResetState : AbstractAppState
     {
-
         public override void Enter()
         {
             UIManager.Instance.EnableCanvas(CanvasTypes.Loading);
