@@ -7,6 +7,7 @@ namespace _Game.Scripts.Enums
         RepairPart,
         Diamond,
         Coal,
-        Treasure
+        Treasure,
+        OrangeOre
     }
 }

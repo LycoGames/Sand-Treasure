@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4296248487276752480}
   - component: {fileID: 4321849853454246930}
   - component: {fileID: 4313824564714711606}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Crystal_13_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4287926121788168338}
   - component: {fileID: 4291823162202974754}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Diamond 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
