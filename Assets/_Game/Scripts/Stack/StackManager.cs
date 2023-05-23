@@ -5,6 +5,7 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.Pool;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.Utils;
+using TMPro;
 using UnityEngine;
 
 namespace _Game.Scripts.Stack
@@ -21,12 +22,14 @@ namespace _Game.Scripts.Stack
         [SerializeField] private bool reverseAlign;
         [SerializeField] private float offsetX = 0.5f;
         [SerializeField] private float offsetZ = 0.5f;
+        [SerializeField] private TextMeshProUGUI maxText;
 
         private Stats stats;
 
         private void Awake()
         {
             SetStats();
+            maxText.enabled = false;
         }
 
         private void OnEnable()
@@ -55,6 +58,11 @@ namespace _Game.Scripts.Stack
                 stackableItem.transform.localPosition, 1f,
                 duration,
                 GetStackPosition(stackableItem.Offset, stackData.Stack.Count)));
+
+            if (IsStackFull() == true)
+            {
+                maxText.enabled = true;
+            }
         }
 
         public StackableItem Get(ItemType type)
@@ -64,7 +72,10 @@ namespace _Game.Scripts.Stack
 
             if (stackData.Stack.Count <= 0)
                 DeActivateStack(stackData);
-
+            if (IsStackFull()==false)
+            {
+                maxText.enabled = false;
+            }
             return stackableItem;
         }
 
@@ -77,6 +88,22 @@ namespace _Game.Scripts.Stack
             return stackList.Count < GetStackLimit();
         }
 
+        public bool IsStackFull()
+        {
+            if (stackList.Count<GetStackLimit())
+            {
+                return false;
+            }
+            foreach (var stack in stackList)
+            {
+                if (stack.Stack.Count < GetStackCapacity())
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
 
         public bool CanGetFromStack(ItemType type)
         {

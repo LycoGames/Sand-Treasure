@@ -17,6 +17,7 @@ namespace _Game.Scripts.Player
 
         public void StopDigAnim()
         {
+            print("stop dig anim");
             arm1Animator.SetTrigger(StopDig);
             arm2Animator.SetBool(Digging, false);
         }

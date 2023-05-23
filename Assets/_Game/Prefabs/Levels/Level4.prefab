@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
-  - {fileID: -1538469862662967881, guid: 31120baf573e4d746b9a1e58afd55f1b, type: 3}
-  - {fileID: 5141354047206038508, guid: d0386dc8dc98e3347a392335678502d5, type: 3}
+  - {fileID: 4468780576709416444, guid: 1a76e2e005887084dbdbcf12fa980e3e, type: 3}
+  - {fileID: 5289664457077682810, guid: a90e3f253f85a2a4e8c2f77c51d57f44, type: 3}
 --- !u!1 &4930036312423174371
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4930036312423174371}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -183,7 +183,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b07a32c3d0bd23b439a158124d387223, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

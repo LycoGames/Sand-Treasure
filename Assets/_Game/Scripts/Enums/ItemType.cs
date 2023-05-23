@@ -8,6 +8,8 @@ namespace _Game.Scripts.Enums
         Diamond,
         Coal,
         Treasure,
-        OrangeOre
+        OrangeOre,
+        GreenOre,
+        RoseOre
     }
 }

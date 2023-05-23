@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d8a98d63d2d0e48a24b5913d23f526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToGet: 030000000400000006000000
+  itemsToGet: 0300000004000000060000000700000008000000
   uiRewardVisualizer: {fileID: 6917458848042563746}
 --- !u!114 &6917458848042563746
 MonoBehaviour:

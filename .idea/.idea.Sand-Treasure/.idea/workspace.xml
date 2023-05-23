@@ -3,20 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt - raft on the desert/Prefabs/Env/Rocks/EA04_Env_Rocks_Sand_01c_PRE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EmaceArt - raft on the desert/Prefabs/Env/Rocks/EA04_Env_Rocks_Sand_01c_PRE.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt - raft on the desert/Prefabs/Env/Stone/EA04_Env_Stone_Sand_01a_PRE.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EmaceArt - raft on the desert/Prefabs/Env/Stone/EA04_Env_Stone_Sand_01a_PRE.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_AmbientOcclusion.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_AmbientOcclusion.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Color.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Color.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Displacement.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Displacement.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalDX.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalDX.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalGL.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalGL.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Roughness.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Roughness.jpg.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/New/CoalBlue.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/New/CoalBlue.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/New/Crystal_03_orange.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/New/Crystal_03_orange.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/New/Diamond 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/New/Diamond 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" afterDir="false" />
@@ -25,12 +12,13 @@
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level6.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level7.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesZone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesZone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level9.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene/NavMesh.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene/NavMesh.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/TerrainToMeshConvertScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/TerrainToMeshConvertScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/ItemType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/ItemType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Stack/StackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Stack/StackManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +34,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f712b1dc50b4468388b9c5f95d0d0eaf159e00/ea/bd397829/SceneManagerAPIInternal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5995835e2565222bd845851833bf32626f8a8e23753c86c8cc54d6f22587cd6a/System.Globalization.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameUIRotater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Base/StateMachine/IStateCanvas.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Factory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Control/Items/Item.cs" root0="FORCE_HIGHLIGHTING" />
@@ -173,7 +163,8 @@
       <workItem from="1684492878070" duration="6313000" />
       <workItem from="1684752235444" duration="605000" />
       <workItem from="1684756777236" duration="1237000" />
-      <workItem from="1684786223535" duration="1944000" />
+      <workItem from="1684786223535" duration="2782000" />
+      <workItem from="1684839848831" duration="7734000" />
     </task>
     <servers />
   </component>

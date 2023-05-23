@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
-  - {fileID: 6957982343563665668, guid: 42d39f1bcec79fd498c77c43aef16cf9, type: 3}
-  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
+  - {fileID: 5289664457077682810, guid: a90e3f253f85a2a4e8c2f77c51d57f44, type: 3}
+  - {fileID: 4468780576709416444, guid: 1a76e2e005887084dbdbcf12fa980e3e, type: 3}
 --- !u!1 &8172799142301953162
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,8 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
-  - {fileID: 6957982343563665668, guid: 42d39f1bcec79fd498c77c43aef16cf9, type: 3}
-  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
+  - {fileID: 4468780576709416444, guid: 1a76e2e005887084dbdbcf12fa980e3e, type: 3}
 --- !u!1 &8172799143259581158
 GameObject:
   m_ObjectHideFlags: 0
