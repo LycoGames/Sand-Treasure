@@ -16,7 +16,7 @@ namespace _Game.Scripts.Player
         [SerializeField] private float diggingField;
         [SerializeField] private Transform diggerPos;
         [SerializeField] private Stats stats;
-        
+
         private Coroutine cooldownTimer;
         private float time = Mathf.Infinity;
         private DigZone digZone = null;
@@ -29,8 +29,6 @@ namespace _Game.Scripts.Player
 
         private void OnTriggerEnter(Collider other)
         {
-            
-            Debug.Log("enter"+other.name);
             if (other.TryGetComponent(out DigZone digZone))
             {
                 this.digZone = digZone;
@@ -39,7 +37,6 @@ namespace _Game.Scripts.Player
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("exit"+other.name);
             if (other.TryGetComponent(out DigZone digZone))
             {
                 this.digZone = null;
@@ -70,7 +67,7 @@ namespace _Game.Scripts.Player
         //     print("zeroya düştü");
         //     return Vector3.negativeInfinity;
         // }
-        
+
 
         public void Dig()
         {

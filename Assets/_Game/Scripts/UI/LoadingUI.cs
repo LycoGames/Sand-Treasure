@@ -11,23 +11,23 @@ namespace _Game.Scripts.UI
         [SerializeField] private Image loadingFill;
        // public float loadingTime;
         public float LoadingTime { get; set; }
-        public void LoadLevel()
-        {
-            StartCoroutine(LoadLevelAsync());
-        }
-
-        private IEnumerator LoadLevelAsync()
-        {
-            //TODO on click next level run LoadLevel() method
-            //TODO operation= LoadManager.LoadNextLevel();
-            AsyncOperation operation = SceneManager.LoadSceneAsync(1);
-            while (!operation.isDone)
-            {
-                float operationValue = Mathf.Clamp01(operation.progress / 0.9f);
-                loadingFill.fillAmount += operationValue;
-                yield return null;
-            }
-        }
+        // public void LoadLevel()
+        // {
+        //     StartCoroutine(LoadLevelAsync());
+        // }
+        //
+        // private IEnumerator LoadLevelAsync()
+        // {
+        //     //TODO on click next level run LoadLevel() method
+        //     //TODO operation= LoadManager.LoadNextLevel();
+        //     AsyncOperation operation = SceneManager.LoadSceneAsync(1);
+        //     while (!operation.isDone)
+        //     {
+        //         float operationValue = Mathf.Clamp01(operation.progress / 0.9f);
+        //         loadingFill.fillAmount += operationValue;
+        //         yield return null;
+        //     }
+        // }
 
         public override void OnStart()
         {

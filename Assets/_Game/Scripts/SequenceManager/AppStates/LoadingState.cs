@@ -22,6 +22,7 @@ namespace _Game.Scripts.SequenceManager.AppStates
             UIManager.Instance.EnableCanvas(CanvasTypes.Loading);
             loadingUI.LoadingTime = loadingTime;
             levelLoader.LoadLevel();
+            Debug.Log("enter loading");
             //TODO load level and exit loading
             Invoke("StartGame", loadingTime);
         }

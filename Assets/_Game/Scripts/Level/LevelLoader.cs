@@ -10,13 +10,16 @@ public class LevelLoader : MonoBehaviour, ISaveable
     [SerializeField] private List<Level> levels = new List<Level>();
     [SerializeField] private PlayerUpgradesUI playerUpgradesMenuUI;
 
-    private int currentLevel;
+    public int currentLevel;
     private Level loadedLevel;
+
     public void LoadLevel()
     {
+        print(currentLevel);
         if (loadedLevel) DestroyLoadedLevel();
         if (currentLevel > levels.Count - 1)
         {
+            print("load random");
             loadedLevel = LoadRandomLevel();
         }
 
@@ -30,12 +33,14 @@ public class LevelLoader : MonoBehaviour, ISaveable
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();
         GameManager.Instance.ResetPlayerState();
-        GameManager.Instance.UpdateLevelText(currentLevel+1);
+        GameManager.Instance.UpdateLevelText(currentLevel + 1);
     }
 
     public void OnLevelComplete()
     {
+        print("on level comp");
         currentLevel++;
+        print("on level comp" + currentLevel);
     }
 
     private void DestroyLoadedLevel()
@@ -59,7 +64,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
     {
         return currentLevel;
     }
-    
+
     public void RestoreState(object state)
     {
         currentLevel = (int)state;
