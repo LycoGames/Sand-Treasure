@@ -13,7 +13,8 @@ namespace _Game.Scripts.Objects
         [SerializeField] private Animator animator;
         [SerializeField] private UIRewardVisualizer rewardVisualizer;
         [SerializeField] private BoxCollider boxCollider;
-
+        [SerializeField] private AudioClip treasureFoundSFX;
+        
         private static readonly int OpenChest = Animator.StringToHash("OpenChest");
 
         private void Start()
@@ -26,6 +27,7 @@ namespace _Game.Scripts.Objects
         {
             if (other.CompareTag("Player"))
             {
+                SoundManager.Instance.PlayOneShot(treasureFoundSFX);
                 boxCollider.enabled = false;
                 animator.SetTrigger(OpenChest);
                 Inventory playerInventory = other.GetComponent<Inventory>();

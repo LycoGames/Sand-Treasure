@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="" />
+    <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_01_rose.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_01_rose.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_01_rose_pure.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_01_rose_pure.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_02_purple.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_02_purple.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_02_purple_pure.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_02_purple_pure.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_03_orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_03_orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_03_orange_pure.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_03_orange_pure.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_04_green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_04_green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_04_green_pure.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_04_green_pure.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_05_blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_05_blue.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_05_blue_pure.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Best Crystals/Models/Materials/Crystals_05_blue_pure.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction1_Tailights9-16.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction1_Tailights9-16.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Body.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Glass.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Matte.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Matte.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Hyper Casual City Buildings/Materials/City Buildings Material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hyper Casual City Buildings/Materials/City Buildings Material.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Treasure.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Treasure.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SellArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/Treasure.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/Treasure.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameState.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -147,6 +172,7 @@
       <workItem from="1684756777236" duration="1237000" />
       <workItem from="1684786223535" duration="2782000" />
       <workItem from="1684839848831" duration="8035000" />
+      <workItem from="1684868975684" duration="1359000" />
     </task>
     <servers />
   </component>

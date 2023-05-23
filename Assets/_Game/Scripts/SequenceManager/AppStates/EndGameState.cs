@@ -9,6 +9,7 @@ public class EndGameState : AbstractAppState
 {
     [SerializeField] private LevelLoader levelLoader;
     [SerializeField] private Effects effects;
+    [SerializeField] private AudioClip levelCompleteSFX;
     
     private EndGameUI endGameUI;
 
@@ -22,6 +23,7 @@ public class EndGameState : AbstractAppState
     {
         UIManager.Instance.EnableCanvas(CanvasTypes.EndGame);
         effects.effect.Play(true);
+        SoundManager.Instance.PlayOneShot(levelCompleteSFX);
     }
 
     public override void Exit()

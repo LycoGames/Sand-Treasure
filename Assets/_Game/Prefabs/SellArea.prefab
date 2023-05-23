@@ -77,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsToGet: 0300000004000000060000000700000008000000
   uiRewardVisualizer: {fileID: 6917458848042563746}
+  sellSFX: {fileID: 8300000, guid: 088c605706e342e4695b92db5559d28b, type: 3}
 --- !u!114 &6917458848042563746
 MonoBehaviour:
   m_ObjectHideFlags: 0

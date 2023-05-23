@@ -16,7 +16,8 @@ namespace _Game.Scripts.Objects
     {
         [SerializeField] private List<ItemType> itemsToGet = new();
         [SerializeField] private UIRewardVisualizer uiRewardVisualizer;
-
+        [SerializeField] private AudioClip sellSFX;
+        
         private StateController playerStateController;
         private StackManager playerStackManager;
         private Inventory playerInventory;
@@ -44,6 +45,7 @@ namespace _Game.Scripts.Objects
                 Actions.onCollisionSellZone?.Invoke();
                 //playerStateController.ChangeState(playerStateController.IdleState);
                 SetCoroutineDictionary();
+                SoundManager.Instance.Play(sellSFX);
             }
         }
 

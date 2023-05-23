@@ -18,6 +18,7 @@ namespace _Game.Scripts.States
                 effects = controller.GetComponent<Effects>();
             }
             effects.effect.Play(true);
+            SoundManager.Instance.PlayLoop();
             playerAnimator.StartDigAnim();
             Debug.Log("entered dig state");
         }
@@ -32,6 +33,7 @@ namespace _Game.Scripts.States
         {
             playerAnimator.StopDigAnim();
             effects.effect.Stop(true);
+            SoundManager.Instance.StopLoop();
             Debug.Log("exited dig state");
         }
     }

@@ -50,6 +50,7 @@ MonoBehaviour:
   animator: {fileID: 6592522062815500762}
   rewardVisualizer: {fileID: 6321996363970991450}
   boxCollider: {fileID: 6321996363970991449}
+  treasureFoundSFX: {fileID: 8300000, guid: 8eb4a794a993be446b9a26fca407b6f4, type: 3}
 --- !u!114 &6321996363970991450
 MonoBehaviour:
   m_ObjectHideFlags: 0
