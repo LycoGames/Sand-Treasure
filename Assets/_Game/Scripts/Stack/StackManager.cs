@@ -20,6 +20,7 @@ namespace _Game.Scripts.Stack
         [SerializeField] private int rowCount = 1;
         [SerializeField] private int columnCount = 1;
         [SerializeField] private bool reverseAlign;
+        [SerializeField] private bool horizontalAlign;
         [SerializeField] private float offsetX = 0.5f;
         [SerializeField] private float offsetZ = 0.5f;
         [SerializeField] private TextMeshProUGUI maxText;
@@ -72,7 +73,7 @@ namespace _Game.Scripts.Stack
 
             if (stackData.Stack.Count <= 0)
                 DeActivateStack(stackData);
-            if (IsStackFull()==false)
+            if (IsStackFull() == false)
             {
                 maxText.enabled = false;
             }
@@ -90,7 +91,7 @@ namespace _Game.Scripts.Stack
 
         public bool IsStackFull()
         {
-            if (stackList.Count<GetStackLimit())
+            if (stackList.Count < GetStackLimit())
             {
                 return false;
             }
@@ -174,7 +175,15 @@ namespace _Game.Scripts.Stack
             if (stackList.Count == 0)
                 return;
 
-            if (stackList.Count % 2 == 1)
+            if (horizontalAlign)
+            {
+                foreach (StackData stack in stackList.ToArray())
+                {
+                    stack.transform.localPosition = GetStackHolderPositionHorizontal(stack);
+                }
+            }
+
+            else if (stackList.Count % 2 == 1)
             {
                 foreach (StackData stack in stackList)
                 {
@@ -202,7 +211,10 @@ namespace _Game.Scripts.Stack
             return new Vector3((stackList.IndexOf(stack) % 2 == 0 ? -1 : 1) * offsetX, 0,
                 stackList.IndexOf(stack) / 2 * offsetZ);
         }
-
+        private Vector3 GetStackHolderPositionHorizontal(StackData stack)
+        {
+            return new Vector3(offsetX * stackList.IndexOf(stack), 0, 0);
+        }
         private Vector3 GetStackPosition(Vector3 itemBounds, int stackItemCount)
         {
             return new Vector3(itemBounds.x * ((stackItemCount - 1) % columnCount),
