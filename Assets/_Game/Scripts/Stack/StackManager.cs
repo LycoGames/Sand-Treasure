@@ -77,6 +77,7 @@ namespace _Game.Scripts.Stack
             {
                 maxText.enabled = false;
             }
+
             return stackableItem;
         }
 
@@ -95,6 +96,7 @@ namespace _Game.Scripts.Stack
             {
                 return false;
             }
+
             foreach (var stack in stackList)
             {
                 if (stack.Stack.Count < GetStackCapacity())
@@ -211,10 +213,17 @@ namespace _Game.Scripts.Stack
             return new Vector3((stackList.IndexOf(stack) % 2 == 0 ? -1 : 1) * offsetX, 0,
                 stackList.IndexOf(stack) / 2 * offsetZ);
         }
+
         private Vector3 GetStackHolderPositionHorizontal(StackData stack)
         {
-            return new Vector3(offsetX * stackList.IndexOf(stack), 0, 0);
+            if (stackList.IndexOf(stack) == 0)
+            {
+                return Vector3.zero;
+            }
+            return new Vector3(((stackList.IndexOf(stack) + 1) / 2) * offsetX * (stackList.IndexOf(stack) % 2 == 0 ? 1 : -1),0,0);
+           // return new Vector3(offsetX * stackList.IndexOf(stack), 0, 0);
         }
+
         private Vector3 GetStackPosition(Vector3 itemBounds, int stackItemCount)
         {
             return new Vector3(itemBounds.x * ((stackItemCount - 1) % columnCount),
