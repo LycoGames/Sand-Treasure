@@ -25,7 +25,6 @@ namespace _Game.Scripts.States
 
         public void UpdateState(StateController controller)
         {
-            Debug.Log("update dig state");
             playerMeshHandler.Dig();
         }
 

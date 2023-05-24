@@ -13,7 +13,6 @@ namespace _Game.Scripts.States
 
         public void UpdateState(StateController controller)
         {
-            Debug.Log("update idle state");
         }
 
         public void OnExit(StateController controller)

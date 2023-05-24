@@ -75,7 +75,6 @@ namespace _Game.Scripts.Player
             {
                 if (digZone != null)
                 {
-                    Debug.Log("digging");
                     digZone.AddDeformingForce(diggerPos.position, force, diggingField);
                 }
 

@@ -15,11 +15,9 @@ public class LevelLoader : MonoBehaviour, ISaveable
 
     public void LoadLevel()
     {
-        print(currentLevel);
         if (loadedLevel) DestroyLoadedLevel();
         if (currentLevel > levels.Count - 1)
         {
-            print("load random");
             loadedLevel = LoadRandomLevel();
         }
 
@@ -38,9 +36,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
 
     public void OnLevelComplete()
     {
-        print("on level comp");
         currentLevel++;
-        print("on level comp" + currentLevel);
     }
 
     private void DestroyLoadedLevel()

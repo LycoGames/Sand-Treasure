@@ -50,7 +50,6 @@ namespace _Game.Scripts.MeshTools
             meshScale = meshBase.transform.localScale;
             scaledPos = new Vector3();
             float zoneSize = transform.localScale.x / 2;
-            Debug.Log(vertices.Length);
             for (int i = 0; i < vertices.Length; i++)
             {
                 scaledPos = GetScaledVector(vertices[i], meshScale);

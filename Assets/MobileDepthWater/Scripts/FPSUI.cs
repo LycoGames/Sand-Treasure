@@ -1,3 +1,5 @@
+using TMPro;
+
 namespace Assets.MobileOptimizedWater.Scripts
 {
     using Assets.Scripts.Helpers;
@@ -6,7 +8,7 @@ namespace Assets.MobileOptimizedWater.Scripts
 
     public class FPSUI : MonoBehaviour
     {
-        [SerializeField] private Text fpsText;
+        [SerializeField] private TextMeshProUGUI fpsText;
 
         private FPSCounter fpsCounter;
 
