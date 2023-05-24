@@ -17,7 +17,12 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 playerStartingPos;
     [SerializeField] private StateController playerStateController;
-    
+
+    protected override void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     public void IncreaseFoundedTreasureCount()
     {
         foundedTreasureCount++;

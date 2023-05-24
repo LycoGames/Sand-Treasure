@@ -9,15 +9,17 @@ namespace _Game.Scripts.States
         private PlayerMeshHandler playerMeshHandler;
         private PlayerAnimator playerAnimator;
         private Effects effects;
+
         public void OnEnter(StateController controller)
         {
-            if (playerMeshHandler == null|| playerAnimator==null)
+            if (playerMeshHandler == null || playerAnimator == null)
             {
                 playerMeshHandler = controller.GetComponent<PlayerMeshHandler>();
                 playerAnimator = controller.GetComponent<PlayerAnimator>();
                 effects = controller.GetComponent<Effects>();
             }
-            effects.effect.Play(true);
+
+            effects.effect.Play();
             SoundManager.Instance.PlayLoop();
             playerAnimator.StartDigAnim();
             Debug.Log("entered dig state");
@@ -31,7 +33,7 @@ namespace _Game.Scripts.States
         public void OnExit(StateController controller)
         {
             playerAnimator.StopDigAnim();
-            effects.effect.Stop(true);
+            effects.effect.Stop();
             SoundManager.Instance.StopLoop();
             Debug.Log("exited dig state");
         }
