@@ -13,7 +13,7 @@ namespace _Game.Scripts.Base.UserInterface
         public delegate void OnUIButtonClickEvent();
 
         public delegate void OnUIToggleClickEvent(bool isOn);
-        public void Start()
+        public virtual void Start()
         {
         }
 

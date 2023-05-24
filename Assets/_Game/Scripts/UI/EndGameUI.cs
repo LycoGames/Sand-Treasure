@@ -9,11 +9,15 @@ public class EndGameUI : AbstractBaseCanvas
     [SerializeField] private Button nextLevelButton;
 
     public OnUIButtonClickEvent NextLevel;
-    
+
+    public override void Start()
+    {
+        nextLevelButton.onClick.AddListener(GoNextLevel);
+    }
+
     public override void OnStart()
     {
         Debug.Log("EndGameUI Enter");
-        nextLevelButton.onClick.AddListener(GoNextLevel);
     }
 
     public override void OnQuit()
