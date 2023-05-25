@@ -1,6 +1,7 @@
 using System.Collections;
 using _Game.Scripts.Enums;
 using _Game.Scripts.MeshTools;
+using _Game.Scripts.Player;
 using _Game.Scripts.Pool;
 using _Game.Scripts.Stack;
 using _Game.Scripts.States;
@@ -20,6 +21,7 @@ namespace _Game.Scripts.Objects
         private WaitForSeconds diggingCoroutineWaitForSeconds;
         private StackManager playerStackManager;
         private Transform playerDigPos;
+        private PlayerController playerController;
         public float LootingCooldown { get; set; }
 
         private void Start()
@@ -36,11 +38,13 @@ namespace _Game.Scripts.Objects
                 stateController = other.GetComponent<StateController>();
                 playerStackManager = other.GetComponent<StackManager>();
                 playerDigPos = other.gameObject.transform.Find("Digger").gameObject.transform;
+                playerController = other.GetComponent<PlayerController>();
                 Stats stats = other.GetComponent<Stats>();
                 stats.OnItemDropChanceChange += UpdateLootingCooldown;
                 UpdateLootingCooldown(stats.GetStat(Stat.ItemDropChance));
             }
-
+            stateController.ChangeState(stateController.DigState);
+            playerController.IncreaseMovementSpeed(false);
             diggingCoroutine = StartCoroutine(DiggingCoroutine());
         }
 
@@ -52,6 +56,8 @@ namespace _Game.Scripts.Objects
             {
                 StopCoroutine(diggingCoroutine);
             }
+            stateController.ChangeState(stateController.IdleState);
+            playerController.IncreaseMovementSpeed(true);
         }
 
         private void UpdateLootingCooldown(float value)

@@ -13,7 +13,6 @@ namespace _Game.Scripts.Player
         [SerializeField] private StateController stateController;
         [SerializeField] private WheelAnimator wheelAnimator;
 
-
         //   [SerializeField] private WheelsController wheelsController;
         //   [SerializeField] private Joystick joystick;
         //   [SerializeField] private float steerSense;
@@ -26,26 +25,29 @@ namespace _Game.Scripts.Player
             Actions.onCollisionSellZone += () => isInSellZone = !isInSellZone;
             Imover = new MovementWithMouse(this);
         }
-
+        public void IncreaseMovementSpeed(bool isIncrease)
+        {
+            Imover.IncreaseMovementSpeed(isIncrease);
+        }
         private void Update()
         {
-            if (Imover.HasInput())
-            {
-                if (stateController.CurrentState == stateController.IdleState)
-                {
-                    stateController.ChangeState(stateController.DigState);
-                }
-
-                wheelAnimator.AnimateWheels();
-            }
-            else
-            {
-                if (stateController.CurrentState == stateController.DigState )
-                {
-                    stateController.ChangeState(stateController.IdleState);
-                }
-            }
-
+            // if (Imover.HasInput())
+            // {
+            //     if (stateController.CurrentState == stateController.IdleState)
+            //     {
+            //         stateController.ChangeState(stateController.DigState);
+            //     }
+            //
+            //     
+            // }
+            // else
+            // {
+            //     if (stateController.CurrentState == stateController.DigState )
+            //     {
+            //         stateController.ChangeState(stateController.IdleState);
+            //     }
+            // }
+            wheelAnimator.AnimateWheels();
             Movement();
         }
 

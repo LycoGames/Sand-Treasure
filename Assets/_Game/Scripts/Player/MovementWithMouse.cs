@@ -15,7 +15,9 @@ namespace _Game.Scripts.Player
         public float speed;
 
         private PlayerController playerController;
-        private float movementSpeed = 8f;
+        private float movementSpeed = 8;
+        private readonly float maxSpeed = 8;
+        private readonly float minSpeed = 4;
         private Rigidbody myRb;
 
         private bool input;
@@ -24,7 +26,6 @@ namespace _Game.Scripts.Player
         {
             this.playerController = playerController;
         }
-
 
         public void Movement()
         {
@@ -61,6 +62,10 @@ namespace _Game.Scripts.Player
             return input;
         }
 
+        public void IncreaseMovementSpeed(bool isIncrease)
+        {
+            movementSpeed = isIncrease ? maxSpeed : minSpeed;
+        }
 
         private Quaternion CalculateRotation()
         {
@@ -75,11 +80,6 @@ namespace _Game.Scripts.Player
         private bool IsPointerOverUIElement()
         {
             return IsPointerOverUIElement(GetEventSystemRaycastResults());
-        }
-
-        private void UpdateMovementSpeed(float speed)
-        {
-            movementSpeed = speed;
         }
 
         private bool IsPointerOverUIElement(IEnumerable<RaycastResult> eventSystemRaycastResults)
