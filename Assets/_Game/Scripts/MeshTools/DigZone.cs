@@ -50,15 +50,17 @@ namespace _Game.Scripts.MeshTools
             meshScale = meshBase.transform.localScale;
             scaledPos = new Vector3();
             Debug.Log(vertices.Length);
-            float zoneSize = transform.localScale.x / 2;
+           // float zoneSize = transform.localScale.x / 2;
             for (int i = 0; i < vertices.Length; i++)
             {
                 scaledPos = GetScaledVector(vertices[i], meshScale);
-                if (Vector3.Distance(scaledPos, transform.position) <= zoneSize)
-                {
-                    zoneVertices.Add(i, vertices[i]);
-                    totalDigHeight += vertices[i].y;
-                }
+                // if (Vector3.Distance(scaledPos, transform.position) <= zoneSize)
+                // {
+                //     zoneVertices.Add(i, vertices[i]);
+                //     totalDigHeight += vertices[i].y;
+                // }
+                zoneVertices.Add(i, vertices[i]);
+                totalDigHeight += vertices[i].y;
             }
         }
 
