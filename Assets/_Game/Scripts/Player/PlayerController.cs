@@ -25,21 +25,23 @@ namespace _Game.Scripts.Player
             Actions.onCollisionSellZone += () => isInSellZone = !isInSellZone;
             Imover = new MovementWithMouse(this);
         }
+
         public void IncreaseMovementSpeed(bool isIncrease)
         {
             Imover.IncreaseMovementSpeed(isIncrease);
         }
+
         private void Update()
         {
-            // if (Imover.HasInput())
-            // {
-            //     if (stateController.CurrentState == stateController.IdleState)
-            //     {
-            //         stateController.ChangeState(stateController.DigState);
-            //     }
-            //
-            //     
-            // }
+            if (Imover.HasInput())
+            {
+                // if (stateController.CurrentState == stateController.IdleState)
+                // {
+                //     stateController.ChangeState(stateController.DigState);
+                // }
+                wheelAnimator.AnimateWheels();
+            }
+
             // else
             // {
             //     if (stateController.CurrentState == stateController.DigState )
@@ -47,14 +49,12 @@ namespace _Game.Scripts.Player
             //         stateController.ChangeState(stateController.IdleState);
             //     }
             // }
-            wheelAnimator.AnimateWheels();
             Movement();
         }
 
         private void Movement()
         {
             Imover.Movement();
-            //moving anim
         }
     }
 }
