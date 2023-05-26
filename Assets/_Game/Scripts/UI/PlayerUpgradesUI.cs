@@ -1,5 +1,6 @@
 using System;
 using _Game.Scripts.Enums;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,9 @@ namespace _Game.Scripts.UI
 {
     public class PlayerUpgradesUI : MonoBehaviour
     {
+        [SerializeField] private RectTransform upgradesUIRectTransform;
+        [SerializeField] private Canvas upgradesCanvas;
+        
         public Action<Stat> OnStackCapacityUpgradeRequest;
         public Action<Stat> OnItemDropChanceUpgradeRequest;
         public Action<Stat> OnMovementSpeedUpgradeRequest;
@@ -39,6 +43,16 @@ namespace _Game.Scripts.UI
         private const string PcsText = "pcs";
         private const string Seconds = "sec";
 
+        public void OnEnter()
+        {
+            upgradesCanvas.enabled = true;
+            upgradesUIRectTransform.DOAnchorPos(Vector2.zero, 0.25f).SetAutoKill(true);
+        }
+
+        public void OnExit()
+        {
+            upgradesUIRectTransform.DOAnchorPos(new Vector2(1080, 0), 0.25f).SetAutoKill(true).OnComplete((() => upgradesCanvas.enabled=false));
+        }
         #region Changes
 
         private void Start()

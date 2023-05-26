@@ -1,32 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using _Game.Scripts.Base.UserInterface;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EndGameUI : AbstractBaseCanvas
+namespace _Game.Scripts.UI
 {
-    [SerializeField] private Button nextLevelButton;
-
-    public OnUIButtonClickEvent NextLevel;
-
-    public override void Start()
+    public class EndGameUI : AbstractBaseCanvas
     {
-        nextLevelButton.onClick.AddListener(GoNextLevel);
-    }
+        [SerializeField] private Button nextLevelButton;
+        [SerializeField] private RectTransform nextLevelButtonRectTransform;
+    
+        public OnUIButtonClickEvent NextLevel;
 
-    public override void OnStart()
-    {
-        Debug.Log("EndGameUI Enter");
-    }
+        public override void Start()
+        {
+            nextLevelButton.onClick.AddListener(GoNextLevel);
+        }
 
-    public override void OnQuit()
-    {
-        Debug.Log("EndGameUI Exit");
-    }
+        public override void OnStart()
+        {
+            Debug.Log("EndGameUI Enter");
+            nextLevelButtonRectTransform.DOAnchorPos(new Vector2(-170,0),0.25f);
+        }
 
-    private void GoNextLevel()
-    {
-        NextLevel?.Invoke();
+        public override void OnQuit()
+        {
+            Debug.Log("EndGameUI Exit");
+            nextLevelButtonRectTransform.DOAnchorPos(new Vector2(170,0),0.25f);
+        }
+
+        private void GoNextLevel()
+        {
+            NextLevel?.Invoke();
+        }
     }
 }

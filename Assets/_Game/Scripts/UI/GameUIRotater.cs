@@ -1,17 +1,19 @@
 using UnityEngine;
 
-
-public class GameUIRotater : MonoBehaviour
+namespace _Game.Scripts.UI
 {
-    private Transform cam;
-
-    private void Start()
+    public class GameUIRotater : MonoBehaviour
     {
-        cam = Camera.main.transform;
-    }
+        private Transform cam;
 
-    private void LateUpdate()
-    {
-        transform.LookAt(transform.position + cam.forward);
+        private void Start()
+        {
+            cam = Camera.main.transform;
+        }
+
+        private void LateUpdate()
+        {
+            transform.LookAt(transform.position + cam.forward);
+        }
     }
 }

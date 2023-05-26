@@ -1,7 +1,6 @@
 using _Game.Scripts.Base.AppState;
 using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
-using _Game.Scripts.UserInterface.Canvases;
 
 namespace _Game.Scripts.SequenceManager.AppStates
 {

@@ -4,7 +4,6 @@ using _Game.Scripts.Base.Singleton;
 using _Game.Scripts.Base.StateMachine;
 using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
-using _Game.Scripts.UserInterface;
 using UnityEngine;
 
 namespace _Game.Scripts.SequenceManager

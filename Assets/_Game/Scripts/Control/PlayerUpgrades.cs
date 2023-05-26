@@ -18,13 +18,13 @@ namespace _Game.Scripts.Control
         private Stats playerStats;
         private Inventory playerInventory;
 
-        private Canvas canvas;
+        //private Canvas canvas;
 
 
         public void Initialize(PlayerUpgradesUI playerUpgradesUI)
         {
             this.playerUpgradesUI = playerUpgradesUI;
-            canvas = this.playerUpgradesUI.GetComponent<Canvas>();
+            //canvas = this.playerUpgradesUI.GetComponent<Canvas>();
             DisableCanvas();
         }
 
@@ -198,12 +198,12 @@ namespace _Game.Scripts.Control
 
         private void EnableCanvas()
         {
-            canvas.enabled = true;
+            playerUpgradesUI.OnEnter();
         }
 
         private void DisableCanvas()
         {
-            canvas.enabled = false;
+            playerUpgradesUI.OnExit();
         }
     }
 }

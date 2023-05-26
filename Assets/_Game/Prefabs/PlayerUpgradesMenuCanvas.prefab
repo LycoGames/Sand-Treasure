@@ -266,7 +266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 942, y: 0}
   m_SizeDelta: {x: 750, y: 950}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2978458982924046443
@@ -3890,6 +3890,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5327fe9ae726d7d47a1a4e8f78570220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  upgradesUIRectTransform: {fileID: 1933189856958076280}
+  upgradesCanvas: {fileID: 6562324356185804196}
   stackCapacityCostText: {fileID: 8316455991973604469}
   stackCapacityUpgradeButton: {fileID: 3064946927461450610}
   stackCapacityStat: {fileID: 8316455992230285905}

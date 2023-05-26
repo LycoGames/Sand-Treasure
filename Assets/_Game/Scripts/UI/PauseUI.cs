@@ -1,7 +1,6 @@
-using System;
 using _Game.Scripts.Base.UserInterface;
 
-namespace _Game.Scripts.UserInterface.Canvases
+namespace _Game.Scripts.UI
 {
     public class PauseUI : AbstractBaseCanvas
     {
