@@ -17,7 +17,7 @@ namespace _Game.Scripts.Player
         private PlayerController playerController;
         private float movementSpeed = 8;
         private readonly float maxSpeed = 8;
-        private readonly float minSpeed = 4;
+        private readonly float minSpeed = 2;
         private Rigidbody myRb;
 
         private bool input;

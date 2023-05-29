@@ -33,20 +33,18 @@ namespace _Game.Scripts.Objects
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Player"))
+            if (!other.CompareTag("Player")) return;
+            if (playerStackManager == null)
             {
-                if (playerStackManager == null)
-                {
-                    playerStackManager = other.GetComponent<StackManager>();
-                    playerInventory = other.GetComponent<Inventory>();
-                    playerStateController = other.GetComponent<StateController>();
-                }
-
-                Actions.onCollisionSellZone?.Invoke();
-                //playerStateController.ChangeState(playerStateController.IdleState);
-                SetCoroutineDictionary();
-                SoundManager.Instance.Play(sellSFX);
+                playerStackManager = other.GetComponent<StackManager>();
+                playerInventory = other.GetComponent<Inventory>();
+                playerStateController = other.GetComponent<StateController>();
             }
+
+            Actions.onCollisionSellZone?.Invoke();
+            //playerStateController.ChangeState(playerStateController.IdleState);
+            SetCoroutineDictionary();
+            SoundManager.Instance.Play(sellSFX);
         }
 
         private void SetCoroutineDictionary()
@@ -91,6 +89,7 @@ namespace _Game.Scripts.Objects
 
         private void OnTriggerExit(Collider other)
         {
+            if (!other.CompareTag("Player")) return;
             StopAllCoroutines();
             Actions.onCollisionSellZone?.Invoke();
         }

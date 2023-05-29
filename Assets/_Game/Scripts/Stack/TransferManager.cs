@@ -165,7 +165,8 @@ namespace _Game.Scripts.Stack
             //     });
             if (stackManager.CanAddToStack(stackableItem.Type))
             {
-                stackManager.Add(stackableItem, transferSpeed);
+                //stackManager.Add(stackableItem, transferSpeed);
+                stackManager.Add(stackableItem, 0.25f);
             }
         }
 

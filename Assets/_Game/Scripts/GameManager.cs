@@ -17,7 +17,8 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 playerStartingPos;
     [SerializeField] private StateController playerStateController;
-
+    [SerializeField] private PlayerController playerController;
+    
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
@@ -59,5 +60,10 @@ public class GameManager : AbstractSingleton<GameManager>
     public void UpdateLevelText(int level)
     {
         inGameUI.SetLevelText(level);
+    }
+
+    public void ResetPlayerSpeed()
+    {
+        playerController.IncreaseMovementSpeed(true);
     }
 }
