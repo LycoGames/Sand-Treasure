@@ -9,7 +9,7 @@ public class DigAreaEntrance : MonoBehaviour
 {
     private StateController stateController;
     private PlayerController playerController;
-
+    private BumpChecker bumpChecker;
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
@@ -17,16 +17,19 @@ public class DigAreaEntrance : MonoBehaviour
         {
             stateController = other.GetComponent<StateController>();
             playerController = other.GetComponent<PlayerController>();
+            bumpChecker = other.GetComponent<BumpChecker>();
         }
 
         stateController.ChangeState(stateController.DigState);
-        playerController.IncreaseMovementSpeed(false);
+        bumpChecker.StartCheckBumpCoroutine();
+        //playerController.IncreaseMovementSpeed(false);
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
         stateController.ChangeState(stateController.IdleState);
-        playerController.IncreaseMovementSpeed(true);
+        bumpChecker.StopCheckBumpCoroutine();
+       // playerController.IncreaseMovementSpeed(true);
     }
 }
