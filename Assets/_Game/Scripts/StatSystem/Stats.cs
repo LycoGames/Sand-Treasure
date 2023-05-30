@@ -16,6 +16,7 @@ namespace _Game.Scripts.StatSystem
         public Action<float> OnStackLimitChange;
         public Action<float> OnItemDropChanceChange;
         public Action<float> OnDigFieldChange;
+        public Action<float> OnStrengthChange;
         [SerializeField] private Progression progression;
 
         [SerializeField] private string id;
@@ -118,6 +119,9 @@ namespace _Game.Scripts.StatSystem
                     break;
                 case Stat.DigField:
                     OnDigFieldChange?.Invoke(GetStat(stat));
+                    break;
+                case Stat.Strength:
+                    OnStrengthChange?.Invoke(GetStat(stat));
                     break;
                 default:
                     Debug.LogWarning("Stat have no action");

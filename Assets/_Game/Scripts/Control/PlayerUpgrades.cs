@@ -57,6 +57,7 @@ namespace _Game.Scripts.Control
             SetStackCapacityOnUI();
             SetDigFieldOnUI();
             SetItemDropChanceOnUI();
+            SetStrengthOnUI();
             //SetHealth();
         }
 
@@ -77,6 +78,9 @@ namespace _Game.Scripts.Control
                     break;
                 case Stat.DigField:
                     SetDigFieldOnUI();
+                    break;
+                case Stat.Strength:
+                    SetStrengthOnUI();
                     break;
             }
 
@@ -109,6 +113,19 @@ namespace _Game.Scripts.Control
             }
 
             playerUpgradesUI.SetDigField(cost, level);
+        }
+
+        private void SetStrengthOnUI()
+        {
+            var cost = playerStats.GetStatCost(Stat.Strength).ToString();
+            var level = playerStats.GetStatLevel(Stat.Strength);
+            if (IsStatOnMaxLevel(Stat.Strength))
+            {
+                playerUpgradesUI.SetStrength(level);
+                return;
+            }
+
+            playerUpgradesUI.SetStrength(cost, level);
         }
 
         private void SetItemDropChanceOnUI()
@@ -168,18 +185,25 @@ namespace _Game.Scripts.Control
             playerUpgradesUI.SetItemDropChanceUpgradeButtonInteractable(IsPurchasable(Stat.ItemDropChance));
         }
 
+        private void SetStrengthButtonInteractable()
+        {
+            playerUpgradesUI.SetStrengthUpgradeButtonInteractable(IsPurchasable(Stat.Strength));
+        }
+
         private void SubscribeToButtonActions()
         {
             playerUpgradesUI.OnStackCapacityUpgradeRequest += UpgradeSelectedStat;
-            playerUpgradesUI.OnMovementSpeedUpgradeRequest += UpgradeSelectedStat;
+            playerUpgradesUI.OnDigZoneUpgradeRequest += UpgradeSelectedStat;
             playerUpgradesUI.OnItemDropChanceUpgradeRequest += UpgradeSelectedStat;
+            playerUpgradesUI.OnStrengthUpgradeRequest += UpgradeSelectedStat;
         }
 
         private void UnSubscribeToButtonActions()
         {
             playerUpgradesUI.OnStackCapacityUpgradeRequest -= UpgradeSelectedStat;
-            playerUpgradesUI.OnMovementSpeedUpgradeRequest -= UpgradeSelectedStat;
+            playerUpgradesUI.OnDigZoneUpgradeRequest -= UpgradeSelectedStat;
             playerUpgradesUI.OnItemDropChanceUpgradeRequest -= UpgradeSelectedStat;
+            playerUpgradesUI.OnStrengthUpgradeRequest -= UpgradeSelectedStat;
         }
 
         private void SubscribeToOnUpgradeAction()
@@ -187,6 +211,7 @@ namespace _Game.Scripts.Control
             OnUpgradeAction += SetDigFieldButtonInteractable;
             OnUpgradeAction += SetStackCapacityUpgradeButtonInteractable;
             OnUpgradeAction += SetItemDropChanceButtonInteractable;
+            OnUpgradeAction += SetStrengthButtonInteractable;
         }
 
         private void UnSubscribeToOnUpgradeAction()
@@ -194,6 +219,7 @@ namespace _Game.Scripts.Control
             OnUpgradeAction -= SetDigFieldButtonInteractable;
             OnUpgradeAction -= SetStackCapacityUpgradeButtonInteractable;
             OnUpgradeAction -= SetItemDropChanceButtonInteractable;
+            OnUpgradeAction -= SetStrengthButtonInteractable;
         }
 
         private void EnableCanvas()

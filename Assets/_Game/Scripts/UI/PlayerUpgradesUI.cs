@@ -11,10 +11,11 @@ namespace _Game.Scripts.UI
     {
         [SerializeField] private RectTransform upgradesUIRectTransform;
         [SerializeField] private Canvas upgradesCanvas;
-        
+
         public Action<Stat> OnStackCapacityUpgradeRequest;
         public Action<Stat> OnItemDropChanceUpgradeRequest;
-        public Action<Stat> OnMovementSpeedUpgradeRequest;
+        public Action<Stat> OnDigZoneUpgradeRequest;
+        public Action<Stat> OnStrengthUpgradeRequest;
 
         [SerializeField] private TMP_Text stackCapacityCostText;
         [SerializeField] private Button stackCapacityUpgradeButton;
@@ -35,6 +36,11 @@ namespace _Game.Scripts.UI
         [SerializeField] private TMP_Text itemDropChanceMaxTextField;
         [SerializeField] private GameObject itemDropChanceUpgradableCostField;
 
+        [Space] [SerializeField] private TMP_Text strengthCostText;
+        [SerializeField] private Button strengthUpgradeButton;
+        [SerializeField] private TMP_Text strengthLevelText;
+        [SerializeField] private TMP_Text strengthMaxTextField;
+        [SerializeField] private GameObject strengthUpgradableCostField;
 
         private const string MaxText = "MAX";
         private const string LevelText = "LEVEL ";
@@ -51,8 +57,10 @@ namespace _Game.Scripts.UI
 
         public void OnExit()
         {
-            upgradesUIRectTransform.DOAnchorPos(new Vector2(1080, 0), 0.25f).SetAutoKill(true).OnComplete((() => upgradesCanvas.enabled=false));
+            upgradesUIRectTransform.DOAnchorPos(new Vector2(1080, 0), 0.25f).SetAutoKill(true)
+                .OnComplete((() => upgradesCanvas.enabled = false));
         }
+
         #region Changes
 
         private void Start()
@@ -60,6 +68,7 @@ namespace _Game.Scripts.UI
             stackCapacityUpgradeButton.onClick.AddListener(RequestStackCapacityUpgrade);
             digFieldUpgradeButton.onClick.AddListener(RequestDigFieldUpgrade);
             itemDropChanceUpgradeButton.onClick.AddListener(RequestItemDropChanceUpgrade);
+            strengthUpgradeButton.onClick.AddListener(RequestStrengthUpgrade);
         }
 
         public void SetStackCapacity(string cost, string currentLevelStat, string nextLevelStat)
@@ -101,6 +110,19 @@ namespace _Game.Scripts.UI
             digFieldLevelText.text = LevelText + level;
         }
 
+        public void SetStrength(string cost, int level)
+        {
+            strengthCostText.text = cost;
+            strengthLevelText.text = LevelText + level;
+        }
+
+        public void SetStrength(int level)
+        {
+            strengthUpgradableCostField.SetActive(false);
+            strengthMaxTextField.enabled = true;
+            strengthLevelText.text = LevelText + level;
+        }
+
         public void SetStackCapacityUpgradeButtonInteractable(bool isInteractable)
         {
             if (isInteractable != stackCapacityUpgradeButton.interactable)
@@ -118,7 +140,11 @@ namespace _Game.Scripts.UI
             if (isInteractable != digFieldUpgradeButton.interactable)
                 digFieldUpgradeButton.interactable = isInteractable;
         }
-
+        public void SetStrengthUpgradeButtonInteractable(bool isInteractable)
+        {
+            if (isInteractable != strengthUpgradeButton.interactable)
+                strengthUpgradeButton.interactable = isInteractable;
+        }
         #endregion
 
         #region Requests
@@ -135,7 +161,12 @@ namespace _Game.Scripts.UI
 
         private void RequestDigFieldUpgrade()
         {
-            OnMovementSpeedUpgradeRequest?.Invoke(Stat.DigField);
+            OnDigZoneUpgradeRequest?.Invoke(Stat.DigField);
+        }
+
+        private void RequestStrengthUpgrade()
+        {
+            OnStrengthUpgradeRequest?.Invoke(Stat.Strength);
         }
 
         #endregion

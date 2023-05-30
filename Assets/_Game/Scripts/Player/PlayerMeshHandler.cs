@@ -24,7 +24,9 @@ namespace _Game.Scripts.Player
         private void Start()
         {
             stats.OnDigFieldChange += UpdateDigField;
+            stats.OnStrengthChange += UpdateStrength;
             diggingField = stats.GetStat(Stat.DigField);
+            force = stats.GetStat(Stat.Strength);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -88,6 +90,11 @@ namespace _Game.Scripts.Player
         private void UpdateDigField(float value)
         {
             diggingField = value;
+        }
+
+        private void UpdateStrength(float value)
+        {
+            force = value;
         }
     }
 }

@@ -10,6 +10,7 @@ public class DigAreaEntrance : MonoBehaviour
     private StateController stateController;
     private PlayerController playerController;
     private BumpChecker bumpChecker;
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
@@ -30,6 +31,6 @@ public class DigAreaEntrance : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         stateController.ChangeState(stateController.IdleState);
         bumpChecker.StopCheckBumpCoroutine();
-       // playerController.IncreaseMovementSpeed(true);
+        playerController.IncreaseMovementSpeed(true);
     }
 }

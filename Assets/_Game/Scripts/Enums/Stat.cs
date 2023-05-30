@@ -7,6 +7,7 @@ namespace _Game.Scripts.Enums
         TransferSpeed,
         MovementSpeed,
         ItemDropChance,
-        DigField
+        DigField,
+        Strength
     }
 }
