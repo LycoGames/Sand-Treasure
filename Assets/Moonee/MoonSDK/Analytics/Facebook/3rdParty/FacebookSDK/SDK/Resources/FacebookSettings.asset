@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedAppIndex: 0
   clientTokens:
-  - 
+  - a82e1031834c759822fb865d0078d779
   appIds:
-  - 123456
+  - 197372512798083
   appLabels:
-  - 
+  - SandTreasure
   cookie: 1
   logging: 1
   status: 1
