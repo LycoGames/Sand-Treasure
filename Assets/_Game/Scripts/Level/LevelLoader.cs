@@ -38,6 +38,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
     public void OnLevelComplete()
     {
         currentLevel++;
+        MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete,currentLevel);
     }
 
     private void DestroyLoadedLevel()
