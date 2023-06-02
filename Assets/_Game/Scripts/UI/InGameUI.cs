@@ -15,8 +15,9 @@ namespace _Game.Scripts.UI
         [SerializeField] private TextMeshProUGUI moneyText;
         [SerializeField] private Inventory inventory;
         [SerializeField] private RectTransform moneyPanel;
-
-        public RectTransform MoneyPanel => moneyPanel;
+        [SerializeField] private RectTransform moneyPanelDestination;
+        
+        public RectTransform MoneyPanel => moneyPanelDestination;
         [SerializeField] private RectTransform treasurePanel;
         public RectTransform TreasurePanel => treasurePanel;
         [SerializeField] private TextMeshProUGUI treasureTotalText;
@@ -29,7 +30,7 @@ namespace _Game.Scripts.UI
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
 
         private readonly Vector3 stockScale = Vector3.one;
-
+        
         private void Start()
         {
             inventory.AddObserver(this);

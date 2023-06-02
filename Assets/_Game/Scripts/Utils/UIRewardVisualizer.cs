@@ -29,7 +29,7 @@ namespace _Game.Scripts.Utils
         public void VisualiseReward(Vector3 position, Action onSequenceCompleted = null)
         {
             var screenPos = mainCam.WorldToScreenPoint(position);
-            var instance = Instantiate(imageToInstantiatePrefab, screenPos, Quaternion.identity, destination);
+            var instance = Instantiate(imageToInstantiatePrefab, screenPos, Quaternion.identity,destination);
             var targetPos = screenPos;
             targetPos.y = Screen.height*3/5;
             targetPos.x = Math.Clamp(targetPos.x + GetRandomXOffset(), 30, screenWidth - 30);
