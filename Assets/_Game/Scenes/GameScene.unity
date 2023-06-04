@@ -453,6 +453,7 @@ MonoBehaviour:
   - {fileID: 348465382352677400, guid: 75a940b603b113d4d9e28c27cfe36e43, type: 3}
   - {fileID: 6320151781771473772, guid: a2c27ac96615dc14ebe548a5a6ca145d, type: 3}
   - {fileID: 8172799142980926020, guid: 5ad7c92dcf7d630489840d7bb165c5ec, type: 3}
+  - {fileID: 8172799142980926020, guid: 0630af6a3586d2d43af837d490af8d52, type: 3}
   playerUpgradesMenuUI: {fileID: 754211873}
   currentLevel: 0
 --- !u!4 &291360827

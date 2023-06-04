@@ -48,7 +48,7 @@ MonoBehaviour:
   type: 7
   value: 15
   offset: {x: 0.8, y: 0.8, z: 0.8}
-  dropChance: 100
+  dropChance: 80
 --- !u!1 &6304950953214521569
 GameObject:
   m_ObjectHideFlags: 0

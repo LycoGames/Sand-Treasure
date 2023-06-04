@@ -131,4 +131,4 @@ MonoBehaviour:
   type: 6
   value: 10
   offset: {x: 0.8, y: 0.8, z: 0.8}
-  dropChance: 100
+  dropChance: 80
