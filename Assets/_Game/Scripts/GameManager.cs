@@ -18,7 +18,7 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private Vector3 playerStartingPos;
     [SerializeField] private StateController playerStateController;
     [SerializeField] private PlayerController playerController;
-    
+
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
@@ -65,5 +65,10 @@ public class GameManager : AbstractSingleton<GameManager>
     public void ResetPlayerSpeed()
     {
         playerController.IncreaseMovementSpeed(true);
+    }
+
+    public void ResetProgressBar()
+    {
+        inGameUI.ResetProgressbar();
     }
 }

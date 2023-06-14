@@ -19,26 +19,30 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private TMP_Text stackCapacityCostText;
         [SerializeField] private Button stackCapacityUpgradeButton;
-        [SerializeField] private TMP_Text stackCapacityStat;
+        [SerializeField] private Image stackCapacityLevelBar;
+        // [SerializeField] private TMP_Text stackCapacityStat;
         [SerializeField] private TMP_Text stackCapacityMaxTextField;
         [SerializeField] private GameObject stackCapacityUpgradableCostField;
 
         [Space] [SerializeField] private TMP_Text digFieldCostText;
         [SerializeField] private Button digFieldUpgradeButton;
-        [SerializeField] private TMP_Text digFieldLevelText;
+        [SerializeField] private Image digFieldLevelBar;
+        //  [SerializeField] private TMP_Text digFieldLevelText;
         [SerializeField] private TMP_Text digFieldMaxTextField;
         [SerializeField] private GameObject digFieldUpgradableCostField;
 
 
         [Space] [SerializeField] private TMP_Text itemDropChanceCostText;
         [SerializeField] private Button itemDropChanceUpgradeButton;
-        [SerializeField] private TMP_Text itemDropChanceStat;
+        [SerializeField] private Image itemDropChanceLevelBar;
+        //  [SerializeField] private TMP_Text itemDropChanceStat;
         [SerializeField] private TMP_Text itemDropChanceMaxTextField;
         [SerializeField] private GameObject itemDropChanceUpgradableCostField;
 
         [Space] [SerializeField] private TMP_Text strengthCostText;
         [SerializeField] private Button strengthUpgradeButton;
-        [SerializeField] private TMP_Text strengthLevelText;
+        [SerializeField] private Image strengthLevelBar;
+        // [SerializeField] private TMP_Text strengthLevelText;
         [SerializeField] private TMP_Text strengthMaxTextField;
         [SerializeField] private GameObject strengthUpgradableCostField;
 
@@ -71,57 +75,119 @@ namespace _Game.Scripts.UI
             strengthUpgradeButton.onClick.AddListener(RequestStrengthUpgrade);
         }
 
-        public void SetStackCapacity(string cost, string currentLevelStat, string nextLevelStat)
+        // ----------------Upgrade with level bars-------------------
+
+        public void SetStackCapacity(string cost, int level)
         {
             stackCapacityCostText.text = cost;
-            stackCapacityStat.text = currentLevelStat + PcsText + StatSeparator + nextLevelStat + PcsText;
+            float newLevel = level - 1;
+            stackCapacityLevelBar.fillAmount = (newLevel / 10);
         }
 
-        public void SetStackCapacity(string currentLevelStat)
+        public void SetStackCapacity(int level)
         {
             stackCapacityUpgradableCostField.SetActive(false);
             stackCapacityMaxTextField.enabled = true;
-            stackCapacityStat.text = currentLevelStat + PcsText;
+            stackCapacityLevelBar.fillAmount = 1f;
         }
 
-        public void SetItemDropChance(string cost, string currentLevelStat, string nextLevelStat)
+        public void SetItemDropChance(string cost, int level)
         {
             itemDropChanceCostText.text = cost;
-            itemDropChanceStat.text = currentLevelStat + Seconds + StatSeparator + nextLevelStat + Seconds;
+            itemDropChanceLevelBar.fillAmount = (float)(level - 1) / 10;
         }
 
-        public void SetItemDropChance(string currentLevelStat)
+        public void SetItemDropChance(int level)
         {
             itemDropChanceUpgradableCostField.SetActive(false);
             itemDropChanceMaxTextField.enabled = true;
-            itemDropChanceStat.text = currentLevelStat + Seconds;
+            itemDropChanceLevelBar.fillAmount = 1;
         }
 
         public void SetDigField(string cost, int level)
         {
             digFieldCostText.text = cost;
-            digFieldLevelText.text = LevelText + level;
+            digFieldLevelBar.fillAmount = (float)(level - 1) / 10;
         }
 
         public void SetDigField(int level)
         {
             digFieldUpgradableCostField.SetActive(false);
             digFieldMaxTextField.enabled = true;
-            digFieldLevelText.text = LevelText + level;
+            digFieldLevelBar.fillAmount = 1f;
         }
 
         public void SetStrength(string cost, int level)
         {
             strengthCostText.text = cost;
-            strengthLevelText.text = LevelText + level;
+            strengthLevelBar.fillAmount = (float)(level - 1) / 10;
         }
 
         public void SetStrength(int level)
         {
             strengthUpgradableCostField.SetActive(false);
             strengthMaxTextField.enabled = true;
-            strengthLevelText.text = LevelText + level;
+            strengthLevelBar.fillAmount = 1f;
         }
+
+        // ----------------Upgrade with texts-------------------
+
+        #region upgradeUIwithexts
+
+        // public void SetStackCapacity(string cost, string currentLevelStat, string nextLevelStat)
+        // {
+        //     stackCapacityCostText.text = cost;
+        //     stackCapacityStat.text = currentLevelStat + PcsText + StatSeparator + nextLevelStat + PcsText;
+        // }
+        //
+        // public void SetStackCapacity(string currentLevelStat)
+        // {
+        //     stackCapacityUpgradableCostField.SetActive(false);
+        //     stackCapacityMaxTextField.enabled = true;
+        //     stackCapacityStat.text = currentLevelStat + PcsText;
+        // }
+        //
+        // public void SetItemDropChance(string cost, string currentLevelStat, string nextLevelStat)
+        // {
+        //     itemDropChanceCostText.text = cost;
+        //     itemDropChanceStat.text = currentLevelStat + Seconds + StatSeparator + nextLevelStat + Seconds;
+        // }
+        //
+        // public void SetItemDropChance(string currentLevelStat)
+        // {
+        //     itemDropChanceUpgradableCostField.SetActive(false);
+        //     itemDropChanceMaxTextField.enabled = true;
+        //     itemDropChanceStat.text = currentLevelStat + Seconds;
+        // }
+        //
+        // public void SetDigField(string cost, int level)
+        // {
+        //     digFieldCostText.text = cost;
+        //     digFieldLevelText.text = LevelText + level;
+        // }
+        //
+        // public void SetDigField(int level)
+        // {
+        //     digFieldUpgradableCostField.SetActive(false);
+        //     digFieldMaxTextField.enabled = true;
+        //     digFieldLevelText.text = LevelText + level;
+        // }
+        //
+        // public void SetStrength(string cost, int level)
+        // {
+        //     strengthCostText.text = cost;
+        //     strengthLevelText.text = LevelText + level;
+        // }
+        //
+        // public void SetStrength(int level)
+        // {
+        //     strengthUpgradableCostField.SetActive(false);
+        //     strengthMaxTextField.enabled = true;
+        //     strengthLevelText.text = LevelText + level;
+        // }
+
+        #endregion
+
 
         public void SetStackCapacityUpgradeButtonInteractable(bool isInteractable)
         {
@@ -140,11 +206,13 @@ namespace _Game.Scripts.UI
             if (isInteractable != digFieldUpgradeButton.interactable)
                 digFieldUpgradeButton.interactable = isInteractable;
         }
+
         public void SetStrengthUpgradeButtonInteractable(bool isInteractable)
         {
             if (isInteractable != strengthUpgradeButton.interactable)
                 strengthUpgradeButton.interactable = isInteractable;
         }
+
         #endregion
 
         #region Requests

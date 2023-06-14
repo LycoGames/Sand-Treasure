@@ -16,28 +16,30 @@ namespace _Game.Scripts.UI
         [SerializeField] private Inventory inventory;
         [SerializeField] private RectTransform moneyPanel;
         [SerializeField] private RectTransform moneyPanelDestination;
-        
+
         public RectTransform MoneyPanel => moneyPanelDestination;
         [SerializeField] private RectTransform treasurePanel;
         public RectTransform TreasurePanel => treasurePanel;
         [SerializeField] private TextMeshProUGUI treasureTotalText;
-      
+
         [SerializeField] private TextMeshProUGUI foundTreasureText;
         [SerializeField] private TextMeshProUGUI levelText;
-        
+
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
-        private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
 
+        [SerializeField] private Image progressbarFill;
+
+        private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
         private readonly Vector3 stockScale = Vector3.one;
-        
+
         private void Start()
         {
             inventory.AddObserver(this);
             moneyText.text = inventory.GetMoney().ToString();
             audioToggle.onValueChanged.AddListener(ToggleAudioOnOff);
         }
-        
+
         public void SetTotalTreasureCount(int count)
         {
             treasureTotalText.text = count.ToString();
@@ -52,6 +54,7 @@ namespace _Game.Scripts.UI
         {
             levelText.text = level.ToString();
         }
+
         public override void OnStart()
         {
             Debug.Log("InGameUI OnStart");
@@ -79,6 +82,16 @@ namespace _Game.Scripts.UI
                     SetFoundedTreasureCount(value);
                     break;
             }
+        }
+
+        public void UpdateProgressBar(float value)
+        {
+            progressbarFill.fillAmount = (value / 100);
+        }
+
+        public void ResetProgressbar()
+        {
+            progressbarFill.fillAmount = 0;
         }
 
         private void ToggleAudioOnOff(bool isOn)

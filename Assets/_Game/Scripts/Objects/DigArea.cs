@@ -6,6 +6,7 @@ using _Game.Scripts.Pool;
 using _Game.Scripts.Stack;
 using _Game.Scripts.States;
 using _Game.Scripts.StatSystem;
+using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
 using UnityEngine;
 
@@ -15,7 +16,7 @@ namespace _Game.Scripts.Objects
     {
         [SerializeField] private LootArea lootArea;
         [SerializeField] private DigZone digZone;
-
+        private InGameUI inGameUI;
         private StateController stateController;
         private Coroutine diggingCoroutine;
         private WaitForSeconds diggingCoroutineWaitForSeconds;
@@ -25,6 +26,7 @@ namespace _Game.Scripts.Objects
 
         private void Start()
         {
+            inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
             LootingCooldown = 1f;
             diggingCoroutineWaitForSeconds = new WaitForSeconds(LootingCooldown);
         }
@@ -60,11 +62,35 @@ namespace _Game.Scripts.Objects
             LootingCooldown = value;
             diggingCoroutineWaitForSeconds = new WaitForSeconds(LootingCooldown);
         }
-
+        //TODO here
+        // private IEnumerator DiggingCoroutine()
+        // {
+        //     int lastPercentage = digZone.GetPercentOfDig();
+        //
+        //     while (true)
+        //     {
+        //         if (stateController.CurrentState == stateController.DigState)
+        //         {
+        //             if (digZone.GetPercentOfDig() != lastPercentage)
+        //             {
+        //                 inGameUI.UpdateProgressBar(digZone.GetPercentOfDig());
+        //                 lastPercentage = digZone.GetPercentOfDig();
+        //
+        //                 if (playerSandAccumulator.CanAccumulateSand())
+        //                 {
+        //                     playerSandAccumulator.AccumulateSand();
+        //                 }
+        //             }
+        //         }
+        //
+        //         yield return diggingCoroutineWaitForSeconds;
+        //     }
+        // }
+        // FOR LOOTING ITEMS, ITS CANCELLED ON ITERATION
         private IEnumerator DiggingCoroutine()
         {
             int lastPercentage = digZone.GetPercentOfDig();
-
+        
             while (true)
             {
                 if (stateController.CurrentState == stateController.DigState)
@@ -72,13 +98,13 @@ namespace _Game.Scripts.Objects
                     if (digZone.GetPercentOfDig() != lastPercentage)
                     {
                         lastPercentage = digZone.GetPercentOfDig();
-
+                        
                         var item = lootArea.GetDroppedItem();
                         if (item == null)
                         {
                             continue;
                         }
-
+        
                         if (playerStackManager.CanAddToStack(item.Type))
                         {
                             var obj = PoolManager.Instance.GetFromPool(item.Type);
@@ -88,7 +114,7 @@ namespace _Game.Scripts.Objects
                         }
                     }
                 }
-
+        
                 yield return diggingCoroutineWaitForSeconds;
             }
         }

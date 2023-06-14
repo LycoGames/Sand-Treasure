@@ -33,12 +33,13 @@ public class LevelLoader : MonoBehaviour, ISaveable
         GameManager.Instance.ResetPlayerState();
         GameManager.Instance.UpdateLevelText(currentLevel + 1);
         GameManager.Instance.ResetPlayerSpeed();
+        GameManager.Instance.ResetProgressBar();
     }
 
     public void OnLevelComplete()
     {
         currentLevel++;
-        MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete,currentLevel);
+        MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, currentLevel);
     }
 
     private void DestroyLoadedLevel()

@@ -58,7 +58,6 @@ namespace _Game.Scripts.Control
             SetDigFieldOnUI();
             SetItemDropChanceOnUI();
             SetStrengthOnUI();
-            //SetHealth();
         }
 
 
@@ -90,16 +89,15 @@ namespace _Game.Scripts.Control
         private void SetStackCapacityOnUI()
         {
             var cost = playerStats.GetStatCost(Stat.StackCapacity).ToString();
-            var currentLevelStat = playerStats.GetStat(Stat.StackCapacity).ToString(CultureInfo.CurrentCulture);
+            var level = playerStats.GetStatLevel(Stat.StackCapacity);
+            print(level);
             if (IsStatOnMaxLevel(Stat.StackCapacity))
             {
-                playerUpgradesUI.SetStackCapacity(currentLevelStat);
+                playerUpgradesUI.SetStackCapacity(level);
                 return;
             }
 
-            var nextLevelStat =
-                playerStats.GetNextLevelStat(Stat.StackCapacity).ToString(CultureInfo.CurrentCulture);
-            playerUpgradesUI.SetStackCapacity(cost, currentLevelStat, nextLevelStat);
+            playerUpgradesUI.SetStackCapacity(cost, level);
         }
 
         private void SetDigFieldOnUI()
@@ -131,17 +129,77 @@ namespace _Game.Scripts.Control
         private void SetItemDropChanceOnUI()
         {
             var cost = playerStats.GetStatCost(Stat.ItemDropChance).ToString();
-            var currentLevelStat = playerStats.GetStat(Stat.ItemDropChance).ToString(CultureInfo.CurrentCulture);
+            var level = playerStats.GetStatLevel(Stat.ItemDropChance);
             if (IsStatOnMaxLevel(Stat.ItemDropChance))
             {
-                playerUpgradesUI.SetItemDropChance(currentLevelStat);
+                playerUpgradesUI.SetItemDropChance(level);
                 return;
             }
 
-            var nextLevelStat =
-                playerStats.GetNextLevelStat(Stat.ItemDropChance).ToString(CultureInfo.CurrentCulture);
-            playerUpgradesUI.SetItemDropChance(cost, currentLevelStat, nextLevelStat);
+            playerUpgradesUI.SetItemDropChance(cost, level);
         }
+
+        // ---------------- Upgrade With Texts-------------
+
+        #region UpdateUpgradeUIwithTexts
+
+        // private void SetStackCapacityOnUI()
+        // {
+        //     var cost = playerStats.GetStatCost(Stat.StackCapacity).ToString();
+        //     var currentLevelStat = playerStats.GetStat(Stat.StackCapacity).ToString(CultureInfo.CurrentCulture);
+        //     if (IsStatOnMaxLevel(Stat.StackCapacity))
+        //     {
+        //         playerUpgradesUI.SetStackCapacity(currentLevelStat);
+        //         return;
+        //     }
+        //
+        //     var nextLevelStat =
+        //         playerStats.GetNextLevelStat(Stat.StackCapacity).ToString(CultureInfo.CurrentCulture);
+        //     playerUpgradesUI.SetStackCapacity(cost, currentLevelStat, nextLevelStat);
+        // }
+        //
+        // private void SetDigFieldOnUI()
+        // {
+        //     var cost = playerStats.GetStatCost(Stat.DigField).ToString();
+        //     var level = playerStats.GetStatLevel(Stat.DigField);
+        //     if (IsStatOnMaxLevel(Stat.DigField))
+        //     {
+        //         playerUpgradesUI.SetDigField(level);
+        //         return;
+        //     }
+        //
+        //     playerUpgradesUI.SetDigField(cost, level);
+        // }
+        //
+        // private void SetStrengthOnUI()
+        // {
+        //     var cost = playerStats.GetStatCost(Stat.Strength).ToString();
+        //     var level = playerStats.GetStatLevel(Stat.Strength);
+        //     if (IsStatOnMaxLevel(Stat.Strength))
+        //     {
+        //         playerUpgradesUI.SetStrength(level);
+        //         return;
+        //     }
+        //
+        //     playerUpgradesUI.SetStrength(cost, level);
+        // }
+        //
+        // private void SetItemDropChanceOnUI()
+        // {
+        //     var cost = playerStats.GetStatCost(Stat.ItemDropChance).ToString();
+        //     var currentLevelStat = playerStats.GetStat(Stat.ItemDropChance).ToString(CultureInfo.CurrentCulture);
+        //     if (IsStatOnMaxLevel(Stat.ItemDropChance))
+        //     {
+        //         playerUpgradesUI.SetItemDropChance(currentLevelStat);
+        //         return;
+        //     }
+        //
+        //     var nextLevelStat =
+        //         playerStats.GetNextLevelStat(Stat.ItemDropChance).ToString(CultureInfo.CurrentCulture);
+        //     playerUpgradesUI.SetItemDropChance(cost, currentLevelStat, nextLevelStat);
+        // }
+
+        #endregion
 
         private bool IsPurchasable(Stat stat)
         {
