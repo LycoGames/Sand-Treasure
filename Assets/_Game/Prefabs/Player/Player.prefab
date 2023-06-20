@@ -19585,9 +19585,9 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 2
+      minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 0.63529414}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.4}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -24869,9 +24869,9 @@ MonoBehaviour:
   _levelMultiplier: 1
   _liquidLayers:
   - layerName: Layer 0
-    amount: 0.4
+    amount: 0
     density: 1
-    color: {r: 0, g: 0.7999177, b: 1, a: 1}
+    color: {r: 0.36320752, g: 0.8726413, b: 1, a: 1}
     miscible: 0
     murkiness: 0.2
     murkColor: {r: 0, g: 0, b: 0, a: 1}
@@ -24881,13 +24881,13 @@ MonoBehaviour:
     bubblesOpacity: 0
     baseLevel: 0
     currentBaseLevel: 0
-    currentAmount: 0.4
-    currentColor: {r: 0, g: 0.7999177, b: 1, a: 1}
+    currentAmount: 0
+    currentColor: {r: 0.36320752, g: 0.8726413, b: 1, a: 1}
     currentMurkiness: 0.2
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
     currentBubblesOpacity: 0
   - layerName: Layer 1
-    amount: 0.3
+    amount: 0
     density: 1
     color: {r: 1, g: 0.63529414, b: 0.99215686, a: 1}
     miscible: 0
@@ -24897,17 +24897,17 @@ MonoBehaviour:
     viscosity: 1
     adjustmentSpeed: 10
     bubblesOpacity: 0
-    baseLevel: 0.4
-    currentBaseLevel: 0.4
-    currentAmount: 0.3
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 0
     currentColor: {r: 1, g: 0.63529414, b: 0.99215686, a: 1}
     currentMurkiness: 0.4
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
     currentBubblesOpacity: 0
   - layerName: Layer 2
-    amount: 0.3
+    amount: 0
     density: 1
-    color: {r: 1, g: 0.85882354, b: 0, a: 1}
+    color: {r: 1, g: 0.91409546, b: 0.3915094, a: 1}
     miscible: 0
     murkiness: 0.2
     murkColor: {r: 0, g: 0, b: 0, a: 1}
@@ -24915,13 +24915,49 @@ MonoBehaviour:
     viscosity: 1
     adjustmentSpeed: 10
     bubblesOpacity: 0
-    baseLevel: 0.70000005
-    currentBaseLevel: 0.70000005
-    currentAmount: 0.3
-    currentColor: {r: 1, g: 0.85882354, b: 0, a: 1}
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 0
+    currentColor: {r: 1, g: 0.91409546, b: 0.3915094, a: 1}
     currentMurkiness: 0.2
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
     currentBubblesOpacity: 0
+  - layerName: Layer 3
+    amount: 0
+    density: 1
+    color: {r: 0.47235844, g: 1, b: 0.43867922, a: 1}
+    miscible: 0
+    murkiness: 0.2
+    murkColor: {r: 0, g: 0, b: 0, a: 1}
+    scale: 0.3
+    viscosity: 1
+    adjustmentSpeed: 10
+    bubblesOpacity: 0
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 0
+    currentColor: {r: 0.47235844, g: 1, b: 0.43867922, a: 1}
+    currentMurkiness: 0.2
+    currentColor2: {r: 0, g: 0, b: 0, a: 1}
+    currentBubblesOpacity: 0
+  - layerName: Layer 4
+    amount: 1
+    density: 1
+    color: {r: 0.7411765, g: 0.49411765, b: 1, a: 1}
+    miscible: 0
+    murkiness: 0.5
+    murkColor: {r: 0, g: 0, b: 0, a: 1}
+    scale: 0.3
+    viscosity: 1
+    adjustmentSpeed: 1
+    bubblesOpacity: 1
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 1
+    currentColor: {r: 0.7411765, g: 0.49411765, b: 1, a: 1}
+    currentMurkiness: 0.5
+    currentColor2: {r: 0, g: 0, b: 0, a: 1}
+    currentBubblesOpacity: 1
   _smoothContactSurface: 0
   _ditherStrength: 0
   _layersAdjustmentSpeed: 10

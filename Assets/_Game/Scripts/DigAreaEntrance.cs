@@ -10,7 +10,8 @@ public class DigAreaEntrance : MonoBehaviour
     private StateController stateController;
     private PlayerController playerController;
     private BumpChecker bumpChecker;
-
+    private PlayerSandAccumulator playerSandAccumulator;
+    private PlayerMatColorChanger playerMatColorChanger;
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
@@ -19,9 +20,14 @@ public class DigAreaEntrance : MonoBehaviour
             stateController = other.GetComponent<StateController>();
             playerController = other.GetComponent<PlayerController>();
             bumpChecker = other.GetComponent<BumpChecker>();
+            playerSandAccumulator = other.GetComponent<PlayerSandAccumulator>();
+            playerMatColorChanger = other.GetComponent<PlayerMatColorChanger>();
         }
 
-        stateController.ChangeState(stateController.DigState);
+        if (playerSandAccumulator.CanAccumulateSand())
+        {
+            stateController.ChangeState(stateController.DigState);
+        }
         bumpChecker.StartCheckBumpCoroutine();
         //playerController.IncreaseMovementSpeed(false);
     }
@@ -31,6 +37,7 @@ public class DigAreaEntrance : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         stateController.ChangeState(stateController.IdleState);
         bumpChecker.StopCheckBumpCoroutine();
+        playerMatColorChanger.ChangeColor(false);
         playerController.IncreaseMovementSpeed(true,false);
     }
 }

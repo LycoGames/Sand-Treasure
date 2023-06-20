@@ -11,7 +11,6 @@ using DG.Tweening;
 using UnityEngine;
 using LiquidVolumeFX;
 using TMPro;
-using Unity.VisualScripting;
 
 public class PlayerSandAccumulator : MonoBehaviour
 {
@@ -84,7 +83,7 @@ public class PlayerSandAccumulator : MonoBehaviour
                 dustEffect.startColor = pinkColor;
                 break;
             case SandType.Yellow:
-                dustEffect.startColor = Color.white;
+                dustEffect.startColor = new Color(1,1,1,0.4f);
                 break;
         }
     }

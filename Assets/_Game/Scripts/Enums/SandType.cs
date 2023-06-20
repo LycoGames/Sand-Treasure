@@ -5,6 +5,8 @@ namespace _Game.Scripts.Enums
         None,
         Blue,
         Pink,
-        Yellow
+        Yellow,
+        Green,
+        Purple
     }
 }

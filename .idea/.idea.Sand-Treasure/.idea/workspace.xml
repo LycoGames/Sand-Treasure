@@ -3,15 +3,53 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BumpChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BumpChecker.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/Effect/gradient_vertical.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/Effect/gradient_vertical.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DesertKits64_Sample/Textures/DesertKitsAtlas_NRM_Sample512.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DesertKits64_Sample/Textures/DesertKitsAtlas_NRM_Sample512.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.psd.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DesertKits64_Sample/Textures/DesertKits_Sand_Sample256.psd.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Materials/Texture/Desert Sand.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Free Low Poly Desert Pack/Materials/Texture/Desert Sand.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_AO.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_AO.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Albedo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Albedo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Height.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Height.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Mask.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Mask.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Metallic.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Muddy_Cracked_Sand_6/Muddy_Cracked_Sand_6_Roughness.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/NewLayer.terrainlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/NewLayer.terrainlayer.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_AO.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_AO.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Albedo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Albedo.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Height.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Height.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Mask.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Mask.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Metallic.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Metallic.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Normal.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Normal.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Roughness.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Buffs/Free Stylized Textures/Textures/Rippled_Sand_2/Rippled_Sand_2_Roughness.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/0/defaultMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/0/defaultMat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_AmbientOcclusion.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_AmbientOcclusion.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Color.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Color.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Displacement.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Displacement.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalDX.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalDX.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalGL.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_NormalGL.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Roughness.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/mud/Ground050_1K_Roughness.jpg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level10.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level8.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level9.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/TerrainToMeshConvertScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/TerrainToMeshConvertScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/DigAreaEntrance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/DigAreaEntrance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/SandType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/SandType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerSandAccumulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerSandAccumulator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +76,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Interfaces/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/MeshTools/DigZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/AbstractPoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/GenericObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/Pool/ItemsObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_Game/Scripts/SequenceManager/AppStates/EndGameState.cs" root0="FORCE_HIGHLIGHTING" />
@@ -175,7 +212,8 @@
       <workItem from="1685700325494" duration="2070000" />
       <workItem from="1685870976613" duration="1497000" />
       <workItem from="1686768209797" duration="985000" />
-      <workItem from="1687259051643" duration="5746000" />
+      <workItem from="1687259051643" duration="6636000" />
+      <workItem from="1687286146606" duration="1660000" />
     </task>
     <servers />
   </component>
