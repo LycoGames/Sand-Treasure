@@ -37,12 +37,12 @@ namespace _Game.Scripts.Player
             return joystick.Vertical + joystick.Horizontal!=0;
         }
 
-        public void IncreaseMovementSpeed(bool isIncrease)
+        public void IncreaseMovementSpeed(bool isIncrease, bool isMinSpeed)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateMovementSpeed()
+        public void IsStopped(bool isStopped)
         {
             throw new NotImplementedException();
         }

@@ -22,6 +22,7 @@ namespace _Game.Scripts.Objects
         private WaitForSeconds diggingCoroutineWaitForSeconds;
         private StackManager playerStackManager;
         private Transform playerDigPos;
+        private PlayerSandAccumulator playerSandAccumulator;
         public float LootingCooldown { get; set; }
 
         private void Start()
@@ -37,6 +38,7 @@ namespace _Game.Scripts.Objects
             if (stateController == null || playerStackManager == null)
             {
                 stateController = other.GetComponent<StateController>();
+                playerSandAccumulator = other.GetComponent<PlayerSandAccumulator>();
                 playerStackManager = other.GetComponent<StackManager>();
                 playerDigPos = other.gameObject.transform.Find("Digger").gameObject.transform;
                 Stats stats = other.GetComponent<Stats>();
@@ -62,7 +64,31 @@ namespace _Game.Scripts.Objects
             LootingCooldown = value;
             diggingCoroutineWaitForSeconds = new WaitForSeconds(LootingCooldown);
         }
-        //TODO here
+
+        private IEnumerator DiggingCoroutine()
+        {
+            int lastPercentage = digZone.GetPercentOfDig();
+
+            while (true)
+            {
+                if (stateController.CurrentState == stateController.DigState)
+                {
+                    if (digZone.GetPercentOfDig() != lastPercentage)
+                    {
+                        inGameUI.UpdateProgressBar(digZone.GetPercentOfDig());
+                        lastPercentage = digZone.GetPercentOfDig();
+
+                        if (playerSandAccumulator.CanAccumulateSand())
+                        {
+                            playerSandAccumulator.AccumulateSand();
+                        }
+                    }
+                }
+
+                yield return diggingCoroutineWaitForSeconds;
+            }
+        }
+        // FOR LOOTING ITEMS, ITS CANCELLED ON ITERATION
         // private IEnumerator DiggingCoroutine()
         // {
         //     int lastPercentage = digZone.GetPercentOfDig();
@@ -73,12 +99,20 @@ namespace _Game.Scripts.Objects
         //         {
         //             if (digZone.GetPercentOfDig() != lastPercentage)
         //             {
-        //                 inGameUI.UpdateProgressBar(digZone.GetPercentOfDig());
         //                 lastPercentage = digZone.GetPercentOfDig();
-        //
-        //                 if (playerSandAccumulator.CanAccumulateSand())
+        //                 
+        //                 var item = lootArea.GetDroppedItem();
+        //                 if (item == null)
         //                 {
-        //                     playerSandAccumulator.AccumulateSand();
+        //                     continue;
+        //                 }
+        //
+        //                 if (playerStackManager.CanAddToStack(item.Type))
+        //                 {
+        //                     var obj = PoolManager.Instance.GetFromPool(item.Type);
+        //                     obj.transform.position = playerDigPos.position;
+        //                     obj.gameObject.SetActive(true);
+        //                     playerStackManager.Add(obj, 0.25f);
         //                 }
         //             }
         //         }
@@ -86,37 +120,5 @@ namespace _Game.Scripts.Objects
         //         yield return diggingCoroutineWaitForSeconds;
         //     }
         // }
-        // FOR LOOTING ITEMS, ITS CANCELLED ON ITERATION
-        private IEnumerator DiggingCoroutine()
-        {
-            int lastPercentage = digZone.GetPercentOfDig();
-        
-            while (true)
-            {
-                if (stateController.CurrentState == stateController.DigState)
-                {
-                    if (digZone.GetPercentOfDig() != lastPercentage)
-                    {
-                        lastPercentage = digZone.GetPercentOfDig();
-                        
-                        var item = lootArea.GetDroppedItem();
-                        if (item == null)
-                        {
-                            continue;
-                        }
-        
-                        if (playerStackManager.CanAddToStack(item.Type))
-                        {
-                            var obj = PoolManager.Instance.GetFromPool(item.Type);
-                            obj.transform.position = playerDigPos.position;
-                            obj.gameObject.SetActive(true);
-                            playerStackManager.Add(obj, 0.25f);
-                        }
-                    }
-                }
-        
-                yield return diggingCoroutineWaitForSeconds;
-            }
-        }
     }
 }

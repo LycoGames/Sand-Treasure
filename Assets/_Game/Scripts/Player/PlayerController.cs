@@ -26,11 +26,15 @@ namespace _Game.Scripts.Player
             Imover = new MovementWithMouse(this);
         }
 
-        public void IncreaseMovementSpeed(bool isIncrease)
+        public void IncreaseMovementSpeed(bool isIncrease, bool isMinSpeed)
         {
-            Imover.IncreaseMovementSpeed(isIncrease);
+            Imover.IncreaseMovementSpeed(isIncrease, isMinSpeed);
         }
 
+        public void StopPlayer(bool isStopped)
+        {
+            Imover.IsStopped(isStopped);
+        }
         private void Update()
         {
             if (Imover.HasInput())

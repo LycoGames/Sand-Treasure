@@ -28,10 +28,14 @@ namespace _Game.Scripts.UI
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
 
-        [SerializeField] private Image progressbarFill;
+        [SerializeField] private Image progressBarFill;
+        [SerializeField] private CapacityBar capacityBar;
+        public CapacityBar CapacityBar => capacityBar;
 
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
         private readonly Vector3 stockScale = Vector3.one;
+        public Action OnReachedFinish;
+        [HideInInspector] public bool isFinished;
 
         private void Start()
         {
@@ -84,15 +88,22 @@ namespace _Game.Scripts.UI
             }
         }
 
+
         public void UpdateProgressBar(float value)
         {
-            progressbarFill.fillAmount = (value / 100);
+            progressBarFill.fillAmount = (value / 100);
+            if (progressBarFill.fillAmount >= 0.5f && isFinished == false)
+            {
+                OnReachedFinish?.Invoke();
+                isFinished = true;
+            }
         }
 
         public void ResetProgressbar()
         {
-            progressbarFill.fillAmount = 0;
+            progressBarFill.fillAmount = 0;
         }
+
 
         private void ToggleAudioOnOff(bool isOn)
         {

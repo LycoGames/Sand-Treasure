@@ -4,6 +4,7 @@ namespace _Game.Scripts.Interfaces
     {
         void Movement();
         bool HasInput();
-        void IncreaseMovementSpeed(bool isIncrease);
+        void IncreaseMovementSpeed(bool isIncrease, bool isMinSpeed);
+        void IsStopped(bool isStopped);
     }
 }

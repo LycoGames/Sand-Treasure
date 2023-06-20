@@ -34,6 +34,8 @@ public class LevelLoader : MonoBehaviour, ISaveable
         GameManager.Instance.UpdateLevelText(currentLevel + 1);
         GameManager.Instance.ResetPlayerSpeed();
         GameManager.Instance.ResetProgressBar();
+        GameManager.Instance.ResetFinishCondition();
+        GameManager.Instance.ResetPlayerColor();
     }
 
     public void OnLevelComplete()

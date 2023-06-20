@@ -90,7 +90,6 @@ namespace _Game.Scripts.Control
         {
             var cost = playerStats.GetStatCost(Stat.StackCapacity).ToString();
             var level = playerStats.GetStatLevel(Stat.StackCapacity);
-            print(level);
             if (IsStatOnMaxLevel(Stat.StackCapacity))
             {
                 playerUpgradesUI.SetStackCapacity(level);

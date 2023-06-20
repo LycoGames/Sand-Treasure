@@ -31,6 +31,6 @@ public class DigAreaEntrance : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         stateController.ChangeState(stateController.IdleState);
         bumpChecker.StopCheckBumpCoroutine();
-        playerController.IncreaseMovementSpeed(true);
+        playerController.IncreaseMovementSpeed(true,false);
     }
 }

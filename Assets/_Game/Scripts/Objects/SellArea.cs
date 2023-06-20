@@ -17,7 +17,7 @@ namespace _Game.Scripts.Objects
         [SerializeField] private List<ItemType> itemsToGet = new();
         [SerializeField] private UIRewardVisualizer uiRewardVisualizer;
         [SerializeField] private AudioClip sellSFX;
-        
+
         private StateController playerStateController;
         private StackManager playerStackManager;
         private Inventory playerInventory;
@@ -30,7 +30,7 @@ namespace _Game.Scripts.Objects
             InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
             uiRewardVisualizer.SetDestination(inGameUI.MoneyPanel);
         }
-        
+
         private void OnTriggerEnter(Collider other)
         {
             if (!other.CompareTag("Player")) return;
@@ -83,7 +83,7 @@ namespace _Game.Scripts.Objects
                 {
                     uiRewardVisualizer.VisualiseReward(this.transform.position,
                         (() => playerInventory.AddMoney(item.Value)));
-                    PoolManager.Instance.ReturnItemToItsPool(item);
+                    //PoolManager.Instance.ReturnItemToItsPool(item);
                 });
         }
 

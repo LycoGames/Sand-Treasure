@@ -18,7 +18,8 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private Vector3 playerStartingPos;
     [SerializeField] private StateController playerStateController;
     [SerializeField] private PlayerController playerController;
-
+    [SerializeField] private PlayerMatColorChanger playerMatColorChanger;
+    
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
@@ -64,11 +65,21 @@ public class GameManager : AbstractSingleton<GameManager>
 
     public void ResetPlayerSpeed()
     {
-        playerController.IncreaseMovementSpeed(true);
+        playerController.IncreaseMovementSpeed(true,false);
     }
 
     public void ResetProgressBar()
     {
         inGameUI.ResetProgressbar();
+    }
+
+    public void ResetFinishCondition()
+    {
+        inGameUI.isFinished = false;
+    }
+
+    public void ResetPlayerColor()
+    {
+        playerMatColorChanger.ResetPlayerColor();
     }
 }

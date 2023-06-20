@@ -17,7 +17,8 @@ namespace _Game.Scripts.Player
         private PlayerController playerController;
         private float movementSpeed = 8;
         private readonly float maxSpeed = 8;
-        private readonly float minSpeed = 2;
+        private readonly float normalSpeed = 2;
+        private readonly float minSpeed = 1;
         private Rigidbody myRb;
 
         private bool input;
@@ -62,9 +63,24 @@ namespace _Game.Scripts.Player
             return input;
         }
 
-        public void IncreaseMovementSpeed(bool isIncrease)
+        public void IncreaseMovementSpeed(bool isIncrease, bool isMinSpeed)
         {
-            movementSpeed = isIncrease ? maxSpeed : minSpeed;
+            if (isMinSpeed)
+            {
+                movementSpeed = minSpeed;
+            }
+            else
+            {
+                movementSpeed = isIncrease ? maxSpeed : normalSpeed;
+            }
+        }
+
+        public void IsStopped(bool isStopped)
+        {
+            if (isStopped)
+            {
+                movementSpeed = 0;
+            }
         }
 
         private Quaternion CalculateRotation()
@@ -99,6 +115,11 @@ namespace _Game.Scripts.Player
             var raycastResults = new List<RaycastResult>();
             EventSystem.current.RaycastAll(eventData, raycastResults);
             return raycastResults;
+        }
+
+        public void SetMinSpeed()
+        {
+            movementSpeed = minSpeed;
         }
     }
 }
