@@ -30,6 +30,8 @@ public class PlayerSandAccumulator : MonoBehaviour
     private const int Blue = 0;
     private const int Pink = 1;
     private const int Yellow = 2;
+    private const int Green = 3;
+    private const int Purple = 4;
 
     [SerializeField] private Color pinkColor;
     private InGameUI inGameUI;
@@ -60,6 +62,14 @@ public class PlayerSandAccumulator : MonoBehaviour
                 liquidVolume.liquidLayers[Yellow].amount += fillAmount / maxCapacity;
                 IncreaseCurrentCapacityValue();
                 break;
+            case SandType.Green:
+                liquidVolume.liquidLayers[Green].amount += fillAmount / maxCapacity;
+                IncreaseCurrentCapacityValue();
+                break;
+            case SandType.Purple:
+                liquidVolume.liquidLayers[Purple].amount += fillAmount / maxCapacity;
+                IncreaseCurrentCapacityValue();
+                break;
         }
 
         UpdateLayers();
@@ -77,13 +87,19 @@ public class PlayerSandAccumulator : MonoBehaviour
         switch (type)
         {
             case SandType.Blue:
-                dustEffect.startColor = new Color(0f, 204f, 255f, 100f);
+                dustEffect.startColor = new Color(0f, 0.38f, 0.46f, 0.4f);
                 break;
             case SandType.Pink:
-                dustEffect.startColor = pinkColor;
+                dustEffect.startColor = new Color(1f, 0.27f, 0.75f, 0.4f);
                 break;
             case SandType.Yellow:
-                dustEffect.startColor = new Color(1,1,1,0.4f);
+                dustEffect.startColor = new Color(0.34f, 0.25f, 0.06f, 0.4f);
+                break;
+            case SandType.Green:
+                dustEffect.startColor = new Color(0.01f, 0.4f, 0f, 0.4f);
+                break;
+            case SandType.Purple:
+                dustEffect.startColor = new Color(0.74f, 0.49f, 0.1f, 0.4f);
                 break;
         }
     }
@@ -123,7 +139,7 @@ public class PlayerSandAccumulator : MonoBehaviour
             bumpChecker.ChangeIsPlayerCapacityFull(true);
         }
 
-        print("current capacity value" + currentCapacityValue + "/" + maxCapacity);
+        //print("current capacity value" + currentCapacityValue + "/" + maxCapacity);
     }
 
     private void SetSandType(SandType type)

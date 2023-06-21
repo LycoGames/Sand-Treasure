@@ -9,13 +9,14 @@ public class ColoredSandArea : MonoBehaviour
 {
     [SerializeField] private SandType sandType;
     [SerializeField] private int level;
-    
+
     private PlayerSandAccumulator playerSandAccumulator;
     private Stats stats;
     private BumpChecker bumpChecker;
     private PlayerMatColorChanger playerMatColorChanger;
     private int playerStrengthLevel;
     private NotEnoughPower notEnoughPower;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -24,17 +25,17 @@ public class ColoredSandArea : MonoBehaviour
             playerSandAccumulator.ChangeDustColor(sandType);
             stats = other.GetComponent<Stats>();
             stats.OnStrengthChange += UpdatePlayerLevel;
+            UpdatePlayerLevel(stats.GetStatLevel(Stat.Strength));
             bumpChecker = other.GetComponent<BumpChecker>();
             playerMatColorChanger = other.GetComponent<PlayerMatColorChanger>();
-            UpdatePlayerLevel(stats.GetStatLevel(Stat.Strength));
             notEnoughPower = other.GetComponent<NotEnoughPower>();
-            if (level>playerStrengthLevel)
+            print("entered to" + sandType);
+            if (level > playerStrengthLevel)
             {
-                bumpChecker.higherLevelArea = true;
+                print("if entered to" + sandType);
+                bumpChecker.isPlayerOnHigherLevelArea = true;
                 playerMatColorChanger.ChangeColor(true);
                 notEnoughPower.InstantiateText();
-                print(playerStrengthLevel);
-                print("not enough power");
             }
         }
     }
@@ -46,11 +47,13 @@ public class ColoredSandArea : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (level>playerStrengthLevel)
+        if (!other.CompareTag("Player")) return;
+        print("exited from" + sandType);
+        if (level > playerStrengthLevel)
         {
-            bumpChecker.higherLevelArea = false;
+            print("if exited from" + sandType);
+            bumpChecker.isPlayerOnHigherLevelArea = false;
             playerMatColorChanger.ChangeColor(false);
         }
     }
-    
 }

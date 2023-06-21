@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1963951545068541206
 Transform:
   m_ObjectHideFlags: 0
@@ -2391,6 +2391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_03_orangeNotPickable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4688551134365010, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -2865,6 +2869,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure
       objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
 --- !u!4 &9044983215992018405 stripped
@@ -3297,6 +3305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
 --- !u!4 &9044983217753727156 stripped
@@ -3446,6 +3458,10 @@ PrefabInstance:
     - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_Name
       value: Crystal_03_orangeNotPickable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4688551134365010, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_RootOrder
@@ -3886,6 +3902,10 @@ PrefabInstance:
     - target: {fileID: 4290459150154609006, guid: 9f18455a1a7ad7a478ab2533c60de26a, type: 3}
       propertyPath: m_Name
       value: DiamondNotPickable
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290459150154609006, guid: 9f18455a1a7ad7a478ab2533c60de26a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f18455a1a7ad7a478ab2533c60de26a, type: 3}

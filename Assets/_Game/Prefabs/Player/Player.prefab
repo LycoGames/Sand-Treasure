@@ -19587,7 +19587,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 0.63529414}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.4}
+      maxColor: {r: 0.3490566, g: 0.25077754, b: 0.060920257, a: 0.4}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -20727,8 +20727,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.2830189, g: 0.22617891, b: 0.11881453, a: 1}
-        key1: {r: 0.16037738, g: 0.12725508, b: 0.05825027, a: 0}
+        key0: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 1, b: 1, a: 0}
         key2: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -20743,7 +20743,7 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 21426
+        atime0: 0
         atime1: 65535
         atime2: 65535
         atime3: 65535
@@ -24865,7 +24865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topology: 1
   _detail: 51
-  _level: 1
+  _level: 0
   _levelMultiplier: 1
   _liquidLayers:
   - layerName: Layer 0
@@ -24941,7 +24941,7 @@ MonoBehaviour:
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
     currentBubblesOpacity: 0
   - layerName: Layer 4
-    amount: 1
+    amount: 0
     density: 1
     color: {r: 0.7411765, g: 0.49411765, b: 1, a: 1}
     miscible: 0
@@ -24953,7 +24953,7 @@ MonoBehaviour:
     bubblesOpacity: 1
     baseLevel: 0
     currentBaseLevel: 0
-    currentAmount: 1
+    currentAmount: 0
     currentColor: {r: 0.7411765, g: 0.49411765, b: 1, a: 1}
     currentMurkiness: 0.5
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
@@ -26148,8 +26148,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 0.2}
-  m_Center: {x: 0, y: 2, z: 3.7}
+  m_Size: {x: 0.7, y: 3, z: 0.2}
+  m_Center: {x: 0, y: 1.9999995, z: 3.7}
 --- !u!114 &5787091169568309251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26287,7 +26287,7 @@ MonoBehaviour:
     m_Bits: 2048
   checkDelay: 0.1
   maxDistance: 7
-  higherLevelArea: 0
+  isPlayerOnHigherLevelArea: 0
   isPlayerCapacityFull: 0
 --- !u!114 &3746180407780357734
 MonoBehaviour:

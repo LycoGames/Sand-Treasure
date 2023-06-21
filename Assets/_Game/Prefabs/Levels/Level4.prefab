@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1090913263125198214
 Transform:
   m_ObjectHideFlags: 0
@@ -523,6 +523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiamondNotPickable
       objectReference: {fileID: 0}
+    - target: {fileID: 4290459150154609006, guid: 9f18455a1a7ad7a478ab2533c60de26a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f18455a1a7ad7a478ab2533c60de26a, type: 3}
 --- !u!4 &4182623397424333392 stripped
@@ -712,6 +716,10 @@ PrefabInstance:
     - target: {fileID: 6304037833603969767, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
       propertyPath: m_Name
       value: Crystal_15_green_pureNotPickable 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304037833603969767, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
@@ -1200,6 +1208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_03_orangeNotPickable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4688551134365010, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -1578,6 +1590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_15_green_pureNotPickable 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6304037833603969767, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
 --- !u!4 &7863758880595029623 stripped
@@ -1595,6 +1611,10 @@ PrefabInstance:
     - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_Name
       value: Crystal_03_orangeNotPickable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4688551134365010, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_RootOrder
@@ -3088,6 +3108,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
 --- !u!4 &1429681591866492100 stripped
@@ -3281,6 +3305,10 @@ PrefabInstance:
     - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
       propertyPath: m_Name
       value: Treasure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
@@ -4031,7 +4059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6356777613376677883, guid: d5497c5d730ce9f47bde1d07a5d3515b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6356777613376677883, guid: d5497c5d730ce9f47bde1d07a5d3515b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4167,7 +4195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4532461114243469862, guid: b956be3a13c889349abecb634af9d449, type: 3}
       propertyPath: m_LocalScale.x
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4532461114243469862, guid: b956be3a13c889349abecb634af9d449, type: 3}
       propertyPath: m_LocalScale.z
@@ -4233,7 +4261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 78697846597204435, guid: 79b84bd094eaca54da77264ae3469cdc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 55
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 78697846597204435, guid: 79b84bd094eaca54da77264ae3469cdc, type: 3}
       propertyPath: m_LocalPosition.x

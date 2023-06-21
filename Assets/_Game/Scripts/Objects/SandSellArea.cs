@@ -21,6 +21,8 @@ public class SandSellArea : MonoBehaviour
     private const int Blue = 0;
     private const int Pink = 1;
     private const int Yellow = 2;
+    private const int Green = 3;
+    private const int Purple = 4;
     [SerializeField] private List<SandCubes> cubesToThrow = new List<SandCubes>();
 
     [Tooltip("Decrease for more cubes")] [SerializeField]
@@ -57,10 +59,11 @@ public class SandSellArea : MonoBehaviour
         //     return;
         // }
         float sum = liquidVolume.liquidLayers.Sum(liquidLayerValue => liquidLayerValue.amount);
-        if (sum<=0)
+        if (sum <= 0)
         {
             return;
         }
+
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)
@@ -95,6 +98,18 @@ public class SandSellArea : MonoBehaviour
             case Yellow:
             {
                 InstantiateCubes(CalculateCubeCount(Yellow), SandType.Yellow);
+                //cubesToThrow.Add(instance);
+                break;
+            }
+            case Green:
+            {
+                InstantiateCubes(CalculateCubeCount(Green), SandType.Green);
+                //cubesToThrow.Add(instance);
+                break;
+            }
+            case Purple:
+            {
+                InstantiateCubes(CalculateCubeCount(Purple), SandType.Purple);
                 //cubesToThrow.Add(instance);
                 break;
             }

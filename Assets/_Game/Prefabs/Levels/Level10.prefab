@@ -731,6 +731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_05_roseNotPickable (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8977641685763568561, guid: 1f3a5f7a8304e0442b6778a6f32390c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3a5f7a8304e0442b6778a6f32390c5, type: 3}
 --- !u!4 &7328792143499430229 stripped
@@ -792,6 +796,10 @@ PrefabInstance:
     - target: {fileID: 6304037833603969767, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
       propertyPath: m_Name
       value: Crystal_15_green_pureNotPickable 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6304037833603969767, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
@@ -934,6 +942,10 @@ PrefabInstance:
     - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_Name
       value: Crystal_03_orangeNotPickable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4688551134365010, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_RootOrder
@@ -1300,6 +1312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_15_green_pureNotPickable 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6304037833603969767, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50b931aab5a4a724a9e9b781642c7e26, type: 3}
 --- !u!4 &1444902165607047263 stripped
@@ -1601,6 +1617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crystal_03_orangeNotPickable
       objectReference: {fileID: 0}
+    - target: {fileID: 1512056085945312, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4688551134365010, guid: ae84119fb2c6536468103e30fe8b43d1, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1892,6 +1912,10 @@ PrefabInstance:
     - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
       propertyPath: m_Name
       value: Treasure (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
@@ -2265,6 +2289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure
       objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
 --- !u!4 &2798885696850148994 stripped
@@ -2450,6 +2478,10 @@ PrefabInstance:
     - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
       propertyPath: m_Name
       value: Treasure
+      objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
@@ -2711,6 +2743,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
 --- !u!4 &2798885697166185358 stripped
@@ -2966,6 +3002,10 @@ PrefabInstance:
     - target: {fileID: 8977641685763568561, guid: 1f3a5f7a8304e0442b6778a6f32390c5, type: 3}
       propertyPath: m_Name
       value: Crystal_05_roseNotPickable
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977641685763568561, guid: 1f3a5f7a8304e0442b6778a6f32390c5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f3a5f7a8304e0442b6778a6f32390c5, type: 3}

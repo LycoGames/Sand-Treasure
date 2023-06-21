@@ -13,7 +13,7 @@ public class BumpChecker : MonoBehaviour
     [SerializeField] private float maxDistance;
 
     private WaitForSeconds waitForSeconds;
-    public bool higherLevelArea;
+    public bool isPlayerOnHigherLevelArea;
     public bool isPlayerCapacityFull;
 
     void Start()
@@ -63,7 +63,7 @@ public class BumpChecker : MonoBehaviour
             }
             else
             {
-                playerController.IncreaseMovementSpeed(false, higherLevelArea);
+                playerController.IncreaseMovementSpeed(false, isPlayerOnHigherLevelArea);
             }
         }
         else
