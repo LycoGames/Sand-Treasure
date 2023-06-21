@@ -107,8 +107,6 @@ public class PlayerSandAccumulator : MonoBehaviour
     public bool CanAccumulateSand()
     {
         return currentCapacityValue < maxCapacity;
-        // float sum = liquidVolumeFX.liquidLayers.Sum(liquidLayerValue => liquidLayerValue.amount);
-        // return sum < 1;
         // return liquidVolumeFX.liquidLayers[0].amount + liquidVolumeFX.liquidLayers[1].amount +
         //     liquidVolumeFX.liquidLayers[2].amount < 1;
     }
@@ -128,7 +126,7 @@ public class PlayerSandAccumulator : MonoBehaviour
 
     private void IncreaseCurrentCapacityValue()
     {
-        currentCapacityValue += Math.Round((fillAmount / maxCapacity) * 100, 2);
+        currentCapacityValue += Math.Round((fillAmount / maxCapacity) * maxCapacity, 2);
         inGameUI.CapacityBar.UpdateCapacity(currentCapacityValue);
         if (!CanAccumulateSand())
         {
@@ -139,7 +137,7 @@ public class PlayerSandAccumulator : MonoBehaviour
             bumpChecker.ChangeIsPlayerCapacityFull(true);
         }
 
-        //print("current capacity value" + currentCapacityValue + "/" + maxCapacity);
+        print("current capacity value" + currentCapacityValue + "/" + maxCapacity);
     }
 
     private void SetSandType(SandType type)

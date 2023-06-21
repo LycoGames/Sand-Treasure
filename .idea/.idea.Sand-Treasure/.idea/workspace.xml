@@ -3,30 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Body.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Destructible_Cars_2_Construction/Construction_2/Materials/Construction2_Body.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/0/Level2Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/0/Level2Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/2/Level3Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/2/Level3Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/3/Level4Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/3/Level4Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/5/Level6Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/5/Level6Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/9/Level10Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/9/Level10Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Dust.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Fire &amp; Explosion Effects/Materials/Dust.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Animator/TextAnimator.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Animator/TextAnimator.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level10.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level10.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level8.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level8.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level9.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level9.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/ColoredSandArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/ColoredSandArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SandSellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SandSellArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/BumpChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/BumpChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMatColorChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerMatColorChanger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerSandAccumulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerSandAccumulator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +168,7 @@
       <workItem from="1686768209797" duration="985000" />
       <workItem from="1687259051643" duration="6636000" />
       <workItem from="1687286146606" duration="1675000" />
-      <workItem from="1687342217299" duration="9869000" />
+      <workItem from="1687342217299" duration="13966000" />
     </task>
     <servers />
   </component>
