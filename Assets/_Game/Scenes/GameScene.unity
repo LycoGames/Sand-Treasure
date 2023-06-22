@@ -206,6 +206,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &99869599
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 285700076609731478, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_Name
+      value: Level2
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731478, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285700076609731480, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
 --- !u!1 &123911971
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 563505572}
---- !u!21 &1042554702
+--- !u!21 &1057778880
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -2983,7 +3044,7 @@ Material:
     - _Glossiness: 0.767
     - _GlossinessInt: 0.5
     - _Level: 1
-    - _LevelPos: 4.495278
+    - _LevelPos: 7.4606905
     - _LiquidRaySteps: 10
     - _LowerLimit: -1.5300958
     - _Metallic: 0
@@ -3007,7 +3068,7 @@ Material:
     m_Colors:
     - _Bounds: {r: 1, g: 1, b: 1, a: 1}
     - _BubblesData: {r: 25, g: 0, b: 1, a: 0}
-    - _Center: {r: -0.0000010855655, g: 5.592618, b: -58.99877, a: 0}
+    - _Center: {r: -0.00000087608186, g: 5.592618, b: -58.99877, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 0, g: 1, b: 0, a: 0.1}
     - _Color2: {r: 1, g: 0, b: 0, a: 0.3}
@@ -3019,7 +3080,7 @@ Material:
     - _GlossinessInt: {r: 49, g: 1, b: 0, a: 0}
     - _LightColor: {r: 1, g: 1, b: 1, a: 1}
     - _Scale: {r: 0.16877924, g: 0.006751169, b: 0.67511696, a: 3.3755846}
-    - _Size: {r: 4.501465, g: 2.9624498, b: 1.1606883, a: 1.2219521}
+    - _Size: {r: 4.25594, g: 2.9624498, b: 1.1606883, a: 0.9775617}
     - _SmokeColor: {r: 0.7, g: 0.7, b: 0.7, a: 0.25}
     - _Turbulence: {r: 0, g: 0, b: 0, a: 0}
     - _ViewDir: {r: 0, g: 0, b: 1, a: 1}
@@ -5214,7 +5275,7 @@ PrefabInstance:
     - target: {fileID: 6510243597676640392, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1042554702}
+      objectReference: {fileID: 1057778880}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
 --- !u!4 &3896031487681478705 stripped
