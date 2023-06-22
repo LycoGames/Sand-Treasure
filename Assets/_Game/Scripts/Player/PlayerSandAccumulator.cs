@@ -99,7 +99,7 @@ public class PlayerSandAccumulator : MonoBehaviour
                 dustEffect.startColor = new Color(0.01f, 0.4f, 0f, 0.4f);
                 break;
             case SandType.Purple:
-                dustEffect.startColor = new Color(0.74f, 0.49f, 0.1f, 0.4f);
+                dustEffect.startColor = new Color(0.46f, 0.22f, 0.85f, 0.4f);
                 break;
         }
     }

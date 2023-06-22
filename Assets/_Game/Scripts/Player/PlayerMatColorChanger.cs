@@ -14,6 +14,7 @@ public class PlayerMatColorChanger : MonoBehaviour
     private WaitForSeconds waitForSeconds;
     private Vector3 scaleSize = new Vector3(0.1f, 0.1f, 0.1f);
     private bool isRunning;
+
     void Start()
     {
         waitForSeconds = new WaitForSeconds(1f);
@@ -31,15 +32,10 @@ public class PlayerMatColorChanger : MonoBehaviour
         else
         {
             playerMat.DOColor(playerStockColor, 1f);
-            if (coroutine != null)
-            {
-                isRunning = false;
-                DOTween.Kill(transform);
-                this.transform.localScale = Vector3.one;
-                StopCoroutine(coroutine);
-            }
+            StopColorAndCoroutine();
         }
     }
+
 
     private IEnumerator ChangeColorCoroutine()
     {
@@ -58,8 +54,20 @@ public class PlayerMatColorChanger : MonoBehaviour
         isRunning = false;
     }
 
+    private void StopColorAndCoroutine()
+    {
+        if (coroutine != null)
+        {
+            isRunning = false;
+            DOTween.Kill(transform);
+            this.transform.localScale = Vector3.one;
+            StopCoroutine(coroutine);
+        }
+    }
+
     public void ResetPlayerColor()
     {
         playerMat.color = playerStockMat.color;
+        StopColorAndCoroutine();
     }
 }
