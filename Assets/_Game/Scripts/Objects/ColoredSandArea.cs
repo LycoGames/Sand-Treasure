@@ -29,10 +29,8 @@ public class ColoredSandArea : MonoBehaviour
             bumpChecker = other.GetComponent<BumpChecker>();
             playerMatColorChanger = other.GetComponent<PlayerMatColorChanger>();
             notEnoughPower = other.GetComponent<NotEnoughPower>();
-            print("entered to" + sandType);
             if (level > playerStrengthLevel)
             {
-                print("if entered to" + sandType);
                 bumpChecker.isPlayerOnHigherLevelArea = true;
                 playerMatColorChanger.ChangeColor(true);
                 notEnoughPower.InstantiateText();
@@ -48,10 +46,8 @@ public class ColoredSandArea : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        print("exited from" + sandType);
         if (level > playerStrengthLevel)
         {
-            print("if exited from" + sandType);
             bumpChecker.isPlayerOnHigherLevelArea = false;
             playerMatColorChanger.ChangeColor(false);
         }

@@ -5,28 +5,30 @@ using _Game.Scripts.Saving;
 
 namespace _Game.Scripts.Player
 {
-    public class Inventory : Subject,ISaveable
+    public class Inventory : Subject, ISaveable
     {
         private int money;
         private int treasure;
-        
+
         public void AddMoney(int value)
         {
             money += value;
-            base.NotifyObservers(money,ItemType.Money);
+            base.NotifyObservers(money, ItemType.Money);
         }
+
         public void SpendMoney(int value)
         {
             money -= value;
-            base.NotifyObservers(money,ItemType.Money);
+            base.NotifyObservers(money, ItemType.Money);
         }
 
         public void AddTreasure()
         {
-            treasure ++;
+            treasure++;
             GameManager.Instance.IncreaseFoundedTreasureCount();
-            base.NotifyObservers(treasure,ItemType.Treasure);
+            base.NotifyObservers(treasure, ItemType.Treasure);
         }
+
         public int GetMoney()
         {
             return money;
@@ -45,7 +47,7 @@ namespace _Game.Scripts.Player
         public void RestoreState(object state)
         {
             money = (int)state;
-            base.NotifyObservers(money,ItemType.Money);
+            base.NotifyObservers(money, ItemType.Money);
         }
 
         public void ResetTreasureCount()

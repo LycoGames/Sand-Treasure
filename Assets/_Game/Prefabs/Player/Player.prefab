@@ -24865,11 +24865,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _topology: 1
   _detail: 51
-  _level: 1
+  _level: 0
   _levelMultiplier: 1
   _liquidLayers:
   - layerName: Layer 0
-    amount: 0.5
+    amount: 0
     density: 1
     color: {r: 0.36320752, g: 0.8726413, b: 1, a: 1}
     miscible: 0
@@ -24881,7 +24881,7 @@ MonoBehaviour:
     bubblesOpacity: 0
     baseLevel: 0
     currentBaseLevel: 0
-    currentAmount: 0.5
+    currentAmount: 0
     currentColor: {r: 0.36320752, g: 0.8726413, b: 1, a: 1}
     currentMurkiness: 0.2
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
@@ -24897,8 +24897,8 @@ MonoBehaviour:
     viscosity: 1
     adjustmentSpeed: 10
     bubblesOpacity: 0
-    baseLevel: 0.5
-    currentBaseLevel: 0.5
+    baseLevel: 0
+    currentBaseLevel: 0
     currentAmount: 0
     currentColor: {r: 1, g: 0.63529414, b: 0.99215686, a: 1}
     currentMurkiness: 0.4
@@ -24915,15 +24915,15 @@ MonoBehaviour:
     viscosity: 1
     adjustmentSpeed: 10
     bubblesOpacity: 0
-    baseLevel: 0.5
-    currentBaseLevel: 0.5
+    baseLevel: 0
+    currentBaseLevel: 0
     currentAmount: 0
     currentColor: {r: 1, g: 0.91409546, b: 0.3915094, a: 1}
     currentMurkiness: 0.2
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
     currentBubblesOpacity: 0
   - layerName: Layer 3
-    amount: 0.5
+    amount: 0
     density: 1
     color: {r: 0.47235844, g: 1, b: 0.43867922, a: 1}
     miscible: 0
@@ -24933,9 +24933,9 @@ MonoBehaviour:
     viscosity: 1
     adjustmentSpeed: 10
     bubblesOpacity: 0
-    baseLevel: 0.5
-    currentBaseLevel: 0.5
-    currentAmount: 0.5
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 0
     currentColor: {r: 0.47235844, g: 1, b: 0.43867922, a: 1}
     currentMurkiness: 0.2
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
@@ -24951,8 +24951,8 @@ MonoBehaviour:
     viscosity: 1
     adjustmentSpeed: 1
     bubblesOpacity: 1
-    baseLevel: 1
-    currentBaseLevel: 1
+    baseLevel: 0
+    currentBaseLevel: 0
     currentAmount: 0
     currentColor: {r: 0.7411765, g: 0.49411765, b: 1, a: 1}
     currentMurkiness: 0.5
@@ -26002,6 +26002,7 @@ GameObject:
   - component: {fileID: 3746180407780357734}
   - component: {fileID: 7203071617468739344}
   - component: {fileID: 2419514597263650919}
+  - component: {fileID: 8474584583723238879}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -26339,6 +26340,21 @@ MonoBehaviour:
   notEnoughPowerText: {fileID: 6890317299914419829, guid: d5b3fe753adebdc409df8d1632056333, type: 3}
   offset: {x: 0, y: 4, z: 0}
   destroyTime: 1
+--- !u!114 &8474584583723238879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5787091169568480365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bcec4879ccceb04cb1e95f595b35d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bowl: {fileID: 5787091169568247379}
+  scaleX: 0.08
+  stats: {fileID: 5787091169568309278}
 --- !u!1 &5787091169568484249
 GameObject:
   m_ObjectHideFlags: 0
