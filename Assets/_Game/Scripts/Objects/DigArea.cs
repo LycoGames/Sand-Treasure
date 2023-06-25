@@ -67,7 +67,7 @@ namespace _Game.Scripts.Objects
 
         private IEnumerator DiggingCoroutine()
         {
-            int lastPercentage = digZone.GetPercentOfDig();
+            float lastPercentage = digZone.GetPercentOfDig();
 
             while (true)
             {

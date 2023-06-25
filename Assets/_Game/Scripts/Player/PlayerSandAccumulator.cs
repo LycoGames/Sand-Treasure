@@ -137,7 +137,7 @@ public class PlayerSandAccumulator : MonoBehaviour
             bumpChecker.ChangeIsPlayerCapacityFull(true);
         }
 
-        print("current capacity value" + currentCapacityValue + "/" + maxCapacity);
+        // print("current capacity value" + currentCapacityValue + "/" + maxCapacity);
     }
 
     private void SetSandType(SandType type)

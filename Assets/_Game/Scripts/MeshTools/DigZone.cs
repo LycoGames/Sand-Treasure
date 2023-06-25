@@ -39,9 +39,9 @@ namespace _Game.Scripts.MeshTools
             meshBase.UpdateMesh();
         }
 
-        public int GetPercentOfDig()
+        public float GetPercentOfDig()
         {
-            return (int)(currentDugHeight / totalDigHeight * 100);
+            return currentDugHeight / totalDigHeight * 100;
         }
 
         private void SearchInZoneVertices()
@@ -50,7 +50,7 @@ namespace _Game.Scripts.MeshTools
             meshScale = meshBase.transform.localScale;
             scaledPos = new Vector3();
             Debug.Log(vertices.Length);
-           // float zoneSize = transform.localScale.x / 2;
+            // float zoneSize = transform.localScale.x / 2;
             for (int i = 0; i < vertices.Length; i++)
             {
                 scaledPos = GetScaledVector(vertices[i], meshScale);

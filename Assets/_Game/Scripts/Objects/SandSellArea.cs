@@ -167,8 +167,8 @@ public class SandSellArea : MonoBehaviour
 
     private Vector3 GetRandomPos()
     {
-        int randomX = Random.Range(-16, 0);
-        int randomZ = Random.Range(-40, -26);
+        int randomX = Random.Range(-12, 0);
+        int randomZ = Random.Range(-58, -50);
         Vector3 pos = new Vector3(randomX, 1, randomZ);
         return pos;
     }

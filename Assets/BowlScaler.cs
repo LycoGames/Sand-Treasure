@@ -10,7 +10,7 @@ public class BowlScaler : MonoBehaviour, ISaveable
     [SerializeField] private Transform bowl;
     [SerializeField] private float scaleX;
     [SerializeField] private Stats stats;
-    private float scaleSizeX;
+    private float scaleSizeX = 0.8f;
 
     private void Start()
     {
@@ -36,6 +36,6 @@ public class BowlScaler : MonoBehaviour, ISaveable
 
     private void SetScaleSizeOnBowl(float value)
     {
-        bowl.localScale = new Vector3(value, 1, 1);
+       // bowl.localScale = new Vector3(value, 1, 1);
     }
 }
