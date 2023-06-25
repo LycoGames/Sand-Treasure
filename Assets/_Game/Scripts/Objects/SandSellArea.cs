@@ -31,10 +31,11 @@ public class SandSellArea : MonoBehaviour
     private float capacity;
     private WaitForSeconds waitForSeconds = new WaitForSeconds(0.2f);
     private WaitForSeconds waitForSecondsVFX = new WaitForSeconds(0.25f);
-
+    public Action OnSell;
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player")) return;
+        if (playerBowlTransform==null)
         {
             playerSandAccumulator = other.GetComponent<PlayerSandAccumulator>();
             playerBowlTransform = other.gameObject.transform.Find("Bowl").gameObject.transform;
@@ -63,7 +64,7 @@ public class SandSellArea : MonoBehaviour
         {
             return;
         }
-
+        OnSell?.Invoke();
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)

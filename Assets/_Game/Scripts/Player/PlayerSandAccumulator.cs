@@ -35,7 +35,7 @@ public class PlayerSandAccumulator : MonoBehaviour
 
     [SerializeField] private Color pinkColor;
     private InGameUI inGameUI;
-
+    public Action OnCapacityFull;
     void Start()
     {
         inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
@@ -135,6 +135,7 @@ public class PlayerSandAccumulator : MonoBehaviour
             capacityIsFullText.enabled = true;
             playerState.ChangeState(playerState.IdleState);
             bumpChecker.ChangeIsPlayerCapacityFull(true);
+            OnCapacityFull?.Invoke();
         }
 
         // print("current capacity value" + currentCapacityValue + "/" + maxCapacity);

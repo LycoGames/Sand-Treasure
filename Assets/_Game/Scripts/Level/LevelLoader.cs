@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class LevelLoader : MonoBehaviour, ISaveable
 {
-    //TODO load new level, reset player's stack, set player's pos, Reset TreasureCount, Update TotalTreasureCount
     [SerializeField] private List<Level> levels = new List<Level>();
     [SerializeField] private PlayerUpgradesUI playerUpgradesMenuUI;
 
@@ -27,6 +26,11 @@ public class LevelLoader : MonoBehaviour, ISaveable
         }
 
         loadedLevel.Initialize(playerUpgradesMenuUI);
+        if (currentLevel==0)
+        {
+            TutorialLevel tutorialLevel = (TutorialLevel)loadedLevel;
+            GameManager.Instance.SetupTutorialLevel(tutorialLevel);
+        }
         GameManager.Instance.ResetTreasureCount();
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();

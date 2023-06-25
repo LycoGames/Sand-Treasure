@@ -36,6 +36,6 @@ public class BowlScaler : MonoBehaviour, ISaveable
 
     private void SetScaleSizeOnBowl(float value)
     {
-       // bowl.localScale = new Vector3(value, 1, 1);
+        bowl.localScale = new Vector3(value, 1, 1);
     }
 }

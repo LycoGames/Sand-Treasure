@@ -94,7 +94,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sandVFX: {fileID: 198603562046773920, guid: d7392277ddbc6394bb6a3403b4c3b669, type: 3}
   cubesToThrow: []
-  amountDivider: 10
+  amountDivider: 20
 --- !u!1001 &4652439914554953056
 PrefabInstance:
   m_ObjectHideFlags: 0

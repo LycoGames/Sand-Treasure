@@ -82,4 +82,9 @@ public class GameManager : AbstractSingleton<GameManager>
     {
         playerMatColorChanger.ResetPlayerColor();
     }
+
+    public void SetupTutorialLevel(TutorialLevel level)
+    {
+        level.Initialize(player.GetComponent<PlayerSandAccumulator>());
+    }
 }
