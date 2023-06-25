@@ -5,7 +5,7 @@ using UnityEngine;
 public class SellZoneTutorialElement : TutorialElement
 {
     [SerializeField] private SandSellArea sandSellArea;
-    
+
     private void OnEnable()
     {
         sandSellArea.OnSell += TutorialCompleted;

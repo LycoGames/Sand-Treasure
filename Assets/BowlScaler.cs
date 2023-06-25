@@ -30,7 +30,9 @@ public class BowlScaler : MonoBehaviour, ISaveable
 
     public void RestoreState(object state)
     {
-        scaleSizeX = (float)state;
+        float value = (float)state;
+        if (value < 0.8f) return;
+        scaleSizeX = value;
         SetScaleSizeOnBowl(scaleSizeX);
     }
 
