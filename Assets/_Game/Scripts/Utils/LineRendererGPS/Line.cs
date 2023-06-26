@@ -16,6 +16,8 @@ namespace _Game.Utils.LineRendererGPS
         [SerializeField] private TutorialElement[] tutorialElements;
         [SerializeField] private float speed = 30f;
         [SerializeField] private float speedMultiplier;
+        [SerializeField] private Vector3 offset;
+
         private int currentIndex = 0;
 
         private Vector3 tempPos;
@@ -81,9 +83,9 @@ namespace _Game.Utils.LineRendererGPS
                 speed = CalculateSpeedByMeters(CalculateDistance(tempPos));
                 while (CalculateDistance(tempPos) > 0.5f)
                 {
-                    lineRenderer.SetPosition(0, playerTransform.position);
-                    lineRenderer.SetPosition(1, tempPos);
-                    tempPos = Vector3.MoveTowards(tempPos, destination.position, speed);
+                    lineRenderer.SetPosition(0, playerTransform.position + offset);
+                    lineRenderer.SetPosition(1, destination.position);
+                    //  tempPos = Vector3.MoveTowards(tempPos, destination.position, speed);
                     yield return null;
                 }
 

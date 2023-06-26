@@ -12,21 +12,22 @@ using Random = UnityEngine.Random;
 
 public class SandSellArea : MonoBehaviour
 {
+    [SerializeField] private List<SandCubes> cubesToThrow = new List<SandCubes>();
+    [SerializeField] private AudioClip sellSFX;
+    [Tooltip("Decrease for more cubes")] [SerializeField] private int amountDivider;
+    [SerializeField] private ParticleSystem sandVFX;
+    
     private PlayerSandAccumulator playerSandAccumulator;
     private LiquidVolume liquidVolume;
     private Stats stats;
     private Transform playerBowlTransform;
     private Stack<ParticleSystem> vfxStack = new Stack<ParticleSystem>();
-    [SerializeField] private ParticleSystem sandVFX;
     private const int Blue = 0;
     private const int Pink = 1;
     private const int Yellow = 2;
     private const int Green = 3;
     private const int Purple = 4;
-    [SerializeField] private List<SandCubes> cubesToThrow = new List<SandCubes>();
-
-    [Tooltip("Decrease for more cubes")] [SerializeField]
-    private int amountDivider;
+    
 
     private float capacity;
     private WaitForSeconds waitForSeconds = new WaitForSeconds(0.2f);
@@ -65,6 +66,7 @@ public class SandSellArea : MonoBehaviour
             return;
         }
         OnSell?.Invoke();
+        SoundManager.Instance.Play(sellSFX);
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)

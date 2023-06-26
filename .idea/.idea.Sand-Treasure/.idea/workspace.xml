@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BowlScaler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BowlScaler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SellZoneTutorialElement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SellZoneTutorialElement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Art/LineRendererGPS/ar.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Art/LineRendererGPS/ar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/LineRendererGPS/Line.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Utils/LineRendererGPS/Line.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +182,8 @@
       <workItem from="1687513840280" duration="2569000" />
       <workItem from="1687692721601" duration="8952000" />
       <workItem from="1687703381763" duration="5021000" />
-      <workItem from="1687709269437" duration="1242000" />
+      <workItem from="1687709269437" duration="1285000" />
+      <workItem from="1687773321038" duration="2038000" />
     </task>
     <servers />
   </component>

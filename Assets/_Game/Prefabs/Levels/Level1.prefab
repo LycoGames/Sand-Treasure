@@ -1508,7 +1508,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 29f379764950883419590e2e1ff9e5be, type: 2}
+  - {fileID: 2100000, guid: 225f4cbbc1379c549a0824e4d4f57390, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1611,6 +1611,7 @@ MonoBehaviour:
   - {fileID: 4616031161722717382}
   speed: 50
   speedMultiplier: 2
+  offset: {x: 0, y: 0, z: 1}
 --- !u!1001 &2656621965547851
 PrefabInstance:
   m_ObjectHideFlags: 0
