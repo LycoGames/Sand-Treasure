@@ -13,6 +13,7 @@ namespace _Game.Scripts.BaseSequence
         private InGameUI inGameUI;
         [SerializeField] private Stats playerStats;
         [SerializeField] private LevelLoader levelLoader;
+        [SerializeField] private PlayerSandAccumulator playerSandAccumulator;
         
         public Action OnReachedFinish;
         [HideInInspector] public bool isFinished;
@@ -22,6 +23,7 @@ namespace _Game.Scripts.BaseSequence
             inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
             inGameUI.AudioToggle = AudioOnOff;
             inGameUI.CapacityBar.Initialize(playerStats);
+            
             //inGameUI.Pause = PauseGame;
             //  playerController.OnPositionChange += inGameUI.SetDistanceText;
         }
@@ -29,6 +31,7 @@ namespace _Game.Scripts.BaseSequence
         public override void Enter()
         {
             //   playerController.canControl = true;
+            playerSandAccumulator.Initialize();
             UpdateProgressBar(levelLoader.GetCompletionPercentage());
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
         }

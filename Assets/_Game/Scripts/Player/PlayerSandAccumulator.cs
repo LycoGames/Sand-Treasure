@@ -57,6 +57,10 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
         dustEffect = playerEffects.effect.main;
         currentSandType = SandType.Yellow;
         stats.OnStackCapacityChange += UpdateMaxCapacity;
+    }
+
+    public void Initialize()
+    {
         if (inGameUI == null)
         {
             GetInGameUI();
@@ -66,7 +70,6 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
         inGameUI.CapacityBar.UpdateMaxCapacity(maxCapacity);
         UpdateInGameUICapacityBar();
     }
-
 
     public void AccumulateSand()
     {
