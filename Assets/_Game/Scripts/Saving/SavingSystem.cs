@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -11,19 +12,15 @@ namespace _Game.Scripts.Saving
     {
         private const string currentSaveKey = "currentSaveName";
 
-        private void Awake()
-        {
-            Load(currentSaveKey);
-        }
-    
         private void OnApplicationQuit()
         {
             Save(currentSaveKey);
         }
 
-        private void OnApplicationPause(bool pauseStatus)
+        private void OnApplicationFocus(bool hasFocus)
         {
-            Save(currentSaveKey);
+            if (!hasFocus)
+                Save(currentSaveKey);
         }
 
         public IEnumerator LoadLastScene(string saveFile)
@@ -46,9 +43,9 @@ namespace _Game.Scripts.Saving
             SaveFile(saveFile, state);
         }
 
-        public void Load(string saveFile)
+        public void Load()
         {
-            RestoreState(LoadFile(saveFile));
+            RestoreState(LoadFile(currentSaveKey));
         }
 
         public void Delete(string saveFile)

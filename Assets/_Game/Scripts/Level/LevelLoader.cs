@@ -8,6 +8,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
 {
     [SerializeField] private List<Level> levels = new List<Level>();
     [SerializeField] private PlayerUpgradesUI playerUpgradesMenuUI;
+    [SerializeField] private SavingSystem savingSystem;
 
     public int currentLevel;
     private Level loadedLevel;
@@ -26,11 +27,13 @@ public class LevelLoader : MonoBehaviour, ISaveable
         }
 
         loadedLevel.Initialize(playerUpgradesMenuUI);
-        if (currentLevel==0)
+        if (currentLevel == 0)
         {
             TutorialLevel tutorialLevel = (TutorialLevel)loadedLevel;
             GameManager.Instance.SetupTutorialLevel(tutorialLevel);
         }
+
+        savingSystem.Load();
         GameManager.Instance.ResetTreasureCount();
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();

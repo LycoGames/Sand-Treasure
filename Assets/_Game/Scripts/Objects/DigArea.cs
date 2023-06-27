@@ -28,6 +28,8 @@ namespace _Game.Scripts.Objects
         private void Start()
         {
             inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
+            inGameUI.UpdateProgressBar(digZone.GetPercentOfDig());
+
             LootingCooldown = 1f;
             diggingCoroutineWaitForSeconds = new WaitForSeconds(LootingCooldown);
         }

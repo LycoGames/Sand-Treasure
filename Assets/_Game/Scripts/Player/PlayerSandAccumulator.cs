@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
+using _Game.Scripts.Saving;
 using _Game.Scripts.States;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.UI;
@@ -12,7 +13,20 @@ using UnityEngine;
 using LiquidVolumeFX;
 using TMPro;
 
-public class PlayerSandAccumulator : MonoBehaviour
+[Serializable]
+public class SandAccumulatorData
+{
+    public Dictionary<int, float> LiquidLayers;
+    public float CurrentCapacity;
+
+    public SandAccumulatorData(Dictionary<int, float> liquidVolumeDictionary, float currentCapacity)
+    {
+        LiquidLayers = liquidVolumeDictionary;
+        CurrentCapacity = currentCapacity;
+    }
+}
+
+public class PlayerSandAccumulator : MonoBehaviour, ISaveable
 {
     [SerializeField] private LiquidVolume liquidVolume;
     public LiquidVolume LiquidVolume => (liquidVolume);
@@ -36,6 +50,7 @@ public class PlayerSandAccumulator : MonoBehaviour
     [SerializeField] private Color pinkColor;
     private InGameUI inGameUI;
     public Action OnCapacityFull;
+
     void Start()
     {
         inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
@@ -149,5 +164,29 @@ public class PlayerSandAccumulator : MonoBehaviour
     private void UpdateMaxCapacity(float value)
     {
         maxCapacity = value;
+    }
+
+    public object CaptureState()
+    {
+        Dictionary<int, float> liquidVolumeDictionary = new();
+        for (int i = 0; i < 5; i++)
+        {
+            liquidVolumeDictionary.Add(i, liquidVolume.liquidLayers[i].amount);
+        }
+
+        return new SandAccumulatorData(liquidVolumeDictionary, (float)currentCapacityValue);
+    }
+
+    public void RestoreState(object state)
+    {
+        var data = (SandAccumulatorData)state;
+        foreach (var layer in data.LiquidLayers)
+        {
+            liquidVolume.liquidLayers[layer.Key].amount = layer.Value;
+        }
+
+        UpdateLayers();
+        currentCapacityValue = data.CurrentCapacity;
+        inGameUI.CapacityBar.UpdateCapacity(currentCapacityValue);
     }
 }

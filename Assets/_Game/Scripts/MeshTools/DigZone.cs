@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using _Game.Scripts.Saving;
 using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _Game.Scripts.MeshTools
 {
-    public class DigZone : MonoBehaviour
+    public class DigZone : MonoBehaviour, ISaveable
     {
         private MeshBase meshBase;
         private Dictionary<int, Vector3> zoneVertices = new Dictionary<int, Vector3>();
@@ -82,6 +83,16 @@ namespace _Game.Scripts.MeshTools
             vector.y *= scale.y;
             vector.z *= scale.z;
             return vector;
+        }
+
+        public object CaptureState()
+        {
+            return currentDugHeight;
+        }
+
+        public void RestoreState(object state)
+        {
+            currentDugHeight = (float)state;
         }
     }
 }
