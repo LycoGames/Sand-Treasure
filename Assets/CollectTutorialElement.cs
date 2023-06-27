@@ -10,12 +10,10 @@ using UnityEngine;
 
 public class CollectTutorialElement : TutorialElement, IObserver
 {
-    private Inventory playerInventory;
     [SerializeField] private int moneyCondition;
 
     public void Initialize(Inventory playerInventory)
     {
-        this.playerInventory = playerInventory;
         playerInventory.AddObserver(this);
     }
 

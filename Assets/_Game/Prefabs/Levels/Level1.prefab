@@ -722,6 +722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTransform: {fileID: 4774298110725193094}
+  tutorialLine: {fileID: 7865632456543101802}
 --- !u!1 &2323993969214218000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5002930629663859882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.91, y: 1, z: -55}
+  m_LocalPosition: {x: -5.91, y: 1, z: -54}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []

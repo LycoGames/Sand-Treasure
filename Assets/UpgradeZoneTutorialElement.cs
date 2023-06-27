@@ -4,11 +4,14 @@ using System.Collections.Generic;
 using _Game.Scripts.Control;
 using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
+using _Game.Scripts.Utils.LineRendererGPS;
 using DG.Tweening;
 using UnityEngine;
 
 public class UpgradeZoneTutorialElement : TutorialElement
 {
+    [SerializeField] private Line tutorialLine;
+    
     private RectTransform fingerRect;
     private readonly Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
     private readonly Vector3 stockSize = new Vector3(0.85f, 0.85f, 0.85f);
@@ -16,7 +19,8 @@ public class UpgradeZoneTutorialElement : TutorialElement
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-
+        if (tutorialLine.IsTutorialComplete) return;
+        
         SetActiveFinger();
     }
 
@@ -36,6 +40,7 @@ public class UpgradeZoneTutorialElement : TutorialElement
     
     private void CompleteCondition(Stat obj)
     {
+        DOTween.Kill(fingerRect);
         fingerRect.gameObject.SetActive(false);
         ConditionComplete();
     }
