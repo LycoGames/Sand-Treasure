@@ -27,21 +27,19 @@ public class LevelLoader : MonoBehaviour, ISaveable
         }
 
         loadedLevel.Initialize(playerUpgradesMenuUI);
+        savingSystem.Load();
         if (currentLevel == 0)
         {
             TutorialLevel tutorialLevel = (TutorialLevel)loadedLevel;
             GameManager.Instance.SetupTutorialLevel(tutorialLevel);
         }
-
-        savingSystem.Load();
         GameManager.Instance.ResetTreasureCount();
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();
         GameManager.Instance.ResetPlayerState();
         GameManager.Instance.UpdateLevelText(currentLevel + 1);
         GameManager.Instance.ResetPlayerSpeed();
-        GameManager.Instance.ResetProgressBar();
-        GameManager.Instance.ResetFinishCondition();
+        //GameManager.Instance.ResetFinishCondition();
         GameManager.Instance.ResetPlayerColor();
     }
 
@@ -49,6 +47,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
     {
         currentLevel++;
         MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, currentLevel);
+        GameManager.Instance.ResetProgressBar();
     }
 
     private void DestroyLoadedLevel()
@@ -76,5 +75,10 @@ public class LevelLoader : MonoBehaviour, ISaveable
     public void RestoreState(object state)
     {
         currentLevel = (int)state;
+    }
+
+    public float GetCompletionPercentage()
+    {
+        return loadedLevel.MyDigZone.GetPercentOfDig();
     }
 }

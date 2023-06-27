@@ -1,14 +1,12 @@
-using System;
 using System.Collections;
 using System.Linq;
-using _Game.Scripts.Utils;
+using _Game.Scripts.Saving;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Pool;
 
-namespace _Game.Utils.LineRendererGPS
+namespace _Game.Scripts.Utils.LineRendererGPS
 {
-    public class Line : MonoBehaviour
+    public class Line : MonoBehaviour, ISaveable
     {
         public UnityEvent onAllPointsTraveled;
         [SerializeField] private LineRenderer lineRenderer;
@@ -24,7 +22,9 @@ namespace _Game.Utils.LineRendererGPS
         private Transform destination;
         private WaitForSeconds lineRendererChangeDelayWaitForSeconds;
         private Coroutine coroutine;
+        private bool isTutorialComplete;
 
+        public bool IsTutorialComplete => isTutorialComplete;
         // private void OnEnable()
         // {
         //     SetFirstDestination();
@@ -100,6 +100,7 @@ namespace _Game.Utils.LineRendererGPS
             {
                 onAllPointsTraveled?.Invoke();
                 DisableRenderer();
+                isTutorialComplete = true;
                 return;
             }
 
@@ -137,6 +138,16 @@ namespace _Game.Utils.LineRendererGPS
         private void EnableDisableRenderer(bool isEnable)
         {
             lineRenderer.enabled = isEnable;
+        }
+
+        public object CaptureState()
+        {
+            return isTutorialComplete;
+        }
+
+        public void RestoreState(object state)
+        {
+            isTutorialComplete = (bool)state;
         }
     }
 }

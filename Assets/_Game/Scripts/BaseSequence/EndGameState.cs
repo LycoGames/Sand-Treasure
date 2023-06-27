@@ -1,7 +1,7 @@
 using _Game.Scripts.Base.AppState;
+using _Game.Scripts.BaseSequence;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
-using _Game.Scripts.SequenceManager;
 using _Game.Scripts.UI;
 using UnityEngine;
 

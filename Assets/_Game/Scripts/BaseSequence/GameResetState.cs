@@ -2,7 +2,7 @@ using _Game.Scripts.Base.AppState;
 using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
 
-namespace _Game.Scripts.SequenceManager.AppStates
+namespace _Game.Scripts.BaseSequence
 {
     public class GameResetState : AbstractAppState
     {

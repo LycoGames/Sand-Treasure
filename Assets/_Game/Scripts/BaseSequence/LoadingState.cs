@@ -3,7 +3,7 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
 using UnityEngine;
 
-namespace _Game.Scripts.SequenceManager.AppStates
+namespace _Game.Scripts.BaseSequence
 {
     public class LoadingState : AbstractAppState
     {

@@ -378,6 +378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalTreasureCount: 0
   playerUpgrades: {fileID: 7989306234795026495}
+  myDigZone: {fileID: 8571292782071928155}
   lineRenderer: {fileID: 7865632456543101802}
   digZoneTutorialElement: {fileID: 1784665813840563368}
   upgradeZoneTutorialElement: {fileID: 4616031161722717382}
@@ -1480,6 +1481,7 @@ GameObject:
   - component: {fileID: 7865632456543101796}
   - component: {fileID: 7865632456543101803}
   - component: {fileID: 7865632456543101802}
+  - component: {fileID: 217373599311706879}
   m_Layer: 0
   m_Name: LineRendererGPS
   m_TagString: Untagged
@@ -1626,6 +1628,19 @@ MonoBehaviour:
   speed: 50
   speedMultiplier: 2
   offset: {x: 0, y: 0, z: 1}
+--- !u!114 &217373599311706879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7865632456543101801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: d4d9da56-851f-4b10-bf1b-bc601380bfb8
 --- !u!1001 &2656621965547851
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using _Game.Utils.LineRendererGPS;
+using _Game.Scripts.Utils.LineRendererGPS;
 using UnityEngine;
 
 public class DigZoneTutorialElement : TutorialElement

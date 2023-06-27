@@ -1,4 +1,5 @@
 using System.Collections;
+using _Game.Scripts.BaseSequence;
 using _Game.Scripts.Enums;
 using _Game.Scripts.MeshTools;
 using _Game.Scripts.Player;
@@ -16,7 +17,6 @@ namespace _Game.Scripts.Objects
     {
         [SerializeField] private LootArea lootArea;
         [SerializeField] private DigZone digZone;
-        private InGameUI inGameUI;
         private StateController stateController;
         private Coroutine diggingCoroutine;
         private WaitForSeconds diggingCoroutineWaitForSeconds;
@@ -24,12 +24,11 @@ namespace _Game.Scripts.Objects
         private Transform playerDigPos;
         private PlayerSandAccumulator playerSandAccumulator;
         public float LootingCooldown { get; set; }
+        private InGameState inGameState;
 
         private void Start()
         {
-            inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
-            inGameUI.UpdateProgressBar(digZone.GetPercentOfDig());
-
+            inGameState = SequenceManager.Instance.GetAppState(AppStateTypes.InGame) as InGameState;
             LootingCooldown = 1f;
             diggingCoroutineWaitForSeconds = new WaitForSeconds(LootingCooldown);
         }
@@ -77,7 +76,7 @@ namespace _Game.Scripts.Objects
                 {
                     if (digZone.GetPercentOfDig() != lastPercentage)
                     {
-                        inGameUI.UpdateProgressBar(digZone.GetPercentOfDig());
+                        inGameState.UpdateProgressBar(digZone.GetPercentOfDig());
                         lastPercentage = digZone.GetPercentOfDig();
 
                         if (playerSandAccumulator.CanAccumulateSand())

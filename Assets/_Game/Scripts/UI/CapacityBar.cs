@@ -17,13 +17,14 @@ public class CapacityBar : MonoBehaviour
     private Stats playerStats;
     private float playerMaxCapacity;
     private float playerCurrentCapacity;
+
     public void Initialize(Stats stats)
     {
         playerStats = stats;
         playerStats.OnStackCapacityChange += UpdateMaxCapacity;
         playerStats.OnStackCapacityChange += ReFillBar;
-        UpdateMaxCapacity(playerStats.GetStat(Stat.StackCapacity));
-        SetCurrentCapacityText();
+
+        // SetCurrentCapacityText();
     }
 
     public void UpdateCapacity(double value)
@@ -34,8 +35,9 @@ public class CapacityBar : MonoBehaviour
         capacityBarFill.DOFillAmount((playerCurrentCapacity / playerMaxCapacity), 0.5f);
     }
 
-    private void UpdateMaxCapacity(float value)
+    public void UpdateMaxCapacity(float value)
     {
+        print("capacity bar max cap: " + value);
         maxCapacityText.text = value.ToString();
         playerMaxCapacity = value;
     }
@@ -49,5 +51,4 @@ public class CapacityBar : MonoBehaviour
     {
         capacityBarFill.DOFillAmount((playerCurrentCapacity / playerMaxCapacity), 0.5f);
     }
-    
 }

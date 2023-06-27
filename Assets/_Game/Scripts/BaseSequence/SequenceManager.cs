@@ -6,7 +6,7 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.UI;
 using UnityEngine;
 
-namespace _Game.Scripts.SequenceManager
+namespace _Game.Scripts.BaseSequence
 {
     public class SequenceManager : AbstractSingleton<SequenceManager>
     {
