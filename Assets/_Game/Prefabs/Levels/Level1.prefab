@@ -382,6 +382,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 7865632456543101802}
   digZoneTutorialElement: {fileID: 1784665813840563368}
   upgradeZoneTutorialElement: {fileID: 4616031161722717382}
+  collectTutorialElement: {fileID: 4323566270970680709}
 --- !u!1 &1073159864843798807
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +396,7 @@ GameObject:
   - component: {fileID: 7299177926873467714}
   - component: {fileID: 8753882874816394099}
   - component: {fileID: 874526118321539650}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: SellZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +624,7 @@ GameObject:
   - component: {fileID: 1339811885554222038}
   - component: {fileID: 5218778039089615891}
   - component: {fileID: 4616031161722717382}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: UpgradeZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -639,7 +640,7 @@ Transform:
   m_GameObject: {fileID: 2048764251404636462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6, y: 1, z: -47.89}
-  m_LocalScale: {x: 6, y: 1, z: 3}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2656622733199894}
@@ -1047,7 +1048,7 @@ GameObject:
   - component: {fileID: 7767751506551896053}
   - component: {fileID: 3995730400830898197}
   - component: {fileID: 1784665813840563368}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: DigZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1241,8 +1242,8 @@ GameObject:
   - component: {fileID: 1538802454594238168}
   - component: {fileID: 6426918687391568251}
   - component: {fileID: 8121956171722957987}
-  - component: {fileID: 3580457807557357858}
-  m_Layer: 0
+  - component: {fileID: 4323566270970680709}
+  m_Layer: 13
   m_Name: SellZone (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1257,8 +1258,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5002930629663859882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.91, y: 1, z: -52.61}
-  m_LocalScale: {x: 5, y: 1, z: 3}
+  m_LocalPosition: {x: -5.91, y: 1, z: -55}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2656622733199894}
@@ -1327,7 +1328,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3580457807557357858
+--- !u!114 &4323566270970680709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1336,10 +1337,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 5002930629663859882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de071ac0eaeacdc4791e0f85f3e0430d, type: 3}
+  m_Script: {fileID: 11500000, guid: 4dad87b121f129f47b5c3658e6f34529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destinationTransform: {fileID: 4058476875809987448}
+  moneyCondition: 10
 --- !u!1 &5528899850571508112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,7 +1625,7 @@ MonoBehaviour:
   tutorialElements:
   - {fileID: 1784665813840563368}
   - {fileID: 874526118321539650}
-  - {fileID: 3580457807557357858}
+  - {fileID: 4323566270970680709}
   - {fileID: 4616031161722717382}
   speed: 50
   speedMultiplier: 2

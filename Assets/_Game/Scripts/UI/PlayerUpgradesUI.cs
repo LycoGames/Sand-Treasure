@@ -16,21 +16,18 @@ namespace _Game.Scripts.UI
         public Action<Stat> OnItemDropChanceUpgradeRequest;
         public Action<Stat> OnDigZoneUpgradeRequest;
         public Action<Stat> OnStrengthUpgradeRequest;
-
+        [SerializeField] private RectTransform finger;
+        public RectTransform Finger => finger;
         [SerializeField] private TMP_Text stackCapacityCostText;
         [SerializeField] private Button stackCapacityUpgradeButton;
-
         [SerializeField] private Image stackCapacityLevelBar;
-
         // [SerializeField] private TMP_Text stackCapacityStat;
         [SerializeField] private TMP_Text stackCapacityMaxTextField;
         [SerializeField] private GameObject stackCapacityUpgradableCostField;
 
         [Space] [SerializeField] private TMP_Text digFieldCostText;
         [SerializeField] private Button digFieldUpgradeButton;
-
         [SerializeField] private Image digFieldLevelBar;
-
         //  [SerializeField] private TMP_Text digFieldLevelText;
         [SerializeField] private TMP_Text digFieldMaxTextField;
         [SerializeField] private GameObject digFieldUpgradableCostField;
@@ -38,18 +35,14 @@ namespace _Game.Scripts.UI
 
         [Space] [SerializeField] private TMP_Text itemDropChanceCostText;
         [SerializeField] private Button itemDropChanceUpgradeButton;
-
         [SerializeField] private Image itemDropChanceLevelBar;
-
         //  [SerializeField] private TMP_Text itemDropChanceStat;
         [SerializeField] private TMP_Text itemDropChanceMaxTextField;
         [SerializeField] private GameObject itemDropChanceUpgradableCostField;
 
         [Space] [SerializeField] private TMP_Text strengthCostText;
         [SerializeField] private Button strengthUpgradeButton;
-
         [SerializeField] private Image strengthLevelBar;
-
         // [SerializeField] private TMP_Text strengthLevelText;
         [SerializeField] private TMP_Text strengthMaxTextField;
         [SerializeField] private GameObject strengthUpgradableCostField;

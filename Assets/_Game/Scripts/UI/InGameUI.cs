@@ -35,7 +35,7 @@ namespace _Game.Scripts.UI
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
         private readonly Vector3 stockScale = Vector3.one;
 
-        private void Start()
+        public override void Start()
         {
             inventory.AddObserver(this);
             moneyText.text = inventory.GetMoney().ToString();

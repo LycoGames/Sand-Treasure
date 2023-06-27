@@ -11,79 +11,81 @@ using UnityEngine;
 public class GameManager : AbstractSingleton<GameManager>
 {
     private int totalTreasureCount;
-        private int foundedTreasureCount;
-        [SerializeField] private InGameUI inGameUI;
-        [SerializeField] private Inventory inventory;
-        [SerializeField] private GameObject player;
-        [SerializeField] private Vector3 playerStartingPos;
-        [SerializeField] private StateController playerStateController;
-        [SerializeField] private PlayerController playerController;
-        [SerializeField] private PlayerMatColorChanger playerMatColorChanger;
-        protected override void Awake()
-        {
-            Application.targetFrameRate = 60;
-        }
+    private int foundedTreasureCount;
+    [SerializeField] private InGameUI inGameUI;
+    [SerializeField] private Inventory inventory;
+    [SerializeField] private GameObject player;
+    [SerializeField] private Vector3 playerStartingPos;
+    [SerializeField] private StateController playerStateController;
+    [SerializeField] private PlayerController playerController;
+    [SerializeField] private PlayerMatColorChanger playerMatColorChanger;
+    [SerializeField] private PlayerUpgradesUI playerUpgradesUI;
 
-        public void IncreaseFoundedTreasureCount()
-        {
-            foundedTreasureCount++;
-            if (foundedTreasureCount >= totalTreasureCount)
-            {
-                SequenceManager.Instance.ChangeState(AppStateTypes.EndGame);
-            }
-        }
+    protected override void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
 
-        public void ResetTreasureCount()
+    public void IncreaseFoundedTreasureCount()
+    {
+        foundedTreasureCount++;
+        if (foundedTreasureCount >= totalTreasureCount)
         {
-            inventory.ResetTreasureCount();
-            foundedTreasureCount = 0;
-            inGameUI.SetFoundedTreasureCount(foundedTreasureCount);
+            SequenceManager.Instance.ChangeState(AppStateTypes.EndGame);
         }
+    }
 
-        public void SetTotalTreasureCount(int value)
-        {
-            totalTreasureCount = value;
-            inGameUI.SetTotalTreasureCount(totalTreasureCount);
-        }
+    public void ResetTreasureCount()
+    {
+        inventory.ResetTreasureCount();
+        foundedTreasureCount = 0;
+        inGameUI.SetFoundedTreasureCount(foundedTreasureCount);
+    }
 
-        public void SetPlayerPos()
-        {
-            player.transform.position = playerStartingPos;
-            player.transform.rotation = Quaternion.Euler(0, 0, 0);
-        }
+    public void SetTotalTreasureCount(int value)
+    {
+        totalTreasureCount = value;
+        inGameUI.SetTotalTreasureCount(totalTreasureCount);
+    }
 
-        public void ResetPlayerState()
-        {
-            playerStateController.ChangeState(playerStateController.IdleState);
-        }
+    public void SetPlayerPos()
+    {
+        player.transform.position = playerStartingPos;
+        player.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
 
-        public void UpdateLevelText(int level)
-        {
-            inGameUI.SetLevelText(level);
-        }
+    public void ResetPlayerState()
+    {
+        playerStateController.ChangeState(playerStateController.IdleState);
+    }
 
-        public void ResetPlayerSpeed()
-        {
-            playerController.IncreaseMovementSpeed(true,false);
-        }
+    public void UpdateLevelText(int level)
+    {
+        inGameUI.SetLevelText(level);
+    }
 
-        public void ResetProgressBar()
-        {
-            inGameUI.ResetProgressbar();
-        }
+    public void ResetPlayerSpeed()
+    {
+        playerController.IncreaseMovementSpeed(true, false);
+    }
 
-        public void ResetFinishCondition()
-        {
-           // inGameUI.isFinished = false;
-        }
+    public void ResetProgressBar()
+    {
+        inGameUI.ResetProgressbar();
+    }
 
-        public void ResetPlayerColor()
-        {
-            playerMatColorChanger.ResetPlayerColor();
-        }
+    public void ResetFinishCondition()
+    {
+        // inGameUI.isFinished = false;
+    }
 
-        public void SetupTutorialLevel(TutorialLevel level)
-        {
-            level.Initialize(player.GetComponent<PlayerSandAccumulator>());
-        }
+    public void ResetPlayerColor()
+    {
+        playerMatColorChanger.ResetPlayerColor();
+    }
+
+    public void SetupTutorialLevel(TutorialLevel level)
+    {
+        level.Initialize(player.GetComponent<PlayerSandAccumulator>(), player.GetComponent<Inventory>(),playerUpgradesUI);
+    }
 }
