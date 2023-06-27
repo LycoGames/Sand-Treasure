@@ -10,7 +10,7 @@ namespace _Game.Scripts.UI
         [SerializeField] private Button nextLevelButton;
         [SerializeField] private RectTransform nextLevelButtonRectTransform;
     
-        public OnUIButtonClickEvent NextLevel;
+        public OnUIButtonClickEvent OnClickNextLevel;
 
         public override void Start()
         {
@@ -31,7 +31,7 @@ namespace _Game.Scripts.UI
 
         private void GoNextLevel()
         {
-            NextLevel?.Invoke();
+            OnClickNextLevel?.Invoke();
         }
     }
 }

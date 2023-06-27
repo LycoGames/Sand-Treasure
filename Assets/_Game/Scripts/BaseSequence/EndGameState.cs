@@ -16,7 +16,7 @@ public class EndGameState : AbstractAppState
     public override void Initialize()
     {
         endGameUI = UIManager.Instance.GetCanvas(CanvasTypes.EndGame) as EndGameUI;
-        endGameUI.NextLevel = ChangeStateToLoading;
+        endGameUI.OnClickNextLevel = ChangeStateToLoading;
     }
 
     public override void Enter()

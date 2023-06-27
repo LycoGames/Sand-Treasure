@@ -338,6 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalTreasureCount: 4
   playerUpgrades: {fileID: 5422333973518639748}
+  myDigZone: {fileID: 6484845003092068402}
 --- !u!1 &8742041491643629632
 GameObject:
   m_ObjectHideFlags: 0
