@@ -9,14 +9,12 @@ namespace _Game.Scripts.MeshTools
     [Serializable]
     public struct ModifiedVertex
     {
-        public int Index;
         public float X;
         public float Y;
         public float Z;
 
-        public ModifiedVertex(int index, float dataX, float dataY, float dataZ)
+        public ModifiedVertex(float dataX, float dataY, float dataZ)
         {
-            Index = index;
             X = dataX;
             Y = dataY;
             Z = dataZ;
@@ -31,7 +29,7 @@ namespace _Game.Scripts.MeshTools
 
         private Mesh mesh;
         private Vector3[] vertices, modifiedVerts;
-        private readonly List<ModifiedVertex> modifiedVertexData = new();
+        private Dictionary<int, ModifiedVertex> modifiedVertexData = new();
 
         private void Start()
         {
@@ -44,7 +42,10 @@ namespace _Game.Scripts.MeshTools
         public void SetVertex(int index, Vector3 pos)
         {
             modifiedVerts[index] = pos;
-            modifiedVertexData.Add(new ModifiedVertex(index, pos.x, pos.y, pos.z));
+            if (modifiedVertexData.ContainsKey(index))
+                modifiedVertexData[index] = new ModifiedVertex(pos.x, pos.y, pos.z);
+            else
+                modifiedVertexData.Add(index, new ModifiedVertex(pos.x, pos.y, pos.z));
         }
 
         public void UpdateMesh()
@@ -73,13 +74,13 @@ namespace _Game.Scripts.MeshTools
 
         public void RestoreState(object state)
         {
-
-            var list = (List<ModifiedVertex>)state;
+            var list = (Dictionary<int, ModifiedVertex>)state;
+            modifiedVertexData = list;
             mesh = meshFilter.mesh;
             var currentVertices = mesh.vertices;
             foreach (var data in list)
             {
-                currentVertices[data.Index] = new Vector3(data.X, data.Y, data.Z);
+                currentVertices[data.Key] = new Vector3(data.Value.X, data.Value.Y, data.Value.Z);
             }
 
             mesh.vertices = currentVertices;
