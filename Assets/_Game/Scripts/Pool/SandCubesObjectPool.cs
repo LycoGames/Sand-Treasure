@@ -13,7 +13,6 @@ namespace _Game.Scripts.Pool
         {
             base.objectToPool = sandCube;
             sandType = sandCube.SandType;
-            print(inGameUI);
             this.inGameUI = inGameUI;
         }
 
