@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1505893710676031740}
   - component: {fileID: 1025611346713437855}
   - component: {fileID: 7067655273898980629}
-  - component: {fileID: 8920794115635353822}
+  - component: {fileID: 9016950010335969472}
   m_Layer: 8
   m_Name: DigPointBig
   m_TagString: DigArea
@@ -35,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &1294514170227299790
 SphereCollider:
@@ -45,17 +45,9 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5569206491163239842}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 0
-  serializedVersion: 3
+  serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6587066814993592129
@@ -98,9 +90,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemsThatCanBeDrop:
   - {fileID: 6957982343563665668, guid: 42d39f1bcec79fd498c77c43aef16cf9, type: 3}
-  - {fileID: 6724763208003881056, guid: 8ecc7a1378d4afe40a362266192ac4c3, type: 3}
-  - {fileID: 4468780576709416444, guid: 1a76e2e005887084dbdbcf12fa980e3e, type: 3}
-  - {fileID: 4291823162202974754, guid: d8a9a2b4b9267d64db5fcce039593ab0, type: 3}
 --- !u!65 &7067655273898980629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -109,20 +98,12 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5569206491163239842}
   m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
   m_IsTrigger: 1
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 80, y: 8, z: 50}
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
   m_Center: {x: 0, y: 2, z: 0}
---- !u!114 &8920794115635353822
+--- !u!114 &9016950010335969472
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
