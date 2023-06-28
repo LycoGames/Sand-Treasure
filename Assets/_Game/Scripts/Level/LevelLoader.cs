@@ -41,7 +41,6 @@ public class LevelLoader : MonoBehaviour
         GameManager.Instance.ResetPlayerState();
         GameManager.Instance.UpdateLevelText(currentLevel + 1);
         GameManager.Instance.ResetPlayerSpeed();
-        //GameManager.Instance.ResetFinishCondition();
         GameManager.Instance.ResetPlayerColor();
     }
 
@@ -50,8 +49,10 @@ public class LevelLoader : MonoBehaviour
         currentLevel++;
         PlayerPrefs.SetInt("LevelIndex", currentLevel);
         PlayerPrefs.Save();
+        savingSystem.Save();
         MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, currentLevel);
         GameManager.Instance.ResetProgressBar();
+        GameManager.Instance.ResetFinishCondition();
     }
 
     private void DestroyLoadedLevel()

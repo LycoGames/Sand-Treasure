@@ -13,6 +13,8 @@ public class GameManager : AbstractSingleton<GameManager>
     private int totalTreasureCount;
     private int foundedTreasureCount;
     [SerializeField] private InGameUI inGameUI;
+    [SerializeField] private InGameState inGameState;
+    
     [SerializeField] private Inventory inventory;
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 playerStartingPos;
@@ -76,7 +78,7 @@ public class GameManager : AbstractSingleton<GameManager>
 
     public void ResetFinishCondition()
     {
-        // inGameUI.isFinished = false;
+        inGameState.isFinished = false;
     }
 
     public void ResetPlayerColor()

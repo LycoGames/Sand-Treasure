@@ -42,7 +42,6 @@ namespace _Game.Scripts.MeshTools
 
         public float GetPercentOfDig()
         {
-            Debug.LogError("CurrentDugHeight: " + currentDugHeight + " TotalDigHeight: " + totalDigHeight);
             return currentDugHeight / totalDigHeight * 100;
         }
 

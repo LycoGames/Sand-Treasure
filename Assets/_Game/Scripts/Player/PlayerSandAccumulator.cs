@@ -53,7 +53,6 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
 
     void Start()
     {
-        capacityIsFullText.enabled = false;
         dustEffect = playerEffects.effect.main;
         currentSandType = SandType.Yellow;
         stats.OnStackCapacityChange += UpdateMaxCapacity;

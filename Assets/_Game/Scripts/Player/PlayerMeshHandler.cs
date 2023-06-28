@@ -25,8 +25,7 @@ namespace _Game.Scripts.Player
         {
             stats.OnDigFieldChange += UpdateDigField;
             stats.OnStrengthChange += UpdateStrength;
-            diggingField = stats.GetStat(Stat.DigField);
-            force = stats.GetStat(Stat.Strength);
+            
         }
 
         private void OnTriggerEnter(Collider other)
@@ -34,6 +33,8 @@ namespace _Game.Scripts.Player
             if (other.TryGetComponent(out DigZone digZone))
             {
                 this.digZone = digZone;
+                diggingField = stats.GetStat(Stat.DigField);
+                force = stats.GetStat(Stat.Strength);
             }
         }
 
