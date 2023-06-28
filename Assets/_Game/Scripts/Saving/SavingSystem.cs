@@ -14,13 +14,13 @@ namespace _Game.Scripts.Saving
 
         private void OnApplicationQuit()
         {
-            Save(currentSaveKey);
+            Save();
         }
 
         private void OnApplicationFocus(bool hasFocus)
         {
             if (!hasFocus)
-                Save(currentSaveKey);
+                Save();
         }
 
         public IEnumerator LoadLastScene(string saveFile)
@@ -36,11 +36,11 @@ namespace _Game.Scripts.Saving
             RestoreState(state);
         }
 
-        public void Save(string saveFile)
+        public void Save()
         {
-            Dictionary<string, object> state = LoadFile(saveFile);
+            Dictionary<string, object> state = LoadFile(currentSaveKey);
             CaptureState(state);
-            SaveFile(saveFile, state);
+            SaveFile(currentSaveKey, state);
         }
 
         public void Load()

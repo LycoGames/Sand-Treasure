@@ -4,7 +4,7 @@ using _Game.Scripts.Saving;
 using _Game.Scripts.UI;
 using UnityEngine;
 
-public class LevelLoader : MonoBehaviour, ISaveable
+public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private List<Level> levels = new List<Level>();
     [SerializeField] private PlayerUpgradesUI playerUpgradesMenuUI;
@@ -16,6 +16,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
     public void LoadLevel()
     {
         if (loadedLevel) DestroyLoadedLevel();
+        currentLevel = PlayerPrefs.HasKey("LevelIndex") ? PlayerPrefs.GetInt("LevelIndex") : 0;
         if (currentLevel > levels.Count - 1)
         {
             loadedLevel = LoadRandomLevel();
@@ -33,6 +34,7 @@ public class LevelLoader : MonoBehaviour, ISaveable
             TutorialLevel tutorialLevel = (TutorialLevel)loadedLevel;
             GameManager.Instance.SetupTutorialLevel(tutorialLevel);
         }
+
         GameManager.Instance.ResetTreasureCount();
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();
@@ -46,6 +48,8 @@ public class LevelLoader : MonoBehaviour, ISaveable
     public void OnLevelComplete()
     {
         currentLevel++;
+        PlayerPrefs.SetInt("LevelIndex", currentLevel);
+        PlayerPrefs.Save();
         MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, currentLevel);
         GameManager.Instance.ResetProgressBar();
     }
@@ -65,16 +69,6 @@ public class LevelLoader : MonoBehaviour, ISaveable
     private int GetRandomLevelIndex()
     {
         return Random.Range(0, levels.Count);
-    }
-
-    public object CaptureState()
-    {
-        return currentLevel;
-    }
-
-    public void RestoreState(object state)
-    {
-        currentLevel = (int)state;
     }
 
     public float GetCompletionPercentage()

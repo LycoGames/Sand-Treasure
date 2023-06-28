@@ -28,7 +28,7 @@ namespace _Game.Scripts.MeshTools
         [SerializeField] private List<DigZone> digZones;
 
         private Mesh mesh;
-        private Vector3[] vertices, modifiedVerts;
+        private Vector3[] vertices, modifiedVerts, baseVerts;
         private Dictionary<int, ModifiedVertex> modifiedVertexData = new();
 
         private void Start()
@@ -37,7 +37,8 @@ namespace _Game.Scripts.MeshTools
             foreach (var digZone in digZones) digZone.RegisterMeshBase(this);
         }
 
-        public Vector3[] GetVertices() => modifiedVerts;
+        public Vector3[] GetBaseVertices() => baseVerts;
+        public Vector3[] GetModifiedVertices() => modifiedVerts;
 
         public void SetVertex(int index, Vector3 pos)
         {
@@ -60,11 +61,7 @@ namespace _Game.Scripts.MeshTools
             mesh = meshFilter.mesh;
             vertices = mesh.vertices;
             modifiedVerts = mesh.vertices;
-            modifiedVerts = new Vector3[vertices.Length];
-            for (int i = 0; i < vertices.Length; i++)
-            {
-                modifiedVerts[i] = vertices[i];
-            }
+            baseVerts ??= modifiedVerts;
         }
 
         public object CaptureState()
@@ -78,6 +75,7 @@ namespace _Game.Scripts.MeshTools
             modifiedVertexData = list;
             mesh = meshFilter.mesh;
             var currentVertices = mesh.vertices;
+            baseVerts = mesh.vertices;
             foreach (var data in list)
             {
                 currentVertices[data.Key] = new Vector3(data.Value.X, data.Value.Y, data.Value.Z);

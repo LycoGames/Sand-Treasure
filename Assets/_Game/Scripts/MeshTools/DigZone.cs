@@ -42,26 +42,28 @@ namespace _Game.Scripts.MeshTools
 
         public float GetPercentOfDig()
         {
+            Debug.LogError("CurrentDugHeight: " + currentDugHeight + " TotalDigHeight: " + totalDigHeight);
             return currentDugHeight / totalDigHeight * 100;
         }
 
         private void SearchInZoneVertices()
         {
-            Vector3[] vertices = meshBase.GetVertices();
+            var baseVertices = meshBase.GetBaseVertices();
+            var modifiedVertices = meshBase.GetModifiedVertices();
             meshScale = meshBase.transform.localScale;
             scaledPos = new Vector3();
-            Debug.Log(vertices.Length);
+            Debug.Log(modifiedVertices.Length);
             // float zoneSize = transform.localScale.x / 2;
-            for (int i = 0; i < vertices.Length; i++)
+            for (int i = 0; i < modifiedVertices.Length; i++)
             {
-                scaledPos = GetScaledVector(vertices[i], meshScale);
+                scaledPos = GetScaledVector(modifiedVertices[i], meshScale);
                 // if (Vector3.Distance(scaledPos, transform.position) <= zoneSize)
                 // {
                 //     zoneVertices.Add(i, vertices[i]);
                 //     totalDigHeight += vertices[i].y;
                 // }
-                zoneVertices.Add(i, vertices[i]);
-                totalDigHeight += vertices[i].y;
+                zoneVertices.Add(i, modifiedVertices[i]);
+                totalDigHeight += baseVertices[i].y;
             }
         }
 
