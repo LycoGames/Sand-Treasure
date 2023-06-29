@@ -85,9 +85,7 @@ namespace _Game.Scripts.Player
 
         public void UpdateSpeed(float value)
         {
-            Debug.Log("update speed:" + value);
             normalSpeed = value;
-            Debug.Log(normalSpeed);
         }
 
         private Quaternion CalculateRotation()

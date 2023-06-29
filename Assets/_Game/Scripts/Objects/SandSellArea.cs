@@ -27,7 +27,7 @@ public class SandSellArea : MonoBehaviour
     private const int Yellow = 2;
     private const int Green = 3;
     private const int Purple = 4;
-    
+    private const int Red = 5;
 
     private float capacity;
     private WaitForSeconds waitForSeconds = new WaitForSeconds(0.2f);
@@ -113,6 +113,12 @@ public class SandSellArea : MonoBehaviour
             case Purple:
             {
                 InstantiateCubes(CalculateCubeCount(Purple), SandType.Purple);
+                //cubesToThrow.Add(instance);
+                break;
+            }
+            case Red:
+            {
+                InstantiateCubes(CalculateCubeCount(Red), SandType.Red);
                 //cubesToThrow.Add(instance);
                 break;
             }

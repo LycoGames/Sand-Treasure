@@ -37,7 +37,6 @@ public class CapacityBar : MonoBehaviour
 
     public void UpdateMaxCapacity(float value)
     {
-        print("capacity bar max cap: " + value);
         maxCapacityText.text = value.ToString();
         playerMaxCapacity = value;
     }

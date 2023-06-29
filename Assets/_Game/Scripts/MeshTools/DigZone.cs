@@ -51,7 +51,7 @@ namespace _Game.Scripts.MeshTools
             var modifiedVertices = meshBase.GetModifiedVertices();
             meshScale = meshBase.transform.localScale;
             scaledPos = new Vector3();
-            Debug.Log(modifiedVertices.Length);
+            //Debug.Log(modifiedVertices.Length);
             // float zoneSize = transform.localScale.x / 2;
             for (int i = 0; i < modifiedVertices.Length; i++)
             {

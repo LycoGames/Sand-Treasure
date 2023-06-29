@@ -46,7 +46,7 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
     private const int Yellow = 2;
     private const int Green = 3;
     private const int Purple = 4;
-
+    private const int Red = 5;
     [SerializeField] private Color pinkColor;
     private InGameUI inGameUI;
     public Action OnCapacityFull;
@@ -94,6 +94,10 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
                 liquidVolume.liquidLayers[Purple].amount += fillAmount / maxCapacity;
                 IncreaseCurrentCapacityValue();
                 break;
+            case SandType.Red:
+                liquidVolume.liquidLayers[Red].amount += fillAmount / maxCapacity;
+                IncreaseCurrentCapacityValue();
+                break;
         }
 
         UpdateLayers();
@@ -124,6 +128,9 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
                 break;
             case SandType.Purple:
                 dustEffect.startColor = new Color(0.46f, 0.22f, 0.85f, 0.4f);
+                break;
+            case SandType.Red:
+                dustEffect.startColor = new Color(0.7f, 0f, 0f, 0.4f);
                 break;
         }
     }
@@ -208,10 +215,10 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
         GetInGameUI();
         currentCapacityValue = data.CurrentCapacity;
         GetMaxCapacity();
-        print("current cap: " + currentCapacityValue + "max cap: " + maxCapacity);
+        //print("current cap: " + currentCapacityValue + "max cap: " + maxCapacity);
         if (currentCapacityValue >= maxCapacity)
         {
-            print("current cap: " + currentCapacityValue + "max cap: " + maxCapacity);
+            //print("current cap: " + currentCapacityValue + "max cap: " + maxCapacity);
             PlayerCapacityIsFull();
         }
     }

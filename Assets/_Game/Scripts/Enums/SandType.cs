@@ -7,6 +7,7 @@ namespace _Game.Scripts.Enums
         Pink,
         Yellow,
         Green,
-        Purple
+        Purple,
+        Red
     }
 }
