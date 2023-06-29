@@ -15,9 +15,9 @@ namespace _Game.Scripts.Player
         public float speed;
 
         private PlayerController playerController;
-        private float movementSpeed = 8;
+        private float movementSpeed;
         private readonly float maxSpeed = 8;
-        private readonly float normalSpeed = 2;
+        private float normalSpeed = 2;
         private readonly float minSpeed = 1;
         private Rigidbody myRb;
 
@@ -81,6 +81,13 @@ namespace _Game.Scripts.Player
             {
                 movementSpeed = 0;
             }
+        }
+
+        public void UpdateSpeed(float value)
+        {
+            Debug.Log("update speed:" + value);
+            normalSpeed = value;
+            Debug.Log(normalSpeed);
         }
 
         private Quaternion CalculateRotation()

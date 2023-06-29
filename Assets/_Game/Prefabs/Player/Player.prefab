@@ -26063,6 +26063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateController: {fileID: 5787091169568309249}
   wheelAnimator: {fileID: 3896031487681478719}
+  stats: {fileID: 5787091169568309278}
 --- !u!54 &5787091169568309276
 Rigidbody:
   m_ObjectHideFlags: 0

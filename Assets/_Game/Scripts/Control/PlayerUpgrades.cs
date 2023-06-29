@@ -225,6 +225,11 @@ namespace _Game.Scripts.Control
         private void UpgradeStat(Stat stat)
         {
             playerStats.UpgradeStat(stat);
+            if (stat == Stat.Strength)
+            {
+                //movement speed change simultaneously with power
+                playerStats.UpgradeStat(Stat.MovementSpeed);
+            }
         }
 
         private void SetStackCapacityUpgradeButtonInteractable()

@@ -46,5 +46,10 @@ namespace _Game.Scripts.Player
         {
             throw new NotImplementedException();
         }
+
+        public void UpdateSpeed(float value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

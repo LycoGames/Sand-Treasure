@@ -122,6 +122,7 @@ namespace _Game.Scripts.StatSystem
                     break;
                 case Stat.Strength:
                     OnStrengthChange?.Invoke(GetStat(stat));
+                    OnMovementSpeedChange?.Invoke(GetStat(Stat.MovementSpeed));
                     break;
                 default:
                     Debug.LogWarning("Stat have no action");

@@ -1,3 +1,4 @@
+using System;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Interfaces;
 using _Game.Scripts.States;
@@ -12,6 +13,8 @@ namespace _Game.Scripts.Player
     {
         [SerializeField] private StateController stateController;
         [SerializeField] private WheelAnimator wheelAnimator;
+        [SerializeField] private Stats stats;
+
 
         //   [SerializeField] private WheelsController wheelsController;
         //   [SerializeField] private Joystick joystick;
@@ -19,6 +22,17 @@ namespace _Game.Scripts.Player
 
         private bool isInSellZone = false;
         private IMover Imover;
+
+        private void Start()
+        {
+            stats.OnMovementSpeedChange += UpdateMovementSpeed;
+            UpdateMovementSpeed(stats.GetStat(Stat.MovementSpeed));
+        }
+
+        private void UpdateMovementSpeed(float obj)
+        {
+            Imover.UpdateSpeed(obj);
+        }
 
         private void Awake()
         {
@@ -35,6 +49,7 @@ namespace _Game.Scripts.Player
         {
             Imover.IsStopped(isStopped);
         }
+
         private void Update()
         {
             if (Imover.HasInput())
