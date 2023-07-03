@@ -12,14 +12,14 @@ public class LevelLoader : MonoBehaviour
 
     public int currentLevel;
     private Level loadedLevel;
-
+    private int levelCounter;
     public void LoadLevel()
     {
         if (loadedLevel) DestroyLoadedLevel();
         currentLevel = PlayerPrefs.HasKey("LevelIndex") ? PlayerPrefs.GetInt("LevelIndex") : 0;
         if (currentLevel > levels.Count - 1)
         {
-            loadedLevel = LoadRandomLevel();
+            loadedLevel = LoadFromFirstLevel();
         }
 
         else
@@ -39,7 +39,7 @@ public class LevelLoader : MonoBehaviour
         GameManager.Instance.SetTotalTreasureCount(levels[currentLevel].TotalTreasureCount);
         GameManager.Instance.SetPlayerPos();
         GameManager.Instance.ResetPlayerState();
-        GameManager.Instance.UpdateLevelText(currentLevel + 1);
+        GameManager.Instance.UpdateLevelText(levelCounter + 1);
         GameManager.Instance.ResetPlayerSpeed();
         GameManager.Instance.ResetPlayerColor();
     }
@@ -47,10 +47,11 @@ public class LevelLoader : MonoBehaviour
     public void OnLevelComplete()
     {
         currentLevel++;
+        levelCounter++;
         PlayerPrefs.SetInt("LevelIndex", currentLevel);
         PlayerPrefs.Save();
         savingSystem.Save();
-        MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, currentLevel);
+        MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, levelCounter);
         GameManager.Instance.ResetProgressBar();
         GameManager.Instance.ResetFinishCondition();
     }
@@ -61,6 +62,11 @@ public class LevelLoader : MonoBehaviour
         loadedLevel = null;
     }
 
+    private Level LoadFromFirstLevel()
+    {
+        currentLevel = 0;
+        return Instantiate(levels[currentLevel]);
+    }
     private Level LoadRandomLevel()
     {
         currentLevel = GetRandomLevelIndex();
