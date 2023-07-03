@@ -275,7 +275,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7052883686482352132}
-  m_Mesh: {fileID: 4300000, guid: 58673800a5f7e184e8c23b41f19afaf9, type: 2}
+  m_Mesh: {fileID: 4300000, guid: 2754e6d32244324439d193d5ab381b17, type: 2}
 --- !u!23 &6230100485254814298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -360,7 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea9374b509b70f4bba37e4a2ca8cf00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: 262a7a35-443c-427f-ba2a-2b4d78193a10
+  uniqueIdentifier: 4a6dc422-ed39-4e2f-92b6-a4b616009051
 --- !u!1001 &246824600200037967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9016950010335969472, guid: 0049ff81860502c49a06c5dbb1fecfdf, type: 3}
       propertyPath: uniqueIdentifier
-      value: 3ed3514d-7da7-4dd4-8c3a-616f6cc177be
+      value: 82a63545-e5b5-4ec2-98b8-fd336976fb18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0049ff81860502c49a06c5dbb1fecfdf, type: 3}
