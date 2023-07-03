@@ -254,6 +254,7 @@ Transform:
   - {fileID: 5098575614311751277}
   - {fileID: 3959039759439827744}
   - {fileID: 6437320558012318037}
+  - {fileID: 7843922712939943659}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -272,6 +273,7 @@ MonoBehaviour:
   TotalTreasureCount: 2
   playerUpgrades: {fileID: 1459438419842718178}
   myDigZone: {fileID: 435566410468016969}
+  fossilManager: {fileID: 7378126458816365205}
 --- !u!1 &7052883686482352132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,6 +3730,79 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 435472, guid: e9ef501c03d9e0f4f8965162fd6bfbba, type: 3}
   m_PrefabInstance: {fileID: 6474817178563954942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6536371633397031634
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4930036312519125842}
+    m_Modifications:
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208236314560733795, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_Name
+      value: FossilManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+--- !u!114 &7378126458816365205 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4382430915401932871, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+  m_PrefabInstance: {fileID: 6536371633397031634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30b1edbadc359e4cba73016773b434e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &7843922712939943659 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+  m_PrefabInstance: {fileID: 6536371633397031634}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6649982996597387749
 PrefabInstance:

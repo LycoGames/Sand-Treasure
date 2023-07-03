@@ -361,6 +361,7 @@ Transform:
   - {fileID: 4058476875809987448}
   - {fileID: 4774298110725193094}
   - {fileID: 1370661019}
+  - {fileID: 5860790940020928969}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -379,6 +380,7 @@ MonoBehaviour:
   TotalTreasureCount: 0
   playerUpgrades: {fileID: 7989306234795026495}
   myDigZone: {fileID: 8571292782071928155}
+  fossilManager: {fileID: 6623350863623103927}
   lineRenderer: {fileID: 7865632456543101802}
   digZoneTutorialElement: {fileID: 1784665813840563368}
   upgradeZoneTutorialElement: {fileID: 4616031161722717382}
@@ -3447,6 +3449,79 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f74680350c092fd4694bc530b5bfce1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &7438639498968221168
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2656622733199894}
+    m_Modifications:
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -18.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -55
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4208236314560733795, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+      propertyPath: m_Name
+      value: FossilManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+--- !u!4 &5860790940020928969 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3922333427670889529, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+  m_PrefabInstance: {fileID: 7438639498968221168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6623350863623103927 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4382430915401932871, guid: 891896b8370e21e48a506c282d71a9a8, type: 3}
+  m_PrefabInstance: {fileID: 7438639498968221168}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30b1edbadc359e4cba73016773b434e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8121165043441325611

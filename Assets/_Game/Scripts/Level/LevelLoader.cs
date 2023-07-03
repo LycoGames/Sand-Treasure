@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Saving;
 using _Game.Scripts.UI;
+using Cinemachine;
 using UnityEngine;
 
 public class LevelLoader : MonoBehaviour
@@ -9,7 +10,8 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private List<Level> levels = new List<Level>();
     [SerializeField] private PlayerUpgradesUI playerUpgradesMenuUI;
     [SerializeField] private SavingSystem savingSystem;
-
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    
     public int currentLevel;
     private Level loadedLevel;
     private int levelCounter;
@@ -27,8 +29,9 @@ public class LevelLoader : MonoBehaviour
             loadedLevel = Instantiate(levels[currentLevel]);
         }
 
-        loadedLevel.Initialize(playerUpgradesMenuUI);
+        loadedLevel.Initialize(playerUpgradesMenuUI,virtualCamera);
         savingSystem.Load();
+        loadedLevel.FossilManager.InstantiateBody();
         if (currentLevel == 0)
         {
             TutorialLevel tutorialLevel = (TutorialLevel)loadedLevel;

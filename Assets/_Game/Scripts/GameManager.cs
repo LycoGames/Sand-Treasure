@@ -6,6 +6,7 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
 using _Game.Scripts.States;
 using _Game.Scripts.UI;
+using Cinemachine;
 using UnityEngine;
 
 public class GameManager : AbstractSingleton<GameManager>
@@ -22,7 +23,8 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private PlayerController playerController;
     [SerializeField] private PlayerMatColorChanger playerMatColorChanger;
     [SerializeField] private PlayerUpgradesUI playerUpgradesUI;
-
+    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
@@ -89,5 +91,10 @@ public class GameManager : AbstractSingleton<GameManager>
     public void SetupTutorialLevel(TutorialLevel level)
     {
         level.Initialize(player.GetComponent<PlayerSandAccumulator>(), player.GetComponent<Inventory>(),playerUpgradesUI);
+    }
+
+    public void ChangeCamFollowTarget(Transform target)
+    {
+        virtualCamera.Follow = target;
     }
 }
