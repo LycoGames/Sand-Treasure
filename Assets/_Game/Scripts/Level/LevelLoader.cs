@@ -11,7 +11,7 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] private PlayerUpgradesUI playerUpgradesMenuUI;
     [SerializeField] private SavingSystem savingSystem;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
-    
+
     public int currentLevel;
     private Level loadedLevel;
     private int levelCounter;
@@ -21,6 +21,7 @@ public class LevelLoader : MonoBehaviour
     {
         if (loadedLevel) DestroyLoadedLevel();
         currentLevel = PlayerPrefs.HasKey("LevelIndex") ? PlayerPrefs.GetInt("LevelIndex") : 0;
+        levelCounter = PlayerPrefs.HasKey("LevelCounter") ? PlayerPrefs.GetInt("LevelCounter") : 0;
         if (currentLevel > levels.Count - 1)
         {
             loadedLevel = LoadFromFirstLevel();
@@ -54,6 +55,7 @@ public class LevelLoader : MonoBehaviour
         currentLevel++;
         levelCounter++;
         PlayerPrefs.SetInt("LevelIndex", currentLevel);
+        PlayerPrefs.SetInt("LevelCounter", levelCounter);
         PlayerPrefs.Save();
         savingSystem.Save();
         MoonSDK.TrackLevelEvents(MoonSDK.LevelEvents.Complete, levelCounter);
@@ -72,6 +74,7 @@ public class LevelLoader : MonoBehaviour
         currentLevel = 0;
         return Instantiate(levels[currentLevel]);
     }
+
     private Level LoadRandomLevel()
     {
         currentLevel = GetRandomLevelIndex();
