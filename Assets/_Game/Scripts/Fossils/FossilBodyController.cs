@@ -20,6 +20,7 @@ public class FossilBodyController : MonoBehaviour
     private Action<BoneType> OnCollect;
     private int collectCount;
     public Action OnSkeletonComplete;
+
     public void SetupBody(List<BoneType> collectedBones, Action<BoneType> OnCollect)
     {
         this.OnCollect = OnCollect;
@@ -31,6 +32,7 @@ public class FossilBodyController : MonoBehaviour
                 bodyPart.part.SetActive(false);
             }
         }
+
         InstantiateFossilPart(collectedBones);
     }
 
@@ -39,7 +41,7 @@ public class FossilBodyController : MonoBehaviour
         OnCollect?.Invoke(part.BoneType);
         EnableBodyPart(part.BoneType);
         collectCount++;
-        if (collectCount>=bodyParts.Count)
+        if (collectCount >= bodyParts.Count)
         {
             OnSkeletonComplete?.Invoke();
         }
@@ -64,6 +66,7 @@ public class FossilBodyController : MonoBehaviour
     {
         GameManager.Instance.ChangeCamFollowTarget(part.transform);
     }
+
     private void InstantiateFossilPart(List<BoneType> collectedBones)
     {
         foreach (var prefab in fossilPartPrefabsToInstantiate)
@@ -73,13 +76,14 @@ public class FossilBodyController : MonoBehaviour
                 var instance = Instantiate(prefab, GetRandomPos(), Quaternion.identity);
                 foreach (var bodyPart in bodyParts)
                 {
-                    if (bodyPart.type==instance.BoneType)
+                    if (bodyPart.type == instance.BoneType)
                     {
-                        instance.Setup(bodyPart.part.transform.position,SwitchFollowTarget);
+                        instance.Setup(bodyPart.part.transform.position, SwitchFollowTarget);
                         instance.OnSequenceComplete += PartCollect;
                     }
                 }
-                // break;
+
+                //break;
             }
         }
     }
