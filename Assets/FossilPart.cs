@@ -10,12 +10,14 @@ public class FossilPart : MonoBehaviour
 {
     [SerializeField] private BoneType boneType;
     [SerializeField] private BoxCollider myCollider;
-    
+
     public BoneType BoneType => boneType;
 
     private Vector3 destination;
 
     public Action<FossilPart> OnCollected;
+
+    public Action OnSequenceComplete;
 
     // private CinemachineVirtualCamera cinemachineVirtualCamera;
     // private Vector3 destination = new Vector3(-16f, 2.22f, -61f);
@@ -25,11 +27,12 @@ public class FossilPart : MonoBehaviour
     //     cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
     //     print(cinemachineVirtualCamera);
     // }
-    public void Setup(Vector3 destination,Action<FossilPart> OnCollect)
+    public void Setup(Vector3 destination, Action<FossilPart> OnCollect)
     {
         OnCollected = OnCollect;
         this.destination = destination;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player"))
@@ -43,9 +46,8 @@ public class FossilPart : MonoBehaviour
             .Append(this.transform.DOMove(destination, 2f))
             .OnComplete(() =>
             {
-                GameManager.Instance.ChangeCamFollowTarget(other.transform);
+                OnSequenceComplete?.Invoke();
                 myCollider.isTrigger = false;
             });
     }
-
 }

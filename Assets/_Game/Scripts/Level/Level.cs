@@ -14,10 +14,10 @@ public class Level : MonoBehaviour
     
     public DigZone MyDigZone => myDigZone;
     public FossilManager FossilManager => fossilManager;
-    public void Initialize(PlayerUpgradesUI playerUpgradesUI,CinemachineVirtualCamera virtualCamera)
+    public void Initialize(PlayerUpgradesUI playerUpgradesUI)
     {
         playerUpgrades.Initialize(playerUpgradesUI);
-        fossilManager.Initialize(virtualCamera);
+        fossilManager.Initialize();
     }
 
     public void DestroyLevel()

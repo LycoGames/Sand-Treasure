@@ -24,6 +24,7 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private PlayerMatColorChanger playerMatColorChanger;
     [SerializeField] private PlayerUpgradesUI playerUpgradesUI;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    [SerializeField] private Effects effect;
     
     protected override void Awake()
     {
@@ -96,5 +97,20 @@ public class GameManager : AbstractSingleton<GameManager>
     public void ChangeCamFollowTarget(Transform target)
     {
         virtualCamera.Follow = target;
+    }
+
+    public void ChangeCamFollowTargetToPlayer()
+    {
+        virtualCamera.Follow = playerController.transform;
+    }
+
+    public void AddMoneyToPlayer(int value)
+    {
+        inventory.AddMoney(value);
+    }
+
+    public void PlayConfetti()
+    {
+        effect.effect.Play();
     }
 }

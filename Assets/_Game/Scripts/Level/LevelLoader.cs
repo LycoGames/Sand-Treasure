@@ -29,7 +29,7 @@ public class LevelLoader : MonoBehaviour
             loadedLevel = Instantiate(levels[currentLevel]);
         }
 
-        loadedLevel.Initialize(playerUpgradesMenuUI,virtualCamera);
+        loadedLevel.Initialize(playerUpgradesMenuUI);
         savingSystem.Load();
         loadedLevel.FossilManager.InstantiateBody();
         if (currentLevel == 0)

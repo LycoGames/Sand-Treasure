@@ -17,11 +17,13 @@ public class FossilBodyController : MonoBehaviour
     [SerializeField] private List<FossilPart> fossilPartPrefabsToInstantiate;
     [SerializeField] private List<BodyPart> bodyParts;
     private FossilManager fossilManager;
-    private Action<BoneType,Transform> OnCollect;
-
-    public void SetupBody(List<BoneType> collectedBones, Action<BoneType,Transform> OnCollect)
+    private Action<BoneType> OnCollect;
+    private int collectCount;
+    public Action OnSkeletonComplete;
+    public void SetupBody(List<BoneType> collectedBones, Action<BoneType> OnCollect)
     {
         this.OnCollect = OnCollect;
+        collectCount = collectedBones.Count;
         foreach (var bodyPart in bodyParts)
         {
             if (!collectedBones.Contains(bodyPart.type))
@@ -32,11 +34,25 @@ public class FossilBodyController : MonoBehaviour
         InstantiateFossilPart(collectedBones);
     }
 
-    private void PartCollect(FossilPart part)
+    private void PartCollect()
     {
-        OnCollect?.Invoke(part.BoneType,part.transform);
+        collectCount++;
+        if (collectCount>=bodyParts.Count)
+        {
+            //hepsi toplandı
+            OnSkeletonComplete?.Invoke();
+        }
+        else
+        {
+            GameManager.Instance.ChangeCamFollowTargetToPlayer();
+        }
     }
 
+    private void SwitchFollowTarget(FossilPart part)
+    {
+        OnCollect?.Invoke(part.BoneType);
+        GameManager.Instance.ChangeCamFollowTarget(part.transform);
+    }
     private void InstantiateFossilPart(List<BoneType> collectedBones)
     {
         foreach (var prefab in fossilPartPrefabsToInstantiate)
@@ -48,10 +64,11 @@ public class FossilBodyController : MonoBehaviour
                 {
                     if (bodyPart.type==instance.BoneType)
                     {
-                        instance.Setup(bodyPart.part.transform.position,PartCollect);
+                        instance.Setup(bodyPart.part.transform.position,SwitchFollowTarget);
+                        instance.OnSequenceComplete += PartCollect;
                     }
                 }
-                break;
+                // break;
             }
         }
     }

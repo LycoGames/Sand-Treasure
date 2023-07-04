@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Saving;
+using _Game.Scripts.UI;
+using _Game.Scripts.Utils;
 using Cinemachine;
 using UnityEngine;
 using Random = UnityEngine.Random;
+
 [Serializable]
 public struct FossilManagerData
 {
@@ -22,28 +25,54 @@ public struct FossilManagerData
 public class FossilManager : MonoBehaviour, ISaveable
 {
     [SerializeField] private List<FossilBodyController> fossilBodyPrefabList;
+    [SerializeField] private UIRewardVisualizer rewardVisualizer;
+    [SerializeField] private AudioClip clip;
+    
     private int currentBodyIndex;
     private CinemachineVirtualCamera virtualCamera;
-   [SerializeField] private List<BoneType> collectedBoneTypes = new();
+    private List<BoneType> collectedBoneTypes = new();
     private FossilBodyController fossilBodyController;
-
-    public void Initialize(CinemachineVirtualCamera vCam)
+    
+    public void Initialize()
     {
-        virtualCamera = vCam;
+        InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
+        rewardVisualizer.SetDestination(inGameUI.MoneyPanel);
     }
 
     public void InstantiateBody()
     {
-        fossilBodyController = Instantiate(fossilBodyPrefabList[currentBodyIndex], this.transform.position+fossilBodyPrefabList[currentBodyIndex].transform.localPosition,
+        fossilBodyController = Instantiate(fossilBodyPrefabList[currentBodyIndex],
+            this.transform.position + fossilBodyPrefabList[currentBodyIndex].transform.localPosition,
             Quaternion.identity * fossilBodyPrefabList[currentBodyIndex].transform.localRotation, this.transform);
         fossilBodyController.SetupBody(collectedBoneTypes, BodyPartCollected);
+        fossilBodyController.OnSkeletonComplete += GoNextFossil;
+    }
+
+    private void GoNextFossil()
+    {
+        currentBodyIndex++;
+        StartCoroutine(RewardCoroutine());
+        //TODO instantiate effect,money add money to  player.
+    }
+
+    private IEnumerator RewardCoroutine()
+    {
+        GameManager.Instance.PlayConfetti();
+        SoundManager.Instance.PlayOneShot(clip);
+        for (int i = 0; i < 4; i++)
+        {
+            rewardVisualizer.VisualiseReward(this.transform.position,(() => GameManager.Instance.AddMoneyToPlayer(20)));
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        yield return new WaitForSeconds(1.5f);
+        GameManager.Instance.ChangeCamFollowTargetToPlayer();
     }
 
 
-    private void BodyPartCollected(BoneType type, Transform bodyPart)
+    private void BodyPartCollected(BoneType type)
     {
         collectedBoneTypes.Add(type);
-        GameManager.Instance.ChangeCamFollowTarget(bodyPart);
     }
 
     public object CaptureState()
