@@ -22,6 +22,7 @@ namespace _Game.Scripts.Player
 
         private bool isInSellZone = false;
         private IMover Imover;
+        public bool IsCanMove { get; set; } = true;
 
         private void Start()
         {
@@ -52,6 +53,11 @@ namespace _Game.Scripts.Player
 
         private void Update()
         {
+            if (!IsCanMove)
+            {
+                return;
+            }
+
             if (Imover.HasInput())
             {
                 // if (stateController.CurrentState == stateController.IdleState)

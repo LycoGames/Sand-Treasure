@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using _Game.Scripts.BaseSequence;
+using _Game.Scripts.Enums;
 using _Game.Scripts.Saving;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -19,11 +21,19 @@ namespace _Game.Scripts.MeshTools
         private Vector3 currentvertPos;
         private float currentDistance;
         private float newHeight;
+        private EndGameState endGameState;
 
         public void RegisterMeshBase(MeshBase meshBase)
         {
             this.meshBase = meshBase;
             SearchInZoneVertices();
+            endGameState=SequenceManager.Instance.GetAppState(AppStateTypes.EndGame) as EndGameState;
+            endGameState.OnClickNextLevelButton += ClearModifiedData;
+        }
+
+        private void ClearModifiedData()
+        {
+            currentDugHeight=0;
         }
 
         public void AddDeformingForce(Vector3 point, float force, float diggingField)

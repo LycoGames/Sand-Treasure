@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using _Game.Scripts.BaseSequence;
+using _Game.Scripts.Enums;
 using _Game.Scripts.Saving;
 using UnityEngine;
 
@@ -30,11 +32,18 @@ namespace _Game.Scripts.MeshTools
         private Mesh mesh;
         private Vector3[] vertices, modifiedVerts, baseVerts;
         private Dictionary<int, ModifiedVertex> modifiedVertexData = new();
-
+        private EndGameState endGameState;
         private void Start()
         {
             GetMeshVertices();
             foreach (var digZone in digZones) digZone.RegisterMeshBase(this);
+            endGameState=SequenceManager.Instance.GetAppState(AppStateTypes.EndGame) as EndGameState;
+            endGameState.OnClickNextLevelButton += ClearModifiedData;
+        }
+
+        private void ClearModifiedData()
+        {
+            modifiedVertexData.Clear();
         }
 
         public Vector3[] GetBaseVertices() => baseVerts;

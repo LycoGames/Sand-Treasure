@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Enums;
+using _Game.Scripts.Player;
 using Cinemachine;
 using DG.Tweening;
 using UnityEngine;
@@ -32,6 +33,8 @@ public class FossilPart : MonoBehaviour
             return;
         }
 
+        PlayerController playerController = other.GetComponent<PlayerController>();
+        playerController.IsCanMove = false;
         OnCollected?.Invoke(this);
         DOTween.Sequence()
             .Append(this.transform.DOMoveY(4, 0.5f))
@@ -41,6 +44,7 @@ public class FossilPart : MonoBehaviour
                 OnSequenceComplete?.Invoke(this);
                 myCollider.isTrigger = false;
                 Destroy(this.gameObject,0.5f);
+                playerController.IsCanMove = true;
             });
     }
 }

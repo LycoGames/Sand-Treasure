@@ -15,6 +15,8 @@ public class LevelLoader : MonoBehaviour
     public int currentLevel;
     private Level loadedLevel;
     private int levelCounter;
+    public bool IsReset { get; set; }
+
     public void LoadLevel()
     {
         if (loadedLevel) DestroyLoadedLevel();

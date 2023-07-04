@@ -83,7 +83,7 @@ public class FossilBodyController : MonoBehaviour
                     }
                 }
 
-                //break;
+                break;
             }
         }
     }

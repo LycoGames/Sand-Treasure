@@ -524,16 +524,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - {fileID: 6617142019723397809, guid: b7292f80f115c4b4ebc4901960833748, type: 3}
-  - {fileID: 285700076609731481, guid: 7e1f52ed32be2bf48b82717f927338fc, type: 3}
-  - {fileID: 3042747120584952942, guid: 5d98d002dd0ad164c96b8a68720fc0ee, type: 3}
-  - {fileID: 4930036312519125841, guid: c1fc9baf250644146ab27326ddc1cee9, type: 3}
-  - {fileID: 1836750826613958387, guid: 3d800259518126d40bf1ee1a36dd2e0b, type: 3}
-  - {fileID: 7648945472732806438, guid: fe4b98dfb9518184ea5eef6557e07870, type: 3}
-  - {fileID: 348465382352677400, guid: 75a940b603b113d4d9e28c27cfe36e43, type: 3}
-  - {fileID: 6320151781771473772, guid: a2c27ac96615dc14ebe548a5a6ca145d, type: 3}
-  - {fileID: 8172799142980926020, guid: 5ad7c92dcf7d630489840d7bb165c5ec, type: 3}
-  - {fileID: 8172799142980926020, guid: 0630af6a3586d2d43af837d490af8d52, type: 3}
-  - {fileID: 4930036312519125841, guid: aff15e0835d719c468fa1b3e810eab03, type: 3}
   - {fileID: 285700076609731481, guid: 6d25dae5a30533a4983a67ba49f14a05, type: 3}
   - {fileID: 7648945472732806438, guid: f89d146da50fc054b9b4f1627ab820d1, type: 3}
   playerUpgradesMenuUI: {fileID: 754211873}
@@ -3589,7 +3579,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!21 &1274031325
+--- !u!21 &1286470148
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -5175,7 +5165,7 @@ PrefabInstance:
     - target: {fileID: 6510243597676640392, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1274031325}
+      objectReference: {fileID: 1286470148}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f79a1efabc10414d878b2dc09e4cac6, type: 3}
 --- !u!4 &3896031487681478705 stripped
