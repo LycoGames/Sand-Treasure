@@ -17,16 +17,8 @@ public class FossilPart : MonoBehaviour
 
     public Action<FossilPart> OnCollected;
 
-    public Action OnSequenceComplete;
-
-    // private CinemachineVirtualCamera cinemachineVirtualCamera;
-    // private Vector3 destination = new Vector3(-16f, 2.22f, -61f);
-    //
-    // private void Awake()
-    // {
-    //     cinemachineVirtualCamera = FindObjectOfType<CinemachineVirtualCamera>();
-    //     print(cinemachineVirtualCamera);
-    // }
+    public Action<FossilPart> OnSequenceComplete;
+    
     public void Setup(Vector3 destination, Action<FossilPart> OnCollect)
     {
         OnCollected = OnCollect;
@@ -46,8 +38,9 @@ public class FossilPart : MonoBehaviour
             .Append(this.transform.DOMove(destination, 2f))
             .OnComplete(() =>
             {
-                OnSequenceComplete?.Invoke();
+                OnSequenceComplete?.Invoke(this);
                 myCollider.isTrigger = false;
+                Destroy(this.gameObject,0.5f);
             });
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using _Game.Scripts.BaseSequence;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Saving;
 using _Game.Scripts.UI;
@@ -27,17 +28,24 @@ public class FossilManager : MonoBehaviour, ISaveable
     [SerializeField] private List<FossilBodyController> fossilBodyPrefabList;
     [SerializeField] private UIRewardVisualizer rewardVisualizer;
     [SerializeField] private AudioClip clip;
-    
+
     private int currentBodyIndex;
     private CinemachineVirtualCamera virtualCamera;
     private List<BoneType> collectedBoneTypes = new();
     private FossilBodyController fossilBodyController;
-    
+
+    private WaitForSeconds moneyWaitForSeconds = new WaitForSeconds(0.3f);
+    private WaitForSeconds camWaitForSeconds = new WaitForSeconds(1.5f);
+    private EndGameState endGameState;
+
     public void Initialize()
     {
         InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
         rewardVisualizer.SetDestination(inGameUI.MoneyPanel);
+        endGameState = SequenceManager.Instance.GetAppState(AppStateTypes.EndGame) as EndGameState;
+        endGameState.OnClickNextLevelButton += NextLevel;
     }
+
 
     public void InstantiateBody()
     {
@@ -45,14 +53,26 @@ public class FossilManager : MonoBehaviour, ISaveable
             this.transform.position + fossilBodyPrefabList[currentBodyIndex].transform.localPosition,
             Quaternion.identity * fossilBodyPrefabList[currentBodyIndex].transform.localRotation, this.transform);
         fossilBodyController.SetupBody(collectedBoneTypes, BodyPartCollected);
-        fossilBodyController.OnSkeletonComplete += GoNextFossil;
+        fossilBodyController.OnSkeletonComplete += OnFossilCompleted;
     }
 
-    private void GoNextFossil()
+    private void OnFossilCompleted()
     {
-        currentBodyIndex++;
         StartCoroutine(RewardCoroutine());
-        //TODO instantiate effect,money add money to  player.
+    }
+
+    private void NextLevel()
+    {
+        if (collectedBoneTypes.Count>=4)
+        {
+            currentBodyIndex++;
+            if (currentBodyIndex >= fossilBodyPrefabList.Count)
+            {
+                currentBodyIndex = 0;
+            }
+
+            collectedBoneTypes.Clear();
+        }
     }
 
     private IEnumerator RewardCoroutine()
@@ -61,11 +81,12 @@ public class FossilManager : MonoBehaviour, ISaveable
         SoundManager.Instance.PlayOneShot(clip);
         for (int i = 0; i < 4; i++)
         {
-            rewardVisualizer.VisualiseReward(this.transform.position,(() => GameManager.Instance.AddMoneyToPlayer(20)));
-            yield return new WaitForSeconds(0.3f);
+            rewardVisualizer.VisualiseReward(this.transform.position,
+                (() => GameManager.Instance.AddMoneyToPlayer(20)));
+            yield return moneyWaitForSeconds;
         }
 
-        yield return new WaitForSeconds(1.5f);
+        yield return camWaitForSeconds;
         GameManager.Instance.ChangeCamFollowTargetToPlayer();
     }
 

@@ -34,12 +34,13 @@ public class FossilBodyController : MonoBehaviour
         InstantiateFossilPart(collectedBones);
     }
 
-    private void PartCollect()
+    private void PartCollect(FossilPart part)
     {
+        OnCollect?.Invoke(part.BoneType);
+        EnableBodyPart(part.BoneType);
         collectCount++;
         if (collectCount>=bodyParts.Count)
         {
-            //hepsi toplandı
             OnSkeletonComplete?.Invoke();
         }
         else
@@ -48,9 +49,19 @@ public class FossilBodyController : MonoBehaviour
         }
     }
 
+    private void EnableBodyPart(BoneType type)
+    {
+        foreach (var bodyPart in bodyParts)
+        {
+            if (bodyPart.type == type)
+            {
+                bodyPart.part.SetActive(true);
+            }
+        }
+    }
+
     private void SwitchFollowTarget(FossilPart part)
     {
-        OnCollect?.Invoke(part.BoneType);
         GameManager.Instance.ChangeCamFollowTarget(part.transform);
     }
     private void InstantiateFossilPart(List<BoneType> collectedBones)
