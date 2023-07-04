@@ -15,11 +15,13 @@ public struct FossilManagerData
 {
     public int currentBodyIndex;
     public List<BoneType> collectedBoneTypes;
+    public bool hasCollectedPart;
 
-    public FossilManagerData(int index, List<BoneType> boneTypes)
+    public FossilManagerData(int index, bool hasCollected, List<BoneType> boneTypes)
     {
         currentBodyIndex = index;
         collectedBoneTypes = boneTypes;
+        hasCollectedPart = hasCollected;
     }
 }
 
@@ -37,6 +39,7 @@ public class FossilManager : MonoBehaviour, ISaveable
     private WaitForSeconds moneyWaitForSeconds = new WaitForSeconds(0.3f);
     private WaitForSeconds camWaitForSeconds = new WaitForSeconds(1.5f);
     private EndGameState endGameState;
+    public bool HasCollectedPart { get; set; }
 
     public void Initialize()
     {
@@ -52,7 +55,7 @@ public class FossilManager : MonoBehaviour, ISaveable
         fossilBodyController = Instantiate(fossilBodyPrefabList[currentBodyIndex],
             this.transform.position + fossilBodyPrefabList[currentBodyIndex].transform.localPosition,
             Quaternion.identity * fossilBodyPrefabList[currentBodyIndex].transform.localRotation, this.transform);
-        fossilBodyController.SetupBody(collectedBoneTypes, BodyPartCollected);
+        fossilBodyController.SetupBody(collectedBoneTypes, HasCollectedPart, BodyPartCollected);
         fossilBodyController.OnSkeletonComplete += OnFossilCompleted;
     }
 
@@ -63,7 +66,7 @@ public class FossilManager : MonoBehaviour, ISaveable
 
     private void NextLevel()
     {
-        if (collectedBoneTypes.Count>=4)
+        if (collectedBoneTypes.Count >= 4)
         {
             currentBodyIndex++;
             if (currentBodyIndex >= fossilBodyPrefabList.Count)
@@ -73,6 +76,8 @@ public class FossilManager : MonoBehaviour, ISaveable
 
             collectedBoneTypes.Clear();
         }
+
+        HasCollectedPart = false;
     }
 
     private IEnumerator RewardCoroutine()
@@ -94,11 +99,12 @@ public class FossilManager : MonoBehaviour, ISaveable
     private void BodyPartCollected(BoneType type)
     {
         collectedBoneTypes.Add(type);
+        HasCollectedPart = true;
     }
 
     public object CaptureState()
     {
-        return new FossilManagerData(currentBodyIndex, collectedBoneTypes);
+        return new FossilManagerData(currentBodyIndex, HasCollectedPart, collectedBoneTypes);
     }
 
     public void RestoreState(object state)
@@ -106,5 +112,6 @@ public class FossilManager : MonoBehaviour, ISaveable
         var data = (FossilManagerData)state;
         currentBodyIndex = data.currentBodyIndex;
         collectedBoneTypes = data.collectedBoneTypes;
+        HasCollectedPart = data.hasCollectedPart;
     }
 }

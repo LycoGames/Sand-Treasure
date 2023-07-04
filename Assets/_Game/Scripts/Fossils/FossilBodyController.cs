@@ -21,7 +21,7 @@ public class FossilBodyController : MonoBehaviour
     private int collectCount;
     public Action OnSkeletonComplete;
 
-    public void SetupBody(List<BoneType> collectedBones, Action<BoneType> OnCollect)
+    public void SetupBody(List<BoneType> collectedBones, bool hasCollected, Action<BoneType> OnCollect)
     {
         this.OnCollect = OnCollect;
         collectCount = collectedBones.Count;
@@ -33,7 +33,8 @@ public class FossilBodyController : MonoBehaviour
             }
         }
 
-        InstantiateFossilPart(collectedBones);
+        if (!hasCollected)
+            InstantiateFossilPart(collectedBones);
     }
 
     private void PartCollect(FossilPart part)
