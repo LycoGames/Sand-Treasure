@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fossilBodyPrefabList:
-  - {fileID: 6647011242870200510, guid: 001901fbe794f1147adc90fe9b273878, type: 3}
   - {fileID: 1011906328596992834, guid: c4666d845a50dbe4e8e9c576a8a9ec23, type: 3}
   - {fileID: 5913918621894864962, guid: de6c7314f33b5c546a582ca31ac285c1, type: 3}
+  - {fileID: 6647011242870200510, guid: 001901fbe794f1147adc90fe9b273878, type: 3}
   rewardVisualizer: {fileID: 2980568890589978921}
   clip: {fileID: 8300000, guid: 8eb4a794a993be446b9a26fca407b6f4, type: 3}
 --- !u!114 &497509768356295965

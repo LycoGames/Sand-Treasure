@@ -52,6 +52,7 @@ public class FossilManager : MonoBehaviour, ISaveable
 
     public void InstantiateBody()
     {
+        print(currentBodyIndex);
         fossilBodyController = Instantiate(fossilBodyPrefabList[currentBodyIndex],
             this.transform.position + fossilBodyPrefabList[currentBodyIndex].transform.localPosition,
             Quaternion.identity * fossilBodyPrefabList[currentBodyIndex].transform.localRotation, this.transform);
@@ -68,12 +69,15 @@ public class FossilManager : MonoBehaviour, ISaveable
     {
         if (collectedBoneTypes.Count >= 4)
         {
+            print(currentBodyIndex);
             currentBodyIndex++;
+            print(currentBodyIndex);
             if (currentBodyIndex >= fossilBodyPrefabList.Count)
             {
+                print("if");
                 currentBodyIndex = 0;
             }
-
+            print("clear");
             collectedBoneTypes.Clear();
         }
 
@@ -104,11 +108,14 @@ public class FossilManager : MonoBehaviour, ISaveable
 
     public object CaptureState()
     {
+        print("capture: "+currentBodyIndex);
+
         return new FossilManagerData(currentBodyIndex, HasCollectedPart, collectedBoneTypes);
     }
 
     public void RestoreState(object state)
-    {
+    { 
+        print("restore: "+currentBodyIndex);
         var data = (FossilManagerData)state;
         currentBodyIndex = data.currentBodyIndex;
         collectedBoneTypes = data.collectedBoneTypes;

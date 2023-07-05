@@ -74,7 +74,7 @@ public class FossilBodyController : MonoBehaviour
         {
             if (!collectedBones.Contains(prefab.BoneType))
             {
-                var instance = Instantiate(prefab, GetRandomPos(), Quaternion.identity);
+                var instance = Instantiate(prefab, GetRandomPos(), Quaternion.identity,this.transform);
                 foreach (var bodyPart in bodyParts)
                 {
                     if (bodyPart.type == instance.BoneType)
