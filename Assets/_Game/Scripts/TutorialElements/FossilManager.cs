@@ -13,13 +13,11 @@ using Random = UnityEngine.Random;
 [Serializable]
 public struct FossilManagerData
 {
-    public int currentBodyIndex;
     public List<BoneType> collectedBoneTypes;
     public bool hasCollectedPart;
 
-    public FossilManagerData(int index, bool hasCollected, List<BoneType> boneTypes)
+    public FossilManagerData(bool hasCollected, List<BoneType> boneTypes)
     {
-        currentBodyIndex = index;
         collectedBoneTypes = boneTypes;
         hasCollectedPart = hasCollected;
     }
@@ -52,7 +50,7 @@ public class FossilManager : MonoBehaviour, ISaveable
 
     public void InstantiateBody()
     {
-        print(currentBodyIndex);
+        currentBodyIndex = PlayerPrefs.HasKey("CurrentBodyIndex") ? PlayerPrefs.GetInt("CurrentBodyIndex") : 0;
         fossilBodyController = Instantiate(fossilBodyPrefabList[currentBodyIndex],
             this.transform.position + fossilBodyPrefabList[currentBodyIndex].transform.localPosition,
             Quaternion.identity * fossilBodyPrefabList[currentBodyIndex].transform.localRotation, this.transform);
@@ -69,15 +67,14 @@ public class FossilManager : MonoBehaviour, ISaveable
     {
         if (collectedBoneTypes.Count >= 4)
         {
-            print(currentBodyIndex);
             currentBodyIndex++;
-            print(currentBodyIndex);
+            PlayerPrefs.SetInt("CurrentBodyIndex", currentBodyIndex);
             if (currentBodyIndex >= fossilBodyPrefabList.Count)
             {
-                print("if");
                 currentBodyIndex = 0;
+                PlayerPrefs.SetInt("CurrentBodyIndex", 0);
             }
-            print("clear");
+
             collectedBoneTypes.Clear();
         }
 
@@ -108,16 +105,12 @@ public class FossilManager : MonoBehaviour, ISaveable
 
     public object CaptureState()
     {
-        print("capture: "+currentBodyIndex);
-
-        return new FossilManagerData(currentBodyIndex, HasCollectedPart, collectedBoneTypes);
+        return new FossilManagerData(HasCollectedPart, collectedBoneTypes);
     }
 
     public void RestoreState(object state)
-    { 
-        print("restore: "+currentBodyIndex);
+    {
         var data = (FossilManagerData)state;
-        currentBodyIndex = data.currentBodyIndex;
         collectedBoneTypes = data.collectedBoneTypes;
         HasCollectedPart = data.hasCollectedPart;
     }

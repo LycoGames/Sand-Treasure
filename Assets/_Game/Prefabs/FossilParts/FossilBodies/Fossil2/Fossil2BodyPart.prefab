@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boneType: 3
-  myCollider: {fileID: 0}
+  myCollider: {fileID: -4800570537193559365}
 --- !u!65 &-4800570537193559365
 BoxCollider:
   m_ObjectHideFlags: 0
