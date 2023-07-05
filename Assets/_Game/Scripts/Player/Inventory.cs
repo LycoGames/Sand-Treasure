@@ -12,7 +12,7 @@ namespace _Game.Scripts.Player
 
         private void Start()
         {
-            AddMoney(3000);
+            AddMoney(40000);
         }
 
         public void AddMoney(int value)

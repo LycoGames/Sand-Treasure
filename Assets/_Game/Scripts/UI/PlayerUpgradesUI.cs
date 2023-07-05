@@ -18,12 +18,15 @@ namespace _Game.Scripts.UI
         public Action<Stat> OnStrengthUpgradeRequest;
         [SerializeField] private RectTransform finger;
         public RectTransform Finger => finger;
+        
         [SerializeField] private TMP_Text stackCapacityCostText;
         [SerializeField] private Button stackCapacityUpgradeButton;
         [SerializeField] private Image stackCapacityLevelBar;
         // [SerializeField] private TMP_Text stackCapacityStat;
         [SerializeField] private TMP_Text stackCapacityMaxTextField;
         [SerializeField] private GameObject stackCapacityUpgradableCostField;
+        [SerializeField] private TMP_Text stackLevelText;
+
 
         [Space] [SerializeField] private TMP_Text digFieldCostText;
         [SerializeField] private Button digFieldUpgradeButton;
@@ -31,6 +34,7 @@ namespace _Game.Scripts.UI
         //  [SerializeField] private TMP_Text digFieldLevelText;
         [SerializeField] private TMP_Text digFieldMaxTextField;
         [SerializeField] private GameObject digFieldUpgradableCostField;
+        [SerializeField] private TMP_Text digFieldLevelText;
 
 
         [Space] [SerializeField] private TMP_Text itemDropChanceCostText;
@@ -46,6 +50,7 @@ namespace _Game.Scripts.UI
         // [SerializeField] private TMP_Text strengthLevelText;
         [SerializeField] private TMP_Text strengthMaxTextField;
         [SerializeField] private GameObject strengthUpgradableCostField;
+        [SerializeField] private TMP_Text strengthLevelText;
 
         private const string MaxText = "MAX";
         private const string LevelText = "LEVEL ";
@@ -82,6 +87,7 @@ namespace _Game.Scripts.UI
         {
             stackCapacityCostText.text = cost;
             float newLevel = level - 1;
+            newLevel %= 10; //reset bar each 10 level
             stackCapacityLevelBar.fillAmount = (newLevel / 10);
         }
 
@@ -90,6 +96,11 @@ namespace _Game.Scripts.UI
             stackCapacityUpgradableCostField.SetActive(false);
             stackCapacityMaxTextField.enabled = true;
             stackCapacityLevelBar.fillAmount = 1f;
+        }
+
+        public void SetStackCapacityLevelText(string text)
+        {
+            stackLevelText.text = text;
         }
 
         public void SetItemDropChance(string cost, int level)
@@ -108,7 +119,9 @@ namespace _Game.Scripts.UI
         public void SetDigField(string cost, int level)
         {
             digFieldCostText.text = cost;
-            digFieldLevelBar.fillAmount = (float)(level - 1) / 10;
+            float newLevel = level - 1;
+            newLevel %= 10;
+            digFieldLevelBar.fillAmount = (newLevel / 10);
         }
 
         public void SetDigField(int level)
@@ -118,10 +131,17 @@ namespace _Game.Scripts.UI
             digFieldLevelBar.fillAmount = 1f;
         }
 
+        public void SetDigFieldLevelText(string text)
+        {
+            digFieldLevelText.text = text;
+        }
+
         public void SetStrength(string cost, int level)
         {
             strengthCostText.text = cost;
-            strengthLevelBar.fillAmount = (float)(level - 1) / 10;
+            float newLevel = level - 1;
+            newLevel %= 10;
+            strengthLevelBar.fillAmount = (newLevel / 10);
         }
 
         public void SetStrength(int level)
@@ -129,6 +149,11 @@ namespace _Game.Scripts.UI
             strengthUpgradableCostField.SetActive(false);
             strengthMaxTextField.enabled = true;
             strengthLevelBar.fillAmount = 1f;
+        }
+
+        public void SetStrengthLevelText(string text)
+        {
+            strengthLevelText.text = text;
         }
 
         // ----------------Upgrade with texts-------------------
