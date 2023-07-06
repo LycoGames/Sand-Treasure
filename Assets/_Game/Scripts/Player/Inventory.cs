@@ -10,11 +10,6 @@ namespace _Game.Scripts.Player
         private int money;
         private int treasure;
 
-        private void Start()
-        {
-            AddMoney(40000);
-        }
-
         public void AddMoney(int value)
         {
             money += value;
