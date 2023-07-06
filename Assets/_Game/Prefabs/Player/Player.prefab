@@ -26372,7 +26372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bowl: {fileID: 5787091169568247379}
-  scaleX: 0.08
+  scaleX: 0.06
   stats: {fileID: 5787091169568309278}
 --- !u!1 &5787091169568484249
 GameObject:
