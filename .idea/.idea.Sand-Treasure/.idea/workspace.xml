@@ -4,12 +4,7 @@
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/RedSand.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/RedSand.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesMenuCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/PlayerUpgradesMenuCanvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Stack/Tractor.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Stack/Tractor.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/PlayerUpgrades.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/PlayerUpgradesUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +201,8 @@
       <workItem from="1688480396081" duration="631000" />
       <workItem from="1688545476694" duration="4349000" />
       <workItem from="1688556988601" duration="1511000" />
-      <workItem from="1688565264600" duration="4821000" />
+      <workItem from="1688565264600" duration="5417000" />
+      <workItem from="1688626552237" duration="1059000" />
     </task>
     <servers />
   </component>

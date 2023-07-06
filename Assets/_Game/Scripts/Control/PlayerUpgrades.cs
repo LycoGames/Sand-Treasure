@@ -92,16 +92,10 @@ namespace _Game.Scripts.Control
             var level = playerStats.GetStatLevel(Stat.StackCapacity);
             if (IsStatOnMaxLevel(Stat.StackCapacity))
             {
-                playerUpgradesUI.SetStackCapacityLevelText("MAX");
                 playerUpgradesUI.SetStackCapacity(level);
                 return;
             }
-
-            if (level - 1 >= 10)
-            {
-                playerUpgradesUI.SetStackCapacityLevelText("Lvl.2");
-            }
-
+            
             playerUpgradesUI.SetStackCapacity(cost, level);
         }
 
@@ -111,16 +105,10 @@ namespace _Game.Scripts.Control
             var level = playerStats.GetStatLevel(Stat.DigField);
             if (IsStatOnMaxLevel(Stat.DigField))
             {
-                playerUpgradesUI.SetDigFieldLevelText("MAX");
                 playerUpgradesUI.SetDigField(level);
                 return;
             }
-
-            if (level - 1 >= 10)
-            {
-                playerUpgradesUI.SetDigFieldLevelText("Lvl.2");
-            }
-
+            
             playerUpgradesUI.SetDigField(cost, level);
         }
 
@@ -130,15 +118,10 @@ namespace _Game.Scripts.Control
             var level = playerStats.GetStatLevel(Stat.Strength);
             if (IsStatOnMaxLevel(Stat.Strength))
             {
-                playerUpgradesUI.SetStrengthLevelText("MAX");
                 playerUpgradesUI.SetStrength(level);
                 return;
             }
-
-            if (level-1>=10)
-            {
-                playerUpgradesUI.SetStrengthLevelText("Lvl.2");
-            }
+            
             playerUpgradesUI.SetStrength(cost, level);
         }
 

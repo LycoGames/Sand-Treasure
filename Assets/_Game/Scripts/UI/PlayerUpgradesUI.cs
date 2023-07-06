@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using _Game.Scripts.Enums;
 using DG.Tweening;
 using TMPro;
@@ -18,10 +19,12 @@ namespace _Game.Scripts.UI
         public Action<Stat> OnStrengthUpgradeRequest;
         [SerializeField] private RectTransform finger;
         public RectTransform Finger => finger;
-        
+
         [SerializeField] private TMP_Text stackCapacityCostText;
         [SerializeField] private Button stackCapacityUpgradeButton;
+
         [SerializeField] private Image stackCapacityLevelBar;
+
         // [SerializeField] private TMP_Text stackCapacityStat;
         [SerializeField] private TMP_Text stackCapacityMaxTextField;
         [SerializeField] private GameObject stackCapacityUpgradableCostField;
@@ -30,7 +33,9 @@ namespace _Game.Scripts.UI
 
         [Space] [SerializeField] private TMP_Text digFieldCostText;
         [SerializeField] private Button digFieldUpgradeButton;
+
         [SerializeField] private Image digFieldLevelBar;
+
         //  [SerializeField] private TMP_Text digFieldLevelText;
         [SerializeField] private TMP_Text digFieldMaxTextField;
         [SerializeField] private GameObject digFieldUpgradableCostField;
@@ -39,14 +44,18 @@ namespace _Game.Scripts.UI
 
         [Space] [SerializeField] private TMP_Text itemDropChanceCostText;
         [SerializeField] private Button itemDropChanceUpgradeButton;
+
         [SerializeField] private Image itemDropChanceLevelBar;
+
         //  [SerializeField] private TMP_Text itemDropChanceStat;
         [SerializeField] private TMP_Text itemDropChanceMaxTextField;
         [SerializeField] private GameObject itemDropChanceUpgradableCostField;
 
         [Space] [SerializeField] private TMP_Text strengthCostText;
         [SerializeField] private Button strengthUpgradeButton;
+
         [SerializeField] private Image strengthLevelBar;
+
         // [SerializeField] private TMP_Text strengthLevelText;
         [SerializeField] private TMP_Text strengthMaxTextField;
         [SerializeField] private GameObject strengthUpgradableCostField;
@@ -54,6 +63,7 @@ namespace _Game.Scripts.UI
 
         private const string MaxText = "MAX";
         private const string LevelText = "LEVEL ";
+        private const string LvlText = "Lvl.";
         private const string StatSeparator = " -> ";
         private const string HealthText = "HP";
         private const string PcsText = "pcs";
@@ -87,6 +97,8 @@ namespace _Game.Scripts.UI
         {
             stackCapacityCostText.text = cost;
             float newLevel = level - 1;
+            string lvl = newLevel.ToString(CultureInfo.InvariantCulture);
+            stackLevelText.text = LvlText + lvl;
             newLevel %= 10; //reset bar each 10 level
             stackCapacityLevelBar.fillAmount = (newLevel / 10);
         }
@@ -96,11 +108,7 @@ namespace _Game.Scripts.UI
             stackCapacityUpgradableCostField.SetActive(false);
             stackCapacityMaxTextField.enabled = true;
             stackCapacityLevelBar.fillAmount = 1f;
-        }
-
-        public void SetStackCapacityLevelText(string text)
-        {
-            stackLevelText.text = text;
+            stackLevelText.text = MaxText;
         }
 
         public void SetItemDropChance(string cost, int level)
@@ -120,6 +128,8 @@ namespace _Game.Scripts.UI
         {
             digFieldCostText.text = cost;
             float newLevel = level - 1;
+            string lvl = newLevel.ToString(CultureInfo.InvariantCulture);
+            digFieldLevelText.text = LvlText + lvl;
             newLevel %= 10;
             digFieldLevelBar.fillAmount = (newLevel / 10);
         }
@@ -129,17 +139,16 @@ namespace _Game.Scripts.UI
             digFieldUpgradableCostField.SetActive(false);
             digFieldMaxTextField.enabled = true;
             digFieldLevelBar.fillAmount = 1f;
+            digFieldLevelText.text = MaxText;
         }
 
-        public void SetDigFieldLevelText(string text)
-        {
-            digFieldLevelText.text = text;
-        }
 
         public void SetStrength(string cost, int level)
         {
             strengthCostText.text = cost;
             float newLevel = level - 1;
+            string lvl = newLevel.ToString(CultureInfo.InvariantCulture);
+            strengthLevelText.text = LvlText + lvl;
             newLevel %= 10;
             strengthLevelBar.fillAmount = (newLevel / 10);
         }
@@ -149,12 +158,9 @@ namespace _Game.Scripts.UI
             strengthUpgradableCostField.SetActive(false);
             strengthMaxTextField.enabled = true;
             strengthLevelBar.fillAmount = 1f;
+            strengthLevelText.text = MaxText;
         }
 
-        public void SetStrengthLevelText(string text)
-        {
-            strengthLevelText.text = text;
-        }
 
         // ----------------Upgrade with texts-------------------
 
