@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using _Game.Scripts.Enums;
+using _Game.Scripts.Player;
 using _Game.Scripts.Pool;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.UI;
@@ -22,6 +23,7 @@ public class SandSellArea : MonoBehaviour
 
     [SerializeField] private ParticleSystem sandVFX;
     [SerializeField] private UIRewardVisualizer rewardVisualizer;
+    [SerializeField] private Effects effect;
 
     private PlayerSandAccumulator playerSandAccumulator;
     private LiquidVolume liquidVolume;
@@ -90,6 +92,8 @@ public class SandSellArea : MonoBehaviour
 
         OnSell?.Invoke();
         SoundManager.Instance.Play(sellSFX);
+        PlayMoneyEffect();
+        effect.effect.Play();
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)
@@ -106,6 +110,12 @@ public class SandSellArea : MonoBehaviour
         coroutine ??= StartCoroutine(VisualiseReward());
     }
 
+    private void PlayMoneyEffect()
+    {
+        var effectPos = playerSandAccumulator.transform.position;
+        effectPos.y = 2f;
+        effect.effect.transform.position = effectPos;
+    }
 
     private void CalculateMoneyCount(int i)
     {
