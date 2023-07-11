@@ -11,12 +11,15 @@ public class Level : MonoBehaviour
     [SerializeField] private PlayerUpgrades playerUpgrades;
     [SerializeField] private DigZone myDigZone;
     [SerializeField] private FossilManager fossilManager;
+    [SerializeField] private SandSellArea sandSellArea;
+    
     public DigZone MyDigZone => myDigZone;
     public FossilManager FossilManager => fossilManager;
     public void Initialize(PlayerUpgradesUI playerUpgradesUI)
     {
         playerUpgrades.Initialize(playerUpgradesUI);
         fossilManager.Initialize();
+        sandSellArea.Initialize();
     }
 
     public void DestroyLevel()

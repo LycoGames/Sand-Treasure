@@ -75,8 +75,8 @@ namespace _Game.Scripts.UI
             {
                 case ItemType.Money:
                     DOTween.Sequence()
-                        .Append(moneyPanel.transform.DOPunchScale(punchScale, 0.1f, 2)).SetEase(Ease.InFlash)
-                        .Append(moneyPanel.transform.DOScale(stockScale, 0.1f));
+                        .Append(moneyPanel.transform.DOPunchScale(punchScale, 0.05f, 2)).SetEase(Ease.InFlash)
+                        .Append(moneyPanel.transform.DOScale(stockScale, 0.05f));
                     moneyText.text = value.ToString();
                     break;
                 case ItemType.Treasure:
@@ -86,6 +86,7 @@ namespace _Game.Scripts.UI
                     SetFoundedTreasureCount(value);
                     break;
             }
+            
         }
 
 

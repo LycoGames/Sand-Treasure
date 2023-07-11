@@ -7,6 +7,7 @@ using _Game.Scripts.Player;
 using _Game.Scripts.States;
 using _Game.Scripts.UI;
 using Cinemachine;
+using DG.Tweening;
 using UnityEngine;
 
 public class GameManager : AbstractSingleton<GameManager>
@@ -29,6 +30,7 @@ public class GameManager : AbstractSingleton<GameManager>
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
+        DOTween.SetTweensCapacity(200,125);
     }
 
     public void IncreaseFoundedTreasureCount()

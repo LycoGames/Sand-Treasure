@@ -448,6 +448,7 @@ MonoBehaviour:
   playerUpgrades: {fileID: 5818161498893049688}
   myDigZone: {fileID: 638065221644133326}
   fossilManager: {fileID: 3481193842001675700}
+  sandSellArea: {fileID: 5476339806906789900}
 --- !u!1 &3042747120602109884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,3 +4172,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6917458848042563748, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
   m_PrefabInstance: {fileID: 8546464431127001584}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5476339806906789900 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4423935699583453692, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
+  m_PrefabInstance: {fileID: 8546464431127001584}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a893dbd633020974b98237fc2dd23237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

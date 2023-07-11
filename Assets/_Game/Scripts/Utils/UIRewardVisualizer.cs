@@ -45,6 +45,9 @@ namespace _Game.Scripts.Utils
             {
                 onSequenceCompleted?.Invoke();
                 Destroy(instance.gameObject);
+                rewardSequence.Kill();
+                punchSequence.Kill();
+                flyUpSequence.Kill();
             });
         }
 

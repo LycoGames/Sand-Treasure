@@ -381,6 +381,7 @@ MonoBehaviour:
   playerUpgrades: {fileID: 7989306234795026495}
   myDigZone: {fileID: 8571292782071928155}
   fossilManager: {fileID: 6623350863623103927}
+  sandSellArea: {fileID: 3330299649127574549}
   lineRenderer: {fileID: 7865632456543101802}
   digZoneTutorialElement: {fileID: 1784665813840563368}
   upgradeZoneTutorialElement: {fileID: 4616031161722717382}

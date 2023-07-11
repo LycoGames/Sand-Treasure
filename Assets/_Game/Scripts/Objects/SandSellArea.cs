@@ -5,6 +5,8 @@ using System.Linq;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Pool;
 using _Game.Scripts.StatSystem;
+using _Game.Scripts.UI;
+using _Game.Scripts.Utils;
 using DG.Tweening;
 using UnityEngine;
 using LiquidVolumeFX;
@@ -14,9 +16,13 @@ public class SandSellArea : MonoBehaviour
 {
     [SerializeField] private List<SandCubes> cubesToThrow = new List<SandCubes>();
     [SerializeField] private AudioClip sellSFX;
-    [Tooltip("Decrease for more cubes")] [SerializeField] private int amountDivider;
+
+    [Tooltip("Decrease for more cubes")] [SerializeField]
+    private int amountDivider;
+
     [SerializeField] private ParticleSystem sandVFX;
-    
+    [SerializeField] private UIRewardVisualizer rewardVisualizer;
+
     private PlayerSandAccumulator playerSandAccumulator;
     private LiquidVolume liquidVolume;
     private Stats stats;
@@ -33,10 +39,26 @@ public class SandSellArea : MonoBehaviour
     private WaitForSeconds waitForSeconds = new WaitForSeconds(0.2f);
     private WaitForSeconds waitForSecondsVFX = new WaitForSeconds(0.25f);
     public Action OnSell;
+    private const int BlueValue = 15;
+    private const int PinkValue = 10;
+    private const int YellowValue = 5;
+    private const int GreenValue = 20;
+    private const int PurpleValue = 25;
+    private const int RedValue = 25;
+
+    private List<int> money = new();
+    private Coroutine coroutine;
+
+    public void Initialize()
+    {
+        InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
+        rewardVisualizer.SetDestination(inGameUI.MoneyPanel);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        if (playerBowlTransform==null)
+        if (playerBowlTransform == null)
         {
             playerSandAccumulator = other.GetComponent<PlayerSandAccumulator>();
             playerBowlTransform = other.gameObject.transform.Find("Bowl").gameObject.transform;
@@ -65,6 +87,7 @@ public class SandSellArea : MonoBehaviour
         {
             return;
         }
+
         OnSell?.Invoke();
         SoundManager.Instance.Play(sellSFX);
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
@@ -73,14 +96,93 @@ public class SandSellArea : MonoBehaviour
             {
                 StartCoroutine(EmptyPlayerBowlCoroutine(liquidVolume.liquidLayers[i].amount, 0, 0.25f, i));
                 InstantiateEffect(i);
-                InstantiateSandCubes(i);
+                CalculateMoneyCount(i);
+                //InstantiateSandCubes(i);
             }
         }
 
         StartCoroutine(PlayParticles());
-        StartCoroutine(ThrowSandCubes());
+        //StartCoroutine(ThrowSandCubes());
+        coroutine ??= StartCoroutine(VisualiseReward());
     }
 
+
+    private void CalculateMoneyCount(int i)
+    {
+        switch (i)
+        {
+            case Blue:
+            {
+                InstantiateMoney(CalculateCubeCount(Blue), BlueValue);
+                break;
+            }
+            case Pink:
+            {
+                InstantiateMoney(CalculateCubeCount(Pink), PinkValue);
+                break;
+            }
+            case Yellow:
+            {
+                InstantiateMoney(CalculateCubeCount(Yellow), YellowValue);
+                break;
+            }
+            case Green:
+            {
+                InstantiateMoney(CalculateCubeCount(Green), GreenValue);
+                break;
+            }
+            case Purple:
+            {
+                InstantiateMoney(CalculateCubeCount(Purple), PurpleValue);
+                break;
+            }
+            case Red:
+            {
+                InstantiateMoney(CalculateCubeCount(Red), RedValue);
+                break;
+            }
+        }
+    }
+
+    private void InstantiateMoney(int i, int value)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            money.Add(value);
+        }
+    }
+
+    private IEnumerator VisualiseReward()
+    {
+        if (!money.Any())
+        {
+            yield break;
+        }
+
+        print(money.Count);
+        int count = 0;
+        int limit = money.Count switch
+        {
+            > 30 => 3,
+            > 15 => 2,
+            _ => 1
+        };
+
+        foreach (var value in money)
+        {
+            rewardVisualizer.VisualiseReward(this.transform.position,
+                (() => GameManager.Instance.AddMoneyToPlayer(value)));
+            count++;
+            if (count >= limit)
+            {
+                yield return new WaitForSeconds(0.1f);
+                count = 0;
+            }
+        }
+
+        money.Clear();
+        coroutine = null;
+    }
 
     private void InstantiateSandCubes(int i)
     {
@@ -125,6 +227,15 @@ public class SandSellArea : MonoBehaviour
         }
     }
 
+    private void InstantiateCubes(int count, SandType sandType)
+    {
+        for (int j = 0; j < count; j++)
+        {
+            var instance = PoolManager.Instance.GetFromPool(sandType);
+            cubesToThrow.Add(instance);
+        }
+    }
+
     private IEnumerator ThrowSandCubes()
     {
         if (cubesToThrow.Count <= 0) yield break;
@@ -165,14 +276,6 @@ public class SandSellArea : MonoBehaviour
         return (int)count;
     }
 
-    private void InstantiateCubes(int count, SandType sandType)
-    {
-        for (int j = 0; j < count; j++)
-        {
-            var instance = PoolManager.Instance.GetFromPool(sandType);
-            cubesToThrow.Add(instance);
-        }
-    }
 
     private Vector3 GetRandomPos()
     {

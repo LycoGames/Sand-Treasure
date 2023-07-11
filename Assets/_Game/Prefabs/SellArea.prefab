@@ -63,7 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
   imageToInstantiatePrefab: {fileID: 7403842012945164169, guid: 5f5fc4d98526dc948a80ac4579761fd7, type: 3}
-  xRandomOffset: 25
+  xRandomOffset: 50
 --- !u!114 &4423935699583453692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +80,7 @@ MonoBehaviour:
   sellSFX: {fileID: 8300000, guid: 088c605706e342e4695b92db5559d28b, type: 3}
   amountDivider: 20
   sandVFX: {fileID: 198603562046773920, guid: d7392277ddbc6394bb6a3403b4c3b669, type: 3}
+  rewardVisualizer: {fileID: 6917458848042563746}
 --- !u!1001 &4652439914554953056
 PrefabInstance:
   m_ObjectHideFlags: 0
