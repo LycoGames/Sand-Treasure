@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _Game.Scripts.Player;
+using _Game.Scripts.States;
 using DG.Tweening;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class BumpChecker : MonoBehaviour
     [SerializeField] private LayerMask layerMask;
     [SerializeField] private float checkDelay;
     [SerializeField] private float maxDistance;
+    [SerializeField] private StateController playerState;
 
     private WaitForSeconds waitForSeconds;
     public bool isPlayerOnHigherLevelArea;
@@ -39,7 +41,7 @@ public class BumpChecker : MonoBehaviour
 
     private void ChangeMaxDistance(bool isPlayerFull)
     {
-        maxDistance = isPlayerFull ? 4 : 7;
+        maxDistance = isPlayerFull ? 4 : 11;
     }
 
     private IEnumerator CheckBumpCoroutine()
@@ -57,6 +59,11 @@ public class BumpChecker : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistance,
                 layerMask))
         {
+            Debug.DrawRay(transform.position,transform.TransformDirection(Vector3.forward)*maxDistance,Color.green);
+            if (!isPlayerCapacityFull)
+            {
+                playerState.ChangeState(playerState.DigState);
+            }
             if (isPlayerCapacityFull)
             {
                 playerController.StopPlayer(isPlayerCapacityFull);
@@ -68,6 +75,7 @@ public class BumpChecker : MonoBehaviour
         }
         else
         {
+            playerState.ChangeState(playerState.IdleState);
             playerController.IncreaseMovementSpeed(true, false);
         }
     }

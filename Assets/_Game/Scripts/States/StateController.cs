@@ -25,6 +25,8 @@ namespace _Game.Scripts.States
 
         public void ChangeState(IState newState)
         {
+            if (currentState == newState) return;
+
             if (currentState != null)
             {
                 currentState.OnExit(this);

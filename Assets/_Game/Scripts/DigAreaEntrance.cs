@@ -24,10 +24,10 @@ public class DigAreaEntrance : MonoBehaviour
             playerMatColorChanger = other.GetComponent<PlayerMatColorChanger>();
         }
 
-        if (playerSandAccumulator.CanAccumulateSand())
-        {
-            stateController.ChangeState(stateController.DigState);
-        }
+        // if (playerSandAccumulator.CanAccumulateSand())
+        // {
+        //     stateController.ChangeState(stateController.DigState);
+        // }
         bumpChecker.StartCheckBumpCoroutine();
         //playerController.IncreaseMovementSpeed(false);
     }

@@ -12,6 +12,7 @@ namespace _Game.Scripts.Player
 
         public void StartDigAnim()
         {
+            print("start dig anim");
             arm1Animator.SetTrigger(StartDig);
         }
 
