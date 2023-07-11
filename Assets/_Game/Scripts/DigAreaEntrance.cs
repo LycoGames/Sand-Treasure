@@ -35,7 +35,7 @@ public class DigAreaEntrance : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        stateController.ChangeState(stateController.IdleState);
+        //stateController.ChangeState(stateController.IdleState);
         bumpChecker.StopCheckBumpCoroutine();
         playerMatColorChanger.ChangeColor(false);
         playerController.IncreaseMovementSpeed(true,false);

@@ -11,7 +11,8 @@ public class FingerSlideAnimation : MonoBehaviour
     [SerializeField] private Transform fingerTransform;
     [SerializeField] private PathType pathType;
     [SerializeField] private List<Transform> pointTransforms;
-    private readonly Vector3[] points=new Vector3[13];
+    private readonly Vector3[] points = new Vector3[13];
+    private Tween tween;
 
     private void Start()
     {
@@ -19,12 +20,28 @@ public class FingerSlideAnimation : MonoBehaviour
         {
             points[i] = pointTransforms[i].position;
         }
-
+    }
+    
+    public void EnableFingerAnim()
+    {
+        this.gameObject.SetActive(true);
         StartFingerAnim();
     }
-
+    public void DisableFingerAnim()
+    {
+        this.gameObject.SetActive(false);
+        tween?.Kill();
+    }
     private void StartFingerAnim()
     {
-        fingerTransform.DOPath(points, 2f, pathType).SetEase(Ease.Linear).SetLoops(-1);
+        tween = fingerTransform.DOPath(points, 2f, pathType).SetEase(Ease.Linear).SetLoops(-1);
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            DisableFingerAnim();
+        }
     }
 }

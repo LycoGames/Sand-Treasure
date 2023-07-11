@@ -34,6 +34,7 @@ namespace _Game.Scripts.BaseSequence
             playerSandAccumulator.Initialize();
             UpdateProgressBar(levelLoader.GetCompletionPercentage());
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
+            inGameUI.FingerAnim.EnableFingerAnim();
         }
 
         public override void Exit()

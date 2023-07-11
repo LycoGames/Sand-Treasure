@@ -107,7 +107,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DigStop
-  m_Speed: -12
+  m_Speed: -18
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -3959415514237747087}
@@ -196,7 +196,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: DigStart
-  m_Speed: 12
+  m_Speed: 18
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8078410023424824925}

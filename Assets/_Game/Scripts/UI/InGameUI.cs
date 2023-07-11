@@ -30,6 +30,8 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private Image progressBarFill;
         [SerializeField] private CapacityBar capacityBar;
+        [SerializeField] private FingerSlideAnimation fingerAnim;
+        public FingerSlideAnimation FingerAnim => fingerAnim;
         public CapacityBar CapacityBar => capacityBar;
 
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
