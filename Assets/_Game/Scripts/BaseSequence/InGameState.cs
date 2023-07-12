@@ -46,12 +46,14 @@ namespace _Game.Scripts.BaseSequence
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
             inGameUI.FingerAnim.EnableFingerAnim();
             Actions.OnInGameStateBegin?.Invoke();
+            SoundManager.Instance.PlayLoopEngine();
         }
 
         public override void Exit()
         {
             // playerController.canControl = false;
             //UIManager.Instance.DisableCanvas(CanvasTypes.InGame);
+            SoundManager.Instance.StopEngine();
         }
 
         private void GoEndGameState()

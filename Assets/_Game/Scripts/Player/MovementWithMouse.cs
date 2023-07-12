@@ -34,6 +34,7 @@ namespace _Game.Scripts.Player
             if (Input.GetMouseButtonDown(0))
             {
                 firstTouch = Input.mousePosition;
+                SoundManager.Instance.EngineSoundPitchIncrease();
             }
 
             if (Input.GetMouseButton(0))
@@ -55,6 +56,8 @@ namespace _Game.Scripts.Player
             if (Input.GetMouseButtonUp(0))
             {
                 input = false;
+                SoundManager.Instance.EngineSoundPitchDecrease();
+
             }
         }
 
