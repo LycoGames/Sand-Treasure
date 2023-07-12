@@ -5,6 +5,7 @@ using System.Linq;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
 using _Game.Scripts.Pool;
+using _Game.Scripts.Stack;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
@@ -23,8 +24,8 @@ public class SandSellArea : MonoBehaviour
 
     [SerializeField] private ParticleSystem sandVFX;
     [SerializeField] private UIRewardVisualizer rewardVisualizer;
-    [SerializeField] private Effects effect;
-
+    [SerializeField] private MoneyStackController moneyStackController;
+    
     private PlayerSandAccumulator playerSandAccumulator;
     private LiquidVolume liquidVolume;
     private Stats stats;
@@ -51,11 +52,6 @@ public class SandSellArea : MonoBehaviour
     private List<int> money = new();
     private Coroutine coroutine;
 
-    public void Initialize()
-    {
-        InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
-        rewardVisualizer.SetDestination(inGameUI.MoneyPanel);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -105,16 +101,10 @@ public class SandSellArea : MonoBehaviour
 
         StartCoroutine(PlayParticles());
         //StartCoroutine(ThrowSandCubes());
-        coroutine ??= StartCoroutine(VisualiseReward());
+        moneyStackController.StartSpawningMoney(money);
+       // money.Clear();
     }
 
-    private void PlayMoneyEffect()
-    {
-        var effectPos = playerSandAccumulator.transform.position;
-        effectPos.y = 2f;
-        effect.effect.transform.position = effectPos;
-        effect.effect.Play();
-    }
 
     private void CalculateMoneyCount(int i)
     {
@@ -161,37 +151,7 @@ public class SandSellArea : MonoBehaviour
         }
     }
 
-    private IEnumerator VisualiseReward()
-    {
-        if (!money.Any())
-        {
-            yield break;
-        }
-
-        print(money.Count);
-        int count = 0;
-        int limit = money.Count switch
-        {
-            > 30 => 3,
-            > 15 => 2,
-            _ => 1
-        };
-
-        foreach (var value in money)
-        {
-            rewardVisualizer.VisualiseReward(this.transform.position,
-                (() => GameManager.Instance.AddMoneyToPlayer(value)));
-            count++;
-            if (count >= limit)
-            {
-                yield return new WaitForSeconds(0.1f);
-                count = 0;
-            }
-        }
-
-        money.Clear();
-        coroutine = null;
-    }
+    
 
     private void InstantiateSandCubes(int i)
     {
@@ -326,7 +286,6 @@ public class SandSellArea : MonoBehaviour
             vfx.transform.DOJump(transform.position, 5f, 1, 1f).OnComplete((() => Destroy(vfx.gameObject)));
             yield return waitForSecondsVFX;
         }
-        PlayMoneyEffect();
         // (var vfx in vfxQueue)
         // {
         //     vfx.Play();
