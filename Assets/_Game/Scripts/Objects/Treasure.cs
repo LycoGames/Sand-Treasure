@@ -14,6 +14,7 @@ namespace _Game.Scripts.Objects
         [SerializeField] private UIRewardVisualizer rewardVisualizer;
         [SerializeField] private BoxCollider boxCollider;
         [SerializeField] private AudioClip treasureFoundSFX;
+        [SerializeField] private int moneyValue;
         
         private static readonly int OpenChest = Animator.StringToHash("OpenChest");
 
@@ -33,7 +34,7 @@ namespace _Game.Scripts.Objects
                 Inventory playerInventory = other.GetComponent<Inventory>();
                 this.gameObject.transform.DOJump(other.transform.position, 5f, 1, 0.3f).SetAutoKill(true).OnComplete(() =>
                 {
-                    rewardVisualizer.VisualiseReward(this.gameObject.transform.position, (() => playerInventory.AddTreasure()));
+                    rewardVisualizer.VisualiseReward(this.gameObject.transform.position, (() => playerInventory.AddMoney(moneyValue)));
                     Destroy(gameObject);
                 });
             }

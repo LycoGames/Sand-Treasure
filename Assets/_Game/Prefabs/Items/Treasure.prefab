@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6321996363970991451
 Transform:
   m_ObjectHideFlags: 0
@@ -51,6 +51,7 @@ MonoBehaviour:
   rewardVisualizer: {fileID: 6321996363970991450}
   boxCollider: {fileID: 6321996363970991449}
   treasureFoundSFX: {fileID: 8300000, guid: 8eb4a794a993be446b9a26fca407b6f4, type: 3}
+  moneyValue: 100
 --- !u!114 &6321996363970991450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +65,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
-  imageToInstantiatePrefab: {fileID: 7403842012945164169, guid: faf4ae8084e4ab5429d50e651f047b64, type: 3}
+  imageToInstantiatePrefab: {fileID: 7403842012945164169, guid: 5f5fc4d98526dc948a80ac4579761fd7, type: 3}
   xRandomOffset: 50
 --- !u!65 &6321996363970991449
 BoxCollider:
