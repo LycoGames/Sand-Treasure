@@ -92,8 +92,6 @@ public class SandSellArea : MonoBehaviour
 
         OnSell?.Invoke();
         SoundManager.Instance.Play(sellSFX);
-        PlayMoneyEffect();
-        effect.effect.Play();
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)
@@ -115,6 +113,7 @@ public class SandSellArea : MonoBehaviour
         var effectPos = playerSandAccumulator.transform.position;
         effectPos.y = 2f;
         effect.effect.transform.position = effectPos;
+        effect.effect.Play();
     }
 
     private void CalculateMoneyCount(int i)
@@ -327,7 +326,7 @@ public class SandSellArea : MonoBehaviour
             vfx.transform.DOJump(transform.position, 5f, 1, 1f).OnComplete((() => Destroy(vfx.gameObject)));
             yield return waitForSecondsVFX;
         }
-
+        PlayMoneyEffect();
         // (var vfx in vfxQueue)
         // {
         //     vfx.Play();
