@@ -7,7 +7,8 @@ using UnityEngine;
 public class DigZoneTutorialElement : TutorialElement
 {
     private PlayerSandAccumulator playerSandAccumulator;
-    [SerializeField] private Line lineRenderer;
+
+    //[SerializeField] private Line lineRenderer;
     private bool isEntered;
 
     public void Initialize(PlayerSandAccumulator playerSandAccumulator)
@@ -24,7 +25,7 @@ public class DigZoneTutorialElement : TutorialElement
     private void TutorialCompleted()
     {
         ConditionComplete();
-        lineRenderer.StartCoroutine();
+        //    lineRenderer.StartCoroutine();
         playerSandAccumulator.OnCapacityFull -= TutorialCompleted;
     }
 
@@ -34,7 +35,8 @@ public class DigZoneTutorialElement : TutorialElement
         if (other.CompareTag("Player"))
         {
             isEntered = true;
-            lineRenderer.StopCoroutine();
+            ReachedToDestination();
+            // lineRenderer.StopCoroutine();
         }
     }
 }

@@ -4,7 +4,6 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
-using RDG;
 using UnityEngine;
 
 namespace _Game.Scripts.BaseSequence
@@ -46,6 +45,7 @@ namespace _Game.Scripts.BaseSequence
             UpdateProgressBar(levelLoader.GetCompletionPercentage());
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
             inGameUI.FingerAnim.EnableFingerAnim();
+            Actions.OnInGameStateBegin?.Invoke();
         }
 
         public override void Exit()

@@ -98,7 +98,7 @@ public class GameManager : AbstractSingleton<GameManager>
     public void SetupTutorialLevel(TutorialLevel level)
     {
         level.Initialize(player.GetComponent<PlayerSandAccumulator>(), player.GetComponent<Inventory>(),
-            playerUpgradesUI);
+            player.GetComponent<PlayerController>(), playerUpgradesUI);
     }
 
     public void ChangeCamFollowTarget(Transform target)

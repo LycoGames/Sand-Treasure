@@ -10,8 +10,8 @@ using UnityEngine;
 
 public class UpgradeZoneTutorialElement : TutorialElement
 {
-    [SerializeField] private Line tutorialLine;
-    
+    [SerializeField] private TutorialManager manager;
+
     private RectTransform fingerRect;
     private readonly Vector3 scaledSize = new Vector3(1.2f, 1.2f, 1.2f);
     private readonly Vector3 stockSize = new Vector3(0.85f, 0.85f, 0.85f);
@@ -19,8 +19,8 @@ public class UpgradeZoneTutorialElement : TutorialElement
     private void OnTriggerEnter(Collider other)
     {
         if (!other.CompareTag("Player")) return;
-        if (tutorialLine.IsTutorialComplete) return;
-        
+        if (manager.IsTutorialComplete) return;
+
         SetActiveFinger();
     }
 
@@ -37,7 +37,7 @@ public class UpgradeZoneTutorialElement : TutorialElement
             .Append(fingerRect.DOScale(scaledSize, 0.5f))
             .Append(fingerRect.DOScale(stockSize, 0.5f)).SetLoops(-1);
     }
-    
+
     private void CompleteCondition(Stat obj)
     {
         DOTween.Kill(fingerRect);

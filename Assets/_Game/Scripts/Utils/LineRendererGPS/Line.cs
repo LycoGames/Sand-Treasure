@@ -46,7 +46,7 @@ namespace _Game.Scripts.Utils.LineRendererGPS
         public void StopCoroutine()
         {
             EnableDisableRenderer(false);
-            if (coroutine!=null)
+            if (coroutine != null)
             {
                 StopCoroutine(coroutine);
             }
