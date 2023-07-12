@@ -4,6 +4,7 @@ using _Game.Scripts.Player;
 using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
 using DG.Tweening;
+using RDG;
 using UnityEngine;
 
 namespace _Game.Scripts.Objects
@@ -21,7 +22,7 @@ namespace _Game.Scripts.Objects
         private void Start()
         {
             InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
-            rewardVisualizer.SetDestination(inGameUI.TreasurePanel);
+            rewardVisualizer.SetDestination(inGameUI.MoneyPanel);
         }
         
         private void OnTriggerEnter(Collider other)
@@ -29,6 +30,7 @@ namespace _Game.Scripts.Objects
             if (other.CompareTag("Player"))
             {
                 SoundManager.Instance.PlayOneShot(treasureFoundSFX);
+                Vibration.Vibrate(100,200,true);
                 boxCollider.enabled = false;
                 animator.SetTrigger(OpenChest);
                 Inventory playerInventory = other.GetComponent<Inventory>();

@@ -5,6 +5,7 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
 using Cinemachine;
 using DG.Tweening;
+using RDG;
 using UnityEngine;
 
 public class FossilPart : MonoBehaviour
@@ -36,6 +37,7 @@ public class FossilPart : MonoBehaviour
         PlayerController playerController = other.GetComponent<PlayerController>();
         playerController.IsCanMove = false;
         OnCollected?.Invoke(this);
+        Vibration.Vibrate(100,200,true);
         DOTween.Sequence()
             .Append(this.transform.DOMoveY(4, 0.5f))
             .Append(this.transform.DOMove(destination, 2f))

@@ -3,6 +3,7 @@ using System.Collections;
 using _Game.Scripts.Enums;
 using _Game.Scripts.MeshTools;
 using _Game.Scripts.StatSystem;
+using RDG;
 using UnityEngine;
 
 namespace _Game.Scripts.Player
@@ -78,6 +79,7 @@ namespace _Game.Scripts.Player
             {
                 if (digZone != null)
                 {
+                    Vibration.Vibrate(50,50,true);
                     digZone.AddDeformingForce(diggerPos.position, force, diggingField);
                 }
 
