@@ -1,5 +1,6 @@
 using _Game.Scripts.Base.AppState;
 using _Game.Scripts.Enums;
+using _Game.Scripts.Player;
 using _Game.Scripts.UI;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace _Game.Scripts.BaseSequence
     {
         [SerializeField] private float loadingTime;
         [SerializeField] private LevelLoader levelLoader;
+        [SerializeField] private PlayerController playerController;
         
         private LoadingUI loadingUI;
 
@@ -20,6 +22,7 @@ namespace _Game.Scripts.BaseSequence
         public override void Enter()
         {
             UIManager.Instance.EnableCanvas(CanvasTypes.Loading);
+            playerController.IsCanMove = false;
             loadingUI.LoadingTime = loadingTime;
             levelLoader.LoadLevel();
             Invoke("StartGame", loadingTime);
@@ -28,6 +31,7 @@ namespace _Game.Scripts.BaseSequence
         public override void Exit()
         {
             UIManager.Instance.DisableCanvas(CanvasTypes.Loading);
+            playerController.IsCanMove = true;
         }
 
         private void StartGame()

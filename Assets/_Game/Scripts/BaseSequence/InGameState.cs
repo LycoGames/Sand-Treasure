@@ -3,6 +3,8 @@ using _Game.Scripts.Base.AppState;
 using _Game.Scripts.Enums;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.UI;
+using _Game.Scripts.Utils;
+using RDG;
 using UnityEngine;
 
 namespace _Game.Scripts.BaseSequence
@@ -14,18 +16,27 @@ namespace _Game.Scripts.BaseSequence
         [SerializeField] private Stats playerStats;
         [SerializeField] private LevelLoader levelLoader;
         [SerializeField] private PlayerSandAccumulator playerSandAccumulator;
-        
+
         public Action OnReachedFinish;
         [HideInInspector] public bool isFinished;
+        private int isVibrationOn;
 
         public override void Initialize()
         {
             inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
             inGameUI.AudioToggle = AudioOnOff;
+            GetVibrationSettings();
+            inGameUI.VibrationToggle = VibrationOnOff;
             inGameUI.CapacityBar.Initialize(playerStats);
-            
             //inGameUI.Pause = PauseGame;
             //  playerController.OnPositionChange += inGameUI.SetDistanceText;
+        }
+
+        private void GetVibrationSettings()
+        {
+            isVibrationOn = PlayerPrefs.HasKey("Vibration") ? PlayerPrefs.GetInt("Vibration") : 1;
+            inGameUI.VibrationToggleButton.isOn = isVibrationOn == 1;
+            GameManager.Instance.ToggleVibration(isVibrationOn == 1);
         }
 
         public override void Enter()
@@ -56,6 +67,20 @@ namespace _Game.Scripts.BaseSequence
         private void AudioOnOff(bool isOn)
         {
             AudioListener.pause = !isOn;
+        }
+
+        private void VibrationOnOff(bool isOn)
+        {
+            GameManager.Instance.ToggleVibration(isOn);
+            switch (isOn)
+            {
+                case true:
+                    PlayerPrefs.SetInt("Vibration", 1);
+                    break;
+                case false:
+                    PlayerPrefs.SetInt("Vibration", 0);
+                    break;
+            }
         }
 
         public void UpdateProgressBar(float value)

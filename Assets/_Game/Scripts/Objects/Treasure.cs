@@ -30,7 +30,7 @@ namespace _Game.Scripts.Objects
             if (other.CompareTag("Player"))
             {
                 SoundManager.Instance.PlayOneShot(treasureFoundSFX);
-                Vibration.Vibrate(100,200,true);
+                GameManager.Instance.Vibrate(100,200,true);
                 boxCollider.enabled = false;
                 animator.SetTrigger(OpenChest);
                 Inventory playerInventory = other.GetComponent<Inventory>();

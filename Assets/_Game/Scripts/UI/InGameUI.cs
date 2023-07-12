@@ -27,7 +27,9 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
-
+        [SerializeField] private Toggle vibrationToggle;
+        public Toggle VibrationToggleButton => vibrationToggle;
+        public OnUIToggleClickEvent VibrationToggle;
         [SerializeField] private Image progressBarFill;
         [SerializeField] private CapacityBar capacityBar;
         [SerializeField] private FingerSlideAnimation fingerAnim;
@@ -42,6 +44,7 @@ namespace _Game.Scripts.UI
             inventory.AddObserver(this);
             moneyText.text = inventory.GetMoney().ToString();
             audioToggle.onValueChanged.AddListener(ToggleAudioOnOff);
+            vibrationToggle.onValueChanged.AddListener(ToggleVibrationOnOff);
         }
 
         public void SetTotalTreasureCount(int count)
@@ -86,7 +89,6 @@ namespace _Game.Scripts.UI
                     SetFoundedTreasureCount(value);
                     break;
             }
-            
         }
 
 
@@ -104,6 +106,11 @@ namespace _Game.Scripts.UI
         private void ToggleAudioOnOff(bool isOn)
         {
             AudioToggle?.Invoke(isOn);
+        }
+
+        private void ToggleVibrationOnOff(bool isOn)
+        {
+            VibrationToggle?.Invoke(isOn);
         }
     }
 }

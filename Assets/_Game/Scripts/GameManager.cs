@@ -6,17 +6,20 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
 using _Game.Scripts.States;
 using _Game.Scripts.UI;
+using _Game.Scripts.Utils;
 using Cinemachine;
 using DG.Tweening;
+using RDG;
 using UnityEngine;
 
 public class GameManager : AbstractSingleton<GameManager>
 {
     private int totalTreasureCount;
     private int foundedTreasureCount;
+    private bool isVibrationOn;
     [SerializeField] private InGameUI inGameUI;
     [SerializeField] private InGameState inGameState;
-    
+
     [SerializeField] private Inventory inventory;
     [SerializeField] private GameObject player;
     [SerializeField] private Vector3 playerStartingPos;
@@ -26,12 +29,13 @@ public class GameManager : AbstractSingleton<GameManager>
     [SerializeField] private PlayerUpgradesUI playerUpgradesUI;
     [SerializeField] private CinemachineVirtualCamera virtualCamera;
     [SerializeField] private Effects effect;
-    
+
     protected override void Awake()
     {
         Application.targetFrameRate = 60;
-        DOTween.SetTweensCapacity(200,125);
+        DOTween.SetTweensCapacity(200, 125);
     }
+
 
     public void IncreaseFoundedTreasureCount()
     {
@@ -93,7 +97,8 @@ public class GameManager : AbstractSingleton<GameManager>
 
     public void SetupTutorialLevel(TutorialLevel level)
     {
-        level.Initialize(player.GetComponent<PlayerSandAccumulator>(), player.GetComponent<Inventory>(),playerUpgradesUI);
+        level.Initialize(player.GetComponent<PlayerSandAccumulator>(), player.GetComponent<Inventory>(),
+            playerUpgradesUI);
     }
 
     public void ChangeCamFollowTarget(Transform target)
@@ -114,5 +119,18 @@ public class GameManager : AbstractSingleton<GameManager>
     public void PlayConfetti()
     {
         effect.effect.Play();
+    }
+
+    public void ToggleVibration(bool isOn)
+    {
+        isVibrationOn = isOn;
+    }
+
+    public void Vibrate(long ms, int amp, bool cancel)
+    {
+        if (isVibrationOn)
+        {
+            Vibration.Vibrate(ms, amp, cancel);
+        }
     }
 }

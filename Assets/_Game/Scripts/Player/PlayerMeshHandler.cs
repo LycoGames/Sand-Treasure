@@ -79,7 +79,7 @@ namespace _Game.Scripts.Player
             {
                 if (digZone != null)
                 {
-                    Vibration.Vibrate(50,50,true);
+                    GameManager.Instance.Vibrate(50,50,true);
                     digZone.AddDeformingForce(diggerPos.position, force, diggingField);
                 }
 
