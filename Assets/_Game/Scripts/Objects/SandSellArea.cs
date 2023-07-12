@@ -25,7 +25,7 @@ public class SandSellArea : MonoBehaviour
     [SerializeField] private ParticleSystem sandVFX;
     [SerializeField] private UIRewardVisualizer rewardVisualizer;
     [SerializeField] private MoneyStackController moneyStackController;
-    
+
     private PlayerSandAccumulator playerSandAccumulator;
     private LiquidVolume liquidVolume;
     private Stats stats;
@@ -102,7 +102,7 @@ public class SandSellArea : MonoBehaviour
         StartCoroutine(PlayParticles());
         //StartCoroutine(ThrowSandCubes());
         moneyStackController.StartSpawningMoney(money);
-       // money.Clear();
+        // money.Clear();
     }
 
 
@@ -151,7 +151,6 @@ public class SandSellArea : MonoBehaviour
         }
     }
 
-    
 
     private void InstantiateSandCubes(int i)
     {
@@ -297,6 +296,15 @@ public class SandSellArea : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //StopAllCoroutines();
+        if (!other.CompareTag("Player")) return;
+        for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
+        {
+            if (liquidVolume.liquidLayers[i].amount > 0)
+            {
+                liquidVolume.liquidLayers[i].amount = 0;
+            }
+            liquidVolume.UpdateLayers();
+            playerSandAccumulator.ResetCapacity();
+        }
     }
 }
