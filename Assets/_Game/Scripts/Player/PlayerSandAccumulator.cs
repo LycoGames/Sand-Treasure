@@ -47,7 +47,6 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
     private const int Green = 3;
     private const int Purple = 4;
     private const int Red = 5;
-    [SerializeField] private Color pinkColor;
     private InGameUI inGameUI;
     public Action OnCapacityFull;
 
