@@ -13,12 +13,14 @@ namespace _Game.Scripts.Player
         public void StartDigAnim()
         {
             print("start dig anim");
+            arm1Animator.ResetTrigger(StopDig);
             arm1Animator.SetTrigger(StartDig);
         }
 
         public void StopDigAnim()
         {
             print("stop dig anim");
+            arm1Animator.ResetTrigger(StartDig);
             arm1Animator.SetTrigger(StopDig);
             arm2Animator.SetBool(Digging, false);
         }

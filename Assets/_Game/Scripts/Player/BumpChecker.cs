@@ -59,20 +59,17 @@ public class BumpChecker : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, maxDistance,
                 layerMask))
         {
-            if (!isPlayerCapacityFull)
-            {
-                playerState.ChangeState(playerState.DigState);
-            }
-            if (isPlayerCapacityFull)
+            if (isPlayerCapacityFull) //player fullse ve önümde kum varsa dur ilerleyeme
             {
                 playerController.StopPlayer(isPlayerCapacityFull);
             }
-            else
+            else //önümde kum varsa hızımı yavaslat, yüksek seviyeli yerdeysem daha da yavaslat
             {
+                playerState.ChangeState(playerState.DigState);
                 playerController.IncreaseMovementSpeed(false, isPlayerOnHigherLevelArea);
             }
         }
-        else
+        else //önümde kum yoksa idle state geç ve hızımı arttır.
         {
             playerState.ChangeState(playerState.IdleState);
             playerController.IncreaseMovementSpeed(true, false);
