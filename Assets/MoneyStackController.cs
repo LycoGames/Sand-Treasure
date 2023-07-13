@@ -14,7 +14,6 @@ public class MoneyStackController : MonoBehaviour
     [SerializeField] private Vector3 offset;
     [SerializeField] private UIRewardVisualizer rewardVisualizer;
     [SerializeField] private Transform spawnPoint;
-    private List<int> moneyList = new List<int>();
     private int index = 0;
 
     public void Initialize()
@@ -25,13 +24,12 @@ public class MoneyStackController : MonoBehaviour
 
     public void StartSpawningMoney(List<int> moneyList)
     {
-        this.moneyList = moneyList;
-        StartCoroutine(SpawnCoroutine());
+        StartCoroutine(SpawnCoroutine(new List<int>(moneyList)));
     }
 
-    private IEnumerator SpawnCoroutine()
+    private IEnumerator SpawnCoroutine(List<int> list)
     {
-        foreach (var money in moneyList)
+        foreach (var money in list)
         {
             var instance = MoneyPool.Instance.GetFromPool();
             index++;
@@ -43,8 +41,6 @@ public class MoneyStackController : MonoBehaviour
             instance.OnCollect += VisualiseReward;
             yield return new WaitForSeconds(0.1f);
         }
-
-        moneyList.Clear();
     }
 
     private void VisualiseReward(Vector3 moneyPos, int value)

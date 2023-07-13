@@ -69,6 +69,22 @@ public class SandSellArea : MonoBehaviour
         SellSand();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (!other.CompareTag("Player")) return;
+        StopAllCoroutines();
+        for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
+        {
+            if (liquidVolume.liquidLayers[i].amount > 0)
+            {
+                liquidVolume.liquidLayers[i].amount = 0;
+            }
+
+            liquidVolume.UpdateLayers();
+            playerSandAccumulator.ResetCapacity();
+        }
+    }
+
     private void UpdatePlayerCapacity(float value)
     {
         capacity = value;
@@ -102,7 +118,7 @@ public class SandSellArea : MonoBehaviour
         StartCoroutine(PlayParticles());
         //StartCoroutine(ThrowSandCubes());
         moneyStackController.StartSpawningMoney(money);
-        // money.Clear();
+        money.Clear();
     }
 
 
@@ -292,19 +308,5 @@ public class SandSellArea : MonoBehaviour
         //     vfx.transform.DOJump(transform.position, 5f, 1, 1f);
         //     yield return new WaitForSeconds(1f);
         // }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (!other.CompareTag("Player")) return;
-        for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
-        {
-            if (liquidVolume.liquidLayers[i].amount > 0)
-            {
-                liquidVolume.liquidLayers[i].amount = 0;
-            }
-            liquidVolume.UpdateLayers();
-            playerSandAccumulator.ResetCapacity();
-        }
     }
 }
