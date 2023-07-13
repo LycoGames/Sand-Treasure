@@ -38,7 +38,11 @@ public class MoneyStackController : MonoBehaviour
             instance.transform.position = this.transform.position;
             instance.transform.parent = this.spawnPoint;
             instance.transform.DOLocalMove(GetStackPosition(offset, index), 0.2f)
-                .OnComplete((() => instance.EnableCollider()));
+                .OnComplete(() =>
+                {
+                    instance.EnableCollider();
+                    instance.transform.parent = MoneyPool.Instance.transform;
+                });
             instance.value = money;
             instance.OnCollect += VisualiseReward;
             yield return new WaitForSeconds(0.1f);
