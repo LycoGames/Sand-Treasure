@@ -2733,6 +2733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Treasure
       objectReference: {fileID: 0}
+    - target: {fileID: 8177877328659419000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: uniqueIdentifier
+      value: c153e3e8-7049-4feb-9648-ab0bc37837c8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
 --- !u!4 &5581291578079743402 stripped
@@ -2986,6 +2990,10 @@ PrefabInstance:
     - target: {fileID: 6321996363970991452, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
       propertyPath: m_Name
       value: Treasure (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177877328659419000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}
+      propertyPath: uniqueIdentifier
+      value: 649ee361-1f53-4c92-88ca-25a58d9486f9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5141c0df957d1d42832bd7462f949a0, type: 3}

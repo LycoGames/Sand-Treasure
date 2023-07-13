@@ -67,11 +67,11 @@ public class SoundManager : AbstractSingleton<SoundManager>
     }
     public void EngineSoundVolumeIncrease()
     {
-        loopEngineSource.volume = 0.25f;
+        loopEngineSource.DOFade(0.25f,1f);
     }
     public void EngineSoundVolumeDecrease()
     {
-        loopEngineSource.volume = 0.1f;
+        loopEngineSource.DOFade(0.1f,1f);
     }
     public void PlayRandomSoundEffect(AudioClip[] clips)
     {

@@ -4,6 +4,7 @@ using _Game.Scripts.BaseSequence;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
 using _Game.Scripts.UI;
+using _Game.Scripts.Utils;
 using UnityEngine;
 
 public class EndGameState : AbstractAppState
@@ -25,6 +26,7 @@ public class EndGameState : AbstractAppState
         UIManager.Instance.EnableCanvas(CanvasTypes.EndGame);
         effects.effect.Play(true);
         SoundManager.Instance.PlayOneShot(levelCompleteSFX);
+        SoundManager.Instance.PlayLoopEngine();
     }
 
     public override void Exit()
@@ -36,6 +38,7 @@ public class EndGameState : AbstractAppState
     private void ChangeStateToLoading()
     {
         OnClickNextLevelButton?.Invoke();
+        Actions.OnGoNextLevel?.Invoke();
         levelLoader.OnLevelComplete();
         SequenceManager.Instance.ChangeState(AppStateTypes.Loading);
     }

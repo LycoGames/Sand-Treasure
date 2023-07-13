@@ -6,5 +6,6 @@ namespace _Game.Scripts.Utils
     {
         public static Action onCollisionSellZone;
         public static Action OnInGameStateBegin;
+        public static Action OnGoNextLevel;
     }
 }
