@@ -24300,7 +24300,7 @@ GameObject:
   - component: {fileID: 1593225649}
   - component: {fileID: 1593225648}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: CapacityFullText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24520,7 +24520,7 @@ GameObject:
   - component: {fileID: 2031321269}
   - component: {fileID: 2031321271}
   m_Layer: 0
-  m_Name: CapacityIsFullCanvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26615,6 +26615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e448fe21144f0547a2065e382b8f0e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addMoneyEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7376503935035932726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26722,7 +26725,6 @@ MonoBehaviour:
   stats: {fileID: 5787091169568309278}
   playerState: {fileID: 5787091169568309249}
   bumpChecker: {fileID: 3896031487681478730}
-  pinkColor: {r: 0.7490196, g: 0, b: 0.7490196, a: 0.39215687}
 --- !u!114 &7203071617468739344
 MonoBehaviour:
   m_ObjectHideFlags: 0

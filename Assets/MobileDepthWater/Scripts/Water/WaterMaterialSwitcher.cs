@@ -10,7 +10,7 @@ namespace Assets.Scripts.Water
     /// </summary>
     public class WaterMaterialSwitcher : MonoBehaviour
     {
-        [SerializeField] private Renderer renderer;
+        [SerializeField] private Renderer myRenderer;
         [SerializeField] private Material waterMaterial;
         [SerializeField] private Material diffuseMaterial;
 
@@ -19,7 +19,7 @@ namespace Assets.Scripts.Water
         public void Awake()
         {
             defaulPropertyBlock = new MaterialPropertyBlock();
-            renderer.GetPropertyBlock(defaulPropertyBlock);
+            myRenderer.GetPropertyBlock(defaulPropertyBlock);
         }
 
         public void OnTriggerEnter(Collider collider)
@@ -28,8 +28,8 @@ namespace Assets.Scripts.Water
             {
                 var waterPropertyBlock = collider.GetComponent<WaterArea>().WaterPropertyBlock;
 
-                renderer.sharedMaterial = waterMaterial;
-                renderer.SetPropertyBlock(waterPropertyBlock);
+                myRenderer.sharedMaterial = waterMaterial;
+                myRenderer.SetPropertyBlock(waterPropertyBlock);
             }
         }
 
@@ -37,8 +37,8 @@ namespace Assets.Scripts.Water
         {
             if (collider.tag == "Water")
             {
-                renderer.sharedMaterial = diffuseMaterial;
-                renderer.SetPropertyBlock(defaulPropertyBlock);
+                myRenderer.sharedMaterial = diffuseMaterial;
+                myRenderer.SetPropertyBlock(defaulPropertyBlock);
             }
         }
     }

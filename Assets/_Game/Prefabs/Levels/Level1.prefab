@@ -382,7 +382,7 @@ MonoBehaviour:
   playerUpgrades: {fileID: 7989306234795026495}
   myDigZone: {fileID: 8571292782071928155}
   fossilManager: {fileID: 6623350863623103927}
-  moneyStackController: {fileID: 693271943151079987}
+  moneyStackController: {fileID: 3578966403132511199}
   tutorialManager: {fileID: 1450840202871157236}
   cameraSwitcher: {fileID: 7624775490340724593}
   digZoneTutorialElement: {fileID: 1784665813840563368}
@@ -3817,17 +3817,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
---- !u!114 &693271943151079987 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1931372294510213082, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
-  m_PrefabInstance: {fileID: 1392566621071746537}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0297879698958774682da476855527c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3330299649127574549 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4423935699583453692, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
@@ -3837,6 +3826,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a893dbd633020974b98237fc2dd23237, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3578966403132511199 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2519879500209681974, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
+  m_PrefabInstance: {fileID: 1392566621071746537}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d904b38f82b158445a1694bb42321ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &5524971002778983757 stripped

@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6917458848042563752}
   - component: {fileID: 6917458848042563746}
   - component: {fileID: 4423935699583453692}
-  - component: {fileID: 4941560951116645103}
-  - component: {fileID: 1931372294510213082}
+  - component: {fileID: 6114200667825971451}
+  - component: {fileID: 2519879500209681974}
   m_Layer: 10
   m_Name: SellArea
   m_TagString: Untagged
@@ -35,7 +35,6 @@ Transform:
   m_Children:
   - {fileID: 6698206240223332285}
   - {fileID: 3677133422259552442}
-  - {fileID: 6578600359575523226}
   - {fileID: 8075769296424331062}
   - {fileID: 6726272295335876231}
   m_Father: {fileID: 0}
@@ -86,8 +85,8 @@ MonoBehaviour:
   amountDivider: 20
   sandVFX: {fileID: 198603562046773920, guid: d7392277ddbc6394bb6a3403b4c3b669, type: 3}
   rewardVisualizer: {fileID: 6917458848042563746}
-  moneyStackController: {fileID: 1931372294510213082}
---- !u!114 &4941560951116645103
+  moneyStackController: {fileID: 2519879500209681974}
+--- !u!114 &6114200667825971451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,11 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6917458848042563755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb5fe655bad78a744bee374ffa562652, type: 3}
+  m_Script: {fileID: 11500000, guid: 67085701d8704dd418fabbbafb5d943b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 6578600359561349640}
---- !u!114 &1931372294510213082
+  dollarSignTextPrefab: {fileID: 5384016842838544610, guid: c0659c6f07e3ee041bc80d34a14c4b31, type: 3}
+--- !u!114 &2519879500209681974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +108,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6917458848042563755}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0297879698958774682da476855527c0, type: 3}
+  m_Script: {fileID: 11500000, guid: d904b38f82b158445a1694bb42321ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   columnCount: 5
@@ -118,6 +117,7 @@ MonoBehaviour:
   offset: {x: 1, y: 0.34, z: 1.75}
   rewardVisualizer: {fileID: 6917458848042563746}
   spawnPoint: {fileID: 8075769296424331062}
+  moneyEffectSpawner: {fileID: 6114200667825971451}
 --- !u!1 &8614189815008438706
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +147,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6917458848042563748}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1702453245955275019
 PrefabInstance:
@@ -175,10 +175,10 @@ PrefabInstance:
     - target: {fileID: 5402297786498074709, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 32d7fad5df81986418e849a7fd8a4413, type: 3}
+      objectReference: {fileID: 21300000, guid: 83fe8fc3e242ee04380bf066fe268c34, type: 3}
     - target: {fileID: 5402297786498074709, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
       propertyPath: m_Color.a
-      value: 0.18431373
+      value: 0.78431374
       objectReference: {fileID: 0}
     - target: {fileID: 5402297786498074709, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
       propertyPath: m_Color.b
@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5402297786678128524, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5402297786678128524, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -279,6 +279,18 @@ PrefabInstance:
     - target: {fileID: 5402297786678128525, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
       propertyPath: m_Name
       value: ZoneCanvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402297786919432853, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6320754
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402297786919432853, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6320754
+      objectReference: {fileID: 0}
+    - target: {fileID: 5402297786919432853, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
+      propertyPath: m_Color.r
+      value: 0.6320754
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08a4bb50c92b38a4e8332bb06c75e2a5, type: 3}
@@ -388,73 +400,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2045767165372828381, guid: 24984c0f667e1b94094b9e56fabf3c39, type: 3}
   m_PrefabInstance: {fileID: 4652439914554953056}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6578600359575886250
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6917458848042563748}
-    m_Modifications:
-    - target: {fileID: 190236, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_Name
-      value: DollarbillBlast
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
---- !u!198 &6578600359561349640 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 19813282, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-  m_PrefabInstance: {fileID: 6578600359575886250}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6578600359575523226 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 431664, guid: 39f586f40e7d928499bfe946ffb04ad5, type: 3}
-  m_PrefabInstance: {fileID: 6578600359575886250}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8790776245159423798
 PrefabInstance:

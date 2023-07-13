@@ -2,6 +2,7 @@ using System;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Observer;
 using _Game.Scripts.Saving;
+using UnityEngine.Events;
 
 namespace _Game.Scripts.Player
 {
@@ -9,6 +10,13 @@ namespace _Game.Scripts.Player
     {
         private int money;
         private int treasure;
+
+        public AddMoneyEvent addMoneyEvent;
+
+        [System.Serializable]
+        public class AddMoneyEvent : UnityEvent<float>
+        {
+        }
 
         private void Start()
         {
@@ -18,6 +26,7 @@ namespace _Game.Scripts.Player
         public void AddMoney(int value)
         {
             money += value;
+            addMoneyEvent.Invoke(value);
             base.NotifyObservers(money, ItemType.Money);
         }
 

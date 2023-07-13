@@ -10,7 +10,7 @@ public class Money : MonoBehaviour
     public Action<Vector3, int> OnCollect;
     [SerializeField] private BoxCollider myBoxCollider;
     [SerializeField] private Effects effect;
-    [SerializeField] private MeshRenderer renderer;
+    [SerializeField] private MeshRenderer myRenderer;
     
     public void EnableCollider() => myBoxCollider.enabled = true;
 
@@ -18,7 +18,7 @@ public class Money : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         OnCollect?.Invoke(this.transform.position, value);
-        renderer.enabled = false;
+        myRenderer.enabled = false;
         effect.effect.Play();
         myBoxCollider.enabled = false;
         Invoke(nameof(Return),1f);
@@ -26,7 +26,7 @@ public class Money : MonoBehaviour
 
     private void Return()
     {
-        renderer.enabled = true;
+        myRenderer.enabled = true;
         MoneyPool.Instance.ReturnToPool(this);
     }
 }

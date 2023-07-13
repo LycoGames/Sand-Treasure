@@ -14,6 +14,8 @@ public class MoneyStackController : MonoBehaviour
     [SerializeField] private Vector3 offset;
     [SerializeField] private UIRewardVisualizer rewardVisualizer;
     [SerializeField] private Transform spawnPoint;
+    [SerializeField] private MoneyEffectSpawner moneyEffectSpawner;
+
     private int index = 0;
 
     public void Initialize()
@@ -46,8 +48,8 @@ public class MoneyStackController : MonoBehaviour
     private void VisualiseReward(Vector3 moneyPos, int value)
     {
         index = 0;
-        rewardVisualizer.VisualiseReward(moneyPos,
-            (() => GameManager.Instance.AddMoneyToPlayer(1)));
+        moneyEffectSpawner.Spawn(value, moneyPos);
+        GameManager.Instance.AddMoneyToPlayer(value);
     }
 
     private Vector3 GetStackPosition(Vector3 itemBounds, int stackItemCount)

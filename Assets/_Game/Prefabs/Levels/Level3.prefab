@@ -448,7 +448,7 @@ MonoBehaviour:
   playerUpgrades: {fileID: 5818161498893049688}
   myDigZone: {fileID: 638065221644133326}
   fossilManager: {fileID: 3481193842001675700}
-  moneyStackController: {fileID: 7806630138893438506}
+  moneyStackController: {fileID: 6080788668029374406}
 --- !u!1 &3042747120602109884
 GameObject:
   m_ObjectHideFlags: 0
@@ -4172,14 +4172,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6917458848042563748, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
   m_PrefabInstance: {fileID: 8546464431127001584}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7806630138893438506 stripped
+--- !u!114 &6080788668029374406 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1931372294510213082, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2519879500209681974, guid: 08086f5f924f75b4bb2e5bae45aae945, type: 3}
   m_PrefabInstance: {fileID: 8546464431127001584}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0297879698958774682da476855527c0, type: 3}
+  m_Script: {fileID: 11500000, guid: d904b38f82b158445a1694bb42321ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
