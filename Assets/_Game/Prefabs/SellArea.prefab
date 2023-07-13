@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cubesToThrow: []
   sellSFX: {fileID: 8300000, guid: 088c605706e342e4695b92db5559d28b, type: 3}
-  amountDivider: 20
+  amountDivider: 6
   sandVFX: {fileID: 198603562046773920, guid: d7392277ddbc6394bb6a3403b4c3b669, type: 3}
   rewardVisualizer: {fileID: 6917458848042563746}
   moneyStackController: {fileID: 2519879500209681974}

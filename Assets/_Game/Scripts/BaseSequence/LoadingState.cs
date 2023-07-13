@@ -26,12 +26,14 @@ namespace _Game.Scripts.BaseSequence
             loadingUI.LoadingTime = loadingTime;
             levelLoader.LoadLevel();
             Invoke("StartGame", loadingTime);
+            AudioListener.pause = true;
         }
 
         public override void Exit()
         {
             UIManager.Instance.DisableCanvas(CanvasTypes.Loading);
             playerController.IsCanMove = true;
+            AudioListener.pause = false;
         }
 
         private void StartGame()

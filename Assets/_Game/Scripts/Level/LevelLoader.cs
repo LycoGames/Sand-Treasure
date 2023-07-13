@@ -48,6 +48,7 @@ public class LevelLoader : MonoBehaviour
         GameManager.Instance.UpdateLevelText(levelCounter + 1);
         GameManager.Instance.ResetPlayerSpeed();
         GameManager.Instance.ResetPlayerColor();
+        SoundManager.Instance.EngineSoundVolumeIncrease();
     }
 
     public void OnLevelComplete()

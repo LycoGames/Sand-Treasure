@@ -29,12 +29,20 @@ public class SoundManager : AbstractSingleton<SoundManager>
     public void PlayLoop()
     {
         loopAudioSource.clip = loopSFX;
-        loopAudioSource.Play();
+        if (!loopAudioSource.isPlaying)
+        {
+            loopAudioSource.Play();
+        }
+        else
+        {
+            loopAudioSource.UnPause();
+        }
     }
 
     public void StopLoop()
     {
-        loopAudioSource.Stop();
+        loopAudioSource.Pause();
+        // loopAudioSource.Stop();
     }
 
     public void PlayLoopEngine()
@@ -57,7 +65,14 @@ public class SoundManager : AbstractSingleton<SoundManager>
     {
         loopEngineSource.DOPitch(0.8f, 1f);
     }
-
+    public void EngineSoundVolumeIncrease()
+    {
+        loopEngineSource.volume = 0.25f;
+    }
+    public void EngineSoundVolumeDecrease()
+    {
+        loopEngineSource.volume = 0.1f;
+    }
     public void PlayRandomSoundEffect(AudioClip[] clips)
     {
         int randomIndex = Random.Range(0, clips.Length);

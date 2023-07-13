@@ -3,25 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MobileDepthWater/Scripts/AnimationStarter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MobileDepthWater/Scripts/AnimationStarter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MobileDepthWater/Scripts/Water/WaterMaterialSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MobileDepthWater/Scripts/Water/WaterMaterialSwitcher.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Money.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Money.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoneyPool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoneyPool.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoneyStackController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoneyStackController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MoneyStackController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MoneyStackController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Money.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Money.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Resources/MoneyText.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Items/Resources/MoneyText.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/SellArea.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/DigAreaEntrance.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/DigAreaEntrance.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/Inventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/BaseSequence/LoadingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/BaseSequence/LoadingState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/DigAreaEntrance.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/DigAreaEntrance.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Control/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Level/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Level/LevelLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SandSellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SandSellArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/UI/InGameUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +215,7 @@
       <workItem from="1689068408542" duration="17127000" />
       <workItem from="1689151716869" duration="6766000" />
       <workItem from="1689190573280" duration="2324000" />
-      <workItem from="1689240822243" duration="5030000" />
+      <workItem from="1689240822243" duration="8434000" />
     </task>
     <servers />
   </component>

@@ -55,6 +55,7 @@ namespace _Game.Scripts.Player
         {
             if (!IsCanMove)
             {
+                SoundManager.Instance.EngineSoundPitchDecrease();
                 return;
             }
 

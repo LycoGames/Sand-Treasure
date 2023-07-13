@@ -72,14 +72,21 @@ namespace _Game.Scripts.UI
             Debug.Log("InGameUI OnExit");
         }
 
+        private Sequence sequence;
+
         public void OnNotify(int value, ItemType type)
         {
             switch (type)
             {
                 case ItemType.Money:
-                    DOTween.Sequence()
-                        .Append(moneyPanel.transform.DOPunchScale(punchScale, 0.05f, 2)).SetEase(Ease.InFlash)
-                        .Append(moneyPanel.transform.DOScale(stockScale, 0.05f));
+                    if (sequence is { active: true })
+                    {
+                        sequence.Kill(true);
+                    }
+
+                    sequence = DOTween.Sequence()
+                        .Append(moneyPanel.transform.DOPunchScale(punchScale, 0.1f, 2)).SetEase(Ease.InFlash)
+                        .Append(moneyPanel.transform.DOScale(stockScale, 0.1f));
                     moneyText.text = value.ToString();
                     break;
                 case ItemType.Treasure:

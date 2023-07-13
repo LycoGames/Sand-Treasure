@@ -29,6 +29,7 @@ public class DigAreaEntrance : MonoBehaviour
         //     stateController.ChangeState(stateController.DigState);
         // }
         bumpChecker.StartCheckBumpCoroutine();
+        SoundManager.Instance.EngineSoundVolumeDecrease();
         //playerController.IncreaseMovementSpeed(false);
     }
 
@@ -37,6 +38,7 @@ public class DigAreaEntrance : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         //stateController.ChangeState(stateController.IdleState);
         bumpChecker.StopCheckBumpCoroutine();
+        SoundManager.Instance.EngineSoundVolumeIncrease();
         playerMatColorChanger.ChangeColor(false);
         playerController.IncreaseMovementSpeed(true,false);
     }
