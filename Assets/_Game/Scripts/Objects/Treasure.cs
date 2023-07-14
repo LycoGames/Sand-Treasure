@@ -33,7 +33,6 @@ namespace _Game.Scripts.Objects
 
         private void HandleSelf()
         {
-            print(hasCollected);
             if (hasCollected)
             {
                 DisableTreasure();
@@ -69,14 +68,12 @@ namespace _Game.Scripts.Objects
 
         public object CaptureState()
         {
-            print("cap: " + hasCollected);
             return hasCollected;
         }
 
         public void RestoreState(object state)
         {
             hasCollected = (bool)state;
-            print("restore " + hasCollected);
         }
     }
 }

@@ -44,7 +44,7 @@ public class SandSellArea : MonoBehaviour
     public Action OnSell;
     private const int BlueValue = 5;
     private const int PinkValue = 3;
-    private const int YellowValue = 1;
+    private const int YellowValue = 2;
     private const int GreenValue = 7;
     private const int PurpleValue = 8;
     private const int RedValue = 10;

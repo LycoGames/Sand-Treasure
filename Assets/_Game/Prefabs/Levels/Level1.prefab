@@ -319,7 +319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2656622733199894}
-  - component: {fileID: 6617142019723397809}
+  - component: {fileID: 2826562142554192248}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Untagged
@@ -366,7 +366,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6617142019723397809
+--- !u!114 &2826562142554192248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2656622733199889}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3b61a00c429d664f966dd5184b2f81f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a80f619e9683e041aa512263da536fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   TotalTreasureCount: 0
@@ -383,11 +383,6 @@ MonoBehaviour:
   myDigZone: {fileID: 8571292782071928155}
   fossilManager: {fileID: 6623350863623103927}
   moneyStackController: {fileID: 3578966403132511199}
-  tutorialManager: {fileID: 1450840202871157236}
-  cameraSwitcher: {fileID: 7624775490340724593}
-  digZoneTutorialElement: {fileID: 1784665813840563368}
-  upgradeZoneTutorialElement: {fileID: 4616031161722717382}
-  collectTutorialElement: {fileID: 4323566270970680709}
 --- !u!1 &1073159864843798807
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +402,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2920504996145814310
 Transform:
   m_ObjectHideFlags: 0
@@ -687,7 +682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4774298110725193094
 Transform:
   m_ObjectHideFlags: 0
@@ -1373,7 +1368,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5327533595834421530
 Transform:
   m_ObjectHideFlags: 0
@@ -1567,7 +1562,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4058476875809987448
 Transform:
   m_ObjectHideFlags: 0
@@ -2215,7 +2210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &19401673667825470
 Transform:
   m_ObjectHideFlags: 0
