@@ -26702,6 +26702,8 @@ MonoBehaviour:
     m_Bits: 2048
   checkDelay: 0.1
   maxDistance: 11
+  sideMaxDistance: 0.75
+  sideRayAngle: 65
   playerState: {fileID: 5787091169568309249}
   isPlayerOnHigherLevelArea: 0
   isPlayerCapacityFull: 0
