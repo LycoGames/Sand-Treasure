@@ -24,17 +24,24 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private TextMeshProUGUI foundTreasureText;
         [SerializeField] private TextMeshProUGUI levelText;
-        [SerializeField] private RectTransform levelBar;
         
+        [SerializeField] private RectTransform levelBar;
         public RectTransform LevelBar =>levelBar ;
+        
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
         [SerializeField] private Toggle vibrationToggle;
         public Toggle VibrationToggleButton => vibrationToggle;
         public OnUIToggleClickEvent VibrationToggle;
+        
         [SerializeField] private Image progressBarFill;
+        [SerializeField] private RectTransform progressBarTransform;
+        public RectTransform ProgressBarTransform => progressBarTransform;
+        
         [SerializeField] private CapacityBar capacityBar;
         [SerializeField] private FingerSlideAnimation fingerAnim;
+        [SerializeField] private RectTransform fingerTransform;
+        public RectTransform FingerTransform => fingerTransform;
         public FingerSlideAnimation FingerAnim => fingerAnim;
         public CapacityBar CapacityBar => capacityBar;
 

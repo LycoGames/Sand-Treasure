@@ -46,8 +46,9 @@ namespace _Game.Scripts.BaseSequence
             UpdateProgressBar(levelLoader.GetCompletionPercentage());
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
             inGameUI.FingerAnim.EnableFingerAnim();
-          //  inGameUI.LevelBar.DOPunchScale(new Vector3(1.25f,1.25f,1.25f), 1f,10,0).SetAutoKill(true);
+            inGameUI.FingerTransform.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.FingerTransform.DOScale(1f,0.7f)));
             inGameUI.LevelBar.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.LevelBar.DOScale(1f,0.7f)));
+            inGameUI.ProgressBarTransform.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.ProgressBarTransform.DOScale(1f,0.7f)));
             Actions.OnInGameStateBegin?.Invoke();
             SoundManager.Instance.PlayLoopEngine();
         }
