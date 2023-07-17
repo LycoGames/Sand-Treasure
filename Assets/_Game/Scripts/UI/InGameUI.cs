@@ -24,7 +24,9 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private TextMeshProUGUI foundTreasureText;
         [SerializeField] private TextMeshProUGUI levelText;
-
+        [SerializeField] private RectTransform levelBar;
+        
+        public RectTransform LevelBar =>levelBar ;
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
         [SerializeField] private Toggle vibrationToggle;

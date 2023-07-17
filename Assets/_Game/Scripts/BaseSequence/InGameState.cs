@@ -4,6 +4,7 @@ using _Game.Scripts.Enums;
 using _Game.Scripts.StatSystem;
 using _Game.Scripts.UI;
 using _Game.Scripts.Utils;
+using DG.Tweening;
 using UnityEngine;
 
 namespace _Game.Scripts.BaseSequence
@@ -45,6 +46,8 @@ namespace _Game.Scripts.BaseSequence
             UpdateProgressBar(levelLoader.GetCompletionPercentage());
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
             inGameUI.FingerAnim.EnableFingerAnim();
+          //  inGameUI.LevelBar.DOPunchScale(new Vector3(1.25f,1.25f,1.25f), 1f,10,0).SetAutoKill(true);
+            inGameUI.LevelBar.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.LevelBar.DOScale(1f,0.7f)));
             Actions.OnInGameStateBegin?.Invoke();
             SoundManager.Instance.PlayLoopEngine();
         }
