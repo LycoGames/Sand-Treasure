@@ -2,31 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15eace1a-41e5-4e7d-9c48-e94cd30567a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/Extra/Standard/SnowParticle 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/Extra/Standard/SnowParticle 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/Extra/Standard/SnowParticle.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/Extra/Standard/SnowParticle.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/Showcase00/Snow00Main.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/Showcase00/Snow00Main.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/Showcase00/Snow00MainNoRT.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/Showcase00/Snow00MainNoRT.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/SnowBallPlayer/SnowPlayer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/SnowBallPlayer/SnowPlayer.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Blue01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Blue01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Blue02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Blue02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Blue03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Blue03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/BlueEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/BlueEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/BlueEffect02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/BlueEffect02.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/BlueEffect03.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/BlueEffect03.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/GreenEffect.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/GreenEffect.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Red01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/Red01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/SnowGreen01.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Materials/SnowIce/Standard/X_Effects/SnowGreen01.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/RenderTextures/RTSnow.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/RenderTextures/RTSnow.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/RenderTextures/RTSnowAdditional.renderTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/RenderTextures/RTSnowAdditional.renderTexture" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Scenes/SnowIce/Standard/01_SnowIce.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Scenes/SnowIce/Standard/01_SnowIce.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice01.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice01.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice01Albedo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice01Albedo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice03.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice03.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice03Albedo.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/Ice03Albedo.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/IceNormal02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Ice/IceNormal02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Pattern/PerlinNoise02.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Pattern/PerlinNoise02.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BruteForce/Textures/Snow/Snow05.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/BruteForce/Textures/Snow/Snow05.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Sand-Treasure/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/15/defaultMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Luna Terrain Exporter/Exported files/15/defaultMat.mat.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/build_info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Lava Materials/Lava02/M_Lava02.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Stylized Lava Materials/Lava02/M_Lava02.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Smoke &amp; Steam Effects/Materials/Dust.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Smoke &amp; Steam Effects/Materials/Dust.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Smoke &amp; Steam Effects/Materials/RockDebris.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UnityTechnologies/ParticlePack/EffectExamples/Smoke &amp; Steam Effects/Materials/RockDebris.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level1 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3New 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Levels/Level3New 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Prefabs/Player/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scenes/GameScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/SandType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Enums/SandType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SandSellArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Objects/SandSellArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerSandAccumulator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Game/Scripts/Player/PlayerSandAccumulator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +225,7 @@
       <workItem from="1689326191481" duration="1609000" />
       <workItem from="1689497523193" duration="4691000" />
       <workItem from="1689585582867" duration="359000" />
-      <workItem from="1689592711517" duration="2648000" />
+      <workItem from="1689592711517" duration="5908000" />
     </task>
     <servers />
   </component>

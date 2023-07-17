@@ -8,6 +8,8 @@ namespace _Game.Scripts.Enums
         Yellow,
         Green,
         Purple,
-        Red
+        Red,
+        Snow,
+        Lava
     }
 }

@@ -47,6 +47,9 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
     private const int Green = 3;
     private const int Purple = 4;
     private const int Red = 5;
+    private const int White = 6;
+    private const int Lava = 7;
+
     private InGameUI inGameUI;
     public Action OnCapacityFull;
 
@@ -97,6 +100,14 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
                 liquidVolume.liquidLayers[Red].amount += fillAmount / maxCapacity;
                 IncreaseCurrentCapacityValue();
                 break;
+            case SandType.Snow:
+                liquidVolume.liquidLayers[White].amount += fillAmount / maxCapacity;
+                IncreaseCurrentCapacityValue();
+                break;
+            case SandType.Lava:
+                liquidVolume.liquidLayers[Lava].amount += fillAmount / maxCapacity;
+                IncreaseCurrentCapacityValue();
+                break;
         }
 
         UpdateLayers();
@@ -130,6 +141,12 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
                 break;
             case SandType.Red:
                 dustEffect.startColor = new Color(0.7f, 0f, 0f, 0.4f);
+                break;
+            case SandType.Snow:
+                dustEffect.startColor = new Color(1f, 1f, 1f, 0.4f);
+                break;
+            case SandType.Lava:
+                dustEffect.startColor = new Color(0f, 0f, 0f, 0.4f);
                 break;
         }
     }
@@ -194,7 +211,7 @@ public class PlayerSandAccumulator : MonoBehaviour, ISaveable
     public object CaptureState()
     {
         Dictionary<int, float> liquidVolumeDictionary = new();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             liquidVolumeDictionary.Add(i, liquidVolume.liquidLayers[i].amount);
         }

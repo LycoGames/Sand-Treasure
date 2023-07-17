@@ -37,7 +37,8 @@ public class SandSellArea : MonoBehaviour
     private const int Green = 3;
     private const int Purple = 4;
     private const int Red = 5;
-
+    private const int Snow = 6;
+    private const int Lava = 7;
     private float capacity;
     private WaitForSeconds waitForSeconds = new WaitForSeconds(0.2f);
     private WaitForSeconds waitForSecondsVFX = new WaitForSeconds(0.25f);
@@ -48,6 +49,8 @@ public class SandSellArea : MonoBehaviour
     private const int GreenValue = 7;
     private const int PurpleValue = 8;
     private const int RedValue = 10;
+    private const int SnowValue = 2;
+    private const int LavaValue = 2;
 
     private List<int> money = new();
     private Coroutine coroutine;
@@ -104,7 +107,7 @@ public class SandSellArea : MonoBehaviour
 
         OnSell?.Invoke();
         SoundManager.Instance.Play(sellSFX);
-        GameManager.Instance.Vibrate(100,200,true);
+        GameManager.Instance.Vibrate(100, 200, true);
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)
@@ -157,6 +160,16 @@ public class SandSellArea : MonoBehaviour
                 InstantiateMoney(CalculateCubeCount(Red), RedValue);
                 break;
             }
+            case Snow:
+            {
+                InstantiateMoney(CalculateCubeCount(Snow), SnowValue);
+                break;
+            }
+            case Lava:
+            {
+                InstantiateMoney(CalculateCubeCount(Lava), LavaValue);
+                break;
+            }
         }
     }
 
@@ -206,6 +219,18 @@ public class SandSellArea : MonoBehaviour
             case Red:
             {
                 InstantiateCubes(CalculateCubeCount(Red), SandType.Red);
+                //cubesToThrow.Add(instance);
+                break;
+            }
+            case Snow:
+            {
+                InstantiateCubes(CalculateCubeCount(Snow), SandType.Snow);
+                //cubesToThrow.Add(instance);
+                break;
+            }
+            case Lava:
+            {
+                InstantiateCubes(CalculateCubeCount(Lava), SandType.Lava);
                 //cubesToThrow.Add(instance);
                 break;
             }

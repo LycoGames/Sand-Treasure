@@ -24812,6 +24812,42 @@ MonoBehaviour:
     currentMurkiness: 0.5
     currentColor2: {r: 0, g: 0, b: 0, a: 1}
     currentBubblesOpacity: 0
+  - layerName: Layer 6
+    amount: 0
+    density: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+    miscible: 0
+    murkiness: 0.1
+    murkColor: {r: 0, g: 0, b: 0, a: 1}
+    scale: 0.3
+    viscosity: 1
+    adjustmentSpeed: 10
+    bubblesOpacity: 0
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 0
+    currentColor: {r: 1, g: 1, b: 1, a: 1}
+    currentMurkiness: 0.1
+    currentColor2: {r: 0, g: 0, b: 0, a: 1}
+    currentBubblesOpacity: 0
+  - layerName: Layer 7
+    amount: 0
+    density: 1
+    color: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    miscible: 0
+    murkiness: 0
+    murkColor: {r: 0, g: 0, b: 0, a: 1}
+    scale: 0.3
+    viscosity: 1
+    adjustmentSpeed: 10
+    bubblesOpacity: 0
+    baseLevel: 0
+    currentBaseLevel: 0
+    currentAmount: 0
+    currentColor: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
+    currentMurkiness: 0
+    currentColor2: {r: 0, g: 0, b: 0, a: 1}
+    currentBubblesOpacity: 0
   _smoothContactSurface: 0
   _ditherStrength: 0
   _layersAdjustmentSpeed: 10
