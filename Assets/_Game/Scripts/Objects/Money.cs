@@ -18,6 +18,7 @@ public class Money : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         OnCollect?.Invoke(this.transform.position, value);
+        GameManager.Instance.Vibrate(30,30,true);
         myRenderer.enabled = false;
         effect.effect.Play();
         myBoxCollider.enabled = false;

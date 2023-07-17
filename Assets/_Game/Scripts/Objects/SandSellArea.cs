@@ -104,6 +104,7 @@ public class SandSellArea : MonoBehaviour
 
         OnSell?.Invoke();
         SoundManager.Instance.Play(sellSFX);
+        GameManager.Instance.Vibrate(100,200,true);
         for (int i = 0; i < liquidVolume.liquidLayers.Length; i++)
         {
             if (liquidVolume.liquidLayers[i].amount > 0)

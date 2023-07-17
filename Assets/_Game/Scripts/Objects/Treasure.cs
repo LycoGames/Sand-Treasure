@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using _Game.Scripts.Enums;
 using _Game.Scripts.Player;
 using _Game.Scripts.Saving;
@@ -17,12 +18,14 @@ namespace _Game.Scripts.Objects
         [SerializeField] private BoxCollider boxCollider;
         [SerializeField] private AudioClip treasureFoundSFX;
         [SerializeField] private int moneyValue;
+        [SerializeField] private int moneyCount;
+        
         [SerializeField] private GameObject mGameObject;
         [SerializeField] private BoxCollider myBoxCollider;
 
         private bool hasCollected;
         private static readonly int OpenChest = Animator.StringToHash("OpenChest");
-
+        private WaitForSeconds waitForSeconds = new WaitForSeconds(0.25f);
         private void Start()
         {
             InGameUI inGameUI = UIManager.Instance.GetCanvas(CanvasTypes.InGame) as InGameUI;
@@ -58,14 +61,21 @@ namespace _Game.Scripts.Objects
                 this.gameObject.transform.DOJump(other.transform.position, 5f, 1, 0.3f).SetAutoKill(true).OnComplete(
                     () =>
                     {
-                        rewardVisualizer.VisualiseReward(this.gameObject.transform.position,
-                            (() => playerInventory.AddMoney(moneyValue)));
                         DisableTreasure();
+                        StartCoroutine(RewardCoroutine());
                         //Destroy(gameObject);
                     });
             }
         }
-
+        private IEnumerator RewardCoroutine()
+        {
+            for (int i = 0; i < moneyCount; i++)
+            {
+                rewardVisualizer.VisualiseReward(this.transform.position,
+                    (() => GameManager.Instance.AddMoneyToPlayer(moneyValue)));
+                yield return waitForSeconds;
+            }
+        }
         public object CaptureState()
         {
             return hasCollected;

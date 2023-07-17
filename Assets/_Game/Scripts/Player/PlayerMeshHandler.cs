@@ -26,7 +26,6 @@ namespace _Game.Scripts.Player
         {
             stats.OnDigFieldChange += UpdateDigField;
             stats.OnStrengthChange += UpdateStrength;
-            
         }
 
         private void OnTriggerEnter(Collider other)
@@ -79,7 +78,6 @@ namespace _Game.Scripts.Player
             {
                 if (digZone != null)
                 {
-                    GameManager.Instance.Vibrate(50,50,true);
                     digZone.AddDeformingForce(diggerPos.position, force, diggingField);
                 }
 

@@ -93,8 +93,8 @@ public class FossilBodyController : MonoBehaviour
     {
         float randomX;
         float randomZ;
-        randomX = Random.Range(-30, 30);
-        randomZ = Random.Range(-15, 17);
+        randomX = Random.Range(-25, 25);
+        randomZ = Random.Range(-10, 15);
         return new Vector3(randomX, 1, randomZ);
     }
 }

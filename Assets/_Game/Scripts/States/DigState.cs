@@ -9,7 +9,8 @@ namespace _Game.Scripts.States
         private PlayerMeshHandler playerMeshHandler;
         private PlayerAnimator playerAnimator;
         private Effects effects;
-
+        private float cooldown = 0.25f;
+        private float time=0;
         public void OnEnter(StateController controller)
         {
             if (playerMeshHandler == null || playerAnimator == null)
@@ -28,6 +29,12 @@ namespace _Game.Scripts.States
         public void UpdateState(StateController controller)
         {
             playerMeshHandler.Dig();
+            time += Time.deltaTime;
+            if (time>=cooldown)
+            {
+                GameManager.Instance.Vibrate(40,40,true);
+                time = 0;
+            }
         }
 
         public void OnExit(StateController controller)
