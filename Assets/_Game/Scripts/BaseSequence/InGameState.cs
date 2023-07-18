@@ -47,8 +47,8 @@ namespace _Game.Scripts.BaseSequence
             //   playerController.canControl = true;
             SetCurrentLevel();
             playerSandAccumulator.Initialize();
-            UpdateProgressBar(levelLoader.GetCompletionPercentage());
             SetTargetCompletionRatio();
+            UpdateProgressBar(levelLoader.GetCompletionPercentage());
             inGameUI.InitializeProgressBar(currentLevel);
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
             inGameUI.FingerAnim.EnableFingerAnim();
