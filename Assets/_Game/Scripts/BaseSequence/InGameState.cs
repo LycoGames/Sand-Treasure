@@ -20,6 +20,9 @@ namespace _Game.Scripts.BaseSequence
         public Action OnReachedFinish;
         [HideInInspector] public bool isFinished;
         private int isVibrationOn;
+        private int currentLevel;
+        private float targetCompletionRatio = 0.5f;
+
 
         public override void Initialize()
         {
@@ -42,16 +45,32 @@ namespace _Game.Scripts.BaseSequence
         public override void Enter()
         {
             //   playerController.canControl = true;
+            SetCurrentLevel();
             playerSandAccumulator.Initialize();
             UpdateProgressBar(levelLoader.GetCompletionPercentage());
+            SetTargetCompletionRatio();
+            inGameUI.InitializeProgressBar(currentLevel);
             UIManager.Instance.EnableCanvas(CanvasTypes.InGame);
             inGameUI.FingerAnim.EnableFingerAnim();
-            inGameUI.FingerTransform.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.FingerTransform.DOScale(1f,0.7f)));
-            inGameUI.LevelBar.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.LevelBar.DOScale(1f,0.7f)));
-            inGameUI.ProgressBarTransform.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.ProgressBarTransform.DOScale(1f,0.7f)));
+            inGameUI.FingerTransform.DOScale(1.25f, 0.7f)
+                .OnComplete((() => inGameUI.FingerTransform.DOScale(1f, 0.7f)));
+            inGameUI.LevelBar.DOScale(1.25f, 0.7f).OnComplete((() => inGameUI.LevelBar.DOScale(1f, 0.7f)));
+            inGameUI.ProgressBarTransform.DOScale(1.25f, 0.7f)
+                .OnComplete((() => inGameUI.ProgressBarTransform.DOScale(1f, 0.7f)));
             Actions.OnInGameStateBegin?.Invoke();
             SoundManager.Instance.PlayLoopEngine();
         }
+
+        private void SetTargetCompletionRatio()
+        {
+            if (currentLevel >= 3) targetCompletionRatio = 0.7f;
+        }
+
+        private void SetCurrentLevel()
+        {
+            currentLevel = PlayerPrefs.HasKey("LevelCounter") ? PlayerPrefs.GetInt("LevelCounter") : 0;
+        }
+
 
         public override void Exit()
         {
@@ -93,7 +112,7 @@ namespace _Game.Scripts.BaseSequence
         {
             value = value / 100;
             inGameUI.UpdateProgressBar(value);
-            if (value >= 0.5f && isFinished == false)
+            if (value >= targetCompletionRatio && isFinished == false)
             {
                 isFinished = true;
                 GoEndGameState();

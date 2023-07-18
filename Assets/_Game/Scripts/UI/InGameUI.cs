@@ -24,20 +24,23 @@ namespace _Game.Scripts.UI
 
         [SerializeField] private TextMeshProUGUI foundTreasureText;
         [SerializeField] private TextMeshProUGUI levelText;
-        
+
         [SerializeField] private RectTransform levelBar;
-        public RectTransform LevelBar =>levelBar ;
-        
+        public RectTransform LevelBar => levelBar;
+
         [SerializeField] private Toggle audioToggle;
         public OnUIToggleClickEvent AudioToggle;
         [SerializeField] private Toggle vibrationToggle;
         public Toggle VibrationToggleButton => vibrationToggle;
         public OnUIToggleClickEvent VibrationToggle;
-        
+
+        [SerializeField] private Image progressBarBase;
         [SerializeField] private Image progressBarFill;
         [SerializeField] private RectTransform progressBarTransform;
+        [SerializeField] private Sprite increasedProgressBarBaseSprite;
+        [SerializeField] private Sprite increasedProgressBarFillSprite;
         public RectTransform ProgressBarTransform => progressBarTransform;
-        
+
         [SerializeField] private CapacityBar capacityBar;
         [SerializeField] private FingerSlideAnimation fingerAnim;
         [SerializeField] private RectTransform fingerTransform;
@@ -47,6 +50,8 @@ namespace _Game.Scripts.UI
 
         private readonly Vector3 punchScale = new Vector3(0.3f, 0.3f, 0.3f);
         private readonly Vector3 stockScale = Vector3.one;
+
+        private bool isProgressBarIncreased;
 
         public override void Start()
         {
@@ -107,6 +112,15 @@ namespace _Game.Scripts.UI
             }
         }
 
+        public void InitializeProgressBar(int currentLevel)
+        {
+            if (currentLevel >= 3 && !isProgressBarIncreased)
+            {
+                progressBarBase.sprite = increasedProgressBarBaseSprite;
+                progressBarFill.sprite = increasedProgressBarFillSprite;
+                isProgressBarIncreased = true;
+            }
+        }
 
         public void UpdateProgressBar(float value)
         {
